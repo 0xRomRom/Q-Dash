@@ -46,6 +46,17 @@
   transform: translateX(230%);
 }
 
+.i3 {
+  position: absolute;
+  left: -3rem;
+}
+
+.man-notif:hover .i3 {
+  transition: all .1s ease-in-out;
+  position: absolute;
+  transform: translateX(210%);
+}
+
 .side-text {
   color: #fff;
   letter-spacing: 2px;
@@ -53,7 +64,7 @@
   font-weight: 800;
 }
 
-.fa-clock, .fa-magnifying-glass-chart, .fa-floppy-disk {
+.fa-clock, .fa-magnifying-glass-chart, .fa-floppy-disk, .fa-comment-dollar {
   color: #fff;
   font-size: 1.5rem;
 }

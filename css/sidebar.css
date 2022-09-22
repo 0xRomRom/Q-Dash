@@ -49,6 +49,18 @@
   transform: translateX(230%);
 }
 
+.i3 {
+  position: absolute;
+  left: -3rem;
+}
+
+.man-notif:hover .i3 {
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  position: absolute;
+  transform: translateX(210%);
+}
+
 .side-text {
   color: white;
   font-family: "Open Sans";
@@ -67,6 +79,11 @@
 }
 
 .fa-floppy-disk {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.fa-comment-dollar {
   color: white;
   font-size: 1.5rem;
 }
