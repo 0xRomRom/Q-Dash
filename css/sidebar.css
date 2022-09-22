@@ -52,6 +52,10 @@
   transform: translateX(230%);
 }
 
+.save-to-desk:hover .fa-floppy-disk {
+  color: white;
+}
+
 .i3 {
   position: absolute;
   left: -3rem;
@@ -82,7 +86,7 @@
 }
 
 .fa-floppy-disk {
-  color: white;
+  color: rgb(215, 207, 207);
   font-size: 1.5rem;
 }
 

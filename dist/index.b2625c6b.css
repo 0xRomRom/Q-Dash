@@ -125,6 +125,7 @@ li > a {
   letter-spacing: 2px;
   background: #00f;
   border-radius: .2rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: .2rem;
@@ -150,6 +151,30 @@ li > a {
 
 .card-fat {
   grid-area: span 2 / span 2;
+}
+
+.card-title {
+  font-size: 2.5rem;
+}
+
+.card-price {
+  font-size: 1.5rem;
+}
+
+.card-percentage {
+  font-size: 1.25rem;
+}
+
+.card-title-fat {
+  font-size: 4.5rem;
+}
+
+.card-price-fat {
+  font-size: 2.75rem;
+}
+
+.card-percentage-fat {
+  font-size: 1.75rem;
 }
 
 .card-radial-d1 {

@@ -50,6 +50,10 @@
   transform: translateX(230%);
 }
 
+.save-to-desk:hover .fa-floppy-disk {
+  color: #fff;
+}
+
 .i3 {
   position: absolute;
   left: -3rem;
@@ -68,7 +72,17 @@
   font-weight: 800;
 }
 
-.fa-clock, .fa-magnifying-glass-chart, .fa-floppy-disk, .fa-comment-dollar {
+.fa-clock, .fa-magnifying-glass-chart {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.fa-floppy-disk {
+  color: #d7cfcf;
+  font-size: 1.5rem;
+}
+
+.fa-comment-dollar {
   color: #fff;
   font-size: 1.5rem;
 }
