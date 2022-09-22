@@ -168,6 +168,10 @@ li > a {
   background: linear-gradient(to left, #6cbf5d, #09ee11);
 }
 
+.card-radial-neutral {
+  background: linear-gradient(to left, #6969b8, #9e4577);
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
