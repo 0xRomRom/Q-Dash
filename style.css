@@ -7,9 +7,9 @@
 
 html {
   background-color: rgb(8, 11, 22);
-/* background-color: red; */
-width: 100vw;
-overflow-x: hidden;
+  /* background-color: red; */
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 nav {
@@ -66,7 +66,6 @@ li > a {
   color: rgb(219, 219, 218);
 }
 
-
 .li-ho3 {
   position: absolute;
   left: 40rem;
@@ -118,9 +117,7 @@ li > a {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .side-menu {
   position: relative;
@@ -133,15 +130,35 @@ li > a {
   position: relative;
   height: 100%;
   width: 85%;
-  /* background-color: rgb(8, 11, 22); */
-  background-color: bisque;
+  background-color: rgb(77, 19, 79);
+  display: grid;
+  gap: 0.5rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  grid-auto-rows: 125px;
 }
 
-.inner-tile-container {
+.card {
   position: relative;
-  width: 98%;
-  left: 1%;
-  height: 98%;
-  top: 1%;
-  background-color: red;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  margin: 0.2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-tall {
+  grid-row: span 2 / auto;
+}
+
+.card-wide {
+  grid-column: span 2 / auto;
+}
+
+.card-fat {
+  grid-column: span 2 / auto;
+  grid-row: span 2 / auto;
 }
