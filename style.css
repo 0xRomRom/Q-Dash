@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: rgb(8, 11, 22);
+}
+
+nav {
+  position: relative;
+  background-color: rgb(8, 11, 22);
+  /* background-color: green; */
+  width: 100vw;
+  height: 6rem;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+li > a {
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 800;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.brand-logo {
+  position: absolute;
+  height: 5rem;
+  left: 4rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.nav-list {
+  position: relative;
+  top: 2rem;
+
+  left: 20%;
+}
+
+.li-ho1 {
+  position: absolute;
+  left: 23rem;
+  color: rgb(219, 219, 218);
+}
+.li-ho2 {
+  position: absolute;
+  left: 30rem;
+  color: rgb(219, 219, 218);
+}
+.li-ho3 {
+  position: absolute;
+  left: 40rem;
+  color: rgb(219, 219, 218);
+}
+
+.li-ho1:hover {
+  transition: all 0.1s ease-in-out;
+  margin-top: 0.2rem;
+  color: white;
+}
+.li-ho2:hover {
+  transition: all 0.1s ease-in-out;
+  margin-top: 0.2rem;
+  color: white;
+}
+.li-ho3:hover {
+  transition: all 0.1s ease-in-out;
+  margin-top: 0.2rem;
+  color: white;
+}
