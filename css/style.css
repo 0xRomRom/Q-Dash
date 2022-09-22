@@ -171,14 +171,14 @@ li > a {
     grid-auto-rows: 115px;
   }
 }
-/* 
+
 @media only screen and (max-width: 1780px) {
-  .tile-container {
-    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
-    grid-auto-rows: 85px;
+  .c-last {
+    display: none;
   }
 }
 
+/* 
 @media only screen and (max-width: 1700px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
