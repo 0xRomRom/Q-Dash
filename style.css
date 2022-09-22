@@ -7,14 +7,22 @@
 
 html {
   background-color: rgb(8, 11, 22);
+/* background-color: red; */
+width: 100vw;
+overflow-x: hidden;
 }
 
 nav {
   position: relative;
   background-color: rgb(8, 11, 22);
-  /* background-color: green; */
-  width: 100vw;
+  width: 100%;
   height: 6rem;
+}
+
+.main-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 li {
@@ -35,14 +43,14 @@ li > a {
   position: absolute;
   height: 5rem;
   left: 4rem;
-  top: 1rem;
+  top: 0.5rem;
   cursor: pointer;
 }
 
 .nav-list {
   position: relative;
   top: 2rem;
-
+  height: 4rem;
   left: 20%;
 }
 
@@ -51,14 +59,23 @@ li > a {
   left: 23rem;
   color: rgb(219, 219, 218);
 }
+
 .li-ho2 {
   position: absolute;
   left: 30rem;
   color: rgb(219, 219, 218);
 }
+
+
 .li-ho3 {
   position: absolute;
   left: 40rem;
+  color: rgb(219, 219, 218);
+}
+
+.li-ho4 {
+  position: absolute;
+  left: 70rem;
   color: rgb(219, 219, 218);
 }
 
@@ -67,13 +84,64 @@ li > a {
   margin-top: 0.2rem;
   color: white;
 }
+
 .li-ho2:hover {
   transition: all 0.1s ease-in-out;
   margin-top: 0.2rem;
   color: white;
 }
+
 .li-ho3:hover {
   transition: all 0.1s ease-in-out;
   margin-top: 0.2rem;
   color: white;
+}
+
+.li-ho4:hover {
+  transition: all 0.1s ease-in-out;
+  color: white;
+}
+
+.hr-div {
+  position: relative;
+  width: 95%;
+  left: 2.5%;
+  height: 1px;
+  background-color: rgb(200, 195, 195);
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  background-color: blue;
+  height: 50.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.side-menu {
+  position: relative;
+  width: 15%;
+  height: 100%;
+  background-color: rgb(13, 18, 37);
+}
+
+.tile-container {
+  position: relative;
+  height: 100%;
+  width: 85%;
+  /* background-color: rgb(8, 11, 22); */
+  background-color: bisque;
+}
+
+.inner-tile-container {
+  position: relative;
+  width: 98%;
+  left: 1%;
+  height: 98%;
+  top: 1%;
+  background-color: red;
 }
