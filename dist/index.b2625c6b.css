@@ -162,4 +162,25 @@ li > a {
   }
 }
 
+@media only screen and (max-width: 1700px) {
+  .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: 75px;
+  }
+}
+
+@media only screen and (max-width: 1660px) {
+  .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-auto-rows: 110px;
+  }
+}
+
+@media only screen and (max-width: 1595px) {
+  .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+  }
+}
+
 /*# sourceMappingURL=index.b2625c6b.css.map */
