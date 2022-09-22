@@ -120,62 +120,6 @@ li > a {
   align-items: center;
 }
 
-.side-menu {
-  position: relative;
-  width: 15%;
-  height: 100%;
-  background-color: rgb(8, 11, 22);
-  /* border: 1px solid white; */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-.side-style {
-  position: relative;
-  width: 90%;
-  height: 3rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 0.2rem;
-  margin-top: 3rem;
-  cursor: pointer;
-  background-color: rgb(14, 19, 38);
-  transition: all 0.1s ease-in-out;
-  box-shadow: 0px 0px 10px rgb(14, 19, 38);
-}
-
-.side-style:hover {
-  background-color: rgb(14, 19, 38);
-}
-
-i {
-  position: absolute;
-  left: -3rem;
-}
-
-.side-style:hover i {
-  transition: all 0.1s ease-in-out;
-  position: relative;
-  color: red;
-  position: absolute;
-  transform: translateX(300%);
-}
-
-.side-text {
-  color: white;
-  font-family: "Open Sans";
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.fa-clock {
-  color: white;
-  font-size: 1.5rem;
-}
-
 .tile-container {
   position: relative;
   height: 100%;

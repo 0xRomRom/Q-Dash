@@ -106,60 +106,6 @@ li > a {
   position: relative;
 }
 
-.side-menu {
-  width: 15%;
-  height: 100%;
-  background-color: #080b16;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.side-style {
-  width: 90%;
-  height: 3rem;
-  cursor: pointer;
-  background-color: #0e1326;
-  border-radius: .2rem;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 3rem;
-  transition: all .1s ease-in-out;
-  display: flex;
-  position: relative;
-  box-shadow: 0 0 10px #0e1326;
-}
-
-.side-style:hover {
-  background-color: #0e1326;
-}
-
-.i1 {
-  position: absolute;
-  left: -3rem;
-}
-
-.side-style:hover .i1 {
-  color: red;
-  transition: all .1s ease-in-out;
-  position: absolute;
-  transform: translateX(300%);
-}
-
-.side-text {
-  color: #fff;
-  letter-spacing: 2px;
-  font-family: Open Sans;
-  font-weight: 800;
-}
-
-.fa-clock {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
 .tile-container {
   height: 100%;
   width: 85%;
@@ -195,4 +141,4 @@ li > a {
   grid-area: span 2 / span 2;
 }
 
-/*# sourceMappingURL=index.3a01df49.css.map */
+/*# sourceMappingURL=index.b2625c6b.css.map */

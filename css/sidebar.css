@@ -1,0 +1,67 @@
+.side-menu {
+  position: relative;
+  width: 15%;
+  height: 100%;
+  background-color: rgb(8, 11, 22);
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-style {
+  position: relative;
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.2rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  background-color: rgb(14, 19, 38);
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 10px rgb(14, 19, 38);
+}
+
+.i1 {
+  position: absolute;
+  left: -3rem;
+}
+
+.watchlist:hover .i1 {
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  position: absolute;
+  transform: translateX(230%);
+}
+
+.i2 {
+  position: absolute;
+  left: -3rem;
+}
+
+.search-contract:hover .i2 {
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  position: absolute;
+  transform: translateX(230%);
+}
+
+.side-text {
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.fa-clock {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.fa-magnifying-glass-chart {
+  color: white;
+  font-size: 1.5rem;
+}
