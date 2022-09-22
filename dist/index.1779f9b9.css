@@ -35,6 +35,10 @@
   transform: translateX(230%);
 }
 
+.side-style:hover p {
+  color: #fff;
+}
+
 .i2 {
   position: absolute;
   left: -3rem;
@@ -58,7 +62,7 @@
 }
 
 .side-text {
-  color: #fff;
+  color: #d7cfcf;
   letter-spacing: 2px;
   font-family: Open Sans;
   font-weight: 800;
