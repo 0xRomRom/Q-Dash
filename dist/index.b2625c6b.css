@@ -164,6 +164,10 @@ li > a {
   font-size: 1.4rem;
 }
 
+.c-small3 {
+  font-size: 1.2rem;
+}
+
 .card-price {
   font-size: 1.5rem;
 }
@@ -213,23 +217,23 @@ li > a {
 }
 
 .d1 {
-  background: linear-gradient(#eb2626, #cd5f9c);
+  background: linear-gradient(#eb2626, #cd5f9c) !important;
 }
 
 .d2 {
-  background: linear-gradient(#ed0b0b, #b41333);
+  background: linear-gradient(#ed0b0b, #b41333) !important;
 }
 
 .u1 {
-  background: linear-gradient(to left, #00bf8f, #085342);
+  background: linear-gradient(to left, #00bf8f, #085342) !important;
 }
 
 .u2 {
-  background: linear-gradient(to left, #6cbf5d, #09ee11);
+  background: linear-gradient(to left, #6cbf5d, #09ee11) !important;
 }
 
 .neutral {
-  background: linear-gradient(to left, #6969b8, #9e4577);
+  background: linear-gradient(to left, #6969b8, #9e4577) !important;
 }
 
 .shiba-price {

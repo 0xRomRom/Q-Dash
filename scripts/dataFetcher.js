@@ -104,6 +104,142 @@ const tezosPrice = document.querySelector(".tezos-price");
 const tezosChange = document.querySelector(".tezos-change");
 const tezosDiv = document.querySelector(".tezos-div");
 
+const axiePrice = document.querySelector(".axie-price");
+const axieChange = document.querySelector(".axie-change");
+const axieDiv = document.querySelector(".axie-div");
+
+const thetaPrice = document.querySelector(".theta-price");
+const thetaChange = document.querySelector(".theta-change");
+const thetaDiv = document.querySelector(".theta-div");
+
+const elrondPrice = document.querySelector(".elrond-price");
+const elrondChange = document.querySelector(".elrond-change");
+const elrondDiv = document.querySelector(".elrond-div");
+
+const aavePrice = document.querySelector(".aave-price");
+const aaveChange = document.querySelector(".aave-change");
+const aaveDiv = document.querySelector(".aave-div");
+
+const kucoinPrice = document.querySelector(".kucoin-price");
+const kucoinChange = document.querySelector(".kucoin-change");
+const kucoinDiv = document.querySelector(".kucoin-div");
+
+const xrpPrice = document.querySelector(".xrp-price");
+const xrpChange = document.querySelector(".xrp-change");
+const xrpDiv = document.querySelector(".xrp-div");
+
+const iotaPrice = document.querySelector(".iota-price");
+const iotaChange = document.querySelector(".iota-change");
+const iotaDiv = document.querySelector(".iota-div");
+
+const ethPrice = document.querySelector(".eth-price");
+const ethChange = document.querySelector(".eth-change");
+const ethDiv = document.querySelector(".eth-div");
+
+const zcashPrice = document.querySelector(".zcash-price");
+const zcashChange = document.querySelector(".zcash-change");
+const zcashDiv = document.querySelector(".zcash-div");
+
+const huobiPrice = document.querySelector(".huobi-price");
+const huobiChange = document.querySelector(".huobi-change");
+const huobiDiv = document.querySelector(".huobi-div");
+
+const solPrice = document.querySelector(".sol-price");
+const solChange = document.querySelector(".sol-change");
+const solDiv = document.querySelector(".sol-div");
+
+const evmosPrice = document.querySelector(".evmos-price");
+const evmosChange = document.querySelector(".evmos-change");
+const evmosDiv = document.querySelector(".evmos-div");
+
+const celsiusPrice = document.querySelector(".celsius-price");
+const celsiusChange = document.querySelector(".celsius-change");
+const celsiusDiv = document.querySelector(".celsius-div");
+
+const cakePrice = document.querySelector(".cake-price");
+const cakeChange = document.querySelector(".cake-change");
+const cakeDiv = document.querySelector(".cake-div");
+
+const gatePrice = document.querySelector(".gate-price");
+const gateChange = document.querySelector(".gate-change");
+const gateDiv = document.querySelector(".gate-div");
+
+const neoPrice = document.querySelector(".neo-price");
+const neoChange = document.querySelector(".neo-change");
+const neoDiv = document.querySelector(".neo-div");
+
+const makerPrice = document.querySelector(".maker-price");
+const makerChange = document.querySelector(".maker-change");
+const makerDiv = document.querySelector(".maker-div");
+
+const heliumPrice = document.querySelector(".helium-price");
+const heliumChange = document.querySelector(".helium-change");
+const heliumDiv = document.querySelector(".helium-div");
+
+const fantomPrice = document.querySelector(".fantom-price");
+const fantomChange = document.querySelector(".fantom-change");
+const fantomDiv = document.querySelector(".fantom-div");
+
+const syntPrice = document.querySelector(".synt-price");
+const syntChange = document.querySelector(".synt-change");
+const syntDiv = document.querySelector(".synt-div");
+
+const bnbPrice = document.querySelector(".bnb-price");
+const bnbChange = document.querySelector(".bnb-change");
+const bnbDiv = document.querySelector(".bnb-div");
+
+const osmosisPrice = document.querySelector(".osmosis-price");
+const osmosisChange = document.querySelector(".osmosis-change");
+const osmosisDiv = document.querySelector(".osmosis-div");
+
+const nexoPrice = document.querySelector(".nexo-price");
+const nexoChange = document.querySelector(".nexo-change");
+const nexoDiv = document.querySelector(".nexo-div");
+
+const cethPrice = document.querySelector(".ceth-price");
+const cethChange = document.querySelector(".ceth-change");
+const cethDiv = document.querySelector(".ceth-div");
+
+const arwPrice = document.querySelector(".arw-price");
+const arwChange = document.querySelector(".arw-change");
+const arwDiv = document.querySelector(".arw-div");
+
+const zilPrice = document.querySelector(".zil-price");
+const zilChange = document.querySelector(".zil-change");
+const zilDiv = document.querySelector(".zil-div");
+
+const runePrice = document.querySelector(".rune-price");
+const runeChange = document.querySelector(".rune-change");
+const runeDiv = document.querySelector(".rune-div");
+
+const dashPrice = document.querySelector(".dash-price");
+const dashChange = document.querySelector(".dash-change");
+const dashDiv = document.querySelector(".dash-div");
+
+const rocketPrice = document.querySelector(".rocket-price");
+const rocketChange = document.querySelector(".rocket-change");
+const rocketDiv = document.querySelector(".rocket-div");
+
+const stacksPrice = document.querySelector(".stacks-price");
+const stacksChange = document.querySelector(".stacks-change");
+const stacksDiv = document.querySelector(".stacks-div");
+
+const wavesPrice = document.querySelector(".waves-price");
+const wavesChange = document.querySelector(".waves-change");
+const wavesDiv = document.querySelector(".waves-div");
+
+const kavaPrice = document.querySelector(".kava-price");
+const kavaChange = document.querySelector(".kava-change");
+const kavaDiv = document.querySelector(".kava-div");
+
+const xdcPrice = document.querySelector(".xdc-price");
+const xdcChange = document.querySelector(".xdc-change");
+const xdcDiv = document.querySelector(".xdc-div");
+
+const compPrice = document.querySelector(".comp-price");
+const compChange = document.querySelector(".comp-change");
+const compDiv = document.querySelector(".comp-div");
+
 const classChecker = (coinDiv, change) => {
   if (change > -2.5 && change < 2.5) {
     coinDiv.classList.add("neutral");
@@ -176,3 +312,37 @@ dataFetcher("bitcoin-cash", bcashDiv, bcashChange, bcashPrice, 1);
 dataFetcher("vechain", vetDiv, vetChange, vetPrice, 4);
 dataFetcher("quant-network", quantDiv, quantChange, quantPrice, 2);
 dataFetcher("tezos", tezosDiv, tezosChange, tezosPrice, 2);
+dataFetcher("axie-infinity", axieDiv, axieChange, axiePrice, 2);
+dataFetcher("theta-token", thetaDiv, thetaChange, thetaPrice, 2);
+dataFetcher("elrond-erd-2", elrondDiv, elrondChange, elrondPrice, 2);
+dataFetcher("aave", aaveDiv, aaveChange, aavePrice, 2);
+dataFetcher("kucoin-shares", kucoinDiv, kucoinChange, kucoinPrice, 2);
+dataFetcher("ripple", xrpDiv, xrpChange, xrpPrice, 2);
+dataFetcher("iota", iotaDiv, iotaChange, iotaPrice, 2);
+dataFetcher("ethereum", ethDiv, ethChange, ethPrice, 2);
+dataFetcher("zcash", zcashDiv, zcashChange, zcashPrice, 2);
+dataFetcher("huobi-token", huobiDiv, huobiChange, huobiPrice, 2);
+dataFetcher("solana", solDiv, solChange, solPrice, 2);
+dataFetcher("evmos", evmosDiv, evmosChange, evmosPrice, 2);
+dataFetcher("celsius-degree-token", celsiusDiv, celsiusChange, celsiusPrice, 2);
+dataFetcher("pancakeswap-token", cakeDiv, cakeChange, cakePrice, 2);
+dataFetcher("gatechain-token", gateDiv, gateChange, gatePrice, 2);
+dataFetcher("neo", neoDiv, neoChange, neoPrice, 2);
+dataFetcher("maker", makerDiv, makerChange, makerPrice, 2);
+dataFetcher("helium", heliumDiv, heliumChange, heliumPrice, 2);
+dataFetcher("fantom", fantomDiv, fantomChange, fantomPrice, 2);
+dataFetcher("havven", syntDiv, syntChange, syntPrice, 2);
+dataFetcher("binancecoin", bnbDiv, bnbChange, bnbPrice, 2);
+dataFetcher("osmosis", osmosisDiv, osmosisChange, osmosisPrice, 2);
+dataFetcher("nexo", nexoDiv, nexoChange, nexoPrice, 2);
+dataFetcher("compound-ether", cethDiv, cethChange, cethPrice, 2);
+dataFetcher("arweave", arwDiv, arwChange, arwPrice, 2);
+dataFetcher("zilliqa", zilDiv, zilChange, zilPrice, 2);
+dataFetcher("thorchain", runeDiv, runeChange, runePrice, 2);
+dataFetcher("dash", dashDiv, dashChange, dashPrice, 2);
+dataFetcher("rocket-pool", rocketDiv, rocketChange, rocketPrice, 2);
+dataFetcher("blockstack", stacksDiv, stacksChange, stacksPrice, 2);
+dataFetcher("waves", wavesDiv, wavesChange, wavesPrice, 2);
+dataFetcher("kava", kavaDiv, kavaChange, kavaPrice, 2);
+dataFetcher("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
+dataFetcher("compound-governance-token", compDiv, compChange, compPrice, 2);
