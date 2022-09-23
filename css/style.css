@@ -12,6 +12,10 @@ html {
   overflow-x: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 nav {
   position: relative;
   background-color: rgb(8, 11, 22);
@@ -270,6 +274,27 @@ li > a {
 
 .shiba-price {
   font-size: 1.1rem;
+}
+
+
+.lightbox {
+  position: absolute;
+  left: 30rem;
+  top: 5rem;
+  width: 50rem;
+  height: 50rem;
+  border: 2px solid rgb(29, 185, 196);
+  background-color: rgb(14, 19, 38);
+  border-radius: 0.4rem;
+}
+
+.fa-x {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  left: 45rem;
+  top: 2rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1915px) {
