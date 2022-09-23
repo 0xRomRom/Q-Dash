@@ -101,15 +101,6 @@ li > a {
   color: white;
 }
 
-.hr-div {
-  position: relative;
-  width: 95%;
-  left: 2.5%;
-  height: 1px;
-  /* background-color: rgb(200, 195, 195); */
-  background-color: transparent;
-}
-
 .main-container {
   position: relative;
   width: 100%;
@@ -162,6 +153,8 @@ li > a {
 
 .card-wide {
   grid-column: span 2 / auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .card-fat {
@@ -171,6 +164,19 @@ li > a {
 
 .card-title {
   font-size: 2.5rem;
+  text-align: center;
+}
+
+.c-mid {
+  font-size: 2rem;
+}
+
+.c-small {
+  font-size: 1.6rem;
+}
+
+.c-small2 {
+  font-size: 1.4rem;
 }
 
 .card-price {
@@ -193,23 +199,51 @@ li > a {
   font-size: 1.75rem;
 }
 
-.card-radial-d1 {
+.card-title-wide {
+  font-size: 3.5rem;
+}
+
+.card-price-wide {
+  font-size: 1.75rem;
+}
+
+.card-percentage-wide {
+  font-size: 1rem;
+}
+
+.card-title-tall {
+  font-size: 3.5rem;
+}
+
+.card-price-tall {
+  font-size: 1.75rem;
+}
+
+.card-percentage-tall {
+  font-size: 1rem;
+}
+
+.eth {
+  font-size: 3rem;
+}
+
+.d1 {
   background: linear-gradient(#eb2626, #cd5f9c);
 }
 
-.card-radial-d2 {
+.d2 {
   background: linear-gradient(#ed0b0b, #b41333);
 }
 
-.card-radial-u1 {
+.u1 {
   background: linear-gradient(to left, #00bf8f, #085342);
 }
 
-.card-radial-u2 {
+.u2 {
   background: linear-gradient(to left, #6cbf5d, #09ee11);
 }
 
-.card-radial-neutral {
+.neutral {
   background: linear-gradient(to left, #6969b8, #9e4577);
 }
 

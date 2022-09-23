@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
     <link href="/index.b2625c6b.css" rel="stylesheet">
     <link href="/index.1779f9b9.css" rel="stylesheet">
-    <script defer="" src="/index.8cfc62b9.js"></script>
+    <script defer="" src="/index.cde5dfe0.js"></script>
+    <script defer="" src="/index.72af17b3.js"></script>
     <script src="https://kit.fontawesome.com/5f3c108898.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -24,7 +25,6 @@
           <li><a href="/press" class="li-ho4">Log In</a></li>
         </ul>
       </nav>
-      <div class="hr-div"></div>
       <div class="main-container">
         <div class="side-menu">
           <div class="watchlist side-style">
@@ -45,74 +45,309 @@
           </div>
         </div>
         <div class="tile-container">
-          <div class="card card-radial-d1">Down</div>
-          <div class="card card-radial-d2">Down Bad</div>
-          <div class="card card-radial-u1">Up</div>
-          <div class="card card-radial-u2">Up Fat</div>
-          <div class="card card-fat card-radial-d1" data-id="bitcoin">
-            <h1 class="card-title card-title-fat">Bitcoin</h1>
-            <p class="card-price-fat">$40032</p>
-            <p class="card-percentage-fat">-2.7%</p>
+          <div class="card cardano-div">
+            <h1 class="card-title c-small">Cardano</h1>
+            <p class="card-price cardano-price"></p>
+            <p class="card-percentage cardano-change"></p>
           </div>
-          <div class="card card-radial-neutral">Neutral</div>
-          <div class="card card-radial-u2">
+          <div class="card d2">
+            <h1 class="card-title">Doge</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card u1">
+            <h1 class="card-title c-small">Polkadot</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card u2">
+            <h1 class="card-title c-mid">Shiba</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card card-fat bitcoin-div" data-id="bitcoin">
+            <h1 class="card-title-fat">Bitcoin</h1>
+            <p class="card-price-fat bitcoin-price"></p>
+            <p class="card-percentage-fat bitcoin-change"></p>
+          </div>
+          <div class="card neutral">
+            <h1 class="card-title c-small">Polygon</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card u2" data-id="avax">
             <h1 class="card-title">AVAX</h1>
             <p class="card-price">$43.20</p>
             <p class="card-percentage">+8.2%</p>
           </div>
-          <div class="card">8</div>
-          <div class="card">9</div>
-          <div class="card">10</div>
-          <div class="card">11</div>
-          <div class="card card-wide card-radial-d2">12</div>
-          <div class="card">13</div>
-          <div class="card">5</div>
-          <div class="card">6</div>
-          <div class="card">7</div>
-          <div class="card">8</div>
-          <div class="card">9</div>
-          <div class="card">10</div>
-          <div class="card">11</div>
-          <div class="card card-radial-u1">12</div>
-          <div class="card">13</div>
-          <div class="card">5</div>
-          <div class="card">6</div>
-          <div class="card">7</div>
-          <div class="card">8</div>
-          <div class="card">11</div>
-          <div class="card">12</div>
-          <div class="card">13</div>
-          <div class="card">5</div>
-          <div class="card">6</div>
-          <div class="card card-tall card-radial-u1">7</div>
-          <div class="card">8</div>
-          <div class="card card-fat card-radial-d2">9</div>
-          <div class="card">10</div>
-          <div class="card">11</div>
-          <div class="card card-wide card-radial-u1">12</div>
-          <div class="card c-last">13</div>
-          <div class="card c-last">5</div>
-          <div class="card">6</div>
-          <div class="card">7</div>
-          <div class="card">8</div>
-          <div class="card">11</div>
-          <div class="card">12</div>
-          <div class="card">13</div>
-          <div class="card">5</div>
-          <div class="card card-fat card-radial-u2">6</div>
-          <div class="card">7</div>
-          <div class="card">8</div>
-          <div class="card">9</div>
-          <div class="card">10</div>
-          <div class="card">11</div>
-          <div class="card">12</div>
-          <div class="card">13</div>
-          <div class="card c-last2">5</div>
-          <div class="card c-last2">6</div>
-          <div class="card c-last">7</div>
-          <div class="card c-last">8</div>
-          <div class="card c-last">9</div>
-          <div class="card c-last">10</div>
+          <div class="card">
+            <h1 class="card-title">TRON</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small2">Avalanche</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Uniswap</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Cosmos</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card card-wide d2">
+            <h1 class="card-title-wide">EOS</h1>
+            <p class="card-price-wide">$58.32</p>
+            <p class="card-percentage-wide">-4.7%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small2">ETH <br>Classic</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Litecoin</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">OKB</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small2">Chainlink</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">XLM</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">FTX</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">NEAR</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Cronos</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card u1">
+            <h1 class="card-title c-small2">Algorand</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Monero</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">
+              Bitcoin <br>
+              Cash
+            </h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">VeChain</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-mid">Quant</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Tezos</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Axie</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Theta</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-mid">Elrond</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Aave</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-mid">KuCoin</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card card-tall u1">
+            <h1 class="card-title-tall">XRP</h1>
+            <p class="card-price-tall">$58.32</p>
+            <p class="card-percentage-tall">-4.7%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">IOTA</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card card-fat d2">
+            <h1 class="card-title-fat eth">Ethereum</h1>
+            <p class="card-price-fat">$1202</p>
+            <p class="card-percentage-fat">-5.7%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Zcash</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Huobi</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card card-wide u1">
+            <h1 class="card-title-wide">Solana</h1>
+            <p class="card-price-wide">$40.32</p>
+            <p class="card-percentage-wide">+3.7%</p>
+          </div>
+          <div class="card c-last">
+            <h1 class="card-title c-mid">Evmos</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last">
+            <h1 class="card-title c-mid">Celcius</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">CAKE</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Gate</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">NEO</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-mid">Maker</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-mid">Helium</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Fantom</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small2">Synthetix</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card card-fat u2">
+            <h1 class="card-title-fat eth">BNB</h1>
+            <p class="card-price-fat">$230</p>
+            <p class="card-percentage-fat">+9.6%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Osmosis</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">NEXO</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">cETH</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-small">Arweave</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title c-mid">Zilliqa</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">RUNE</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card">
+            <h1 class="card-title">Dash</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last2">
+            <h1 class="card-title c-small2">Rocket Pool</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last2">
+            <h1 class="card-title c-mid">Stacks</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last">
+            <h1 class="card-title c-mid">Waves</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last">
+            <h1 class="card-title">Kava</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last">
+            <h1 class="card-title">XDC</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
+          <div class="card c-last">
+            <h1 class="card-title">Trust</h1>
+            <p class="card-price">$43.20</p>
+            <p class="card-percentage">+8.2%</p>
+          </div>
         </div>
       </div>
     </div>
