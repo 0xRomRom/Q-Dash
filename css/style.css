@@ -118,9 +118,25 @@ li > a {
   background-color: rgb(8, 11, 22);
   display: grid;
   gap: 0.5rem;
-
   grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
   grid-auto-rows: 125px;
+}
+
+.rotater {
+  animation: rotates 1.2s ease-in-out 1;
+}
+
+@keyframes rotates {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  50% {
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
 }
 
 .card {

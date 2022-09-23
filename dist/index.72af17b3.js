@@ -796,7 +796,12 @@ setInterval(()=>{
     dataFetcher("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
     dataFetcher("compound-governance-token", compDiv, compChange, compPrice, 2);
     console.log("Data Fetched");
+    cardanoDiv.classList.remove("rotater");
 }, 1000);
+const allCards = document.querySelectorAll(".card");
+allCards.forEach((card)=>{
+    card.classList.add("rotater");
+});
 
 },{}]},["cjnog","jWrRo"], "jWrRo", "parcelRequire379f")
 
