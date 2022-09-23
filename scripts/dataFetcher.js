@@ -291,7 +291,7 @@ const dataFetcher = async (
 
 
 
-setInterval(() => {
+// setInterval(() => {
   dataFetcher("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
   dataFetcher("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
   dataFetcher("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
@@ -353,12 +353,7 @@ setInterval(() => {
   dataFetcher("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
   dataFetcher("compound-governance-token", compDiv, compChange, compPrice, 2);
   console.log('Data Fetched')
-}, 1000)
+// }, 30000)
 
 
 
-const allCards = document.querySelectorAll('.card');
-
-allCards.forEach((card) => {
-  card.classList.add('rotater');
-})

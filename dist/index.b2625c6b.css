@@ -270,6 +270,7 @@ li > a {
   background-color: #0e1326;
   border: 2px solid #1db9c4;
   border-radius: .4rem;
+  font-family: Open Sans;
   position: absolute;
   top: 5rem;
   left: 30rem;
@@ -282,6 +283,12 @@ li > a {
   position: absolute;
   top: 2rem;
   left: 45rem;
+}
+
+.rank {
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
 }
 
 @media only screen and (max-width: 1915px) {

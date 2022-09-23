@@ -286,6 +286,7 @@ li > a {
   border: 2px solid rgb(29, 185, 196);
   background-color: rgb(14, 19, 38);
   border-radius: 0.4rem;
+  font-family: "Open Sans";
 }
 
 .fa-x {
@@ -295,6 +296,12 @@ li > a {
   left: 45rem;
   top: 2rem;
   cursor: pointer;
+}
+
+.rank {
+  position: relative;
+  font-size: 2rem;
+  color: white;
 }
 
 @media only screen and (max-width: 1915px) {
