@@ -282,74 +282,78 @@ const dataFetcher = async (
   priceTxt,
   fixedParam
 ) => {
-  const response = await fetch(
-    `https://api.coingecko.com/api/v3/simple/price?ids=${coinName}&vs_currencies=usd&include_24hr_change=true`
-  );
-  const data = await response.json();
-  dataUpdater(data, changeDiv, coinName, changeTxt, priceTxt, fixedParam);
+    const response = await fetch(
+    `https://api.coingecko.com/api/v3/simple/price?ids=${coinName}&vs_currencies=usd&include_24hr_change=true`)
+    const data = await response.json();
+  dataUpdater(data, changeDiv, coinName, changeTxt, priceTxt, fixedParam); 
 };
 
-setInterval(
-  dataFetcher("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0),
-  5000
-);
 
-dataFetcher("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
-dataFetcher("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
-dataFetcher("polkadot", polkadotDiv, polkadotChange, polkadotPrice, 2);
-dataFetcher("shiba-inu", shibaDiv, shibaChange, shibaPrice, 7);
-dataFetcher("matic-network", polygonDiv, polygonChange, polygonPrice, 2);
-dataFetcher("avalanche-2", avaxDiv, avaxChange, avaxPrice, 2);
-dataFetcher("tron", trxDiv, trxChange, trxPrice, 2);
-dataFetcher("leo-token", leoDiv, leoChange, leoPrice, 2);
-dataFetcher("uniswap", uniDiv, uniChange, uniPrice, 2);
-dataFetcher("cosmos", cosmosDiv, cosmosChange, cosmosPrice, 2);
-dataFetcher("eos", eosDiv, eosChange, eosPrice, 2);
-dataFetcher("ethereum-classic", ethCDiv, ethCChange, ethCPrice, 2);
-dataFetcher("litecoin", litecoinDiv, litecoinChange, litecoinPrice, 2);
-dataFetcher("okb", okbDiv, okbChange, okbPrice, 2);
-dataFetcher("chainlink", chainlinkDiv, chainlinkChange, chainlinkPrice, 2);
-dataFetcher("stellar", xlmDiv, xlmChange, xlmPrice, 2);
-dataFetcher("ftx-token", ftxDiv, ftxChange, ftxPrice, 2);
-dataFetcher("near", nearDiv, nearChange, nearPrice, 2);
-dataFetcher("crypto-com-chain", cronosDiv, cronosChange, cronosPrice, 2);
-dataFetcher("algorand", algoDiv, algoChange, algoPrice, 2);
-dataFetcher("monero", moneroDiv, moneroChange, moneroPrice, 1);
-dataFetcher("bitcoin-cash", bcashDiv, bcashChange, bcashPrice, 1);
-dataFetcher("vechain", vetDiv, vetChange, vetPrice, 4);
-dataFetcher("quant-network", quantDiv, quantChange, quantPrice, 2);
-dataFetcher("tezos", tezosDiv, tezosChange, tezosPrice, 2);
-dataFetcher("axie-infinity", axieDiv, axieChange, axiePrice, 2);
-dataFetcher("theta-token", thetaDiv, thetaChange, thetaPrice, 2);
-dataFetcher("elrond-erd-2", elrondDiv, elrondChange, elrondPrice, 2);
-dataFetcher("aave", aaveDiv, aaveChange, aavePrice, 2);
-dataFetcher("kucoin-shares", kucoinDiv, kucoinChange, kucoinPrice, 2);
-dataFetcher("ripple", xrpDiv, xrpChange, xrpPrice, 2);
-dataFetcher("iota", iotaDiv, iotaChange, iotaPrice, 2);
-dataFetcher("ethereum", ethDiv, ethChange, ethPrice, 2);
-dataFetcher("zcash", zcashDiv, zcashChange, zcashPrice, 2);
-dataFetcher("huobi-token", huobiDiv, huobiChange, huobiPrice, 2);
-dataFetcher("solana", solDiv, solChange, solPrice, 2);
-dataFetcher("evmos", evmosDiv, evmosChange, evmosPrice, 2);
-dataFetcher("celsius-degree-token", celsiusDiv, celsiusChange, celsiusPrice, 2);
-dataFetcher("pancakeswap-token", cakeDiv, cakeChange, cakePrice, 2);
-dataFetcher("gatechain-token", gateDiv, gateChange, gatePrice, 2);
-dataFetcher("neo", neoDiv, neoChange, neoPrice, 2);
-dataFetcher("maker", makerDiv, makerChange, makerPrice, 2);
-dataFetcher("helium", heliumDiv, heliumChange, heliumPrice, 2);
-dataFetcher("fantom", fantomDiv, fantomChange, fantomPrice, 2);
-dataFetcher("havven", syntDiv, syntChange, syntPrice, 2);
-dataFetcher("binancecoin", bnbDiv, bnbChange, bnbPrice, 2);
-dataFetcher("osmosis", osmosisDiv, osmosisChange, osmosisPrice, 2);
-dataFetcher("nexo", nexoDiv, nexoChange, nexoPrice, 2);
-dataFetcher("compound-ether", cethDiv, cethChange, cethPrice, 2);
-dataFetcher("arweave", arwDiv, arwChange, arwPrice, 2);
-dataFetcher("zilliqa", zilDiv, zilChange, zilPrice, 4);
-dataFetcher("thorchain", runeDiv, runeChange, runePrice, 2);
-dataFetcher("dash", dashDiv, dashChange, dashPrice, 2);
-dataFetcher("rocket-pool", rocketDiv, rocketChange, rocketPrice, 2);
-dataFetcher("blockstack", stacksDiv, stacksChange, stacksPrice, 3);
-dataFetcher("waves", wavesDiv, wavesChange, wavesPrice, 2);
-dataFetcher("kava", kavaDiv, kavaChange, kavaPrice, 2);
-dataFetcher("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
-dataFetcher("compound-governance-token", compDiv, compChange, compPrice, 2);
+
+
+setInterval(() => {
+  dataFetcher("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
+  dataFetcher("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
+  dataFetcher("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
+  dataFetcher("polkadot", polkadotDiv, polkadotChange, polkadotPrice, 2);
+  dataFetcher("shiba-inu", shibaDiv, shibaChange, shibaPrice, 7);
+  dataFetcher("matic-network", polygonDiv, polygonChange, polygonPrice, 2);
+  dataFetcher("avalanche-2", avaxDiv, avaxChange, avaxPrice, 2);
+  dataFetcher("tron", trxDiv, trxChange, trxPrice, 2);
+  dataFetcher("leo-token", leoDiv, leoChange, leoPrice, 2);
+  dataFetcher("uniswap", uniDiv, uniChange, uniPrice, 2);
+  dataFetcher("cosmos", cosmosDiv, cosmosChange, cosmosPrice, 2);
+  dataFetcher("eos", eosDiv, eosChange, eosPrice, 2);
+  dataFetcher("ethereum-classic", ethCDiv, ethCChange, ethCPrice, 2);
+  dataFetcher("litecoin", litecoinDiv, litecoinChange, litecoinPrice, 2);
+  dataFetcher("okb", okbDiv, okbChange, okbPrice, 2);
+  dataFetcher("chainlink", chainlinkDiv, chainlinkChange, chainlinkPrice, 2);
+  dataFetcher("stellar", xlmDiv, xlmChange, xlmPrice, 2);
+  dataFetcher("ftx-token", ftxDiv, ftxChange, ftxPrice, 2);
+  dataFetcher("near", nearDiv, nearChange, nearPrice, 2);
+  dataFetcher("crypto-com-chain", cronosDiv, cronosChange, cronosPrice, 2);
+  dataFetcher("algorand", algoDiv, algoChange, algoPrice, 2);
+  dataFetcher("monero", moneroDiv, moneroChange, moneroPrice, 1);
+  dataFetcher("bitcoin-cash", bcashDiv, bcashChange, bcashPrice, 1);
+  dataFetcher("vechain", vetDiv, vetChange, vetPrice, 4);
+  dataFetcher("quant-network", quantDiv, quantChange, quantPrice, 2);
+  dataFetcher("tezos", tezosDiv, tezosChange, tezosPrice, 2);
+  dataFetcher("axie-infinity", axieDiv, axieChange, axiePrice, 2);
+  dataFetcher("theta-token", thetaDiv, thetaChange, thetaPrice, 2);
+  dataFetcher("elrond-erd-2", elrondDiv, elrondChange, elrondPrice, 2);
+  dataFetcher("aave", aaveDiv, aaveChange, aavePrice, 2);
+  dataFetcher("kucoin-shares", kucoinDiv, kucoinChange, kucoinPrice, 2);
+  dataFetcher("ripple", xrpDiv, xrpChange, xrpPrice, 2);
+  dataFetcher("iota", iotaDiv, iotaChange, iotaPrice, 2);
+  dataFetcher("ethereum", ethDiv, ethChange, ethPrice, 2);
+  dataFetcher("zcash", zcashDiv, zcashChange, zcashPrice, 2);
+  dataFetcher("huobi-token", huobiDiv, huobiChange, huobiPrice, 2);
+  dataFetcher("solana", solDiv, solChange, solPrice, 2);
+  dataFetcher("evmos", evmosDiv, evmosChange, evmosPrice, 2);
+  dataFetcher("celsius-degree-token", celsiusDiv, celsiusChange, celsiusPrice, 2);
+  dataFetcher("pancakeswap-token", cakeDiv, cakeChange, cakePrice, 2);
+  dataFetcher("gatechain-token", gateDiv, gateChange, gatePrice, 2);
+  dataFetcher("neo", neoDiv, neoChange, neoPrice, 2);
+  dataFetcher("maker", makerDiv, makerChange, makerPrice, 2);
+  dataFetcher("helium", heliumDiv, heliumChange, heliumPrice, 2);
+  dataFetcher("fantom", fantomDiv, fantomChange, fantomPrice, 2);
+  dataFetcher("havven", syntDiv, syntChange, syntPrice, 2);
+  dataFetcher("binancecoin", bnbDiv, bnbChange, bnbPrice, 2);
+  dataFetcher("osmosis", osmosisDiv, osmosisChange, osmosisPrice, 2);
+  dataFetcher("nexo", nexoDiv, nexoChange, nexoPrice, 2);
+  dataFetcher("compound-ether", cethDiv, cethChange, cethPrice, 2);
+  dataFetcher("arweave", arwDiv, arwChange, arwPrice, 2);
+  dataFetcher("zilliqa", zilDiv, zilChange, zilPrice, 4);
+  dataFetcher("thorchain", runeDiv, runeChange, runePrice, 2);
+  dataFetcher("dash", dashDiv, dashChange, dashPrice, 2);
+  dataFetcher("rocket-pool", rocketDiv, rocketChange, rocketPrice, 2);
+  dataFetcher("blockstack", stacksDiv, stacksChange, stacksPrice, 3);
+  dataFetcher("waves", wavesDiv, wavesChange, wavesPrice, 2);
+  dataFetcher("kava", kavaDiv, kavaChange, kavaPrice, 2);
+  dataFetcher("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
+  dataFetcher("compound-governance-token", compDiv, compChange, compPrice, 2);
+  console.log('Data Fetched')
+}, 1000)
+
+
+
