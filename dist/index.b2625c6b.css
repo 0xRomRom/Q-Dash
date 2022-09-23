@@ -123,6 +123,7 @@ li > a {
   margin: .2rem;
   font-family: Open Sans;
   font-weight: 800;
+  transition: all .2s ease-in-out;
   display: flex;
   position: relative;
 }

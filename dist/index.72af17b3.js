@@ -723,6 +723,8 @@ const classChecker = (coinDiv, change)=>{
 const dataUpdater = (data, changeDiv, coinName, changeTxt, priceTxt, fixedParam)=>{
     const price = data[coinName].usd.toFixed(fixedParam);
     const change = data[coinName].usd_24h_change.toFixed(2);
+    priceTxt.textContent = "";
+    changeTxt.textContent = "";
     priceTxt.textContent = `$${price}`;
     changeTxt.textContent = `${change}%`;
     classChecker(changeDiv, change);
@@ -732,9 +734,9 @@ const dataFetcher = async (coinName, changeDiv, changeTxt, priceTxt, fixedParam)
     const data = await response.json();
     dataUpdater(data, changeDiv, coinName, changeTxt, priceTxt, fixedParam);
 };
-dataFetcher("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
+setInterval(dataFetcher("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0), 5000);
 dataFetcher("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
-dataFetcher("dogecoin", dogeDiv, dogeChange, dogePrice, 2);
+dataFetcher("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
 dataFetcher("polkadot", polkadotDiv, polkadotChange, polkadotPrice, 2);
 dataFetcher("shiba-inu", shibaDiv, shibaChange, shibaPrice, 7);
 dataFetcher("matic-network", polygonDiv, polygonChange, polygonPrice, 2);
@@ -783,11 +785,11 @@ dataFetcher("osmosis", osmosisDiv, osmosisChange, osmosisPrice, 2);
 dataFetcher("nexo", nexoDiv, nexoChange, nexoPrice, 2);
 dataFetcher("compound-ether", cethDiv, cethChange, cethPrice, 2);
 dataFetcher("arweave", arwDiv, arwChange, arwPrice, 2);
-dataFetcher("zilliqa", zilDiv, zilChange, zilPrice, 2);
+dataFetcher("zilliqa", zilDiv, zilChange, zilPrice, 4);
 dataFetcher("thorchain", runeDiv, runeChange, runePrice, 2);
 dataFetcher("dash", dashDiv, dashChange, dashPrice, 2);
 dataFetcher("rocket-pool", rocketDiv, rocketChange, rocketPrice, 2);
-dataFetcher("blockstack", stacksDiv, stacksChange, stacksPrice, 2);
+dataFetcher("blockstack", stacksDiv, stacksChange, stacksPrice, 3);
 dataFetcher("waves", wavesDiv, wavesChange, wavesPrice, 2);
 dataFetcher("kava", kavaDiv, kavaChange, kavaPrice, 2);
 dataFetcher("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);

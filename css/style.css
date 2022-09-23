@@ -139,6 +139,7 @@ li > a {
   font-family: "Open Sans";
   font-weight: 800;
   letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
