@@ -287,6 +287,7 @@ li > a {
   background-color: rgb(14, 19, 38);
   border-radius: 0.4rem;
   font-family: "Open Sans";
+  color: white;
 }
 
 .fa-x {
@@ -296,6 +297,7 @@ li > a {
   left: 45rem;
   top: 2rem;
   cursor: pointer;
+  z-index: 10;
 }
 
 .rank {
@@ -303,6 +305,21 @@ li > a {
   font-size: 2rem;
   color: white;
 }
+
+.coin-name {
+  position: relative;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.tradingview-widget-container {
+position: relative;
+top: 10rem;
+height: 30rem;
+}
+
 
 @media only screen and (max-width: 1915px) {
   .tile-container {

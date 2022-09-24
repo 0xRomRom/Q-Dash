@@ -557,6 +557,7 @@ allCards.forEach((card)=>{
 const lightBoxFiller = (data)=>{
     console.log(data);
     rank.textContent = `Rank: ${data.coingecko_rank}`;
+    coinName.textContent = data.name;
 };
 const lightBoxFetcher = async (coinName)=>{
     try {
