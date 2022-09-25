@@ -243,13 +243,25 @@ const compChange = document.querySelector(".comp-change");
 const compDiv = document.querySelector(".comp-div");
 
 const refreshArrow = document.querySelector(".refresh-button");
+const allCards = document.querySelectorAll(".card");
+
+// Initial render
+window.addEventListener("load", async () => {
+  updateUI();
+});
+
+setInterval(() => {
+  updateUI();
+  allCards.forEach((card) => {
+    card.classList.add("rotater");
+  });
+}, 180000);
 
 // Refresh/Refetch
 refreshArrow.addEventListener("click", () => {
   refreshArrow.disabled = true;
   updateUI();
   refreshArrow.classList.add("refreshRotate");
-  const allCards = document.querySelectorAll(".card");
   allCards.forEach((card) => {
     card.classList.add("rotater");
     setTimeout(() => {
@@ -262,7 +274,6 @@ refreshArrow.addEventListener("click", () => {
 
 let responseObject = {};
 
-const allCards = document.querySelectorAll(".card");
 allCards.forEach((card) => {
   card.classList.add("rotater");
   setTimeout(() => {
@@ -333,10 +344,6 @@ const updateUI = async () => {
   uiUpdater("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
   uiUpdater("compound-governance-token", compDiv, compChange, compPrice, 2);
 };
-
-window.addEventListener("load", async () => {
-  updateUI();
-});
 
 const classChecker = (coinDiv, change) => {
   if (change >= -2.5 && change <= 2.5) {
