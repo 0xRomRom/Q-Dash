@@ -532,7 +532,7 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"jUTag":[function(require,module,exports) {
-var _coinIndex = require("./coinIndex");
+var _coinIndexJs = require("./coinIndex.js");
 "use strict";
 const lightBox = document.querySelector(".lightbox");
 const dropShadow = document.querySelector(".dropshadow");
@@ -568,7 +568,7 @@ allCards.forEach((card)=>{
 const lightBoxFiller = (key)=>{
     new TradingView.widget({
         autosize: true,
-        symbol: (0, _coinIndex.coinIndex)[key],
+        symbol: (0, _coinIndexJs.coinIndex)[key],
         interval: "D",
         timezone: "Etc/UTC",
         theme: "dark",
@@ -579,7 +579,7 @@ const lightBoxFiller = (key)=>{
     });
 };
 
-},{"./coinIndex":"dc5Y2"}],"dc5Y2":[function(require,module,exports) {
+},{"./coinIndex.js":"dc5Y2"}],"dc5Y2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "coinIndex", ()=>coinIndex);

@@ -1,6 +1,6 @@
 "use strict";
 
-import { coinIndex } from "./coinIndex";
+import { coinIndex } from "./coinIndex.js";
 
 const lightBox = document.querySelector(".lightbox");
 const dropShadow = document.querySelector(".dropshadow");
