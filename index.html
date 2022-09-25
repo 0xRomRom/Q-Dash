@@ -24,6 +24,7 @@
       type="text/javascript"
       src="https://s3.tradingview.com/tv.js"
     ></script>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
   </head>
   <body>
     <div class="main-page">
@@ -50,10 +51,12 @@
             <i class="fa-solid fa-comment-dollar i3"></i>
             <p class="side-text">Manage Notifications</p>
           </div>
-          <div class="save-to-desk side-style">
-            <i class="fa-regular fa-floppy-disk"></i>
-            <p class="side-text">Save App To Desktop</p>
-          </div>
+          <a href="QDash.url" class="download-href" download>
+            <div class="save-to-desk side-style">
+              <i class="fa-regular fa-floppy-disk"></i>
+              <p class="side-text">Save App To Desktop</p>
+            </div>
+          </a>
         </div>
         <div class="tile-container">
           <div class="card cardano-div rotater" data-id="cardano">
@@ -364,13 +367,10 @@
       <div class="lightbox hidden">
         <i class="fa-solid fa-x light-close"></i>
         <h1 class="coin-name"></h1>
-
         <div class="chart-container">
-          <!-- TradingView Widget BEGIN -->
           <div class="tradingview-widget-container">
             <div id="chartbox"></div>
           </div>
-          <!-- TradingView Widget END -->
         </div>
       </div>
     </div>

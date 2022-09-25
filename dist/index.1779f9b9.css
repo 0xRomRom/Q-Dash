@@ -87,4 +87,17 @@
   font-size: 1.5rem;
 }
 
+.download-href {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  text-decoration: none;
+  display: flex;
+}
+
+.fa-floppy-disk {
+  margin-right: 1rem;
+}
+
 /*# sourceMappingURL=index.1779f9b9.css.map */

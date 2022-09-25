@@ -612,10 +612,8 @@ const coinIndex = {
 allCards.forEach((card)=>{
     card.addEventListener("click", ()=>{
         coinName.textContent = "";
-        console.log(card.children[0].textContent);
         lightBox.classList.remove("hidden");
         coinName.textContent = card.children[0].textContent;
-        console.log(card.dataset.id);
         lightBoxFiller(card.dataset.id);
     });
 });
