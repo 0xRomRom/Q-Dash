@@ -535,6 +535,7 @@ function hmrAcceptRun(bundle, id) {
 var _coinIndex = require("./coinIndex");
 "use strict";
 const lightBox = document.querySelector(".lightbox");
+const dropShadow = document.querySelector(".dropshadow");
 const lightBoxClose = document.querySelector(".fa-x");
 const chartContainer = document.querySelector(".chart-container");
 const widgetContainer = document.querySelector(".tradingview-widget-container");
@@ -547,6 +548,11 @@ allCards.forEach((card)=>{
 // Close lightbox
 lightBoxClose.addEventListener("click", ()=>{
     lightBox.classList.add("hidden");
+    dropShadow.classList.add("hidden");
+});
+dropShadow.addEventListener("click", ()=>{
+    lightBox.classList.add("hidden");
+    dropShadow.classList.add("hidden");
 });
 // Render lightbox
 allCards.forEach((card)=>{
@@ -554,6 +560,7 @@ allCards.forEach((card)=>{
         widgetContainer.classList.add("fadeIn");
         coinName.textContent = "";
         lightBox.classList.remove("hidden");
+        dropShadow.classList.remove("hidden");
         coinName.textContent = card.children[0].textContent;
         lightBoxFiller(card.dataset.id);
     });

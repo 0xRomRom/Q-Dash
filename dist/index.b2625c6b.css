@@ -268,13 +268,24 @@ li > a {
   width: 50%;
   height: 50rem;
   color: #fff;
+  z-index: 50;
   background-color: #0e1326;
-  border: 2px solid #1db9c4;
+  border: 1px solid #1db9c4;
   border-radius: .4rem;
   font-family: Open Sans;
   position: absolute;
   top: 5rem;
   left: 25%;
+  box-shadow: 0 0 15px #1db9c4;
+}
+
+.dropshadow {
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: #101410b5;
+  position: absolute;
+  top: 0;
 }
 
 .fa-x {
