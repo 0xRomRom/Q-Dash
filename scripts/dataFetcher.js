@@ -254,6 +254,9 @@ setInterval(() => {
   updateUI();
   allCards.forEach((card) => {
     card.classList.add("rotater");
+    setTimeout(() => {
+      card.classList.remove("rotater");
+    }, 1100);
   });
 }, 180000);
 
