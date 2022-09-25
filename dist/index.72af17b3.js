@@ -533,7 +533,7 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"jWrRo":[function(require,module,exports) {
 "use strict";
-const COINGECKOAPI = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cethereum-classic%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token&vs_currencies=usd&include_24hr_change=true";
+const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic&vs_currencies=usd&include_24hr_change=true`;
 const bitcoinPrice = document.querySelector(".bitcoin-price");
 const bitcoinChange = document.querySelector(".bitcoin-change");
 const bitcoinDiv = document.querySelector(".bitcoin-div");
@@ -681,9 +681,9 @@ const osmosisDiv = document.querySelector(".osmosis-div");
 const nexoPrice = document.querySelector(".nexo-price");
 const nexoChange = document.querySelector(".nexo-change");
 const nexoDiv = document.querySelector(".nexo-div");
-const cethPrice = document.querySelector(".ceth-price");
-const cethChange = document.querySelector(".ceth-change");
-const cethDiv = document.querySelector(".ceth-div");
+const flowPrice = document.querySelector(".flow-price");
+const flowChange = document.querySelector(".flow-change");
+const flowDiv = document.querySelector(".flow-div");
 const arwPrice = document.querySelector(".arw-price");
 const arwChange = document.querySelector(".arw-change");
 const arwDiv = document.querySelector(".arw-div");
@@ -716,6 +716,7 @@ const compChange = document.querySelector(".comp-change");
 const compDiv = document.querySelector(".comp-div");
 window.addEventListener("load", async ()=>{
     await dataFetcher();
+    console.log(responseObject);
     uiUpdater("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
     uiUpdater("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
     uiUpdater("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
@@ -729,6 +730,7 @@ window.addEventListener("load", async ()=>{
     uiUpdater("cosmos", cosmosDiv, cosmosChange, cosmosPrice, 2);
     uiUpdater("eos", eosDiv, eosChange, eosPrice, 2);
     uiUpdater("ethereum-classic", ethCDiv, ethCChange, ethCPrice, 2);
+    uiUpdater("flow", flowDiv, flowChange, flowPrice, 2);
     uiUpdater("litecoin", litecoinDiv, litecoinChange, litecoinPrice, 2);
     uiUpdater("okb", okbDiv, okbChange, okbPrice, 2);
     uiUpdater("chainlink", chainlinkDiv, chainlinkChange, chainlinkPrice, 2);
@@ -765,7 +767,6 @@ window.addEventListener("load", async ()=>{
     uiUpdater("binancecoin", bnbDiv, bnbChange, bnbPrice, 2);
     uiUpdater("osmosis", osmosisDiv, osmosisChange, osmosisPrice, 2);
     uiUpdater("nexo", nexoDiv, nexoChange, nexoPrice, 2);
-    uiUpdater("compound-ether", cethDiv, cethChange, cethPrice, 2);
     uiUpdater("arweave", arwDiv, arwChange, arwPrice, 2);
     uiUpdater("zilliqa", zilDiv, zilChange, zilPrice, 4);
     uiUpdater("thorchain", runeDiv, runeChange, runePrice, 2);
