@@ -12,7 +12,7 @@ html {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 nav {
@@ -335,6 +335,20 @@ li > a {
   }
 }
 
+.fallback {
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  font-family: Open Sans;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
 .fadeIn {
   animation: 1.5s ease-in forwards fadeIn;
 }
@@ -350,6 +364,62 @@ li > a {
   .c-last {
     display: none;
   }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-price {
+    font-size: 1.3rem;
+  }
+
+  .card-percentage {
+    font-size: 1.1rem;
+  }
+
+  .card-title-fat {
+    font-size: 3rem;
+  }
+
+  .card-price-fat {
+    font-size: 2.3rem;
+  }
+
+  .card-percentage-fat {
+    font-size: 1.75rem;
+  }
+
+  .card-title-wide {
+    font-size: 3rem;
+  }
+
+  .card-price-wide {
+    font-size: 1.5rem;
+  }
+
+  .card-percentage-wide {
+    font-size: 1rem;
+  }
+
+  .card-title-tall {
+    font-size: 3.2rem;
+  }
+
+  .card-price-tall {
+    font-size: 1.75rem;
+  }
+
+  .card-percentage-tall, .shiba-price {
+    font-size: 1rem;
+  }
+
+  .eth {
+    font-size: 2.8rem;
+  }
+
+  .algo {
+    font-size: 1.3rem;
+  }
 }
 
 @media only screen and (max-width: 1660px) {
@@ -363,6 +433,34 @@ li > a {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
+  }
+
+  .card-title-wide {
+    font-size: 2.4rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .bitcoincash, .card-price {
+    font-size: 1.2rem;
+  }
+
+  .card-percentage {
+    font-size: 1rem;
+  }
+
+  .shiba-price {
+    font-size: .8rem;
+  }
+
+  .chainlink {
+    font-size: 1.1rem;
+  }
+
+  .eth {
+    font-size: 2.6rem;
   }
 }
 
@@ -379,12 +477,82 @@ li > a {
   .c-last2 {
     display: none;
   }
+
+  .compound {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .eth {
+    font-size: 2.4rem;
+  }
+
+  .arweave {
+    font-size: 1.1rem;
+  }
+
+  .compound {
+    font-size: .9rem;
+  }
+
+  .synthetix, .cardano, .algo, .uniswap {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (max-width: 1370px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     grid-auto-rows: 90px;
+  }
+
+  .ethclassic {
+    font-size: 1rem;
+  }
+
+  .card-price {
+    font-size: 1.1rem;
+  }
+
+  .card-percentage {
+    font-size: .9rem;
+  }
+
+  .card-title-wide {
+    font-size: 1.8rem;
+  }
+
+  .card-price-wide {
+    font-size: 1.3rem;
+  }
+
+  .bitcoincash {
+    font-size: 1rem;
+  }
+
+  .shiba-price {
+    font-size: .7rem;
+  }
+
+  .polkadot, .polygon, .cosmos, .cardano {
+    font-size: 1rem;
+  }
+
+  .synthetix {
+    font-size: .8rem;
+  }
+
+  .osmosis {
+    font-size: 1rem;
+  }
+
+  .eth {
+    font-size: 2.1rem;
+  }
+
+  .xrp {
+    font-size: 2.3rem;
   }
 }
 
@@ -393,12 +561,73 @@ li > a {
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     grid-auto-rows: 70px;
   }
+
+  .card-title {
+    font-size: .7rem;
+  }
+
+  .card-price {
+    font-size: .6rem;
+  }
+
+  .card-percentage {
+    font-size: .5rem;
+  }
+
+  .card-title-fat {
+    font-size: 2rem;
+  }
+
+  .eth {
+    font-size: 1.6rem;
+  }
+
+  .card-price-fat {
+    font-size: 1.2rem;
+  }
+
+  .card-percentage-fat {
+    font-size: 1rem;
+  }
+
+  .card-title-wide {
+    font-size: 1.2rem;
+  }
+
+  .card-price-wide {
+    font-size: 1rem;
+  }
+
+  .card-percentage-wide {
+    font-size: .9rem;
+  }
+
+  .xrp {
+    font-size: 1.3rem;
+  }
+
+  .xrp-price {
+    font-size: 1rem;
+  }
+
+  .xrp-change {
+    font-size: .8rem;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     grid-auto-rows: 60px;
+  }
+
+  .main-page {
+    display: none;
+  }
+
+  .fallback {
+    font-size: 3vw;
+    display: flex !important;
   }
 }
 
