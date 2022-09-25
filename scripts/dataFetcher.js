@@ -309,13 +309,13 @@ window.addEventListener("load", async () => {
 });
 
 const classChecker = (coinDiv, change) => {
-  if (change > -2.5 && change < 2.5) {
+  if (change >= -2.5 && change <= 2.5) {
     coinDiv.classList.add("neutral");
   }
-  if (change > 0 && change < 7.5) {
+  if (change >= 0 && change <= 7.5) {
     coinDiv.classList.add("u1");
   }
-  if (change > 7.5) {
+  if (change >= 7.5) {
     coinDiv.classList.add("u2");
   }
   if (change < -2.5) {

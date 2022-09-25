@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -362,6 +363,24 @@ li > a {
 
 .fadeIn {
   animation: 1.5s ease-in forwards fadeIn;
+}
+
+.disclaimer {
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: .9rem;
+}
+
+.romspan {
+  color: green;
+  text-decoration: none;
+}
+
+.sitespan {
+  color: #fff;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1915px) {

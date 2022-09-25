@@ -779,9 +779,9 @@ window.addEventListener("load", async ()=>{
     uiUpdater("compound-governance-token", compDiv, compChange, compPrice, 2);
 });
 const classChecker = (coinDiv, change)=>{
-    if (change > -2.5 && change < 2.5) coinDiv.classList.add("neutral");
-    if (change > 0 && change < 7.5) coinDiv.classList.add("u1");
-    if (change > 7.5) coinDiv.classList.add("u2");
+    if (change >= -2.5 && change <= 2.5) coinDiv.classList.add("neutral");
+    if (change >= 0 && change <= 7.5) coinDiv.classList.add("u1");
+    if (change >= 7.5) coinDiv.classList.add("u2");
     if (change < -2.5) coinDiv.classList.add("d1");
     if (change < -7.5) coinDiv.classList.add("d2");
 };
