@@ -395,6 +395,33 @@ li > a {
   text-decoration: none;
 }
 
+.refresh-button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  top: 4rem;
+}
+
+.fa-arrow-rotate-right {
+  color: rgb(172, 168, 168);
+  font-size: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.refreshRotate {
+  animation: rotating ease-in-out 1s forwards;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));

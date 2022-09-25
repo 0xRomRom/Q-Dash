@@ -714,8 +714,31 @@ const xdcDiv = document.querySelector(".xdc-div");
 const compPrice = document.querySelector(".comp-price");
 const compChange = document.querySelector(".comp-change");
 const compDiv = document.querySelector(".comp-div");
+const refreshArrow = document.querySelector(".refresh-button");
+// Refresh/Refetch
+refreshArrow.addEventListener("click", ()=>{
+    refreshArrow.disabled = true;
+    updateUI();
+    refreshArrow.classList.add("refreshRotate");
+    const allCards = document.querySelectorAll(".card");
+    allCards.forEach((card)=>{
+        card.classList.add("rotater");
+        setTimeout(()=>{
+            refreshArrow.classList.remove("refreshRotate");
+            card.classList.remove("rotater");
+            refreshArrow.disabled = false;
+        }, 1100);
+    });
+});
 let responseObject = {};
-window.addEventListener("load", async ()=>{
+const allCards = document.querySelectorAll(".card");
+allCards.forEach((card)=>{
+    card.classList.add("rotater");
+    setTimeout(()=>{
+        card.classList.remove("rotater");
+    }, 1100);
+});
+const updateUI = async ()=>{
     await dataFetcher();
     uiUpdater("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
     uiUpdater("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
@@ -777,6 +800,9 @@ window.addEventListener("load", async ()=>{
     uiUpdater("kava", kavaDiv, kavaChange, kavaPrice, 2);
     uiUpdater("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
     uiUpdater("compound-governance-token", compDiv, compChange, compPrice, 2);
+};
+window.addEventListener("load", async ()=>{
+    updateUI();
 });
 const classChecker = (coinDiv, change)=>{
     if (change >= -2.5 && change <= 2.5) coinDiv.classList.add("neutral");
