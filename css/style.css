@@ -276,7 +276,6 @@ li > a {
   font-size: 1.1rem;
 }
 
-
 .lightbox {
   position: absolute;
   left: 30rem;
@@ -314,12 +313,24 @@ li > a {
   margin-top: 1rem;
 }
 
-.tradingview-widget-container {
-position: relative;
-top: 10rem;
-height: 30rem;
+.chart-container {
+  position: relative;
+
+  height: 42rem;
+  top: 5rem;
 }
 
+.tradingview-widget-container {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+}
+
+#chartbox {
+  width: 100%;
+  position: relative;
+  height: 40rem;
+}
 
 @media only screen and (max-width: 1915px) {
   .tile-container {
