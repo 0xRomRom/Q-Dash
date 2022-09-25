@@ -242,9 +242,10 @@ const compPrice = document.querySelector(".comp-price");
 const compChange = document.querySelector(".comp-change");
 const compDiv = document.querySelector(".comp-div");
 
+let responseObject = {};
+
 window.addEventListener("load", async () => {
   await dataFetcher();
-  console.log(responseObject);
   uiUpdater("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
   uiUpdater("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
   uiUpdater("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
@@ -324,8 +325,6 @@ const classChecker = (coinDiv, change) => {
     coinDiv.classList.add("d2");
   }
 };
-
-let responseObject = {};
 
 const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam) => {
   const price = responseObject[coinName].usd.toFixed(fixedParam);

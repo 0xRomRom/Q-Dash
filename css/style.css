@@ -278,9 +278,9 @@ li > a {
 
 .lightbox {
   position: absolute;
-  left: 30rem;
+  left: 25%;
   top: 5rem;
-  width: 50rem;
+  width: 50%;
   height: 50rem;
   border: 2px solid rgb(29, 185, 196);
   background-color: rgb(14, 19, 38);
@@ -293,7 +293,7 @@ li > a {
   position: absolute;
   color: white;
   font-size: 2rem;
-  left: 45rem;
+  left: 93%;
   top: 2rem;
   cursor: pointer;
   z-index: 10;
@@ -306,18 +306,19 @@ li > a {
 }
 
 .coin-name {
-  position: relative;
   font-size: 3rem;
   color: white;
   text-align: center;
   margin-top: 1rem;
+  /* background-color: red; */
+  text-align: center;
 }
 
 .chart-container {
   position: relative;
 
   height: 42rem;
-  top: 5rem;
+  top: 3rem;
 }
 
 .tradingview-widget-container {

@@ -265,7 +265,7 @@ li > a {
 }
 
 .lightbox {
-  width: 50rem;
+  width: 50%;
   height: 50rem;
   color: #fff;
   background-color: #0e1326;
@@ -274,7 +274,7 @@ li > a {
   font-family: Open Sans;
   position: absolute;
   top: 5rem;
-  left: 30rem;
+  left: 25%;
 }
 
 .fa-x {
@@ -284,7 +284,7 @@ li > a {
   font-size: 2rem;
   position: absolute;
   top: 2rem;
-  left: 45rem;
+  left: 93%;
 }
 
 .rank {
@@ -296,15 +296,15 @@ li > a {
 .coin-name {
   color: #fff;
   text-align: center;
+  text-align: center;
   margin-top: 1rem;
   font-size: 3rem;
-  position: relative;
 }
 
 .chart-container {
   height: 42rem;
   position: relative;
-  top: 5rem;
+  top: 3rem;
 }
 
 .tradingview-widget-container {

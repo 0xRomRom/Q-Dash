@@ -535,7 +535,7 @@ function hmrAcceptRun(bundle, id) {
 "use strict";
 const lightBox = document.querySelector(".lightbox");
 const lightBoxClose = document.querySelector(".fa-x");
-const coinName = document.querySelector(".coin-name");
+let coinName = document.querySelector(".coin-name");
 const chartContainer = document.querySelector(".chart-container");
 // Onload rotate animation
 const allCards = document.querySelectorAll(".card");
@@ -611,7 +611,10 @@ const coinIndex = {
 // Render lightbox
 allCards.forEach((card)=>{
     card.addEventListener("click", ()=>{
+        coinName.textContent = "";
+        console.log(card.children[0].textContent);
         lightBox.classList.remove("hidden");
+        coinName.textContent = card.children[0].textContent;
         console.log(card.dataset.id);
         lightBoxFiller(card.dataset.id);
     });
