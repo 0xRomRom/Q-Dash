@@ -532,11 +532,13 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"jUTag":[function(require,module,exports) {
+var _coinIndex = require("./coinIndex");
 "use strict";
 const lightBox = document.querySelector(".lightbox");
 const lightBoxClose = document.querySelector(".fa-x");
-let coinName = document.querySelector(".coin-name");
 const chartContainer = document.querySelector(".chart-container");
+const widgetContainer = document.querySelector(".tradingview-widget-container");
+let coinName = document.querySelector(".coin-name");
 // Onload rotate animation
 const allCards = document.querySelectorAll(".card");
 allCards.forEach((card)=>{
@@ -546,6 +548,35 @@ allCards.forEach((card)=>{
 lightBoxClose.addEventListener("click", ()=>{
     lightBox.classList.add("hidden");
 });
+// Render lightbox
+allCards.forEach((card)=>{
+    card.addEventListener("click", ()=>{
+        widgetContainer.classList.add("fadeIn");
+        coinName.textContent = "";
+        lightBox.classList.remove("hidden");
+        coinName.textContent = card.children[0].textContent;
+        lightBoxFiller(card.dataset.id);
+    });
+});
+const lightBoxFiller = (key)=>{
+    new TradingView.widget({
+        autosize: true,
+        symbol: (0, _coinIndex.coinIndex)[key],
+        interval: "D",
+        timezone: "Etc/UTC",
+        theme: "dark",
+        style: "1",
+        locale: "en",
+        toolbar_bg: "#f1f3f6",
+        container_id: "chartbox"
+    });
+};
+
+},{"./coinIndex":"dc5Y2"}],"dc5Y2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "coinIndex", ()=>coinIndex);
+"use strict";
 const coinIndex = {
     bitcoin: "BINANCE:BTCUSDT",
     cardano: "BINANCE:ADAUSDT",
@@ -608,26 +639,34 @@ const coinIndex = {
     xdc: "XDCUSDT",
     compound: "COMPUSDT"
 };
-// Render lightbox
-allCards.forEach((card)=>{
-    card.addEventListener("click", ()=>{
-        coinName.textContent = "";
-        lightBox.classList.remove("hidden");
-        coinName.textContent = card.children[0].textContent;
-        lightBoxFiller(card.dataset.id);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
     });
-});
-const lightBoxFiller = (key)=>{
-    new TradingView.widget({
-        autosize: true,
-        symbol: coinIndex[key],
-        interval: "D",
-        timezone: "Etc/UTC",
-        theme: "dark",
-        style: "1",
-        locale: "en",
-        toolbar_bg: "#f1f3f6",
-        container_id: "chartbox"
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
     });
 };
 

@@ -332,6 +332,24 @@ li > a {
   height: 40rem;
 }
 
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
