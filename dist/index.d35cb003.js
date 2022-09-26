@@ -579,6 +579,11 @@ returnResultButton.addEventListener("click", ()=>{
     resultContainer.classList.add("slideOutDiv");
     setTimeout(()=>{
         resultContainer.classList.add("hidden");
+        t1.textContent = "";
+        t2.textContent = "";
+        t3.textContent = "";
+        t4.textContent = "";
+        t5.textContent = "";
     }, 2000);
 });
 const coinFetcher = async ()=>{

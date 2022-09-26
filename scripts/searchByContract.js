@@ -54,8 +54,14 @@ returnResultButton.addEventListener("click", () => {
   addressInput.value = "";
   resultContainer.classList.remove("slideInDiv");
   resultContainer.classList.add("slideOutDiv");
+
   setTimeout(() => {
     resultContainer.classList.add("hidden");
+    t1.textContent = "";
+    t2.textContent = "";
+    t3.textContent = "";
+    t4.textContent = "";
+    t5.textContent = "";
   }, 2000);
 });
 
