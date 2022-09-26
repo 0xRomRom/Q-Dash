@@ -57,33 +57,35 @@ li > a {
 
 .nav-list {
   height: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8rem;
+  display: flex;
   position: relative;
   top: 2rem;
-  left: 20%;
 }
 
 .li-ho1 {
   color: #dbdbda;
+  padding-left: 1.2rem;
   position: absolute;
-  left: 23rem;
 }
 
 .li-ho2 {
   color: #dbdbda;
   position: absolute;
-  left: 30rem;
 }
 
 .li-ho3 {
   color: #dbdbda;
+  padding-left: 1.5rem;
   position: absolute;
-  left: 40rem;
 }
 
 .li-ho4 {
   color: #dbdbda;
+  padding-left: 18rem;
   position: absolute;
-  left: 70rem;
 }
 
 .li-ho1:hover, .li-ho2:hover, .li-ho3:hover {
@@ -897,6 +899,12 @@ option {
 
   .xrp-change {
     font-size: .8rem;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .li-ho4 {
+    padding-left: 15rem;
   }
 }
 

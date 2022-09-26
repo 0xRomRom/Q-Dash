@@ -565,9 +565,9 @@ searchCoinButton.addEventListener("click", ()=>{
 const resultModal = (data)=>{
     console.log(data);
     t1.insertAdjacentHTML("beforeend", data.name);
-    t2.insertAdjacentHTML("beforeend", ` $${data.market_data.current_price.usd.toFixed(5)}`);
+    t2.insertAdjacentHTML("beforeend", ` $${data.market_data.current_price.usd.toFixed(6)}`);
     t3.insertAdjacentHTML("beforeend", ` ${data.coingecko_rank}`);
-    t4.insertAdjacentHTML("beforeend", ` ${data.categories.join(", ")}`);
+    t4.insertAdjacentHTML("beforeend", ` ${data.categories !== null ? data.categories.join(", ") : "Undefined"}`);
     t5.insertAdjacentHTML("beforeend", `$${data.symbol}`);
 };
 returnResultButton.addEventListener("click", ()=>{

@@ -61,30 +61,36 @@ li > a {
   position: relative;
   top: 2rem;
   height: 4rem;
-  left: 20%;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8rem;
 }
 
 .li-ho1 {
   position: absolute;
-  left: 23rem;
+  /* left: 34%; */
   color: rgb(219, 219, 218);
+  padding-left: 1.2rem;
 }
 
 .li-ho2 {
   position: absolute;
-  left: 30rem;
+  /* left: 40%; */
   color: rgb(219, 219, 218);
 }
 
 .li-ho3 {
   position: absolute;
-  left: 40rem;
+  /* left: 48%; */
   color: rgb(219, 219, 218);
+  padding-left: 1.5rem;
 }
 
 .li-ho4 {
   position: absolute;
-  left: 70rem;
+  padding-left: 18rem;
   color: rgb(219, 219, 218);
 }
 
@@ -892,6 +898,12 @@ option {
   }
   .xrp-change {
     font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .li-ho4 {
+    padding-left: 15rem;
   }
 }
 
