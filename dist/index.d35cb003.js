@@ -579,6 +579,7 @@ returnResultButton.addEventListener("click", ()=>{
     resultContainer.classList.add("slideOutDiv");
     setTimeout(()=>{
         resultContainer.classList.add("hidden");
+        inputContainer.classList.remove("slideInDiv");
         t1.textContent = "";
         t2.textContent = "";
         t3.textContent = "";
