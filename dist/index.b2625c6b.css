@@ -286,6 +286,21 @@ li > a {
   box-shadow: 0 0 15px #1db9c4;
 }
 
+.notification-box {
+  width: 50%;
+  height: 50rem;
+  color: #fff;
+  z-index: 100;
+  background-color: #0e1326;
+  border: 1px solid #1db9c4;
+  border-radius: .4rem;
+  font-family: Open Sans;
+  position: absolute;
+  top: 5rem;
+  left: 25%;
+  box-shadow: 0 0 15px #1db9c4;
+}
+
 .dropshadow {
   width: 100vw;
   height: 100vh;
