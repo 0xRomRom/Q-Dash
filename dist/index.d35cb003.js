@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"2mNKm":[function(require,module,exports) {
+})({"aGi2U":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "b3c595598cfc62b9";
+module.bundle.HMR_BUNDLE_ID = "c758df2bd35cb003";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,8 +531,38 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"6rimH":[function(require,module,exports) {
+},{}],"dye7W":[function(require,module,exports) {
+"use strict";
+const searchContractBox = document.querySelector(".search-contract-box");
+const searchContractButton = document.querySelector(".search-contract");
+const closeContractSearch = document.querySelector(".light-close2");
+const dropShadow = document.querySelector(".dropshadow");
+const searchCoinButton = document.querySelector(".seach-coin-btn");
+const addressInput = document.querySelector(".contract-input");
+const blockchains = document.querySelector(".blockchains");
+const errorText = document.querySelector(".error-text");
+closeContractSearch.addEventListener("click", ()=>{
+    searchContractBox.classList.add("hidden");
+    dropShadow.classList.add("hidden");
+});
+searchContractButton.addEventListener("click", ()=>{
+    searchContractBox.classList.remove("hidden");
+    dropShadow.classList.remove("hidden");
+});
+searchCoinButton.addEventListener("click", ()=>{
+    errorText.classList.add("inv");
+    coinFetcher();
+});
+const coinFetcher = async ()=>{
+    try {
+        const response = await fetch(`https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}`);
+        const data = await response.json();
+        if (data.error) errorText.classList.remove("inv");
+    } catch (err) {
+        console.log(err);
+    }
+};
 
-},{}]},["2mNKm","6rimH"], "6rimH", "parcelRequire379f")
+},{}]},["aGi2U","dye7W"], "dye7W", "parcelRequire379f")
 
-//# sourceMappingURL=index.8cfc62b9.js.map
+//# sourceMappingURL=index.d35cb003.js.map

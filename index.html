@@ -11,7 +11,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-S26PTY099E");
     </script>
     <script
@@ -37,6 +36,7 @@
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/sidebar.css" rel="stylesheet" />
     <script src="./scripts/dataFetcher.js" type="module"></script>
+    <script src="./scripts/searchByContract.js" type="module"></script>
     <script src="./scripts/coinIndex.js" type="module"></script>
     <script src="./scripts/script.js" type="module"></script>
     <script
@@ -278,8 +278,8 @@
             <p class="card-price evmos-price"></p>
             <p class="card-percentage evmos-change"></p>
           </div>
-          <div class="card c-last celsius-div" data-id="celcius">
-            <h1 class="card-title c-mid">Celcius</h1>
+          <div class="card c-last celsius-div" data-id="celsius">
+            <h1 class="card-title c-mid">Celsius</h1>
             <p class="card-price celsius-price"></p>
             <p class="card-percentage celsius-change"></p>
           </div>
@@ -409,6 +409,113 @@
           <div class="tradingview-widget-container">
             <div id="chartbox"></div>
           </div>
+        </div>
+      </div>
+      <div class="search-contract-box hidden">
+        <i class="fa-solid fa-x light-close2"></i>
+        <div class="search-input-box">
+          <h1 class="search-title">Select Blockchain</h1>
+          <div class="input-container">
+            <select class="blockchains" name="blockchains">
+              <option value="avalanche">AVAX</option>
+              <option value="acala">Acala</option>
+              <option value="achain">Achain</option>
+              <option value="algorand">Algorand</option>
+              <option value="arbitrum-one">Arbitrum One</option>
+              <option value="ardor">Ardor</option>
+              <option value="aurora">Aurora</option>
+              <option value="bnb-beacon-chain">BNB Beacon Chain</option>
+              <option value="binance-smart-chain">Binance Smart Chain</option>
+              <option value="binancecoin">Binance Coin</option>
+              <option value="bitcichain">Bitcichain</option>
+              <option value="bitcoin-cash">Bitcoin Cash</option>
+              <option value="bitshares">Bitshares</option>
+              <option value="boba">Boba Network</option>
+              <option value="cardano">Cardano</option>
+              <option value="celo">Celo</option>
+              <option value="chiliz">Chiliz</option>
+              <option value="cosmos">Cosmos</option>
+              <option value="counterparty">Counterparty</option>
+              <option value="cronos">Cronos</option>
+              <option value="defi-kingdoms-blockchain">DFK Chain</option>
+              <option value="defichain">DefiChain</option>
+              <option value="eos">EOS</option>
+              <option value="elrond">Elrond</option>
+              <option value="enq-enecuum">Enecuum</option>
+              <option value="ethereum">Ethereum</option>
+              <option value="ethereum-classic">Ethereum Classic</option>
+              <option value="factom">Factom</option>
+              <option value="fantom">Fantom</option>
+              <option value="fuse">Fuse</option>
+              <option value="fusion-network">Fusion Network</option>
+              <option value="gochain">GoChain</option>
+              <option value="hoo">Hoo</option>
+              <option value="hoo-smart-chain">Hoo Smart Chain</option>
+              <option value="huobi-token">Huobi Mainnet</option>
+              <option value="icon">Icon</option>
+              <option value="iotex">IoTeX</option>
+              <option value="kardiachain">KardiaChain</option>
+              <option value="kava">Kava</option>
+              <option value="klay-token">Klaytn</option>
+              <option value="komodo">Komodo</option>
+              <option value="kucoin-community-chain">Kucoin</option>
+              <option value="kusama">Kusama</option>
+              <option value="mdex">Mdex</option>
+              <option value="metaverse-etp">Metaverse ETP</option>
+              <option value="meter">Meter</option>
+              <option value="metis-andromeda">Metis Andromeda</option>
+              <option value="milkomeda-cardano">Milkomeda</option>
+              <option value="moonbeam">Moonbeam</option>
+              <option value="nem">Nem</option>
+              <option value="nxt">NXT</option>
+              <option value="near-protocol">Near Protocol</option>
+              <option value="neo">Neo</option>
+              <option value="nuls">Nuls</option>
+              <option value="oasis">Oasis</option>
+              <option value="okex-chain">OkexChain</option>
+              <option value="omni">Omni</option>
+              <option value="ontology">Ontology</option>
+              <option value="openledger">Openledger</option>
+              <option value="optimistic-ethereum">Optimistic Ethereum</option>
+              <option value="osmosis">Osmosis</option>
+              <option value="polis-chain">Polis Chain</option>
+              <option value="polkadot">Polkadot</option>
+              <option value="polygon-pos">Polygon POS</option>
+              <option value="ronin">Ronin</option>
+              <option value="rootstock">Rootstock RSK</option>
+              <option value="secret">Secret</option>
+              <option value="super-zero">Sero</option>
+              <option value="shiden-network">Shiden Network</option>
+              <option value="smartbch">SmartBCH</option>
+              <option value="solana">Solana</option>
+              <option value="sora">Sora</option>
+              <option value="stellar">Stellar</option>
+              <option value="stratis">Stratis</option>
+              <option value="syscoin">Syscoin NEVM</option>
+              <option value="tron">TRON</option>
+              <option value="terra">Terra</option>
+              <option value="tezos">Tezos</option>
+              <option value="thetha">Thetha</option>
+              <option value="thorchain">Thorchain</option>
+              <option value="tomochain">TomoChain</option>
+              <option value="vechain">VeChain</option>
+              <option value="velas">Velas</option>
+              <option value="vite">Vite</option>
+              <option value="wanchain">Wanchain</option>
+              <option value="waves">Waves</option>
+              <option value="xrp">XRP</option>
+              <option value="zilliqa">Zilliqa</option>
+              <option value="harmony-shard-0">Harmony Shard 0</option>
+              <option value="xdai">xDAI</option>
+            </select>
+            <input
+              type="text"
+              class="contract-input"
+              placeholder="Contract Address"
+            />
+            <p class="error-text inv">Could not find coin with the given ID</p>
+          </div>
+          <button class="seach-coin-btn">Search</button>
         </div>
       </div>
       <div class="dropshadow hidden"></div>

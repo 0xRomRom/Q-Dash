@@ -18,6 +18,10 @@ html {
   display: none !important;
 }
 
+.inv {
+  visibility: hidden !important;
+}
+
 nav {
   position: relative;
   background-color: rgb(8, 11, 22);
@@ -413,6 +417,102 @@ li > a {
   animation: rotating ease-in-out 1s forwards;
 }
 
+.search-contract-box {
+  position: absolute;
+  left: 25%;
+  top: 5rem;
+  width: 50%;
+  height: 50rem;
+  box-shadow: 0px 0px 15px rgb(29, 185, 196);
+  border: 1px solid rgb(29, 185, 196);
+  background: linear-gradient(90deg, #c33764, #1d2671);
+  border-radius: 0.4rem;
+  font-family: "Open Sans";
+  color: white;
+  z-index: 50;
+}
+.input-container {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-input-box {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.9rem;
+  width: 50%;
+  height: 30rem;
+  left: 25%;
+  top: 10rem;
+}
+
+.error-text {
+  color: red;
+  font-family: "Open Sans";
+}
+
+.search-title {
+  font-family: "Open Sans";
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 1rem;
+}
+
+.blockchains {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.4rem;
+  width: 13rem;
+  cursor: pointer;
+}
+
+.contract-input::placeholder {
+  color: white;
+}
+
+.contract-input {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.4rem;
+  width: 13rem;
+}
+
+option {
+  background-color: black;
+}
+
+.seach-coin-btn {
+  position: relative;
+  top: 6rem;
+  width: 25%;
+  left: 37.5%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  font-family: "Open Sans";
+  cursor: pointer;
+  font-weight: 800;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.seach-coin-btn:hover {
+  color: black;
+  background-color: white;
+}
 @keyframes rotating {
   from {
     transform: rotate(0deg);

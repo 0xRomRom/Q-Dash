@@ -7,6 +7,8 @@ const dropShadow = document.querySelector(".dropshadow");
 const lightBoxClose = document.querySelector(".fa-x");
 const chartContainer = document.querySelector(".chart-container");
 const widgetContainer = document.querySelector(".tradingview-widget-container");
+const searchContractBox = document.querySelector(".search-contract-box");
+
 let coinName = document.querySelector(".coin-name");
 
 // Onload rotate animation
@@ -24,6 +26,7 @@ lightBoxClose.addEventListener("click", () => {
 dropShadow.addEventListener("click", () => {
   lightBox.classList.add("hidden");
   dropShadow.classList.add("hidden");
+  searchContractBox.classList.add("hidden");
 });
 
 // Render lightbox

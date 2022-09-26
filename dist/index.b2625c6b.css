@@ -16,6 +16,10 @@ html {
   display: none !important;
 }
 
+.inv {
+  visibility: hidden !important;
+}
+
 nav {
   width: 100%;
   height: 6rem;
@@ -399,6 +403,104 @@ li > a {
 
 .refreshRotate {
   animation: 1s ease-in-out forwards rotating;
+}
+
+.search-contract-box {
+  width: 50%;
+  height: 50rem;
+  color: #fff;
+  z-index: 50;
+  background: linear-gradient(90deg, #c33764, #1d2671);
+  border: 1px solid #1db9c4;
+  border-radius: .4rem;
+  font-family: Open Sans;
+  position: absolute;
+  top: 5rem;
+  left: 25%;
+  box-shadow: 0 0 15px #1db9c4;
+}
+
+.input-container {
+  width: 100%;
+  height: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  position: relative;
+  top: 5rem;
+}
+
+.search-input-box {
+  width: 50%;
+  height: 30rem;
+  background-color: #000;
+  border-radius: .9rem;
+  position: relative;
+  top: 10rem;
+  left: 25%;
+}
+
+.error-text {
+  color: red;
+  font-family: Open Sans;
+}
+
+.search-title {
+  text-align: center;
+  padding-top: 1rem;
+  font-family: Open Sans;
+  font-size: 3rem;
+}
+
+.blockchains {
+  color: #fff;
+  width: 13rem;
+  cursor: pointer;
+  background-color: #0000;
+  border: 1px solid #fff;
+  border-radius: .4rem;
+  padding: .75rem 1.75rem;
+}
+
+.contract-input::placeholder {
+  color: #fff;
+}
+
+.contract-input {
+  color: #fff;
+  width: 13rem;
+  background-color: #0000;
+  border: 1px solid #fff;
+  border-radius: .4rem;
+  padding: .75rem 1.75rem;
+}
+
+option {
+  background-color: #000;
+}
+
+.seach-coin-btn {
+  width: 25%;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: .4rem;
+  padding: 1rem;
+  font-family: Open Sans;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all .2s ease-in-out;
+  position: relative;
+  top: 6rem;
+  left: 37.5%;
+}
+
+.seach-coin-btn:hover {
+  color: #000;
+  background-color: #fff;
 }
 
 @keyframes rotating {
