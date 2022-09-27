@@ -49,6 +49,17 @@ li > a {
   font-size: 1.4rem;
 }
 
+.constr {
+  position: absolute;
+  color: white;
+  top: 45rem;
+  left: 2rem;
+
+  z-index: 100;
+  font-size: 0.8rem;
+  font-family: "Press Start 2P", sans-serif;
+}
+
 .brand-logo {
   position: absolute;
   height: 5rem;
@@ -316,6 +327,31 @@ li > a {
   font-family: "Open Sans";
   color: white;
   z-index: 100;
+}
+
+.notif-anim-container {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 41.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.notif-push {
+  font-family: "Open Sans";
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.allow-text {
+  text-align: center;
 }
 
 .dropshadow {
