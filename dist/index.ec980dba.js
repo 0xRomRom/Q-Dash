@@ -554,7 +554,7 @@ const userPercentageInput = document.querySelector(".user-percentage-input");
 const incDecToggle = document.querySelector(".coin-param");
 const alertButton = document.querySelector(".alert-button");
 let permission = false;
-if (!permission) allowContainer.classList.add("hidden");
+if (!permission) allowContainer.classList.remove("hidden");
 // Open notification modal
 manageNotification.addEventListener("click", ()=>{
     notificationModal.classList.remove("hidden");
@@ -570,8 +570,8 @@ dropShadow.addEventListener("click", ()=>{
     dropShadow.classList.add("hidden");
 });
 // Ask for permission
-notifPush.addEventListener("click", ()=>{
-    Notification.requestPermission().then((perm)=>{
+notifPush.addEventListener("click", async ()=>{
+    await Notification.requestPermission().then((perm)=>{
         if (perm === "granted") {
             permission = true;
             allowContainer.classList.add("opacityOut");
@@ -585,14 +585,6 @@ notifPush.addEventListener("click", ()=>{
 // User input search
 coinSearch.addEventListener("click", ()=>{
     fetchCoinAlert();
-    if (permission) {
-        const notification = new Notification(`${userInput.value}`, {
-            body: "This is more text"
-        });
-        setTimeout(()=>{
-            notification.close();
-        }, 10000);
-    }
 });
 let fetchedCoinPrice = 0;
 let expectedCoinPrice = 0;
@@ -619,46 +611,69 @@ const fetchCoinAlert = async ()=>{
         noCoinErrorTxt.classList.remove("inv");
     }
 };
+let positiveBool = true;
 // Calculate price
 calculatePrice.addEventListener("click", ()=>{
     if (incDecToggle.value === "Increases") {
         let calculateValue = (+userPercentageInput.value + 100) / 100;
         let outputValue = calculateValue * fetchedCoinPrice;
-        expectedCoinPrice = outputValue;
-        userSpecifiedChange = "target price has been reached!";
+        // expectedCoinPrice = outputValue;
+        userSpecifiedChange = "surged past your target!";
         targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
         alertButton.classList.remove("hidden");
+        positiveBool = true;
         return;
     }
     if (incDecToggle.value === "Decreases") {
         let calculateValue1 = (100 - +userPercentageInput.value) / 100;
         let outputValue1 = calculateValue1 * fetchedCoinPrice;
-        expectedCoinPrice = outputValue1;
+        // expectedCoinPrice = outputValue;
+        userSpecifiedChange = "dropped past your target!";
         targetPriceExpected.textContent = `$${+outputValue1.toFixed(2)}`;
         alertButton.classList.remove("hidden");
+        positiveBool = false;
         return;
     }
 });
-const intervalFetcher = async ()=>{
-    let fetchedPrice = 0;
-    while(fetchedPrice < expectedCoinPrice)setInterval(()=>{
+let fetchedPrice = 0;
+const intervalFetcher = ()=>{
+    console.log("Started Cycle");
+    setInterval(async ()=>{
         try {
-            const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${userQueriedCoinName}&vs_currencies=usd`);
-            const data = await response.json();
-            console.log(data[userQueriedCoinName].usd);
-            console.log(expectedCoinPrice);
-            fetchedPrice = data[userQueriedCoinName].usd;
+            if (positiveBool) while(fetchedPrice < expectedCoinPrice){
+                const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${userQueriedCoinName}&vs_currencies=usd`);
+                const data = await response.json();
+                fetchedPrice = data[userQueriedCoinName].usd;
+                checkResultsMin();
+            }
+            else while(fetchedPrice > expectedCoinPrice){
+                const response1 = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${userQueriedCoinName}&vs_currencies=usd`);
+                const data1 = await response1.json();
+                fetchedPrice = data1[userQueriedCoinName].usd;
+                checkResultsPlus();
+            }
         } catch (err) {
             console.log(err);
         }
-    }, 60000);
-    if (fetchedPrice > expectedCoinPrice) {
-        const notification = new Notification(`${userInput.value}`, {
-            body: "This is more text"
+    }, 10000);
+};
+let matchResult = true;
+const checkResultsMin = ()=>{
+    if (fetchedPrice !== 0 && fetchedPrice > expectedCoinPrice && matchResult) {
+        alert("Alert!");
+        const notification = new Notification(`${userQueriedCoinName.charAt(0).toUpperCase() + userInput.value.slice(1)}'s price ${userSpecifiedChange}`, {
+            body: `${userQueriedCoinName.charAt(0).toUpperCase() + userInput.value.slice(1)}'s price is $${expectedCoinPrice}`
         });
-        setTimeout(()=>{
-            notification.close();
-        }, 10000);
+        matchResult = false;
+    }
+};
+const checkResultsPlus = ()=>{
+    if (fetchedPrice !== 0 && fetchedPrice < expectedCoinPrice && matchResult) {
+        alert("Alert!");
+        const notification = new Notification(`${userQueriedCoinName.charAt(0).toUpperCase() + userInput.value.slice(1)}'s price ${userSpecifiedChange}`, {
+            body: `${userQueriedCoinName.charAt(0).toUpperCase() + userInput.value.slice(1)}'s price is $${expectedCoinPrice}`
+        });
+        matchResult = false;
     }
 };
 alertButton.addEventListener("click", ()=>{
