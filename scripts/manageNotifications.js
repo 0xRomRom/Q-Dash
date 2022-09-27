@@ -63,7 +63,7 @@ coinSearch.addEventListener("click", () => {
 });
 
 let fetchedCoinPrice = 0;
-let expectedCoinPrice = 0;
+let expectedCoinPrice = 6.32;
 let userQueriedCoinName = "";
 let userSpecifiedChange = "";
 
@@ -94,14 +94,14 @@ const fetchCoinAlert = async () => {
   }
 };
 
-let positiveBool = true;
+let positiveBool = "";
 
 // Calculate price
 calculatePrice.addEventListener("click", () => {
   if (incDecToggle.value === "Increases") {
     let calculateValue = (+userPercentageInput.value + 100) / 100;
     let outputValue = calculateValue * fetchedCoinPrice;
-    expectedCoinPrice = outputValue;
+    // expectedCoinPrice = outputValue;
     userSpecifiedChange = "surged past your target!";
     targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
     alertButton.classList.remove("hidden");
@@ -111,7 +111,7 @@ calculatePrice.addEventListener("click", () => {
   if (incDecToggle.value === "Decreases") {
     let calculateValue = (100 - +userPercentageInput.value) / 100;
     let outputValue = calculateValue * fetchedCoinPrice;
-    expectedCoinPrice = outputValue;
+    // expectedCoinPrice = outputValue;
     userSpecifiedChange = "dropped past your target!";
     targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
     alertButton.classList.remove("hidden");
@@ -121,10 +121,9 @@ calculatePrice.addEventListener("click", () => {
 });
 
 let fetchedPrice = 0;
-let intervalID;
 
 const intervalFetcher = () => {
-  intervalID = setInterval(async () => {
+  setInterval(async () => {
     try {
       if (positiveBool) {
         if (fetchedPrice < expectedCoinPrice) {
@@ -133,14 +132,20 @@ const intervalFetcher = () => {
           );
           const data = await response.json();
           fetchedPrice = data[userQueriedCoinName].usd;
+          console.log(fetchedPrice);
+          console.log("Fetched Plus");
           checkResultsMin();
         }
-      } else {
+      }
+
+      if (!positiveBool && positiveBool !== "") {
         const response = await fetch(
           `https://api.coingecko.com/api/v3/simple/price?ids=${userQueriedCoinName}&vs_currencies=usd`
         );
         const data = await response.json();
         fetchedPrice = data[userQueriedCoinName].usd;
+        console.log(fetchedPrice);
+        console.log("Fetched Min");
         checkResultsPlus();
       }
     } catch (err) {
@@ -148,7 +153,6 @@ const intervalFetcher = () => {
     }
   }, 10000);
 };
-
 // If expected price is lower
 const checkResultsMin = () => {
   if (fetchedPrice !== 0 && fetchedPrice > expectedCoinPrice) {
@@ -163,7 +167,6 @@ const checkResultsMin = () => {
         }'s price is $${expectedCoinPrice}`,
       }
     );
-    clearInterval(intervalID);
   }
 };
 
@@ -181,7 +184,6 @@ const checkResultsPlus = () => {
         }'s price is $${expectedCoinPrice}`,
       }
     );
-    clearInterval(intervalID);
   }
 };
 
