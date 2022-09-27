@@ -311,9 +311,9 @@ li > a {
   box-shadow: 0 0 15px #1db9c4;
 }
 
-.notif-anim-container {
+.notif-anim-container, .notif-anim-container2 {
   width: 80%;
-  height: 41.5rem;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -321,6 +321,46 @@ li > a {
   display: flex;
   position: relative;
   left: 10%;
+}
+
+.notif-anim-container3 {
+  width: 80%;
+  height: 100%;
+  background-color: #09ee11;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 10%;
+}
+
+.result-output-box {
+  width: 50%;
+  height: 100%;
+  background-color: #00f;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.result-setup-box {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.user-coin-query {
+  padding: .5rem 1rem;
+  font-size: 2rem;
 }
 
 .notif-push {
@@ -332,8 +372,33 @@ li > a {
   font-weight: 800;
 }
 
-.allow-text {
+.coin-search {
+  cursor: pointer;
+  border-radius: .4rem;
+  padding: .75rem 1.5rem;
+  font-family: Open Sans;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.state-coinname, .by {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.allow-text, .specify-text {
   text-align: center;
+}
+
+.coin-fetch-title, .coin-fetch-output {
+  font-family: Open Sans;
+  font-size: 4rem;
+}
+
+.target-price-expected {
+  font-family: Open Sans;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .dropshadow {
@@ -623,7 +688,7 @@ li > a {
   border-radius: .9rem;
 }
 
-.error-text {
+.error-text, .error-text2 {
   color: red;
   font-family: Open Sans;
 }
@@ -662,6 +727,10 @@ option {
   background-color: #000;
 }
 
+.opt2 {
+  background-color: #0000;
+}
+
 .seach-coin-btn {
   color: #fff;
   cursor: pointer;
@@ -678,6 +747,20 @@ option {
 .seach-coin-btn:hover {
   color: #000;
   background-color: #fff;
+}
+
+.opacityOut {
+  animation: 1s ease-in-out forwards opaOut;
+}
+
+@keyframes opaOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes rotating {

@@ -333,12 +333,62 @@ li > a {
   position: relative;
   width: 80%;
   left: 10%;
-  height: 41.5rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+}
+
+.notif-anim-container2 {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.notif-anim-container3 {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #09ee11;
+}
+.result-output-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result-setup-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-coin-query {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
 }
 
 .notif-push {
@@ -350,8 +400,44 @@ li > a {
   font-weight: 800;
 }
 
+.coin-search {
+  font-family: "Open Sans";
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+.state-coinname {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.by {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
 .allow-text {
   text-align: center;
+}
+.specify-text {
+  text-align: center;
+}
+
+.coin-fetch-title {
+  font-family: "Open Sans";
+  font-size: 4rem;
+}
+.coin-fetch-output {
+  font-family: "Open Sans";
+  font-size: 4rem;
+}
+
+.target-price-expected {
+  font-size: 2rem;
+  font-family: "Open Sans";
+  font-weight: 800;
 }
 
 .dropshadow {
@@ -641,6 +727,11 @@ li > a {
   font-family: "Open Sans";
 }
 
+.error-text2 {
+  color: red;
+  font-family: "Open Sans";
+}
+
 .search-title {
   font-family: "Open Sans";
   text-align: center;
@@ -675,6 +766,10 @@ option {
   background-color: black;
 }
 
+.opt2 {
+  background-color: transparent;
+}
+
 .seach-coin-btn {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
@@ -691,6 +786,19 @@ option {
 .seach-coin-btn:hover {
   color: black;
   background-color: white;
+}
+
+.opacityOut {
+  animation: opaOut 1s ease-in-out forwards;
+}
+
+@keyframes opaOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes rotating {
