@@ -322,29 +322,31 @@ li > a {
   height: 50rem;
   box-shadow: 0px 0px 15px rgb(29, 185, 196);
   border: 1px solid rgb(29, 185, 196);
-  background-color: rgb(14, 19, 38);
+  background-color: black;
   border-radius: 0.4rem;
   font-family: "Open Sans";
   color: white;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .notif-anim-container {
-  position: relative;
-  width: 80%;
-  left: 10%;
-  height: 100%;
+  height: 30rem;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  /* border: 1px solid rgb(29, 185, 196);
+  box-shadow: 0px 0px 10px rgb(29, 185, 196); */
+  border-radius: 0.6rem;
 }
 
 .notif-anim-container2 {
-  position: relative;
   width: 80%;
-  left: 10%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -354,31 +356,48 @@ li > a {
 }
 
 .notif-anim-container3 {
-  position: relative;
-  width: 80%;
-  left: 10%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #09ee11;
+  background-color: #000000;
 }
+
+.result-upper {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  width: 95%;
+  height: 48%;
+  border-radius: 1rem;
+}
+
+.result-lower {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  width: 95%;
+  height: 48%;
+  border-radius: 1rem;
+}
+
 .result-output-box {
   position: relative;
   width: 50%;
   height: 100%;
-  background-color: blue;
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.5rem;
 }
 .result-setup-box {
   position: relative;
   width: 50%;
   height: 100%;
-  background-color: red;
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,9 +405,50 @@ li > a {
   gap: 1rem;
 }
 
+.setup-title {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.state-coinname {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.coin-param {
+  margin-top: 1rem;
+  position: relative;
+  left: 38%;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.coin-param option {
+  color: white;
+}
+
+.result-modal {
+  position: relative;
+  width: 96%;
+  height: 50%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  border: 1px solid white;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .user-coin-query {
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 2rem;
+  width: 17rem;
+  font-family: "Open Sans";
+  font-weight: 800;
+  border-radius: 0.2rem;
+  border: none;
 }
 
 .notif-push {
@@ -398,6 +458,15 @@ li > a {
   font-size: 2rem;
   cursor: pointer;
   font-weight: 800;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.notif-push:hover {
+  color: black;
+  background: white;
 }
 
 .coin-search {
@@ -407,7 +476,17 @@ li > a {
   font-size: 1.5rem;
   cursor: pointer;
   font-weight: 800;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
 }
+
+.coin-search:hover {
+  color: black;
+  background-color: white;
+}
+
 .state-coinname {
   font-size: 2rem;
   font-weight: 800;
@@ -421,6 +500,7 @@ li > a {
 .allow-text {
   text-align: center;
 }
+
 .specify-text {
   text-align: center;
 }

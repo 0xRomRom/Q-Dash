@@ -21,10 +21,12 @@ const userPercentageInput = document.querySelector(".user-percentage-input");
 const incDecToggle = document.querySelector(".coin-param");
 const alertButton = document.querySelector(".alert-button");
 
-let permission = false;
-if (!permission) {
-  allowContainer.classList.remove("hidden");
-}
+// window.addEventListener("load", () => {
+//   if (Notification.permission === "granted") {
+//     allowContainer.classList.add("hidden");
+//     inputContainer.classList.remove("hidden");
+//   }
+// });
 
 // Open notification modal
 manageNotification.addEventListener("click", () => {
@@ -47,7 +49,6 @@ dropShadow.addEventListener("click", () => {
 notifPush.addEventListener("click", async () => {
   await Notification.requestPermission().then((perm) => {
     if (perm === "granted") {
-      permission = true;
       allowContainer.classList.add("opacityOut");
       setTimeout(() => {
         allowContainer.classList.add("hidden");
@@ -63,7 +64,7 @@ coinSearch.addEventListener("click", () => {
 });
 
 let fetchedCoinPrice = 0;
-let expectedCoinPrice = 6.32;
+let expectedCoinPrice = 0;
 let userQueriedCoinName = "";
 let userSpecifiedChange = "";
 
@@ -101,7 +102,7 @@ calculatePrice.addEventListener("click", () => {
   if (incDecToggle.value === "Increases") {
     let calculateValue = (+userPercentageInput.value + 100) / 100;
     let outputValue = calculateValue * fetchedCoinPrice;
-    // expectedCoinPrice = outputValue;
+    expectedCoinPrice = outputValue;
     userSpecifiedChange = "surged past your target!";
     targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
     alertButton.classList.remove("hidden");
@@ -111,7 +112,7 @@ calculatePrice.addEventListener("click", () => {
   if (incDecToggle.value === "Decreases") {
     let calculateValue = (100 - +userPercentageInput.value) / 100;
     let outputValue = calculateValue * fetchedCoinPrice;
-    // expectedCoinPrice = outputValue;
+    expectedCoinPrice = outputValue;
     userSpecifiedChange = "dropped past your target!";
     targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
     alertButton.classList.remove("hidden");

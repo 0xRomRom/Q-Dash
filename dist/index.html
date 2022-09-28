@@ -508,9 +508,9 @@ gtag("config", "G-S26PTY099E");
       <div class="notification-box hidden">
         <i class="fa-solid fa-x light-close3"></i>
 
-        <div class="notif-anim-container">
+        <div class="notif-anim-container hidden">
           <h1 class="allow-text">Allow QDash to notify you</h1>
-          <button class="notif-push">Notify</button>
+          <button class="notif-push">Allow</button>
           <img src="/allow-notif.70636d46.png" class="example-img">
         </div>
         <div class="notif-anim-container2 hidden">
@@ -519,27 +519,33 @@ gtag("config", "G-S26PTY099E");
           <p class="error-text2 inv">Could not find coin with the given name</p>
           <button class="coin-search">Search</button>
         </div>
-        <div class="notif-anim-container3 hidden">
+        <div class="notif-anim-container3">
           <div class="result-output-box">
-            <h1 class="current-price">Current price</h1>
-            <p class="coin-fetch-title"></p>
-            <p class="coin-fetch-output"></p>
-            <h1 class="target-price">Target price</h1>
-            <p class="target-price-title"></p>
-            <p class="target-price-expected"></p>
+            <div class="result-upper">
+              <h1 class="current-price">Current price</h1>
+              <p class="coin-fetch-title">$133</p>
+              <p class="coin-fetch-output">Solana</p>
+            </div>
+            <div class="result-lower">
+              <h1 class="target-price">Target price</h1>
+              <p class="target-price-title">Solana</p>
+              <p class="target-price-expected">$135</p>
+            </div>
           </div>
           <div class="result-setup-box">
-            <h1 class="setup-title">Configure Parameters</h1>
-            <p class="state-coinname">If Solana's price</p>
-            <select class="coin-param">
-              <option value="Increases" class="opt2">Increases</option>
-              <option value="Decreases" class="opt2">Decreases</option>
-            </select>
-            <p class="by">By</p>
-            <input type="text" class="user-percentage-input">
-            <span>%</span>
-            <button class="calculate-price">Calculate</button>
-            <button class="alert-button hidden">Alert me!</button>
+            <div class="result-modal">
+              <h1 class="setup-title">Configure Parameters</h1>
+              <p class="state-coinname">If Solana's price</p>
+              <select class="coin-param">
+                <option value="Increases" class="opt2">Increases</option>
+                <option value="Decreases" class="opt2">Decreases</option>
+              </select>
+              <p class="by">By</p>
+              <input type="text" class="user-percentage-input">
+              <span>%</span>
+              <button class="calculate-price">Calculate</button>
+              <button class="alert-button hidden">Alert me!</button>
+            </div>
           </div>
         </div>
       </div>
