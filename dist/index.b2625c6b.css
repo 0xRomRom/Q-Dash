@@ -302,7 +302,7 @@ li > a {
   color: #fff;
   z-index: 100;
   background-color: #000;
-  border: 1px solid #1db9c4;
+  border: 1px solid #8c149c8e;
   border-radius: .4rem;
   justify-content: center;
   align-items: center;
@@ -311,7 +311,7 @@ li > a {
   position: absolute;
   top: 5rem;
   left: 25%;
-  box-shadow: 0 0 15px #1db9c4;
+  box-shadow: 0 0 15px #8c149c;
 }
 
 .notif-anim-container {
@@ -339,6 +339,7 @@ li > a {
   width: 100%;
   height: 100%;
   background-color: #000;
+  border-radius: .4rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -346,26 +347,140 @@ li > a {
 }
 
 .result-upper {
-  width: 95%;
-  height: 48%;
-  background-color: #000;
-  border: 1px solid #fff;
+  width: 93%;
+  height: 46%;
+  background: linear-gradient(to right, #200c29, #24243e);
   border-radius: 1rem;
+  box-shadow: 1px 1px 10px #8c149c;
+}
+
+.current-price {
+  text-align: center;
+  color: gray;
+  text-shadow: 0 3px 5px #8c149c;
+}
+
+.coin-fetch-output {
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#82b5d4, #8c149c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 4rem;
+  font-size: 72px;
+}
+
+.coin-fetch-title {
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(90deg, #5a94b9, #01f732);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 72px;
+  font-weight: 800;
 }
 
 .result-lower {
-  width: 95%;
-  height: 48%;
-  background-color: #000;
-  border: 1px solid #fff;
+  width: 93%;
+  height: 46%;
+  background: linear-gradient(to left, #0f0c29, #1a1a2c);
   border-radius: 1rem;
+  margin-top: 1rem;
   position: relative;
+  box-shadow: 1px 1px 10px #8c149c;
+}
+
+.target-price {
+  text-align: center;
+  color: gray;
+  text-shadow: 0 3px 5px #8c149c;
+}
+
+.target-price-title {
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#82b5d4, #8c149c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 4rem;
+  font-size: 72px;
+}
+
+.target-price-expected {
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(90deg, #5a94b9, #01f732);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 65px !important;
+}
+
+.center-alert-btn {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.alert-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 2px solid #8c149c;
+  border-radius: .4rem;
+  margin-top: 2.5rem;
+  padding: .5rem 1rem;
+  font-family: Open Sans;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all .1s ease-in-out;
+  animation: 1s ease-in-out infinite hover;
+}
+
+.alert-button:hover {
+  background-color: #8c149c;
+}
+
+.fa-arrow-turn-down {
+  color: #8c149c80;
+  font-size: 4rem;
+  position: absolute;
+  top: 7rem;
+  left: 30rem;
+}
+
+.fa-ar {
+  color: #8c149c80;
+  font-size: 4rem;
+  position: absolute;
+  top: 38rem;
+  left: 30.5rem;
+  transform: rotate(90deg);
+}
+
+@keyframes hover {
+  0% {
+    position: absolute;
+    transform: translateY(0);
+  }
+
+  50% {
+    position: absolute;
+    transform: translateY(.2rem);
+  }
+
+  100% {
+    position: absolute;
+    transform: translateY(0);
+  }
 }
 
 .result-output-box {
   width: 50%;
   height: 100%;
-  background-color: #000;
+  border-radius: .4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -377,7 +492,7 @@ li > a {
 .result-setup-box {
   width: 50%;
   height: 100%;
-  background-color: #000;
+  background-color: #0000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -386,8 +501,46 @@ li > a {
   position: relative;
 }
 
+.result-modal {
+  width: 93%;
+  height: 50%;
+  background: linear-gradient(to right, #0f0c29, #24243e);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  position: relative;
+  box-shadow: 1px 1px 10px #8c149c;
+}
+
+.percentage-box {
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  position: relative;
+}
+
+.user-percentage-input {
+  width: 4rem;
+  text-align: center;
+  color: #fff;
+  background-color: #0000;
+  border: 2px solid #8c149c;
+  border-radius: .2rem;
+  outline: 0;
+  margin-right: .5rem;
+  padding: .3rem 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  position: relative;
+}
+
 .setup-title {
   text-align: center;
+  color: gray;
+  text-shadow: 0 3px 5px #8c149c;
   margin-top: .5rem;
 }
 
@@ -397,27 +550,28 @@ li > a {
 }
 
 .coin-param {
-  background-color: #fff;
-  border: 1px solid #fff;
+  color: #fff;
+  width: 10rem;
+  cursor: pointer;
+  background-color: #0000;
+  border: 2px solid #8c149c;
+  border-radius: .4rem;
+  outline: 0;
   margin-top: 1rem;
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+
+.center-options {
+  width: 100%;
+  justify-content: center;
+  display: flex;
   position: relative;
-  left: 38%;
 }
 
 .coin-param option {
   color: #fff;
-}
-
-.result-modal {
-  width: 96%;
-  height: 50%;
   background-color: #000;
-  border: 1px solid #fff;
-  border-radius: 1rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .user-coin-query {
@@ -429,6 +583,35 @@ li > a {
   font-family: Open Sans;
   font-size: 2rem;
   font-weight: 800;
+}
+
+.calculate-price {
+  width: 10rem;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: #0000;
+  border: 2px solid #8c149c;
+  border-radius: .4rem;
+  margin-top: 4rem;
+  padding: .5rem 2rem;
+  font-family: Open Sans;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+.calculate-price:hover {
+  background-color: #a322b5;
+  border: 2px solid #0000;
+}
+
+.calculate-box {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  position: relative;
 }
 
 .notif-push {
@@ -467,9 +650,22 @@ li > a {
   background-color: #fff;
 }
 
-.state-coinname, .by {
+.state-coinname {
   font-size: 2rem;
   font-weight: 800;
+}
+
+.by {
+  padding-right: .5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  position: relative;
+  top: -.15rem;
+}
+
+.perc-span {
+  position: relative;
+  top: -.15rem;
 }
 
 .allow-text, .specify-text {

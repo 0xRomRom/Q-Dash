@@ -534,8 +534,9 @@
         </div>
       </div>
       <div class="notification-box hidden">
+        <i class="fa-solid fa-arrow-turn-down"></i>
+        <i class="fa-solid fa-arrow-turn-down fa-ar"></i>
         <i class="fa-solid fa-x light-close3"></i>
-
         <div class="notif-anim-container hidden">
           <h1 class="allow-text">Allow QDash to notify you</h1>
           <button class="notif-push">Allow</button>
@@ -551,28 +552,36 @@
           <div class="result-output-box">
             <div class="result-upper">
               <h1 class="current-price">Current price</h1>
-              <p class="coin-fetch-title">$133</p>
               <p class="coin-fetch-output">Solana</p>
+              <p class="coin-fetch-title">$133</p>
             </div>
             <div class="result-lower">
               <h1 class="target-price">Target price</h1>
               <p class="target-price-title">Solana</p>
               <p class="target-price-expected">$135</p>
+              <div class="center-alert-btn">
+                <button class="alert-button">Alert me!</button>
+              </div>
             </div>
           </div>
           <div class="result-setup-box">
             <div class="result-modal">
               <h1 class="setup-title">Configure Parameters</h1>
               <p class="state-coinname">If Solana's price</p>
-              <select class="coin-param">
-                <option value="Increases" class="opt2">Increases</option>
-                <option value="Decreases" class="opt2">Decreases</option>
-              </select>
-              <p class="by">By</p>
-              <input type="text" class="user-percentage-input" />
-              <span>%</span>
-              <button class="calculate-price">Calculate</button>
-              <button class="alert-button hidden">Alert me!</button>
+              <div class="center-options">
+                <select class="coin-param">
+                  <option value="Increases" class="opt2">Increases</option>
+                  <option value="Decreases" class="opt2">Decreases</option>
+                </select>
+              </div>
+              <div class="percentage-box">
+                <p class="by">By</p>
+                <input type="text" class="user-percentage-input" />
+                <span class="perc-span">%</span>
+              </div>
+              <div class="calculate-box">
+                <button class="calculate-price">Calculate</button>
+              </div>
             </div>
           </div>
         </div>
