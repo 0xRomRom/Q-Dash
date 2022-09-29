@@ -781,7 +781,7 @@ li > a {
   text-align: center;
 }
 
-.dropshadow {
+.dropshadow, .dropshadow-contr {
   width: 100vw;
   height: 100vh;
   z-index: 20;

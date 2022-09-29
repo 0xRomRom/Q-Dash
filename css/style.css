@@ -816,6 +816,15 @@ li > a {
   background-color: rgba(16, 20, 16, 0.71);
 }
 
+.dropshadow-contr {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(16, 20, 16, 0.71);
+}
+
 .fa-x {
   position: absolute;
   color: white;

@@ -536,7 +536,7 @@ function hmrAcceptRun(bundle, id) {
 const searchContractBox = document.querySelector(".search-contract-box");
 const searchContractButton = document.querySelector(".search-contract");
 const closeContractSearch = document.querySelector(".light-close2");
-const dropShadow = document.querySelector(".dropshadow");
+const dropShadow = document.querySelector(".dropshadow-contr");
 const searchCoinButton = document.querySelector(".seach-coin-btn");
 const addressInput = document.querySelector(".contract-input");
 const blockchains = document.querySelector(".blockchains");
@@ -552,15 +552,23 @@ const t5 = document.querySelector(".t5a");
 closeContractSearch.addEventListener("click", ()=>{
     searchContractBox.classList.add("hidden");
     dropShadow.classList.add("hidden");
+    errorText.classList.add("inv");
+});
+dropShadow.addEventListener("click", ()=>{
+    errorText.classList.add("inv");
+    dropShadow.classList.add("hidden");
+    searchContractBox.classList.add("hidden");
 });
 searchContractButton.addEventListener("click", ()=>{
     searchContractBox.classList.remove("hidden");
     dropShadow.classList.remove("hidden");
 });
+// Attempt to find coin
 searchCoinButton.addEventListener("click", ()=>{
     errorText.classList.add("inv");
     coinFetcher();
 });
+// Test data with blockchain: Solana
 // 7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
 const resultModal = (data)=>{
     t1.insertAdjacentHTML("beforeend", data.name);
