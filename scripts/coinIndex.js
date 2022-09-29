@@ -1,8 +1,8 @@
 "use strict";
 
 export const coinIndex = {
-  bitcoin: "BINANCE:BTCUSDT",
-  cardano: "BINANCE:ADAUSDT",
+  bitcoin: "BTCUSDT",
+  cardano: "ADAUSDT",
   doge: "DOGEUSDT",
   polkadot: "DOTUSDT",
   shiba: "SHIBUSDT",

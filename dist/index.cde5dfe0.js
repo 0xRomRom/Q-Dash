@@ -561,6 +561,7 @@ allCards.forEach((card)=>{
     card.addEventListener("click", ()=>{
         widgetContainer.classList.add("fadeIn");
         coinName.textContent = "";
+        coinName.classList.add("dropIn");
         lightBox.classList.remove("hidden");
         dropShadow.classList.remove("hidden");
         coinName.textContent = card.children[0].textContent;

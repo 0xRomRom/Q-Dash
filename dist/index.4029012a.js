@@ -537,8 +537,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "coinIndex", ()=>coinIndex);
 "use strict";
 const coinIndex = {
-    bitcoin: "BINANCE:BTCUSDT",
-    cardano: "BINANCE:ADAUSDT",
+    bitcoin: "BTCUSDT",
+    cardano: "ADAUSDT",
     doge: "DOGEUSDT",
     polkadot: "DOTUSDT",
     shiba: "SHIBUSDT",

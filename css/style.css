@@ -215,15 +215,34 @@ li > a {
   grid-row: span 2 / auto;
 }
 
+.card-tall:hover {
+  top: -0.5%;
+  left: -0.5%;
+  width: 101%;
+  height: 101%;
+}
+
 .card-wide {
   grid-column: span 2 / auto;
   display: flex;
   justify-content: flex-end;
 }
+.card-wide:hover {
+  top: -0.5%;
+  left: -0.5%;
+  width: 101%;
+  height: 101%;
+}
 
 .card-fat {
   grid-column: span 2 / auto;
   grid-row: span 2 / auto;
+}
+.card-fat:hover {
+  top: -0.5%;
+  left: -0.5%;
+  width: 101%;
+  height: 101%;
 }
 
 .card-title {
@@ -332,6 +351,7 @@ li > a {
   font-family: "Open Sans";
   color: white;
   z-index: 50;
+  overflow: hidden;
 }
 
 .notification-box {
@@ -817,7 +837,6 @@ li > a {
   color: white;
   text-align: center;
   margin-top: 1rem;
-
   background: -webkit-linear-gradient(
     90deg,
     rgb(210, 39, 210),
@@ -825,8 +844,22 @@ li > a {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-align: center;
+}
+
+.dropIn {
+  animation: dropIn 1s ease-in forwards;
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
 }
 
 .chart-container {
