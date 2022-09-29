@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"lNSW0":[function(require,module,exports) {
+})({"7abT5":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "799dd96bcde5dfe0";
+module.bundle.HMR_BUNDLE_ID = "ea1e6ecf4029012a";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,56 +531,104 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"jUTag":[function(require,module,exports) {
-var _coinIndexJs = require("./coinIndex.js");
+},{}],"dc5Y2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "coinIndex", ()=>coinIndex);
 "use strict";
-const lightBox = document.querySelector(".lightbox");
-const dropShadow = document.querySelector(".dropshadow");
-const lightBoxClose = document.querySelector(".fa-x");
-const chartContainer = document.querySelector(".chart-container");
-const widgetContainer = document.querySelector(".tradingview-widget-container");
-const searchContractBox = document.querySelector(".search-contract-box");
-let coinName = document.querySelector(".coin-name");
-// Onload rotate animation
-const allCards = document.querySelectorAll(".card");
-allCards.forEach((card)=>{
-    card.classList.add("rotater");
-});
-// Close lightbox
-lightBoxClose.addEventListener("click", ()=>{
-    lightBox.classList.add("hidden");
-    dropShadow.classList.add("hidden");
-});
-dropShadow.addEventListener("click", ()=>{
-    lightBox.classList.add("hidden");
-    dropShadow.classList.add("hidden");
-    searchContractBox.classList.add("hidden");
-});
-// Render lightbox
-allCards.forEach((card)=>{
-    card.addEventListener("click", ()=>{
-        widgetContainer.classList.add("fadeIn");
-        coinName.textContent = "";
-        lightBox.classList.remove("hidden");
-        dropShadow.classList.remove("hidden");
-        coinName.textContent = card.children[0].textContent;
-        lightBoxFiller(card.dataset.id);
+const coinIndex = {
+    bitcoin: "BINANCE:BTCUSDT",
+    cardano: "BINANCE:ADAUSDT",
+    doge: "DOGEUSDT",
+    polkadot: "DOTUSDT",
+    shiba: "SHIBUSDT",
+    polygon: "MATICUSDT",
+    avax: "AVAXUSD",
+    tron: "TRXUSDT",
+    leo: "LEOUSDT",
+    uniswap: "UNIUSDT",
+    cosmos: "ATOMUSDT",
+    eos: "EOSUSDT",
+    ethclassic: "ETCUSDT",
+    litecoin: "LTCUSDT",
+    okb: "OKBUSDT",
+    chainlink: "LINKUSDT",
+    xlm: "XLMUSDT",
+    ftx: "FTTUSDT",
+    near: "NEARUSDT",
+    cronos: "CROUSDT",
+    algorand: "ALGOUSDT",
+    monero: "XMRUSDT",
+    bitcoincash: "BCHUSDT",
+    vechain: "VETUSDT",
+    quant: "QNTUSDT",
+    tezos: "XTZUSDT",
+    axie: "AXSUSDT",
+    theta: "THETAUSDT",
+    elrond: "EGLDUSDT",
+    aave: "AAVEUSDT",
+    kucoin: "KCSUSDT",
+    xrp: "XRPUSDT",
+    iota: "IOTAUSDT",
+    ethereum: "ETHUSDT",
+    zcash: "ZECUSDT",
+    huobi: "HTUSDT",
+    solana: "SOLUSDT",
+    evmos: "EVMOSUSDT",
+    celsius: "CELUSDT",
+    cake: "CAKEUSDT",
+    gate: "GTUSDT",
+    neo: "NEOUSDT",
+    maker: "MKRUSDT",
+    helium: "HNTUSDT",
+    fantom: "FTMUSDT",
+    synthetix: "SNXUSDT",
+    bnb: "BNBUSDT",
+    osmosis: "OSMOUSDT",
+    nexo: "NEXOUSDT",
+    flow: "FLOWUSDT",
+    arweave: "ARUSDT",
+    zilliqa: "ZILUSDT",
+    rune: "RUNEUSDT",
+    dash: "DASHUSDT",
+    rocketpool: "RPLUSDT",
+    stacks: "STXUSDT",
+    waves: "WAVESUSDT",
+    kava: "KAVAUSDT",
+    xdc: "XDCUSDT",
+    compound: "COMPUSDT"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
     });
-});
-const lightBoxFiller = (key)=>{
-    new TradingView.widget({
-        autosize: true,
-        symbol: (0, _coinIndexJs.coinIndex)[key],
-        interval: "D",
-        timezone: "Etc/UTC",
-        theme: "dark",
-        style: "1",
-        locale: "en",
-        toolbar_bg: "#f1f3f6",
-        container_id: "chartbox"
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
     });
 };
 
-},{"./coinIndex.js":"dc5Y2"}]},["lNSW0","jUTag"], "jUTag", "parcelRequire379f")
+},{}]},["7abT5","dc5Y2"], "dc5Y2", "parcelRequire379f")
 
-//# sourceMappingURL=index.cde5dfe0.js.map
+//# sourceMappingURL=index.4029012a.js.map

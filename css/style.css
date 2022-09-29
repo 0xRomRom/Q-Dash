@@ -628,6 +628,8 @@ li > a {
 .state-coinname {
   margin-top: 3.5rem;
   text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .coin-param {
@@ -742,11 +744,6 @@ li > a {
 
 .coin-search:hover {
   background-color: rgb(140, 20, 156);
-}
-
-.state-coinname {
-  font-size: 2rem;
-  font-weight: 800;
 }
 
 .by {
@@ -1247,6 +1244,12 @@ option {
   .eth {
     font-size: 2.6rem;
   }
+  .state-coinname {
+    font-size: 1.5rem;
+  }
+  .setup-title {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (max-width: 1490px) {
@@ -1286,6 +1289,18 @@ option {
   }
   .uniswap {
     font-size: 1.1rem;
+  }
+  .coin-fetch-title {
+    font-size: 2.5rem;
+  }
+  .coin-fetch-output {
+    font-size: 2rem !important;
+  }
+  .target-price-title {
+    font-size: 2.5rem;
+  }
+  .target-price-expected {
+    font-size: 2rem !important;
   }
 }
 
@@ -1388,11 +1403,20 @@ option {
   .xrp-change {
     font-size: 0.8rem;
   }
+  .setup-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
   .li-ho4 {
     padding-left: 15rem;
+  }
+  .state-coinname {
+    font-size: 1.3rem;
+  }
+  .setup-title {
+    font-size: 1.3rem;
   }
 }
 
