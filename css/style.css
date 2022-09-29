@@ -191,7 +191,7 @@ li > a {
   height: 100%;
   background: blue;
   margin: 0.2rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.872);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,13 +201,14 @@ li > a {
   font-family: "Open Sans";
   font-weight: 800;
   letter-spacing: 2px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .card:hover {
-  left: -1%;
-  width: 101%;
-  height: 101%;
+  top: -0.5%;
+  left: -0.5%;
+  width: 102%;
+  height: 102%;
 }
 
 .card-tall {
@@ -816,14 +817,22 @@ li > a {
   color: white;
   text-align: center;
   margin-top: 1rem;
-  /* background-color: red; */
+
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(210, 39, 210),
+    rgba(172, 78, 191, 0.479)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   text-align: center;
 }
 
 .chart-container {
   position: relative;
   height: 42rem;
-  top: 3rem;
+  top: 4.8rem;
 }
 
 .tradingview-widget-container {

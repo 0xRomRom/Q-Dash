@@ -171,7 +171,7 @@ li > a {
 .card {
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: #ffffffde;
   cursor: pointer;
   letter-spacing: 2px;
   background: #00f;
@@ -182,15 +182,16 @@ li > a {
   margin: .2rem;
   font-family: Open Sans;
   font-weight: 800;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
   display: flex;
   position: relative;
 }
 
 .card:hover {
-  width: 101%;
-  height: 101%;
-  left: -1%;
+  width: 102%;
+  height: 102%;
+  top: -.5%;
+  left: -.5%;
 }
 
 .card-tall {
@@ -786,7 +787,11 @@ li > a {
 .coin-name {
   color: #fff;
   text-align: center;
+  -webkit-text-fill-color: transparent;
   text-align: center;
+  background: -webkit-linear-gradient(90deg, #d227d2, #ac4ebf7a);
+  -webkit-background-clip: text;
+  background-clip: text;
   margin-top: 1rem;
   font-size: 3rem;
 }
@@ -794,7 +799,7 @@ li > a {
 .chart-container {
   height: 42rem;
   position: relative;
-  top: 3rem;
+  top: 4.8rem;
 }
 
 .tradingview-widget-container {
