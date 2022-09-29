@@ -377,21 +377,21 @@ li > a {
 .coin-fetch-output {
   text-align: center;
   -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(#82b5d4, #8c149c);
+  background: -webkit-linear-gradient(90deg, #5a94b9, #01f732);
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 72px;
+  font-weight: 800;
+  font-size: 35px !important;
 }
 
 .coin-fetch-title {
   text-align: center;
   -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(90deg, #5a94b9, #01f732);
+  background: -webkit-linear-gradient(#82b5d4, #8c149c);
   -webkit-background-clip: text;
   background-clip: text;
   margin-top: 4rem;
-  font-weight: 800;
-  font-size: 45px !important;
+  font-size: 45px;
 }
 
 .result-lower {
@@ -426,7 +426,9 @@ li > a {
   background: -webkit-linear-gradient(90deg, #5a94b9, #01f732);
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 65px !important;
+  font-family: Open Sans;
+  font-weight: 800;
+  font-size: 35px !important;
 }
 
 .center-alert-btn {
@@ -687,6 +689,20 @@ li > a {
   background: #8c149c;
 }
 
+.not-working {
+  color: #fff;
+  cursor: pointer;
+  padding-top: 5rem;
+  font-family: Open Sans;
+  position: absolute;
+  top: 40rem;
+}
+
+.reset-img {
+  position: absolute;
+  top: 37rem;
+}
+
 .coin-search {
   cursor: pointer;
   color: #fff;
@@ -724,22 +740,6 @@ li > a {
 
 .allow-text, .specify-text {
   text-align: center;
-}
-
-.coin-fetch-title {
-  font-family: Open Sans;
-  font-size: 4rem;
-}
-
-.coin-fetch-output {
-  font-family: Open Sans;
-  font-size: 3rem;
-}
-
-.target-price-expected {
-  font-family: Open Sans;
-  font-weight: 800;
-  font-size: 3rem !important;
 }
 
 .dropshadow {

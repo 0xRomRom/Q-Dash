@@ -555,6 +555,8 @@ const userPercentageInput = document.querySelector(".user-percentage-input");
 const incDecToggle = document.querySelector(".coin-param");
 const alertButton = document.querySelector(".alert-button");
 const messageModal = document.querySelector(".msg-modal");
+const notWorking = document.querySelector(".not-working");
+const resetImg = document.querySelector(".reset-img");
 const upperModal = document.querySelector(".result-upper");
 const lowerModal = document.querySelector(".result-lower");
 const sideModal = document.querySelector(".result-setup-box");
@@ -573,16 +575,19 @@ manageNotification.addEventListener("click", ()=>{
 closeNotifModal.addEventListener("click", ()=>{
     notificationModal.classList.add("hidden");
     dropShadow.classList.add("hidden");
+    resetImg.classList.add("hidden");
 });
 dropShadow.addEventListener("click", ()=>{
     notificationModal.classList.add("hidden");
     dropShadow.classList.add("hidden");
+    resetImg.classList.add("hidden");
 });
 // Ask for permission
 notifPush.addEventListener("click", async ()=>{
     await Notification.requestPermission().then((perm)=>{
         if (perm === "granted") {
             allowContainer.classList.add("opacityOut");
+            resetImg.classList.add("hidden");
             setTimeout(()=>{
                 allowContainer.classList.add("hidden");
                 inputContainer.classList.remove("hidden");
@@ -605,8 +610,9 @@ const fetchCoinAlert = async ()=>{
         const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${userInput.value}&vs_currencies=usd`);
         const data = await response.json();
         userQueriedCoinName = userInput.value;
+        console.log(data[userInput.value].usd.toString().length);
         fetchedCoinPrice = data[userInput.value].usd;
-        coinFetchPrice.textContent = `$${data[userInput.value].usd}`;
+        coinFetchPrice.textContent = `$${fetchedCoinPrice}`;
         coinFetchTitle.textContent = userInput.value.charAt(0).toUpperCase() + userInput.value.slice(1);
         coinFetchTitle2.textContent = userInput.value.charAt(0).toUpperCase() + userInput.value.slice(1);
         inputContainer.classList.add("opacityOut");
@@ -628,7 +634,7 @@ calculatePrice.addEventListener("click", ()=>{
         let outputValue = calculateValue * fetchedCoinPrice;
         expectedCoinPrice = outputValue;
         userSpecifiedChange = "surged past your target!";
-        targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
+        targetPriceExpected.textContent = `$${+outputValue}`;
         alertButton.classList.remove("hidden");
         positiveBool = true;
         return;
@@ -638,7 +644,7 @@ calculatePrice.addEventListener("click", ()=>{
         let outputValue1 = calculateValue1 * fetchedCoinPrice;
         expectedCoinPrice = outputValue1;
         userSpecifiedChange = "dropped past your target!";
-        targetPriceExpected.textContent = `$${+outputValue1.toFixed(2)}`;
+        targetPriceExpected.textContent = `$${+outputValue1}`;
         alertButton.classList.remove("hidden");
         positiveBool = false;
         return;
@@ -653,8 +659,6 @@ const intervalFetcher = ()=>{
                     const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${userQueriedCoinName}&vs_currencies=usd`);
                     const data = await response.json();
                     fetchedPrice = data[userQueriedCoinName].usd;
-                    console.log(fetchedPrice);
-                    console.log("Fetched Plus");
                     checkResultsMin();
                 }
             }
@@ -662,8 +666,6 @@ const intervalFetcher = ()=>{
                 const response1 = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${userQueriedCoinName}&vs_currencies=usd`);
                 const data1 = await response1.json();
                 fetchedPrice = data1[userQueriedCoinName].usd;
-                console.log(fetchedPrice);
-                console.log("Fetched Min");
                 checkResultsPlus();
             }
         } catch (err) {
@@ -730,6 +732,10 @@ alertButton.addEventListener("click", ()=>{
     setTimeout(()=>{
         messageModal.classList.add("hidden");
     }, 5600);
+});
+// Open help image
+notWorking.addEventListener("click", ()=>{
+    resetImg.classList.toggle("hidden");
 });
 
 },{}]},["a37Ji","4yZjd"], "4yZjd", "parcelRequire379f")

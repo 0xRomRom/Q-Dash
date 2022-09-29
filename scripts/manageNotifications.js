@@ -22,6 +22,8 @@ const userPercentageInput = document.querySelector(".user-percentage-input");
 const incDecToggle = document.querySelector(".coin-param");
 const alertButton = document.querySelector(".alert-button");
 const messageModal = document.querySelector(".msg-modal");
+const notWorking = document.querySelector(".not-working");
+const resetImg = document.querySelector(".reset-img");
 
 const upperModal = document.querySelector(".result-upper");
 const lowerModal = document.querySelector(".result-lower");
@@ -44,11 +46,13 @@ manageNotification.addEventListener("click", () => {
 closeNotifModal.addEventListener("click", () => {
   notificationModal.classList.add("hidden");
   dropShadow.classList.add("hidden");
+  resetImg.classList.add("hidden");
 });
 
 dropShadow.addEventListener("click", () => {
   notificationModal.classList.add("hidden");
   dropShadow.classList.add("hidden");
+  resetImg.classList.add("hidden");
 });
 
 // Ask for permission
@@ -56,6 +60,7 @@ notifPush.addEventListener("click", async () => {
   await Notification.requestPermission().then((perm) => {
     if (perm === "granted") {
       allowContainer.classList.add("opacityOut");
+      resetImg.classList.add("hidden");
       setTimeout(() => {
         allowContainer.classList.add("hidden");
         inputContainer.classList.remove("hidden");
@@ -83,8 +88,9 @@ const fetchCoinAlert = async () => {
     );
     const data = await response.json();
     userQueriedCoinName = userInput.value;
+    console.log(data[userInput.value].usd.toString().length);
     fetchedCoinPrice = data[userInput.value].usd;
-    coinFetchPrice.textContent = `$${data[userInput.value].usd}`;
+    coinFetchPrice.textContent = `$${fetchedCoinPrice}`;
     coinFetchTitle.textContent =
       userInput.value.charAt(0).toUpperCase() + userInput.value.slice(1);
     coinFetchTitle2.textContent =
@@ -112,7 +118,7 @@ calculatePrice.addEventListener("click", () => {
     let outputValue = calculateValue * fetchedCoinPrice;
     expectedCoinPrice = outputValue;
     userSpecifiedChange = "surged past your target!";
-    targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
+    targetPriceExpected.textContent = `$${+outputValue}`;
     alertButton.classList.remove("hidden");
     positiveBool = true;
     return;
@@ -122,7 +128,7 @@ calculatePrice.addEventListener("click", () => {
     let outputValue = calculateValue * fetchedCoinPrice;
     expectedCoinPrice = outputValue;
     userSpecifiedChange = "dropped past your target!";
-    targetPriceExpected.textContent = `$${+outputValue.toFixed(2)}`;
+    targetPriceExpected.textContent = `$${+outputValue}`;
     alertButton.classList.remove("hidden");
     positiveBool = false;
     return;
@@ -141,8 +147,6 @@ const intervalFetcher = () => {
           );
           const data = await response.json();
           fetchedPrice = data[userQueriedCoinName].usd;
-          console.log(fetchedPrice);
-          console.log("Fetched Plus");
           checkResultsMin();
         }
       }
@@ -153,8 +157,6 @@ const intervalFetcher = () => {
         );
         const data = await response.json();
         fetchedPrice = data[userQueriedCoinName].usd;
-        console.log(fetchedPrice);
-        console.log("Fetched Min");
         checkResultsPlus();
       }
     } catch (err) {
@@ -240,4 +242,9 @@ alertButton.addEventListener("click", () => {
   setTimeout(() => {
     messageModal.classList.add("hidden");
   }, 5600);
+});
+
+// Open help image
+notWorking.addEventListener("click", () => {
+  resetImg.classList.toggle("hidden");
 });
