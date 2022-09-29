@@ -390,8 +390,8 @@ li > a {
   -webkit-background-clip: text;
   background-clip: text;
   margin-top: 4rem;
-  font-size: 72px;
   font-weight: 800;
+  font-size: 45px !important;
 }
 
 .result-lower {
@@ -416,8 +416,8 @@ li > a {
   background: -webkit-linear-gradient(#82b5d4, #8c149c);
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 4rem;
-  font-size: 72px;
+  margin-top: 3.5rem;
+  font-size: 45px;
 }
 
 .target-price-expected {
@@ -433,7 +433,7 @@ li > a {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 6rem;
   display: flex;
   position: relative;
 }
@@ -444,7 +444,6 @@ li > a {
   background-color: #0000;
   border: 2px solid #8c149c;
   border-radius: .4rem;
-  margin-top: 2.5rem;
   padding: .5rem 1rem;
   font-family: Open Sans;
   font-size: 1.2rem;
@@ -549,6 +548,48 @@ li > a {
   font-size: 1.2rem;
   font-weight: 800;
   position: relative;
+}
+
+.msg-modal {
+  color: #fff;
+  width: 15rem;
+  height: 5rem;
+  z-index: 100;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #080b16;
+  border: 2px solid #8c149c;
+  border-radius: .6rem;
+  padding-top: .75rem;
+  font-family: Open Sans;
+  font-size: 1.2rem;
+  font-weight: 800;
+  position: absolute;
+  top: 3rem;
+  left: 45%;
+  box-shadow: 0 0 15px #8c149c;
+}
+
+.msgAnimate {
+  animation: 4s ease-in-out forwards msgFade;
+}
+
+@keyframes msgFade {
+  0% {
+    display: initial;
+    opacity: 1;
+    transform: translateY(-5rem);
+  }
+
+  90% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    transform: translateY(4rem);
+  }
 }
 
 .setup-title {
@@ -685,15 +726,20 @@ li > a {
   text-align: center;
 }
 
-.coin-fetch-title, .coin-fetch-output {
+.coin-fetch-title {
   font-family: Open Sans;
   font-size: 4rem;
 }
 
+.coin-fetch-output {
+  font-family: Open Sans;
+  font-size: 3rem;
+}
+
 .target-price-expected {
   font-family: Open Sans;
-  font-size: 2rem;
   font-weight: 800;
+  font-size: 3rem !important;
 }
 
 .dropshadow {

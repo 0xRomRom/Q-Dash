@@ -404,7 +404,7 @@ li > a {
 
 .coin-fetch-title {
   text-align: center;
-  font-size: 72px;
+  font-size: 45px !important;
   font-weight: 800;
   background: -webkit-linear-gradient(
     90deg,
@@ -435,11 +435,11 @@ li > a {
 
 .target-price-title {
   text-align: center;
-  font-size: 72px;
+  font-size: 45px;
   background: -webkit-linear-gradient(rgb(130, 181, 212), rgb(140, 20, 156));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
 }
 
 .target-price-expected {
@@ -461,6 +461,7 @@ li > a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 6rem;
 }
 
 .alert-button {
@@ -472,7 +473,6 @@ li > a {
   padding: 0.5rem 1rem;
   font-weight: 800;
   font-size: 1.2rem;
-  margin-top: 2.5rem;
   animation: hover 1s ease-in-out infinite;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -574,6 +574,46 @@ li > a {
   border: 2px solid rgb(140, 20, 156);
   color: white;
   font-weight: 800;
+}
+
+.msg-modal {
+  position: absolute;
+  color: white;
+  background-color: #080b16;
+  border: 2px solid rgb(140, 20, 156);
+  box-shadow: 0px 0px 15px rgb(140, 20, 156);
+  border-radius: 0.6rem;
+  width: 15rem;
+  height: 5rem;
+  left: 45%;
+  top: 3rem;
+  z-index: 100;
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-top: 0.75rem;
+}
+
+.msgAnimate {
+  animation: msgFade 4s ease-in-out forwards;
+}
+
+@keyframes msgFade {
+  0% {
+    display: initial;
+    transform: translateY(-5rem);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(4rem);
+    opacity: 0;
+    display: none;
+  }
 }
 
 .setup-title {
@@ -720,11 +760,11 @@ li > a {
 }
 .coin-fetch-output {
   font-family: "Open Sans";
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .target-price-expected {
-  font-size: 2rem;
+  font-size: 3rem !important;
   font-family: "Open Sans";
   font-weight: 800;
 }

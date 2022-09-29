@@ -554,15 +554,16 @@ const calculatePrice = document.querySelector(".calculate-price");
 const userPercentageInput = document.querySelector(".user-percentage-input");
 const incDecToggle = document.querySelector(".coin-param");
 const alertButton = document.querySelector(".alert-button");
+const messageModal = document.querySelector(".msg-modal");
 const upperModal = document.querySelector(".result-upper");
 const lowerModal = document.querySelector(".result-lower");
 const sideModal = document.querySelector(".result-setup-box");
-// window.addEventListener("load", () => {
-//   if (Notification.permission === "granted") {
-//     allowContainer.classList.add("hidden");
-//     inputContainer.classList.remove("hidden");
-//   }
-// });
+window.addEventListener("load", ()=>{
+    if (Notification.permission === "granted") {
+        allowContainer.classList.add("hidden");
+        inputContainer.classList.remove("hidden");
+    }
+});
 // Open notification modal
 manageNotification.addEventListener("click", ()=>{
     notificationModal.classList.remove("hidden");
@@ -714,7 +715,21 @@ alertButton.addEventListener("click", ()=>{
         allowContainer.classList.remove("opacityOut");
         inputContainer.classList.remove("opacityOut");
         userInput.value = "";
+        coinFetchPrice.textContent = "";
+        coinFetchTitle.textContent = "";
+        coinFetchTitle2.textContent = "";
+        coinNameTitle.textContent = "";
+        targetPriceExpected.textContent = "";
+        userPercentageInput.value = "";
+        incDecToggle.value = "Increases";
     }, 1400);
+    setTimeout(()=>{
+        messageModal.classList.remove("hidden");
+        messageModal.classList.add("msgAnimate");
+    }, 1600);
+    setTimeout(()=>{
+        messageModal.classList.add("hidden");
+    }, 5600);
 });
 
 },{}]},["a37Ji","4yZjd"], "4yZjd", "parcelRequire379f")
