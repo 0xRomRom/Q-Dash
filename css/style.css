@@ -375,6 +375,19 @@ li > a {
   border-radius: 1rem;
 }
 
+.fadeModalOut {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .current-price {
   text-align: center;
   color: gray;
@@ -387,7 +400,6 @@ li > a {
   background: -webkit-linear-gradient(rgb(130, 181, 212), rgb(140, 20, 156));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 4rem;
 }
 
 .coin-fetch-title {
@@ -401,6 +413,7 @@ li > a {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 4rem;
 }
 
 .result-lower {
@@ -472,7 +485,7 @@ li > a {
   font-size: 4rem;
   color: rgba(140, 20, 156, 0.502);
   position: absolute;
-  left: 30rem;
+  left: 0rem;
   top: 7rem;
 }
 
@@ -481,7 +494,7 @@ li > a {
   font-size: 4rem;
   color: rgba(140, 20, 156, 0.502);
   position: absolute;
-  left: 30.5rem;
+  left: 0.5rem;
   top: 38rem;
 }
 
@@ -609,6 +622,7 @@ li > a {
   font-weight: 800;
   border-radius: 0.2rem;
   border: none;
+  outline: 0;
 }
 
 .calculate-price {
@@ -647,15 +661,14 @@ li > a {
   font-size: 2rem;
   cursor: pointer;
   font-weight: 800;
-  border: 2px solid white;
+  border: 2px solid rgb(140, 20, 156);
   background: transparent;
   color: white;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .notif-push:hover {
-  color: black;
-  background: white;
+  background: rgb(140, 20, 156);
 }
 
 .coin-search {
@@ -665,15 +678,14 @@ li > a {
   font-size: 1.5rem;
   cursor: pointer;
   font-weight: 800;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   color: white;
   background-color: black;
-  border: 1px solid white;
+  border: 2px solid rgb(140, 20, 156);
 }
 
 .coin-search:hover {
-  color: black;
-  background-color: white;
+  background-color: rgb(140, 20, 156);
 }
 
 .state-coinname {

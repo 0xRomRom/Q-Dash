@@ -534,10 +534,8 @@
         </div>
       </div>
       <div class="notification-box hidden">
-        <i class="fa-solid fa-arrow-turn-down"></i>
-        <i class="fa-solid fa-arrow-turn-down fa-ar"></i>
         <i class="fa-solid fa-x light-close3"></i>
-        <div class="notif-anim-container hidden">
+        <div class="notif-anim-container">
           <h1 class="allow-text">Allow QDash to notify you</h1>
           <button class="notif-push">Allow</button>
           <img src="./img/allow-notif.png" class="example-img" />
@@ -548,26 +546,28 @@
           <p class="error-text2 inv">Could not find coin with the given name</p>
           <button class="coin-search">Search</button>
         </div>
-        <div class="notif-anim-container3">
+        <div class="notif-anim-container3 hidden">
           <div class="result-output-box">
             <div class="result-upper">
               <h1 class="current-price">Current price</h1>
-              <p class="coin-fetch-output">Solana</p>
-              <p class="coin-fetch-title">$133</p>
+              <p class="coin-fetch-title"></p>
+              <p class="coin-fetch-output"></p>
             </div>
             <div class="result-lower">
               <h1 class="target-price">Target price</h1>
-              <p class="target-price-title">Solana</p>
-              <p class="target-price-expected">$135</p>
+              <p class="target-price-title"></p>
+              <p class="target-price-expected"></p>
               <div class="center-alert-btn">
-                <button class="alert-button">Alert me!</button>
+                <button class="alert-button hidden">Alert me!</button>
               </div>
             </div>
           </div>
           <div class="result-setup-box">
+            <i class="fa-solid fa-arrow-turn-down"></i>
+            <i class="fa-solid fa-arrow-turn-down fa-ar"></i>
             <div class="result-modal">
               <h1 class="setup-title">Configure Parameters</h1>
-              <p class="state-coinname">If Solana's price</p>
+              <p class="state-coinname"></p>
               <div class="center-options">
                 <select class="coin-param">
                   <option value="Increases" class="opt2">Increases</option>

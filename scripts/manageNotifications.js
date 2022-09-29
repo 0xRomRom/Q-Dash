@@ -8,6 +8,7 @@ const notifPush = document.querySelector(".notif-push");
 const coinSearch = document.querySelector(".coin-search");
 const coinFetchPrice = document.querySelector(".coin-fetch-output");
 const coinFetchTitle = document.querySelector(".coin-fetch-title");
+const coinFetchTitle2 = document.querySelector(".target-price-title");
 const userInput = document.querySelector(".user-coin-query");
 const allowContainer = document.querySelector(".notif-anim-container");
 const inputContainer = document.querySelector(".notif-anim-container2");
@@ -20,6 +21,10 @@ const calculatePrice = document.querySelector(".calculate-price");
 const userPercentageInput = document.querySelector(".user-percentage-input");
 const incDecToggle = document.querySelector(".coin-param");
 const alertButton = document.querySelector(".alert-button");
+
+const upperModal = document.querySelector(".result-upper");
+const lowerModal = document.querySelector(".result-lower");
+const sideModal = document.querySelector(".result-setup-box");
 
 // window.addEventListener("load", () => {
 //   if (Notification.permission === "granted") {
@@ -80,6 +85,8 @@ const fetchCoinAlert = async () => {
     fetchedCoinPrice = data[userInput.value].usd;
     coinFetchPrice.textContent = `$${data[userInput.value].usd}`;
     coinFetchTitle.textContent =
+      userInput.value.charAt(0).toUpperCase() + userInput.value.slice(1);
+    coinFetchTitle2.textContent =
       userInput.value.charAt(0).toUpperCase() + userInput.value.slice(1);
     inputContainer.classList.add("opacityOut");
     coinNameTitle.textContent = `If ${
@@ -188,7 +195,34 @@ const checkResultsPlus = () => {
   }
 };
 
-// Launnch alert
+const fadeModalsOut = (modal, time) => {
+  setTimeout(() => {
+    modal.classList.add("fadeModalOut");
+  }, time);
+};
+
+// Launch alert
 alertButton.addEventListener("click", () => {
   intervalFetcher();
+  fadeModalsOut(upperModal, 300);
+  fadeModalsOut(sideModal, 600);
+  fadeModalsOut(lowerModal, 900);
+  fadeModalsOut(notificationModal, 1400);
+  setTimeout(() => {
+    notificationModal.classList.add("hidden");
+    notificationModal.classList.remove("fadeModalOut");
+    upperModal.classList.remove("fadeModalOut");
+    sideModal.classList.remove("fadeModalOut");
+    lowerModal.classList.remove("fadeModalOut");
+    dropShadow.classList.add("hidden");
+    inputContainer.classList.add("hidden");
+    resultContainer.classList.add("hidden");
+    inputContainer.classList.remove("hidden");
+    if (Notification.permission !== "granted") {
+      allowContainer.classList.remove("hidden");
+    }
+    allowContainer.classList.remove("opacityOut");
+    inputContainer.classList.remove("opacityOut");
+    userInput.value = "";
+  }, 1400);
 });
