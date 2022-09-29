@@ -634,7 +634,7 @@ calculatePrice.addEventListener("click", ()=>{
         let outputValue = calculateValue * fetchedCoinPrice;
         expectedCoinPrice = outputValue;
         userSpecifiedChange = "surged past your target!";
-        targetPriceExpected.textContent = `$${+outputValue}`;
+        targetPriceExpected.textContent = `$${+outputValue.toFixed(6)}`;
         alertButton.classList.remove("hidden");
         positiveBool = true;
         return;
@@ -644,7 +644,7 @@ calculatePrice.addEventListener("click", ()=>{
         let outputValue1 = calculateValue1 * fetchedCoinPrice;
         expectedCoinPrice = outputValue1;
         userSpecifiedChange = "dropped past your target!";
-        targetPriceExpected.textContent = `$${+outputValue1}`;
+        targetPriceExpected.textContent = `$${+outputValue1.toFixed(6)}`;
         alertButton.classList.remove("hidden");
         positiveBool = false;
         return;

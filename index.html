@@ -522,13 +522,14 @@
               <button class="seach-coin-btn">Search</button>
             </div>
             <div class="result-container hidden">
-              <h1 class="t1"><span class="t1a"></span></h1>
-              <p class="t2">Price:<span class="t2a"></span></p>
-              <p class="t3">Rank:<span class="t3a"></span></p>
-              <p class="t4">Category:<span class="t4a"> Undefined</span></p>
-              <p class="t5">Symbol: <span class="t5a"></span></p>
-              <p></p>
+              <h1 class="t1a"></h1>
               <i class="fa-solid fa-arrow-right-to-bracket return-result"></i>
+              <div class="result-flex">
+                <p class="t2">Price:<span class="t2a"></span></p>
+                <p class="t3">Rank:<span class="t3a"></span></p>
+                <p class="t4">Category:<span class="t4a"></span></p>
+                <p class="t5">Symbol: <span class="t5a"></span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -540,11 +541,11 @@
           <button class="notif-push">Allow</button>
           <img src="./img/allow-notif.png" class="example-img" />
           <p class="not-working">Not working?</p>
-          <img src="./img/reset-notif.png" class="reset-img hidden" />
+          <img src="./img/reset-notif.png" class="reset-img" />
         </div>
         <div class="notif-anim-container2 hidden">
           <h1 class="specify-text">Specify your token</h1>
-          <input type="text" class="user-coin-query" />
+          <input type="text" class="user-coin-query" spellcheck="false" />
           <p class="error-text2 inv">Could not find coin with the given name</p>
           <button class="coin-search">Search</button>
         </div>
