@@ -193,7 +193,7 @@ li > a {
   border: 1px solid red;
   top: -.5%;
   left: -.5%;
-  box-shadow: 0 0 10px #0ff;
+  box-shadow: 0 0 8px #0ff;
 }
 
 .card-tall {
@@ -928,7 +928,7 @@ li > a {
 }
 
 .fa-arrow-rotate-right:hover {
-  color: #fff;
+  color: #ffffffc9;
 }
 
 .refreshRotate {
