@@ -560,7 +560,9 @@ const resetImg = document.querySelector(".reset-img");
 const upperModal = document.querySelector(".result-upper");
 const lowerModal = document.querySelector(".result-lower");
 const sideModal = document.querySelector(".result-setup-box");
+const enterNumber = document.querySelector(".enter-number");
 window.addEventListener("load", ()=>{
+    enterNumber.classList.add("inv");
     if (Notification.permission === "granted") {
         allowContainer.classList.add("hidden");
         inputContainer.classList.remove("hidden");
@@ -629,6 +631,11 @@ const fetchCoinAlert = async ()=>{
 let positiveBool = "";
 // Calculate price
 calculatePrice.addEventListener("click", ()=>{
+    if (isNaN(userPercentageInput.value)) {
+        enterNumber.classList.remove("inv");
+        return;
+    }
+    enterNumber.classList.add("inv");
     if (incDecToggle.value === "Increases") {
         let calculateValue = (+userPercentageInput.value + 100) / 100;
         let outputValue = calculateValue * fetchedCoinPrice;

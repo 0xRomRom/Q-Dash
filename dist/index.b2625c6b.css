@@ -777,6 +777,12 @@ li > a {
   top: -.15rem;
 }
 
+.enter-number {
+  color: red;
+  font-family: Open Sans;
+  position: absolute;
+}
+
 .allow-text, .specify-text {
   text-align: center;
 }
