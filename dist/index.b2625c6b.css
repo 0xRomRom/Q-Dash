@@ -190,8 +190,10 @@ li > a {
 .card:hover {
   width: 102%;
   height: 102%;
+  border: 1px solid red;
   top: -.5%;
   left: -.5%;
+  box-shadow: 0 0 10px #0ff;
 }
 
 .card-tall {
@@ -921,7 +923,12 @@ li > a {
   color: #aca8a8;
   cursor: pointer;
   font-size: 3rem;
+  transition: all .1s ease-in-out;
   position: relative;
+}
+
+.fa-arrow-rotate-right:hover {
+  color: #fff;
 }
 
 .refreshRotate {

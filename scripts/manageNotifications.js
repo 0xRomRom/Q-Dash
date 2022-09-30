@@ -79,6 +79,7 @@ userInput.addEventListener('keyup', (e) => {
     fetchCoinAlert();
   }
 })
+
 coinSearch.addEventListener("click", () => {
   fetchCoinAlert();
 });
@@ -121,14 +122,14 @@ const fetchCoinAlert = async () => {
 let positiveBool = "";
 
 
-// Calculate price
-calculatePrice.addEventListener("click", () => {
+//Calculate Price
+
+const priceCalculator = () => {
   if(isNaN(userPercentageInput.value)) {
     enterNumber.classList.remove('inv');
     return;
   }
   enterNumber.classList.add('inv');
-
 
   if (incDecToggle.value === "Increases") {
     let calculateValue = (+userPercentageInput.value + 100) / 100;
@@ -150,7 +151,20 @@ calculatePrice.addEventListener("click", () => {
     positiveBool = false;
     return;
   }
-});
+};
+
+userPercentageInput.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    priceCalculator()
+  }
+})
+
+calculatePrice.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    priceCalculator();
+  }
+})
+
 
 let fetchedPrice = 0;
 
@@ -180,7 +194,9 @@ const intervalFetcher = () => {
       console.log(err);
     }
   }, 10000);
-};
+}
+
+
 // If expected price is lower
 const checkResultsMin = () => {
   if (fetchedPrice !== 0 && fetchedPrice > expectedCoinPrice) {

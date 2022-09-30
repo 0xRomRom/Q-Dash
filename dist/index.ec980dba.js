@@ -632,8 +632,8 @@ const fetchCoinAlert = async ()=>{
     }
 };
 let positiveBool = "";
-// Calculate price
-calculatePrice.addEventListener("click", ()=>{
+//Calculate Price
+const priceCalculator = ()=>{
     if (isNaN(userPercentageInput.value)) {
         enterNumber.classList.remove("inv");
         return;
@@ -659,6 +659,12 @@ calculatePrice.addEventListener("click", ()=>{
         positiveBool = false;
         return;
     }
+};
+userPercentageInput.addEventListener("keyup", (e)=>{
+    if (e.key === "Enter") priceCalculator();
+});
+calculatePrice.addEventListener("keyup", (e)=>{
+    if (e.key === "Enter") priceCalculator();
 });
 let fetchedPrice = 0;
 const intervalFetcher = ()=>{
