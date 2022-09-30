@@ -331,7 +331,7 @@ li > a {
   z-index: 50;
   background: linear-gradient(to right, #0f0c29, #24243e);
   border: 1px solid #8c149c;
-  border-radius: .4rem;
+  border-radius: 1rem;
   font-family: Open Sans;
   position: absolute;
   top: 5rem;
@@ -347,7 +347,7 @@ li > a {
   z-index: 100;
   background-color: #000;
   border: 1px solid #8c149c8e;
-  border-radius: .4rem;
+  border-radius: 1rem;
   justify-content: center;
   align-items: center;
   font-family: Open Sans;
@@ -941,7 +941,7 @@ li > a {
   color: #fff;
   z-index: 50;
   background: linear-gradient(to right, #0f0c29, #24243e);
-  border-radius: .4rem;
+  border-radius: 1rem;
   font-family: Open Sans;
   position: absolute;
   top: 5rem;
