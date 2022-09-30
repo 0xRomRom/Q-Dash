@@ -598,6 +598,9 @@ notifPush.addEventListener("click", async ()=>{
     });
 });
 // User input search
+userInput.addEventListener("keyup", (e)=>{
+    if (e.key === "Enter") fetchCoinAlert();
+});
 coinSearch.addEventListener("click", ()=>{
     fetchCoinAlert();
 });
