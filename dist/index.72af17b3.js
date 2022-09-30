@@ -728,7 +728,7 @@ setInterval(()=>{
             card.classList.remove("rotater");
         }, 1100);
     });
-}, 180000);
+}, 90000);
 // Refresh/Refetch
 refreshArrow.addEventListener("click", ()=>{
     refreshArrow.disabled = true;
