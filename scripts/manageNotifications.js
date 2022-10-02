@@ -42,19 +42,13 @@ window.addEventListener("load", () => {
 // Open notification modal
 manageNotification.addEventListener("click", () => {
   notificationModal.classList.remove("hidden");
-  dropShadow.classList.remove("hidden");
   notificationModal.classList.remove("fadeOut");
+  dropShadow.classList.remove("hidden");
   dropShadow.classList.remove("fadeOut");
 });
 
 // Close notification modal
 closeNotifModal.addEventListener("click", () => {
-  notificationModal.classList.add("hidden");
-  dropShadow.classList.add("hidden");
-  resetImg.classList.add("hidden");
-});
-
-dropShadow.addEventListener("click", () => {
   notificationModal.classList.add("fadeOut");
   dropShadow.classList.add("fadeOut");
   resetImg.classList.add("hidden");
@@ -64,8 +58,7 @@ dropShadow.addEventListener("click", () => {
   }, 500);
 });
 
-//Close search modal
-dropBg.addEventListener("click", () => {
+dropShadow.addEventListener("click", () => {
   notificationModal.classList.add("fadeOut");
   dropShadow.classList.add("fadeOut");
   resetImg.classList.add("hidden");

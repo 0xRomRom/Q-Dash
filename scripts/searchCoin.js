@@ -2,6 +2,7 @@
 
 const searchModalButton = document.querySelector(".search-button");
 const searchModal = document.querySelector(".search-modal");
+const searchModalInner = document.querySelector(".search-inner-modal");
 const dropBg = document.querySelector(".dropshadow-srch");
 const closeSearchModal = document.querySelector(".light-close4");
 const searchInput = document.querySelector(".search-coin-input");
@@ -60,9 +61,12 @@ const coinSearcher = async () => {
     );
     const data = await response.json();
     responseHandler(data);
-    data[0] === undefined
-      ? cantFindText.classList.remove("inv")
-      : cantFindText.classList.add("inv");
+    if (data[0] === undefined) {
+      cantFindText.classList.remove("inv");
+    } else {
+      searchModalInner.classList.add("rotateDiv");
+      cantFindText.classList.add("inv");
+    }
   } catch (err) {
     console.log(err);
   }

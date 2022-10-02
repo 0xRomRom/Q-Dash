@@ -54,6 +54,21 @@ html {
   }
 }
 
+.rotateDiv {
+  animation: rotateDiv 0.5s ease-in-out forwards;
+}
+
+@keyframes rotateDiv {
+  0% {
+    position: absolute;
+    transform: rotateX(0deg);
+  }
+  100% {
+    position: absolute;
+    transform: rotateX(90deg);
+  }
+}
+
 nav {
   position: relative;
   background-color: rgb(8, 11, 22);
