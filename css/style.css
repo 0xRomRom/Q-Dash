@@ -62,7 +62,7 @@ left: 20rem;
 width: 3rem;
 height: 3rem;
 cursor: pointer;
-z-index: 100;
+z-index: 10;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -84,13 +84,13 @@ left: 24rem;
 width: 3rem;
 height: 3rem;
 cursor: pointer;
-z-index: 100;
 background-color: transparent;
 display: flex;
 justify-content: center;
 align-items: center;
 border: none;
 text-align: center;
+z-index: 10;
 }
 
 .fa-arrow-rotate-right {
@@ -100,7 +100,7 @@ text-align: center;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
-.fa-arrow-rotate-right:hover {
+.refresh-button:hover .fa-arrow-rotate-right {
  color: rgba(255, 255, 255, 0.79);
 }
 
@@ -469,7 +469,7 @@ li > a {
   align-items: center;
   flex-direction: row;
   background-color: #000000;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
 }
 
 .result-upper {
@@ -626,12 +626,11 @@ li > a {
   width: 50%;
   height: 100%;
   display: flex;
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
 }
 .result-setup-box {
   position: relative;
