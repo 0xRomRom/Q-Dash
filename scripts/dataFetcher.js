@@ -245,12 +245,39 @@ const compDiv = document.querySelector(".comp-div");
 const refreshArrow = document.querySelector(".refresh-button");
 const allCards = document.querySelectorAll(".card");
 
+const refreshCounter = document.querySelector('.refresh-counter');
+
+
 // Initial render
 window.addEventListener("load", async () => {
   updateUI();
 });
 
+
+//Refresh interval counter
+let refreshCount = 90;
+refreshCounter.textContent = refreshCount;
+
+ setInterval(() => {
+  if(refreshCount === 0) {
+    updateUI();
+    refreshCount = 90;
+    allCards.forEach((card) => {
+    card.classList.add("rotater");
+    setTimeout(() => {
+      card.classList.remove("rotater");
+    }, 1100);
+  });
+  }
+    refreshCounter.textContent = refreshCount;
+    refreshCount--;
+    refreshCounter.textContent = refreshCount;
+  }, 1000)
+
+
 setInterval(() => {
+  refreshCount = 90;
+  refreshCounter.textContent = refreshCount;
   updateUI();
   allCards.forEach((card) => {
     card.classList.add("rotater");
@@ -263,6 +290,7 @@ setInterval(() => {
 // Refresh/Refetch
 refreshArrow.addEventListener("click", () => {
   refreshArrow.disabled = true;
+  refreshCount = 90
   updateUI();
   refreshArrow.classList.add("refreshRotate");
   allCards.forEach((card) => {

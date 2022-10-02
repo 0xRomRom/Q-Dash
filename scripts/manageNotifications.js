@@ -121,7 +121,6 @@ const fetchCoinAlert = async () => {
 
 let positiveBool = "";
 
-
 //Calculate Price
 
 const priceCalculator = () => {
@@ -168,6 +167,7 @@ calculatePrice.addEventListener('keyup', (e) => {
 
 let fetchedPrice = 0;
 
+// Fetch coin prices every 10 second
 const intervalFetcher = () => {
   setInterval(async () => {
     try {
@@ -200,7 +200,6 @@ const intervalFetcher = () => {
 // If expected price is lower
 const checkResultsMin = () => {
   if (fetchedPrice !== 0 && fetchedPrice > expectedCoinPrice) {
-    alert("Alert!");
     const notification = new Notification(
       `${
         userQueriedCoinName.charAt(0).toUpperCase() + userInput.value.slice(1)
@@ -217,7 +216,6 @@ const checkResultsMin = () => {
 // If expected price is higher
 const checkResultsPlus = () => {
   if (fetchedPrice !== 0 && fetchedPrice < expectedCoinPrice) {
-    alert("Alert!");
     const notification = new Notification(
       `${
         userQueriedCoinName.charAt(0).toUpperCase() + userInput.value.slice(1)

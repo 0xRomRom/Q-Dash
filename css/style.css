@@ -54,6 +54,70 @@ nav {
   height: 100vh;
 }
 
+.search-button {
+position: absolute;
+background-color: transparent;
+top: 1.5rem;
+left: 20rem;
+width: 3rem;
+height: 3rem;
+cursor: pointer;
+z-index: 100;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+}
+
+.refresh-counter {
+  position: absolute;
+  color: rgb(172, 168, 168);
+  z-index: 200;
+  text-align: center;
+  margin-right: 4px;
+}
+
+.refresh-button {
+position: absolute;
+top: 1.5rem;
+left: 24rem;
+width: 3rem;
+height: 3rem;
+cursor: pointer;
+z-index: 100;
+background-color: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+text-align: center;
+}
+
+.fa-arrow-rotate-right {
+  color: rgb(172, 168, 168);
+  font-size: 3rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.fa-arrow-rotate-right:hover {
+ color: rgba(255, 255, 255, 0.79);
+}
+
+
+.fa-magnifying-glass {
+  color: rgb(172, 168, 168);
+  font-size: 3rem;
+  transition: all 0.1s ease-in-out;
+}
+
+
+.fa-magnifying-glass:hover {
+ color: rgba(255, 255, 255, 0.79);
+}
+
+
+
 li {
   text-decoration: none;
   list-style-type: none;
@@ -947,23 +1011,7 @@ li > a {
   text-decoration: none;
 }
 
-.refresh-button {
-  position: relative;
-  background-color: transparent;
-  border: none;
-  top: 4rem;
-}
 
-.fa-arrow-rotate-right {
-  color: rgb(172, 168, 168);
-  font-size: 3rem;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-.fa-arrow-rotate-right:hover {
- color: rgba(255, 255, 255, 0.79);
-}
 
 .refreshRotate {
   animation: rotating ease-in-out 1s forwards;
