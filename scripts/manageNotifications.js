@@ -158,11 +158,7 @@ userPercentageInput.addEventListener('keyup', (e) => {
   }
 })
 
-calculatePrice.addEventListener('keyup', (e) => {
-  if (e.key === 'Enter') {
-    priceCalculator();
-  }
-})
+calculatePrice.addEventListener('click', priceCalculator)
 
 
 let fetchedPrice = 0;

@@ -663,9 +663,7 @@ const priceCalculator = ()=>{
 userPercentageInput.addEventListener("keyup", (e)=>{
     if (e.key === "Enter") priceCalculator();
 });
-calculatePrice.addEventListener("keyup", (e)=>{
-    if (e.key === "Enter") priceCalculator();
-});
+calculatePrice.addEventListener("click", priceCalculator);
 let fetchedPrice = 0;
 // Fetch coin prices every 10 second
 const intervalFetcher = ()=>{
