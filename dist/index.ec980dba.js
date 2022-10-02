@@ -572,6 +572,8 @@ window.addEventListener("load", ()=>{
 manageNotification.addEventListener("click", ()=>{
     notificationModal.classList.remove("hidden");
     dropShadow.classList.remove("hidden");
+    notificationModal.classList.remove("fadeOut");
+    dropShadow.classList.remove("fadeOut");
 });
 // Close notification modal
 closeNotifModal.addEventListener("click", ()=>{
@@ -580,9 +582,23 @@ closeNotifModal.addEventListener("click", ()=>{
     resetImg.classList.add("hidden");
 });
 dropShadow.addEventListener("click", ()=>{
-    notificationModal.classList.add("hidden");
-    dropShadow.classList.add("hidden");
+    notificationModal.classList.add("fadeOut");
+    dropShadow.classList.add("fadeOut");
     resetImg.classList.add("hidden");
+    setTimeout(()=>{
+        notificationModal.classList.add("hidden");
+        dropShadow.classList.add("hidden");
+    }, 500);
+});
+//Close search modal
+dropBg.addEventListener("click", ()=>{
+    notificationModal.classList.add("fadeOut");
+    dropShadow.classList.add("fadeOut");
+    resetImg.classList.add("hidden");
+    setTimeout(()=>{
+        notificationModal.classList.add("hidden");
+        dropShadow.classList.add("hidden");
+    }, 500);
 });
 // Ask for permission
 notifPush.addEventListener("click", async ()=>{

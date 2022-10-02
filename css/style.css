@@ -41,6 +41,19 @@ html {
   visibility: hidden !important;
 }
 
+.fadeOut {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 nav {
   position: relative;
   background-color: rgb(8, 11, 22);
@@ -55,18 +68,18 @@ nav {
 }
 
 .search-button {
-position: absolute;
-background-color: transparent;
-top: 1.5rem;
-left: 20rem;
-width: 3rem;
-height: 3rem;
-cursor: pointer;
-z-index: 10;
-display: flex;
-justify-content: center;
-align-items: center;
-border: none;
+  position: absolute;
+  background-color: transparent;
+  top: 1.5rem;
+  left: 20rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 
 .refresh-counter {
@@ -78,19 +91,19 @@ border: none;
 }
 
 .refresh-button {
-position: absolute;
-top: 1.5rem;
-left: 24rem;
-width: 3rem;
-height: 3rem;
-cursor: pointer;
-background-color: transparent;
-display: flex;
-justify-content: center;
-align-items: center;
-border: none;
-text-align: center;
-z-index: 10;
+  position: absolute;
+  top: 1.5rem;
+  left: 24rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  text-align: center;
+  z-index: 10;
 }
 
 .fa-arrow-rotate-right {
@@ -101,9 +114,8 @@ z-index: 10;
   transition: all 0.1s ease-in-out;
 }
 .refresh-button:hover .fa-arrow-rotate-right {
- color: rgba(255, 255, 255, 0.79);
+  color: rgba(255, 255, 255, 0.79);
 }
-
 
 .fa-magnifying-glass {
   color: rgb(172, 168, 168);
@@ -111,12 +123,9 @@ z-index: 10;
   transition: all 0.1s ease-in-out;
 }
 
-
 .fa-magnifying-glass:hover {
- color: rgba(255, 255, 255, 0.79);
+  color: rgba(255, 255, 255, 0.79);
 }
-
-
 
 li {
   text-decoration: none;
@@ -896,6 +905,15 @@ li > a {
   background-color: rgba(16, 20, 16, 0.71);
 }
 
+.dropshadow-srch {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(16, 20, 16, 0.71);
+}
+
 .fa-x {
   position: absolute;
   color: white;
@@ -1009,8 +1027,6 @@ li > a {
   color: white;
   text-decoration: none;
 }
-
-
 
 .refreshRotate {
   animation: rotating ease-in-out 1s forwards;
@@ -1249,11 +1265,6 @@ option:focus {
   border: 1px solid rgb(140, 20, 156) !important;
 }
 
-input:focus {
-  outline: none;
-  border: 1px solid rgb(140, 20, 156) !important;
-}
-
 .opt2 {
   background-color: transparent;
 }
@@ -1314,6 +1325,71 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-inner-modal {
+  position: relative;
+  width: 20rem;
+  height: 30rem;
+  background: linear-gradient(to right, #0f0c29, #161626);
+  border-radius: 1rem;
+}
+
+.search-modal-title {
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.search-coin-input {
+  position: relative;
+  width: 60%;
+  top: 6rem;
+  left: 20%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: 0;
+  font-size: 1.3rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-coin-btn {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(140, 20, 156);
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.search-coin-btn:hover {
+  background-color: rgb(140, 20, 156);
+}
+
+.cntr-sr-btn {
+  top: 7rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cant-find {
+  color: red;
 }
 
 @media only screen and (max-width: 1915px) {

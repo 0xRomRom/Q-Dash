@@ -32,7 +32,7 @@ const sideModal = document.querySelector(".result-setup-box");
 const enterNumber = document.querySelector(".enter-number");
 
 window.addEventListener("load", () => {
-  enterNumber.classList.add('inv');
+  enterNumber.classList.add("inv");
   if (Notification.permission === "granted") {
     allowContainer.classList.add("hidden");
     inputContainer.classList.remove("hidden");
@@ -43,6 +43,8 @@ window.addEventListener("load", () => {
 manageNotification.addEventListener("click", () => {
   notificationModal.classList.remove("hidden");
   dropShadow.classList.remove("hidden");
+  notificationModal.classList.remove("fadeOut");
+  dropShadow.classList.remove("fadeOut");
 });
 
 // Close notification modal
@@ -53,9 +55,24 @@ closeNotifModal.addEventListener("click", () => {
 });
 
 dropShadow.addEventListener("click", () => {
-  notificationModal.classList.add("hidden");
-  dropShadow.classList.add("hidden");
+  notificationModal.classList.add("fadeOut");
+  dropShadow.classList.add("fadeOut");
   resetImg.classList.add("hidden");
+  setTimeout(() => {
+    notificationModal.classList.add("hidden");
+    dropShadow.classList.add("hidden");
+  }, 500);
+});
+
+//Close search modal
+dropBg.addEventListener("click", () => {
+  notificationModal.classList.add("fadeOut");
+  dropShadow.classList.add("fadeOut");
+  resetImg.classList.add("hidden");
+  setTimeout(() => {
+    notificationModal.classList.add("hidden");
+    dropShadow.classList.add("hidden");
+  }, 500);
 });
 
 // Ask for permission
@@ -74,11 +91,11 @@ notifPush.addEventListener("click", async () => {
 
 // User input search
 
-userInput.addEventListener('keyup', (e) => {
-  if (e.key === 'Enter') {
+userInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
     fetchCoinAlert();
   }
-})
+});
 
 coinSearch.addEventListener("click", () => {
   fetchCoinAlert();
@@ -124,11 +141,11 @@ let positiveBool = "";
 //Calculate Price
 
 const priceCalculator = () => {
-  if(isNaN(userPercentageInput.value)) {
-    enterNumber.classList.remove('inv');
+  if (isNaN(userPercentageInput.value)) {
+    enterNumber.classList.remove("inv");
     return;
   }
-  enterNumber.classList.add('inv');
+  enterNumber.classList.add("inv");
 
   if (incDecToggle.value === "Increases") {
     let calculateValue = (+userPercentageInput.value + 100) / 100;
@@ -152,14 +169,13 @@ const priceCalculator = () => {
   }
 };
 
-userPercentageInput.addEventListener('keyup', (e) => {
-  if (e.key === 'Enter') {
-    priceCalculator()
+userPercentageInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    priceCalculator();
   }
-})
+});
 
-calculatePrice.addEventListener('click', priceCalculator)
-
+calculatePrice.addEventListener("click", priceCalculator);
 
 let fetchedPrice = 0;
 
@@ -190,8 +206,7 @@ const intervalFetcher = () => {
       console.log(err);
     }
   }, 10000);
-}
-
+};
 
 // If expected price is lower
 const checkResultsMin = () => {

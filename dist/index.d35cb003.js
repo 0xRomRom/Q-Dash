@@ -550,18 +550,30 @@ const t3 = document.querySelector(".t3a");
 const t4 = document.querySelector(".t4a");
 const t5 = document.querySelector(".t5a");
 closeContractSearch.addEventListener("click", ()=>{
-    searchContractBox.classList.add("hidden");
-    dropShadow.classList.add("hidden");
     errorText.classList.add("inv");
+    dropShadow.classList.add("fadeOut");
+    searchContractBox.classList.add("fadeOut");
+    setTimeout(()=>{
+        errorText.classList.add("inv");
+        dropShadow.classList.add("hidden");
+        searchContractBox.classList.add("hidden");
+    }, 500);
 });
 dropShadow.addEventListener("click", ()=>{
     errorText.classList.add("inv");
-    dropShadow.classList.add("hidden");
-    searchContractBox.classList.add("hidden");
+    dropShadow.classList.add("fadeOut");
+    searchContractBox.classList.add("fadeOut");
+    setTimeout(()=>{
+        errorText.classList.add("inv");
+        dropShadow.classList.add("hidden");
+        searchContractBox.classList.add("hidden");
+    }, 500);
 });
 searchContractButton.addEventListener("click", ()=>{
     searchContractBox.classList.remove("hidden");
     dropShadow.classList.remove("hidden");
+    searchContractBox.classList.remove("fadeOut");
+    dropShadow.classList.remove("fadeOut");
 });
 // Attempt to find coin
 searchCoinButton.addEventListener("click", ()=>{

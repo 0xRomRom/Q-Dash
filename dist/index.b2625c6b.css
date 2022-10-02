@@ -39,6 +39,20 @@ html {
   visibility: hidden !important;
 }
 
+.fadeOut {
+  animation: .5s ease-in-out forwards fadeOut;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 nav {
   width: 100%;
   height: 6rem;
@@ -464,16 +478,6 @@ li > a {
   animation: .3s ease-in forwards fadeOut;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
 .current-price {
   text-align: center;
   color: gray;
@@ -850,7 +854,7 @@ li > a {
   text-align: center;
 }
 
-.dropshadow, .dropshadow-contr {
+.dropshadow, .dropshadow-contr, .dropshadow-srch {
   width: 100vw;
   height: 100vh;
   z-index: 20;
@@ -1200,7 +1204,7 @@ select {
   outline: 0;
 }
 
-option:focus, input:focus {
+option:focus {
   outline: none;
   border: 1px solid #8c149c !important;
 }
@@ -1262,11 +1266,76 @@ option:focus, input:focus {
   justify-content: center;
   align-items: center;
   font-family: Open Sans;
+  transition: all .2s ease-in-out;
   display: flex;
   position: absolute;
   top: 5rem;
   left: 25%;
   box-shadow: 0 0 15px #8c149c;
+}
+
+.search-inner-modal {
+  width: 20rem;
+  height: 30rem;
+  background: linear-gradient(to right, #0f0c29, #161626);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.search-modal-title {
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2.5rem;
+}
+
+.search-coin-input {
+  width: 60%;
+  border: none;
+  border-radius: .3rem;
+  outline: 0;
+  padding: .5rem 1rem;
+  font-size: 1.3rem;
+  position: relative;
+  top: 6rem;
+  left: 20%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-coin-btn {
+  width: 10rem;
+  height: 3rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 2px solid #8c149c;
+  border-radius: .3rem;
+  font-family: Open Sans;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: all .2s ease-in-out;
+  position: relative;
+}
+
+.search-coin-btn:hover {
+  background-color: #8c149c;
+}
+
+.cntr-sr-btn {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+  position: relative;
+  top: 7rem;
+}
+
+.cant-find {
+  color: red;
 }
 
 @media only screen and (max-width: 1915px) {
