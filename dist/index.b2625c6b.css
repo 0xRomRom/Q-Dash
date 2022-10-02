@@ -1251,6 +1251,24 @@ option:focus, input:focus {
   }
 }
 
+.search-modal {
+  width: 50%;
+  height: 50rem;
+  color: #fff;
+  z-index: 100;
+  background-color: #000;
+  border: 1px solid #8c149c8e;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-family: Open Sans;
+  display: flex;
+  position: absolute;
+  top: 5rem;
+  left: 25%;
+  box-shadow: 0 0 15px #8c149c;
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
