@@ -1409,10 +1409,131 @@ input:focus {
 
 .search-inner-result {
   position: relative;
-  width: 60%;
-  height: 40rem;
+  width: 70%;
+  height: 45rem;
   background-color: rgb(25, 21, 36);
   border-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.4rem;
+}
+
+.box-s1 {
+  position: relative;
+  width: 90%;
+  height: 9rem;
+  /* background-color: rgb(32, 39, 47); */
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-img-box {
+  position: relative;
+  border: 1px solid white;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.search-middle-box {
+  position: relative;
+  border: 1px solid white;
+  width: 70%;
+  height: 7rem;
+}
+
+.up-down {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.5rem;
+}
+
+.res-img {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  z-index: 5;
+}
+
+.fluctuate {
+  padding: 0.25rem 1.8rem;
+  width: 3rem;
+  /* text-align: center; */
+  background-color: rgb(79, 159, 88);
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+  border-radius: 0.6rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+
+.search-side {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.coin-title {
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fetched-rank {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 2rem;
+  padding-top: 0.4rem;
+}
+
+.search-flex-top {
+  display: flex;
+  border: 2px solid red;
+  width: 100%;
+  gap: 5%;
+}
+
+.search-right-box {
+  position: relative;
+  border: 1px solid white;
+  width: 25%;
+  height: 7rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.circ-perc-box {
+  position: relative;
+  width: 5rem;
+  height: 4rem;
+  background: linear-gradient(to right, rgb(222, 67, 152), rgb(155, 64, 201));
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circ-l {
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.circ-s {
 }
 
 @media only screen and (max-width: 1915px) {

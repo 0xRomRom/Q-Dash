@@ -541,6 +541,7 @@ const closeSearchModal = document.querySelector(".light-close4");
 const searchInput = document.querySelector(".search-coin-input");
 const searchButton = document.querySelector(".search-coin-btn");
 const cantFindText = document.querySelector(".cant-find");
+const responseImage = document.querySelector(".res-img");
 //Open search modal
 searchModalButton.addEventListener("click", ()=>{
     dropBg.classList.remove("hidden");
@@ -601,7 +602,7 @@ const nameChecker = (data)=>{
     }
 };
 // Re-fetching coin and displaying result
-const dataFetcher = async (id)=>{
+const dataFetcher = async (id = "samoyedcoin")=>{
     try {
         const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
         const data = await response.json();
@@ -611,7 +612,10 @@ const dataFetcher = async (id)=>{
         console.log(err);
     }
 };
-const displayUI = (data)=>{};
+dataFetcher();
+const displayUI = (data)=>{
+    responseImage.src = data.image;
+};
 
 },{}]},["8BNRe","hwjhP"], "hwjhP", "parcelRequire379f")
 

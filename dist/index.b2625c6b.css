@@ -1355,11 +1355,126 @@ input:focus {
 }
 
 .search-inner-result {
-  width: 60%;
-  height: 40rem;
+  width: 70%;
+  height: 45rem;
   background-color: #191524;
   border-radius: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1.4rem;
+  display: flex;
   position: relative;
+}
+
+.box-s1 {
+  width: 90%;
+  height: 9rem;
+  border: 1px solid #fff;
+  border-radius: .5rem;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.search-img-box {
+  width: 7rem;
+  height: 7rem;
+  border: none;
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.search-middle-box {
+  width: 70%;
+  height: 7rem;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.up-down {
+  width: 7rem;
+  height: 7rem;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.res-img {
+  width: 3rem;
+  height: 3rem;
+  z-index: 5;
+  position: absolute;
+}
+
+.fluctuate {
+  width: 3rem;
+  background-color: #4f9f58;
+  border-radius: .6rem;
+  justify-content: center;
+  padding: .25rem 1.8rem;
+  font-family: Open Sans;
+  font-size: .9rem;
+  font-weight: 800;
+  display: flex;
+}
+
+.search-side {
+  width: 100%;
+  justify-content: flex-start;
+  gap: .5rem;
+  display: flex;
+  position: relative;
+}
+
+.coin-title {
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+}
+
+.fetched-rank {
+  padding-top: .4rem;
+  font-size: 2rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.search-flex-top {
+  width: 100%;
+  border: 2px solid red;
+  gap: 5%;
+  display: flex;
+}
+
+.search-right-box {
+  width: 25%;
+  height: 7rem;
+  border: 1px solid #fff;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+}
+
+.circ-perc-box {
+  width: 5rem;
+  height: 4rem;
+  background: linear-gradient(to right, #de4398, #9b40c9);
+  border-radius: .7rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.circ-l {
+  letter-spacing: 3px;
+  font-weight: 800;
 }
 
 @media only screen and (max-width: 1915px) {
