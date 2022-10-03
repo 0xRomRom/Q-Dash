@@ -1354,6 +1354,14 @@ input:focus {
   color: red;
 }
 
+.search-inner-result {
+  width: 60%;
+  height: 40rem;
+  background-color: #191524;
+  border-radius: 1rem;
+  position: relative;
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));

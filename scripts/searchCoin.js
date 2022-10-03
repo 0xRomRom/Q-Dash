@@ -49,21 +49,22 @@ searchInput.addEventListener("keyup", (e) => {
   }
 });
 
-const responseHandler = (data) => {
-  console.log(data[0]);
-};
+// Used to store user inserted search value
+let userValue;
 
-// Fetch coindata
+// Fetch coin name
 const coinSearcher = async () => {
+  let searchValue = searchInput.value.toLowerCase();
+  userValue = searchValue;
   try {
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${searchInput.value}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+      `https://api.coingecko.com/api/v3/search?query=${searchValue}`
     );
     const data = await response.json();
-    responseHandler(data);
-    if (data[0] === undefined) {
+    if (data.coins.length === 0) {
       cantFindText.classList.remove("inv");
     } else {
+      nameChecker(data);
       searchModalInner.classList.add("rotateDiv");
       cantFindText.classList.add("inv");
     }
@@ -71,3 +72,32 @@ const coinSearcher = async () => {
     console.log(err);
   }
 };
+
+// Check for match and return right api-id
+const nameChecker = (data) => {
+  for (let value of Object.values(data.coins)) {
+    if (
+      value.symbol.toLowerCase() === userValue ||
+      value.name.toLowerCase() === userValue
+    ) {
+      dataFetcher(value.id);
+      return;
+    }
+  }
+};
+
+// Re-fetching coin and displaying result
+const dataFetcher = async (id) => {
+  try {
+    const response = await fetch(
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+    );
+    const data = await response.json();
+    console.log(data[0]);
+    displayUI(data[0]);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const displayUI = (data) => {};
