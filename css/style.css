@@ -104,6 +104,7 @@ nav {
   z-index: 200;
   text-align: center;
   margin-right: 4px;
+  font-size: 0.7rem;
 }
 
 .refresh-button {
@@ -124,7 +125,7 @@ nav {
 
 .fa-arrow-rotate-right {
   color: rgb(172, 168, 168);
-  font-size: 3rem;
+  font-size: 2.5rem;
   position: relative;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -135,7 +136,7 @@ nav {
 
 .fa-magnifying-glass {
   color: rgb(172, 168, 168);
-  font-size: 3rem;
+  font-size: 2.5rem;
   transition: all 0.1s ease-in-out;
 }
 
@@ -239,7 +240,7 @@ li > a {
 .main-container {
   position: relative;
   width: 100%;
-  background-color: rgb(226, 94, 94);
+  /* background-color: rgb(226, 94, 94); */
   height: 50.5rem;
   display: flex;
   justify-content: center;
@@ -1712,6 +1713,7 @@ input:focus {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
     grid-auto-rows: 115px;
+    height: 90%;
   }
 }
 
@@ -1783,6 +1785,7 @@ input:focus {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     grid-auto-rows: 110px;
+    height: 80%;
   }
 }
 
@@ -1790,6 +1793,7 @@ input:focus {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
+    height: 65%;
   }
   .card-title-wide {
     font-size: 2.4rem;
@@ -1827,6 +1831,7 @@ input:focus {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
+    height: 90%;
   }
   .c-last {
     display: flex;
@@ -1873,12 +1878,44 @@ input:focus {
   .target-price-expected {
     font-size: 2rem !important;
   }
+  .tile-container {
+    height: 90%;
+  }
 }
 
 @media only screen and (max-width: 1370px) {
   .tile-container {
+    top: -3.5rem;
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     grid-auto-rows: 90px;
+    height: 75%;
+  }
+  .fa-magnifying-glass {
+    font-size: 2rem;
+  }
+  .fa-arrow-rotate-right {
+    font-size: 2rem;
+  }
+  .refresh-counter {
+    font-size: 0.6rem;
+  }
+  .search-button {
+    left: 18rem;
+  }
+  .refresh-button {
+    left: 21rem;
+  }
+  .nav-list {
+    padding-left: 7rem;
+  }
+  .li-ho4 {
+    padding-left: 10rem;
+  }
+
+  .disclaimer {
+    position: absolute;
+    top: 53rem;
+    left: 25%;
   }
   .ethclassic {
     font-size: 1rem;
@@ -1980,14 +2017,14 @@ input:focus {
 }
 
 @media only screen and (max-width: 1150px) {
-  .li-ho4 {
-    padding-left: 15rem;
-  }
   .state-coinname {
     font-size: 1.3rem;
   }
   .setup-title {
     font-size: 1.3rem;
+  }
+  .nav-list {
+    padding-left: 10rem;
   }
 }
 
