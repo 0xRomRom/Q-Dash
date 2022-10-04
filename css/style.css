@@ -1418,6 +1418,7 @@ input:focus {
   align-items: center;
   flex-direction: column;
   padding-top: 1.4rem;
+  gap: 0.7rem;
 }
 
 .box-s1 {
@@ -1425,37 +1426,34 @@ input:focus {
   width: 90%;
   height: 9rem;
   /* background-color: rgb(32, 39, 47); */
-  border: 1px solid white;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .search-img-box {
   position: relative;
-  border: 1px solid white;
-  width: 7rem;
-  height: 7rem;
+  width: 11rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  border: none;
+  overflow: hidden;
+  overflow: hidden;
 }
 
 .search-middle-box {
-  position: relative;
-  border: 1px solid white;
   width: 70%;
   height: 7rem;
 }
 
 .up-down {
-  position: relative;
-  width: 7rem;
-  height: 7rem;
+  width: auto;
+  height: 9rem;
   border-radius: 0.5rem;
+  font-family: "Helvetica";
 }
 
 .res-img {
@@ -1491,6 +1489,7 @@ input:focus {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  font-family: "Helvetica";
 }
 
 .fetched-rank {
@@ -1498,18 +1497,18 @@ input:focus {
   font-weight: 800;
   font-size: 2rem;
   padding-top: 0.4rem;
+  font-family: "Helvetica";
 }
 
 .search-flex-top {
   display: flex;
-  border: 2px solid red;
   width: 100%;
+  height: 100%;
   gap: 5%;
 }
 
 .search-right-box {
   position: relative;
-  border: 1px solid white;
   width: 25%;
   height: 7rem;
   display: flex;
@@ -1518,7 +1517,7 @@ input:focus {
 
 .circ-perc-box {
   position: relative;
-  width: 5rem;
+  width: 5.1rem;
   height: 4rem;
   background: linear-gradient(to right, rgb(222, 67, 152), rgb(155, 64, 201));
   border-radius: 0.7rem;
@@ -1529,11 +1528,41 @@ input:focus {
 }
 
 .circ-l {
-  font-weight: 800;
-  letter-spacing: 3px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-family: "Helvetica";
 }
 
 .circ-s {
+  font-family: "Helvetica";
+  font-size: 0.9rem;
+  padding-bottom: 0.25rem;
+}
+
+.box-s2 {
+  position: relative;
+  width: 90%;
+  height: 8rem;
+  background: linear-gradient(
+    135deg,
+    rgb(68, 104, 58),
+    rgb(68, 104, 58),
+    rgb(32, 39, 47),
+    rgb(32, 39, 47)
+  );
+  /* border: 1px solid white; */
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 0.7rem;
+  padding-top: 0.7rem;
+}
+
+.net-change {
+  font-size: 0.9rem;
+  font-family: "Helvetica";
 }
 
 @media only screen and (max-width: 1915px) {

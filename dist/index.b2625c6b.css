@@ -1362,6 +1362,7 @@ input:focus {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: .7rem;
   padding-top: 1.4rem;
   display: flex;
   position: relative;
@@ -1370,37 +1371,34 @@ input:focus {
 .box-s1 {
   width: 90%;
   height: 9rem;
-  border: 1px solid #fff;
   border-radius: .5rem;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
   display: flex;
   position: relative;
 }
 
 .search-img-box {
-  width: 7rem;
-  height: 7rem;
-  border: none;
+  width: 11rem;
+  height: 100%;
   border-radius: .5rem;
   justify-content: center;
   align-items: center;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .search-middle-box {
   width: 70%;
   height: 7rem;
-  border: 1px solid #fff;
-  position: relative;
 }
 
 .up-down {
-  width: 7rem;
-  height: 7rem;
+  width: auto;
+  height: 9rem;
   border-radius: .5rem;
-  position: relative;
+  font-family: Helvetica;
 }
 
 .res-img {
@@ -1432,6 +1430,7 @@ input:focus {
 
 .coin-title {
   align-items: center;
+  font-family: Helvetica;
   font-size: 1.2rem;
   font-weight: 400;
   display: flex;
@@ -1439,6 +1438,7 @@ input:focus {
 
 .fetched-rank {
   padding-top: .4rem;
+  font-family: Helvetica;
   font-size: 2rem;
   font-weight: 800;
   display: inline-block;
@@ -1446,7 +1446,7 @@ input:focus {
 
 .search-flex-top {
   width: 100%;
-  border: 2px solid red;
+  height: 100%;
   gap: 5%;
   display: flex;
 }
@@ -1454,14 +1454,13 @@ input:focus {
 .search-right-box {
   width: 25%;
   height: 7rem;
-  border: 1px solid #fff;
   justify-content: flex-end;
   display: flex;
   position: relative;
 }
 
 .circ-perc-box {
-  width: 5rem;
+  width: 5.1rem;
   height: 4rem;
   background: linear-gradient(to right, #de4398, #9b40c9);
   border-radius: .7rem;
@@ -1473,8 +1472,34 @@ input:focus {
 }
 
 .circ-l {
-  letter-spacing: 3px;
-  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: Helvetica;
+  font-size: 1.3rem;
+  font-weight: 1000;
+}
+
+.circ-s {
+  padding-bottom: .25rem;
+  font-family: Helvetica;
+  font-size: .9rem;
+}
+
+.box-s2 {
+  width: 90%;
+  height: 8rem;
+  background: linear-gradient(135deg, #44683a, #44683a, #20272f, #20272f);
+  border-radius: .5rem;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: .7rem;
+  padding-left: .7rem;
+  display: flex;
+  position: relative;
+}
+
+.net-change {
+  font-family: Helvetica;
+  font-size: .9rem;
 }
 
 @media only screen and (max-width: 1915px) {
