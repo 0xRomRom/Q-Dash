@@ -1413,8 +1413,8 @@ input:focus {
 
 .search-inner-result {
   position: relative;
-  width: 70%;
-  height: 45rem;
+  width: 64%;
+  height: 43.5rem;
   background-color: rgb(25, 21, 36);
   border-radius: 1rem;
   display: flex;
@@ -1547,7 +1547,7 @@ input:focus {
 .box-s2 {
   position: relative;
   width: 90%;
-  height: 8rem;
+  height: 7rem;
   background: linear-gradient(
     135deg,
     rgb(68, 104, 58),
