@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter&display=swap";
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -1505,7 +1505,7 @@ input:focus {
   display: inline-block;
 }
 
-.total-sup-title {
+.total-sup-title, .mark-price-title {
   color: #9a979f;
   font-family: Helvetica;
   font-size: .8rem;
@@ -1515,7 +1515,7 @@ input:focus {
 .price-perc-change {
   color: #76db8c;
   font-family: Inter, sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
 }
 
@@ -1533,10 +1533,25 @@ input:focus {
   position: relative;
 }
 
+.box-s4 {
+  width: 90%;
+  height: 6rem;
+  background-color: #20272f;
+  border-radius: .5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .5rem;
+  padding-top: .7rem;
+  padding-left: .7rem;
+  display: flex;
+  position: relative;
+}
+
 .total-sup {
   color: #fff;
   font-family: Inter, sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 800;
 }
 
@@ -1552,6 +1567,40 @@ input:focus {
   position: relative;
   top: .5rem;
   left: 5rem;
+}
+
+.s4-textbox {
+  top: .5rem;
+  left: 5rem;
+}
+
+.total-sup, .mark-price {
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.box-s5 {
+  width: 90%;
+  height: 6rem;
+  border-radius: .5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: .7rem;
+  display: flex;
+  position: relative;
+}
+
+.s5-left, .s5-right {
+  width: 49%;
+  height: 6rem;
+  background-color: #20272f;
+  border-radius: .5rem;
+  padding-top: .7rem;
+  padding-left: .7rem;
+  position: relative;
 }
 
 @media only screen and (max-width: 1915px) {
