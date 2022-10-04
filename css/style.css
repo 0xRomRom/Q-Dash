@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
   padding: 0;
@@ -1028,9 +1028,7 @@ li > a {
 }
 
 .disclaimer {
-  position: absolute;
-  top: 53.5rem;
-  left: 33%;
+  position: relative;
   color: white;
   font-size: 0.9rem;
   text-align: center !important;
@@ -1673,7 +1671,6 @@ input:focus {
   justify-content: space-between;
   flex-direction: row;
   gap: 0.7rem;
-  
 }
 
 .s5-left {
