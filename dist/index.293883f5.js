@@ -718,11 +718,12 @@ const dateConverter = (month)=>{
 const displayUI = (data, percentage)=>{
     let date = data.ath_date.slice(0, 10);
     console.log(data.circulating_supply / data.total_supply);
+    console.log(data.circulating_supply);
     circulatingPercentage.textContent = data.circulating_supply / data.total_supply === Infinity ? "∞" : `${(data.circulating_supply / data.total_supply).toString().slice(2, 4)}%`;
     if (data.circulating_supply / data.total_supply === 1) circulatingPercentage.textContent = "∞";
     responseImage.src = data.image;
     SearchCoinTitle.textContent = data.name;
-    fetchedRank.textContent = `#${data.market_cap_rank}`;
+    fetchedRank.textContent = `#${data.market_cap_rank === null ? "N/A" : data.market_cap_rank}`;
     pricePercentageChange.textContent = `${percentage >= 0.01 ? "+" : ""}${percentage}% $${data.symbol.toUpperCase()} ${"$" + percentage >= 0.01 ? "+" : ""}${data.current_price.toString().length >= 8 ? "" : "(" + data.price_change_24h.toString().slice(0, 6) + " USD" + ")"}`;
     totalSupply.textContent = data.total_supply === null ? "∞" : data.total_supply.toFixed(0) + " " + data.symbol.toUpperCase();
     markPrice.textContent = `$${data.current_price} USD`;
@@ -745,6 +746,10 @@ const displayUI = (data, percentage)=>{
         upDown2.classList.remove("hidden");
         upDown.classList.add("hidden");
         box2.classList.add("bg-down");
+    }
+    if (data.circulating_supply === 0) {
+        circulatingCount.textContent = "N/A";
+        circulatingPercentage.textContent = "N/A";
     }
 };
 

@@ -215,7 +215,7 @@ const dateConverter = (month) => {
 const displayUI = (data, percentage) => {
   let date = data.ath_date.slice(0, 10);
   console.log(data.circulating_supply / data.total_supply);
-
+  console.log(data.circulating_supply);
   circulatingPercentage.textContent =
     data.circulating_supply / data.total_supply === Infinity
       ? "∞"
@@ -228,7 +228,9 @@ const displayUI = (data, percentage) => {
 
   responseImage.src = data.image;
   SearchCoinTitle.textContent = data.name;
-  fetchedRank.textContent = `#${data.market_cap_rank}`;
+  fetchedRank.textContent = `#${
+    data.market_cap_rank === null ? "N/A" : data.market_cap_rank
+  }`;
 
   pricePercentageChange.textContent = `${
     percentage >= 0.01 ? "+" : ""
@@ -272,5 +274,9 @@ const displayUI = (data, percentage) => {
     upDown2.classList.remove("hidden");
     upDown.classList.add("hidden");
     box2.classList.add("bg-down");
+  }
+  if (data.circulating_supply === 0) {
+    circulatingCount.textContent = "N/A";
+    circulatingPercentage.textContent = "N/A";
   }
 };
