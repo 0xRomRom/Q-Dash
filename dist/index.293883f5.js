@@ -542,6 +542,12 @@ const searchInput = document.querySelector(".search-coin-input");
 const searchButton = document.querySelector(".search-coin-btn");
 const cantFindText = document.querySelector(".cant-find");
 const responseImage = document.querySelector(".res-img");
+const upDown = document.querySelector(".up-down");
+const fluctuate = document.querySelector(".fluctuate");
+const SearchCoinTitle = document.querySelector(".coin-title");
+const fetchedRank = document.querySelector(".fetched-rank");
+const circulatingPercentage = document.querySelector(".circ-l");
+const pricePercentageChange = document.querySelector(".price-perc-change");
 //Open search modal
 searchModalButton.addEventListener("click", ()=>{
     dropBg.classList.remove("hidden");
@@ -602,19 +608,38 @@ const nameChecker = (data)=>{
     }
 };
 // Re-fetching coin and displaying result
-const dataFetcher = async (id = "bitcoin")=>{
+const dataFetcher = async (id = "terra-luna")=>{
     try {
         const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
         const data = await response.json();
+        const response2 = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd&include_24hr_change=true`);
+        const data2 = await response2.json();
+        const resultPercentage = data2[id].usd_24h_change.toString().slice(0, 4);
         console.log(data[0]);
-        displayUI(data[0]);
+        console.log(data2[id]);
+        displayUI(data[0], resultPercentage);
     } catch (err) {
         console.log(err);
     }
 };
 dataFetcher();
-const displayUI = (data)=>{
+const displayUI = (data, percentage)=>{
+    circulatingPercentage.textContent = `${(data.circulating_supply / data.max_supply).toString().slice(2, 4)}%`;
     responseImage.src = data.image;
+    SearchCoinTitle.textContent = data.name;
+    fetchedRank.textContent = `#${data.market_cap_rank}`;
+    pricePercentageChange.textContent = `${percentage >= 0 ? "+" : ""}${percentage}% $${data.symbol} ($${data.price_change_24h})`;
+    upDown.src = "./img/pump.png";
+    if (percentage >= 0) {
+        fluctuate.textContent = "UP";
+        upDown.src = "./img/pump.png";
+        fluctuate.style.backgroundColor = "rgb(79, 159, 88)";
+    }
+    if (percentage < 0) {
+        fluctuate.textContent = "DOWN";
+        upDown.src = "./img/dump.png";
+        fluctuate.style.backgroundColor = "rgb(193, 67, 45)";
+    }
 };
 
 },{}]},["8BNRe","hwjhP"], "hwjhP", "parcelRequire379f")

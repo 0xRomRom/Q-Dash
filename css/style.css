@@ -1412,7 +1412,7 @@ input:focus {
 
 .search-inner-result {
   position: relative;
-  width: 64%;
+  width: 61%;
   height: 43.5rem;
   background-color: rgb(25, 21, 36);
   border-radius: 1rem;
@@ -1469,8 +1469,6 @@ input:focus {
 .fluctuate {
   padding: 0.25rem 1.8rem;
   width: 3rem;
-  /* text-align: center; */
-  background-color: rgb(79, 159, 88);
   font-family: "Open Sans";
   font-size: 0.9rem;
   border-radius: 0.6rem;
@@ -1547,14 +1545,6 @@ input:focus {
   position: relative;
   width: 90%;
   height: 7rem;
-  background: linear-gradient(
-    135deg,
-    rgb(68, 104, 58),
-    rgb(68, 104, 58),
-    rgb(32, 39, 47),
-    rgb(32, 39, 47)
-  );
-  /* border: 1px solid white; */
   border-radius: 0.5rem;
   display: flex;
   align-items: flex-start;
@@ -1562,6 +1552,26 @@ input:focus {
   gap: 0.5rem;
   padding-left: 0.7rem;
   padding-top: 0.7rem;
+}
+
+.bg-up {
+  background: linear-gradient(
+    135deg,
+    rgb(68, 104, 58),
+    rgb(68, 104, 58),
+    rgb(32, 39, 47),
+    rgb(32, 39, 47)
+  );
+}
+.bg-down {
+  background: linear-gradient(
+    135deg,
+    rgb(188, 67, 63),
+    rgb(188, 67, 63),
+    rgb(32, 39, 47),
+    rgb(32, 39, 47)
+  );
+  text-shadow: 0px 0px 1px white;
 }
 
 .net-change {
@@ -1787,6 +1797,9 @@ input:focus {
     grid-auto-rows: 110px;
     height: 80%;
   }
+  .circ-s {
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 1595px) {
@@ -1824,6 +1837,13 @@ input:focus {
   }
   .setup-title {
     font-size: 1.7rem;
+  }
+  .circ-perc-box {
+    position: absolute;
+    width: 6rem;
+  }
+  .search-flex-top {
+    gap: 0.2rem;
   }
 }
 
@@ -1911,7 +1931,6 @@ input:focus {
   .li-ho4 {
     padding-left: 10rem;
   }
-
   .disclaimer {
     position: absolute;
     top: 53rem;
@@ -1961,6 +1980,10 @@ input:focus {
   }
   .xrp {
     font-size: 2.3rem;
+  }
+  .circ-perc-box {
+    position: absolute;
+    width: 5rem;
   }
 }
 

@@ -10,6 +10,17 @@ const searchButton = document.querySelector(".search-coin-btn");
 const cantFindText = document.querySelector(".cant-find");
 
 const responseImage = document.querySelector(".res-img");
+const upDown = document.querySelector(".up-down");
+const fluctuate = document.querySelector(".fluctuate");
+const SearchCoinTitle = document.querySelector(".coin-title");
+const fetchedRank = document.querySelector(".fetched-rank");
+const circulatingPercentage = document.querySelector(".circ-l");
+const pricePercentageChange = document.querySelector(".price-perc-change");
+const totalSupply = document.querySelector(".total-sup");
+const markPrice = document.querySelector(".mark-price");
+const markPriceHigh = document.querySelector(".mark-price-high");
+const markPriceLow = document.querySelector(".mark-price-low");
+const box2 = document.querySelector(".box-s2");
 
 //Open search modal
 searchModalButton.addEventListener("click", () => {
@@ -89,20 +100,60 @@ const nameChecker = (data) => {
 };
 
 // Re-fetching coin and displaying result
-const dataFetcher = async (id = "bitcoin") => {
+const dataFetcher = async (id = "uniswap") => {
   try {
     const response = await fetch(
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
     );
     const data = await response.json();
+    const response2 = await fetch(
+      `https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd&include_24hr_change=true`
+    );
+    const data2 = await response2.json();
+    const resultPercentage = data2[id].usd_24h_change.toString().slice(0, 4);
     console.log(data[0]);
-    displayUI(data[0]);
+    console.log(data2[id]);
+    displayUI(data[0], resultPercentage);
   } catch (err) {
     console.log(err);
   }
 };
 dataFetcher();
 
-const displayUI = (data) => {
+const displayUI = (data, percentage) => {
+  circulatingPercentage.textContent =
+    data.circulating_supply / data.max_supply === Infinity
+      ? "∞"
+      : `${(data.circulating_supply / data.max_supply)
+          .toString()
+          .slice(2, 4)}%`;
+
   responseImage.src = data.image;
+  SearchCoinTitle.textContent = data.name;
+  fetchedRank.textContent = `#${data.market_cap_rank}`;
+  pricePercentageChange.textContent = `${
+    percentage >= 0 ? "+" : ""
+  }${percentage}% $${data.symbol.toUpperCase()} ($${
+    percentage >= 0 ? "+" : ""
+  }${data.price_change_24h.toString().slice(0, 7)})`;
+  totalSupply.textContent =
+    data.total_supply === null ? "∞" : data.total_supply.toFixed(0);
+
+  markPrice.textContent = `$${data.current_price} USD`;
+  markPriceHigh.textContent = `$${data.high_24h} USD`;
+  markPriceLow.textContent = `$${data.low_24h} USD`;
+  if (+percentage >= 0) {
+    fluctuate.textContent = "UP";
+    fluctuate.style.backgroundColor = "rgb(79, 159, 88)";
+    pricePercentageChange.style.color = "rgb(118, 219, 140)";
+    upDown.src = "./img/pump.png";
+    box2.classList.add("bg-up");
+  }
+  if (+percentage < 0) {
+    fluctuate.style.backgroundColor = "rgb(188, 67, 63)";
+    fluctuate.textContent = "DOWN";
+    pricePercentageChange.style.color = "red";
+    upDown.src = "./img/dump.png";
+    box2.classList.add("bg-down");
+  }
 };
