@@ -1480,12 +1480,13 @@ input:focus {
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
 }
 
 .search-img-box {
   position: relative;
-  width: 11rem;
+  width: 9.3rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -1496,8 +1497,8 @@ input:focus {
 }
 
 .search-middle-box {
-  width: 70%;
-  height: 7rem;
+  width: 50%;
+  height: 9rem;
 }
 
 .up-down {
@@ -1552,24 +1553,26 @@ input:focus {
 }
 
 .search-flex-top {
+  position: relative;
   display: flex;
-  width: 100%;
-  height: 100%;
+  justify-content: space-between;
+  width: 70%;
+  height: 9rem;
   gap: 5%;
 }
 
 .search-right-box {
   position: relative;
-  width: 25%;
-  height: 8rem;
+  width: 30%;
+  height: 9rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: start;
 }
 
 .circ-perc-box {
-  position: relative;
-  width: 5.1rem;
+  /* position: relative; */
+  width: 100%;
   height: 4rem;
   background: linear-gradient(to right, rgb(222, 67, 152), rgb(155, 64, 201));
   border-radius: 0.7rem;
@@ -1582,10 +1585,10 @@ input:focus {
 
 .circ-amount-box {
   margin-top: 0.4rem;
+  right: 1.1rem;
   position: relative;
-  width: 9rem;
+  width: 120%;
   height: 4rem;
-  left: -2rem;
   background: linear-gradient(to right, rgb(222, 67, 152), rgb(64, 84, 201));
   border-radius: 0.7rem;
   display: flex;
@@ -1817,6 +1820,12 @@ input:focus {
   }
 }
 
+@media only screen and (max-width: 1850px) {
+  .price-perc-change {
+    font-size: 2vw;
+  }
+}
+
 @media only screen and (max-width: 1780px) {
   .c-last {
     display: none;
@@ -1890,6 +1899,21 @@ input:focus {
   .circ-s {
     font-size: 0.8rem;
   }
+  .search-side {
+    width: 11rem;
+  }
+  .coin-title {
+    font-size: 1rem;
+  }
+  .search-flex-top {
+    gap: 0;
+  }
+  .search-inner-modal {
+    width: 30rem;
+  }
+  .fetched-rank {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 1595px) {
@@ -1928,13 +1952,6 @@ input:focus {
   .setup-title {
     font-size: 1.7rem;
   }
-  .circ-perc-box {
-    position: absolute;
-    width: 6rem;
-  }
-  .search-flex-top {
-    gap: 0.2rem;
-  }
 }
 
 @media only screen and (max-width: 1490px) {
@@ -1951,6 +1968,9 @@ input:focus {
   }
   .compound {
     font-size: 1rem;
+  }
+  .search-right-box {
+    width: 35%;
   }
 }
 
@@ -1990,6 +2010,33 @@ input:focus {
   }
   .tile-container {
     height: 90%;
+  }
+  .search-img-box {
+    position: relative;
+    width: 75%;
+    height: 100%;
+  }
+  .fluctuate {
+    padding: 0.2rem 1.6rem;
+    width: 3rem;
+    height: 1.8rem;
+    font-family: "Open Sans";
+    font-size: 0.7rem;
+    border-radius: 0.6rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .coin-title {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    font-family: "Helvetica";
   }
 }
 
@@ -2071,9 +2118,23 @@ input:focus {
   .xrp {
     font-size: 2.3rem;
   }
-  .circ-perc-box {
-    position: absolute;
-    width: 5rem;
+  .light-close4 {
+    left: 90%;
+  }
+  .total-sup {
+    font-size: 1.2rem;
+  }
+  .mark-price {
+    font-size: 1.2rem;
+  }
+  .mark-price-high {
+    font-size: 1.2rem;
+  }
+  .mark-price-low {
+    font-size: 1.2rem;
+  }
+  .ath-date {
+    font-size: 1.2rem;
   }
 }
 
@@ -2127,6 +2188,22 @@ input:focus {
   .setup-title {
     font-size: 1.5rem;
   }
+  .circ-l {
+    font-size: 1.1rem;
+  }
+  .circ-s {
+    font-size: 0.7rem;
+  }
+  .circ-perc-box {
+    width: 80%;
+    margin-left: 0.9rem;
+  }
+  .circ-count {
+    font-size: 0.8rem;
+  }
+  .circ-title {
+    font-size: 0.9rem;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -2138,6 +2215,27 @@ input:focus {
   }
   .nav-list {
     padding-left: 10rem;
+  }
+  .circ-l {
+    font-size: 1rem;
+  }
+  .circ-s {
+    font-size: 0.6rem;
+  }
+  .fluctuate {
+    padding: 0.15rem 1.5rem;
+    width: 3rem;
+    height: 1.8rem;
+    font-family: "Open Sans";
+    font-size: 0.6rem;
+    border-radius: 0.6rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-side {
+    gap: 0.2rem;
   }
 }
 
