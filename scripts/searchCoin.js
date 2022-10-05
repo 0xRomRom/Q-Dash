@@ -21,6 +21,24 @@ const markPrice = document.querySelector(".mark-price");
 const markPriceHigh = document.querySelector(".mark-price-high");
 const markPriceLow = document.querySelector(".mark-price-low");
 const box2 = document.querySelector(".box-s2");
+const athDate = document.querySelector(".ath-date");
+
+// Date array
+
+const monthsArray = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 //Open search modal
 searchModalButton.addEventListener("click", () => {
@@ -100,7 +118,7 @@ const nameChecker = (data) => {
 };
 
 // Re-fetching coin and displaying result
-const dataFetcher = async (id = "uniswap") => {
+const dataFetcher = async (id = "dogecoin") => {
   try {
     const response = await fetch(
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
@@ -120,7 +138,13 @@ const dataFetcher = async (id = "uniswap") => {
 };
 dataFetcher();
 
+const dateConverter = (month) => {
+  let slicedMonth = +month.slice(5, 7);
+  return monthsArray[slicedMonth - 1];
+};
+
 const displayUI = (data, percentage) => {
+  let date = data.ath_date.slice(0, 10);
   circulatingPercentage.textContent =
     data.circulating_supply / data.max_supply === Infinity
       ? "∞"
@@ -142,6 +166,11 @@ const displayUI = (data, percentage) => {
   markPrice.textContent = `$${data.current_price} USD`;
   markPriceHigh.textContent = `$${data.high_24h} USD`;
   markPriceLow.textContent = `$${data.low_24h} USD`;
+
+  athDate.textContent = `${dateConverter(date)} ${data.ath_date.slice(
+    8,
+    10
+  )} ${data.ath_date.slice(0, 4)}`;
   if (+percentage >= 0) {
     fluctuate.textContent = "UP";
     fluctuate.style.backgroundColor = "rgb(79, 159, 88)";
