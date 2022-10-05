@@ -43,7 +43,7 @@ html {
 }
 
 .fadeOut {
-  animation: fadeOut 0.5s ease-in-out forwards;
+  animation: fadeOut 0.1s ease-in-out forwards;
 }
 
 @keyframes fadeOut {
@@ -56,17 +56,33 @@ html {
 }
 
 .rotateDiv {
-  animation: rotateDiv 0.5s ease-in-out forwards;
+  animation: rotateDiv 0.4s ease-in-out forwards;
 }
 
 @keyframes rotateDiv {
   0% {
     position: absolute;
-    transform: rotateX(0deg);
   }
   100% {
     position: absolute;
-    transform: rotateX(90deg);
+    width: 61%;
+    height: 43.5rem;
+    background-color: rgb(25, 21, 36);
+  }
+}
+
+.rotateDivBack {
+  animation: rotateDivBack 0.4s ease-in-out forwards;
+}
+
+@keyframes rotateDivBack {
+  0% {
+    position: absolute;
+  }
+  100% {
+    position: absolute;
+    width: 20rem;
+    height: 30rem;
   }
 }
 
@@ -510,6 +526,9 @@ li > a {
 .fadeModalOut {
   animation: fadeOut 0.3s ease-in forwards;
 }
+.fadeOut {
+  animation: fadeOut 0.2s ease-in forwards;
+}
 
 @keyframes fadeOut {
   from {
@@ -941,6 +960,21 @@ li > a {
   z-index: 10;
 }
 
+.search-back {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  top: 2rem;
+  left: 2rem;
+  transform: rotate(180deg);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.search-back:hover {
+  color: red;
+}
+
 .rank {
   position: relative;
   font-size: 2rem;
@@ -994,6 +1028,19 @@ li > a {
   width: 100%;
   position: relative;
   height: 40rem;
+}
+
+.fadeDivIn {
+  animation: fadeDivIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeDivIn {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -1350,7 +1397,7 @@ option:focus {
   position: relative;
   width: 20rem;
   height: 30rem;
-  background: linear-gradient(to right, #0f0c29, #161626);
+  background-color: rgb(25, 21, 36);
   border-radius: 1rem;
 }
 
@@ -1422,6 +1469,7 @@ input:focus {
   flex-direction: column;
   padding-top: 1.4rem;
   gap: 0.7rem;
+  overflow: hidden;
 }
 
 .box-s1 {
