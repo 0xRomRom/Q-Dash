@@ -16,6 +16,7 @@ const resultBoxes = document.querySelectorAll(".out");
 
 const responseImage = document.querySelector(".res-img");
 const upDown = document.querySelector(".up-down");
+const upDown2 = document.querySelector(".up-down2");
 const fluctuate = document.querySelector(".fluctuate");
 const SearchCoinTitle = document.querySelector(".coin-title");
 const fetchedRank = document.querySelector(".fetched-rank");
@@ -211,8 +212,6 @@ const dateConverter = (month) => {
 
 const displayUI = (data, percentage) => {
   let date = data.ath_date.slice(0, 10);
-  console.log(data.price_change_24h);
-  let stringFloat = 6;
   circulatingPercentage.textContent =
     data.circulating_supply / data.total_supply === Infinity
       ? "∞"
@@ -231,10 +230,7 @@ const displayUI = (data, percentage) => {
   }${
     data.current_price.toString().length >= 8
       ? ""
-      : "(" +
-        data.price_change_24h.toString().slice(0, stringFloat) +
-        " USD" +
-        ")"
+      : "(" + data.price_change_24h.toString().slice(0, 6) + " USD" + ")"
   }`;
   totalSupply.textContent =
     data.total_supply === null
@@ -258,14 +254,14 @@ const displayUI = (data, percentage) => {
     fluctuate.textContent = "UP";
     fluctuate.style.backgroundColor = "rgb(79, 159, 88)";
     pricePercentageChange.style.color = "rgb(118, 219, 140)";
-    upDown.src = "./img/pump.png";
+    upDown.classList.remove("hidden");
     box2.classList.add("bg-up");
   }
   if (+percentage < 0) {
     fluctuate.style.backgroundColor = "rgb(188, 67, 63)";
     fluctuate.textContent = "DOWN";
     pricePercentageChange.style.color = "red";
-    upDown.src = "./img/dump.png";
+    upDown2.classList.remove("hidden");
     box2.classList.add("bg-down");
   }
 };

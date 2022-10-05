@@ -1508,6 +1508,13 @@ input:focus {
   font-family: "Helvetica";
 }
 
+.up-down2 {
+  width: auto;
+  height: 9rem;
+  border-radius: 0.5rem;
+  font-family: "Helvetica";
+}
+
 .res-img {
   position: absolute;
   width: 3rem;
