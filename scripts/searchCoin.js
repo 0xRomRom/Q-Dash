@@ -22,6 +22,9 @@ const markPriceHigh = document.querySelector(".mark-price-high");
 const markPriceLow = document.querySelector(".mark-price-low");
 const box2 = document.querySelector(".box-s2");
 const athDate = document.querySelector(".ath-date");
+const circulatingCount = document.querySelector(".circ-count");
+const circulatingPercentageBox = document.querySelector(".circ-perc-box");
+const circulatingCountBox = document.querySelector(".circ-amount-box");
 
 // Date array
 
@@ -39,6 +42,13 @@ const monthsArray = [
   "November",
   "December",
 ];
+
+circulatingPercentageBox.addEventListener("mouseover", () => {
+  circulatingCountBox.classList.remove("inv");
+});
+circulatingPercentageBox.addEventListener("mouseleave", () => {
+  circulatingCountBox.classList.add("inv");
+});
 
 //Open search modal
 searchModalButton.addEventListener("click", () => {
@@ -118,7 +128,7 @@ const nameChecker = (data) => {
 };
 
 // Re-fetching coin and displaying result
-const dataFetcher = async (id = "dogecoin") => {
+const dataFetcher = async (id = "ethereum-name-service") => {
   try {
     const response = await fetch(
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
@@ -144,6 +154,8 @@ const dateConverter = (month) => {
 };
 
 const displayUI = (data, percentage) => {
+  console.log(data.current_price.toString().length);
+
   let date = data.ath_date.slice(0, 10);
   circulatingPercentage.textContent =
     data.circulating_supply / data.max_supply === Infinity
@@ -157,16 +169,26 @@ const displayUI = (data, percentage) => {
   fetchedRank.textContent = `#${data.market_cap_rank}`;
   pricePercentageChange.textContent = `${
     percentage >= 0 ? "+" : ""
-  }${percentage}% $${data.symbol.toUpperCase()} ($${
-    percentage >= 0 ? "+" : ""
-  }${data.price_change_24h.toString().slice(0, 7)})`;
+  }${percentage}% $${data.symbol.toUpperCase()} ${
+    "$" + percentage >= 0 ? "+" : ""
+  }${
+    data.current_price.toString().length >= 8
+      ? ""
+      : "(" + data.price_change_24h.toString().slice(0, 7) + ")"
+  }`;
   totalSupply.textContent =
     data.total_supply === null ? "∞" : data.total_supply.toFixed(0);
 
   markPrice.textContent = `$${data.current_price} USD`;
-  markPriceHigh.textContent = `$${data.high_24h} USD`;
-  markPriceLow.textContent = `$${data.low_24h} USD`;
-
+  markPriceHigh.textContent = `$${
+    data.current_price > 1 ? data.high_24h.toFixed(2) : data.high_24h.toFixed(5)
+  } USD`;
+  markPriceLow.textContent = `$${
+    data.current_price > 1 ? data.low_24h.toFixed(2) : data.low_24h.toFixed(5)
+  } USD`;
+  circulatingCount.textContent = `${data.circulating_supply.toFixed(
+    0
+  )} $${data.symbol.toUpperCase()}`;
   athDate.textContent = `${dateConverter(date)} ${data.ath_date.slice(
     8,
     10
