@@ -595,6 +595,8 @@ searchBackButton.addEventListener("click", ()=>{
     buttonBox.classList.add("fadeOut");
     searchInput.value = "";
     searchBackButton.classList.add("hidden");
+    upDown.classList.add("hidden");
+    upDown2.classList.add("hidden");
     resultBoxes.forEach((item)=>{
         item.classList.add("fadeOut");
     });
@@ -715,7 +717,9 @@ const dateConverter = (month)=>{
 };
 const displayUI = (data, percentage)=>{
     let date = data.ath_date.slice(0, 10);
+    console.log(data.circulating_supply / data.total_supply);
     circulatingPercentage.textContent = data.circulating_supply / data.total_supply === Infinity ? "∞" : `${(data.circulating_supply / data.total_supply).toString().slice(2, 4)}%`;
+    if (data.circulating_supply / data.total_supply === 1) circulatingPercentage.textContent = "∞";
     responseImage.src = data.image;
     SearchCoinTitle.textContent = data.name;
     fetchedRank.textContent = `#${data.market_cap_rank}`;
@@ -726,11 +730,12 @@ const displayUI = (data, percentage)=>{
     markPriceLow.textContent = `$${data.current_price > 1 ? data.low_24h.toFixed(2) : data.low_24h.toFixed(5)} USD`;
     circulatingCount.textContent = `${data.circulating_supply.toFixed(0)} $${data.symbol.toUpperCase()}`;
     athDate.textContent = `${dateConverter(date)} ${data.ath_date.slice(8, 10)} ${data.ath_date.slice(0, 4)}`;
-    if (+percentage >= 0) {
+    if (+percentage >= 0.01) {
         fluctuate.textContent = "UP";
         fluctuate.style.backgroundColor = "rgb(79, 159, 88)";
         pricePercentageChange.style.color = "rgb(118, 219, 140)";
         upDown.classList.remove("hidden");
+        upDown2.classList.add("hidden");
         box2.classList.add("bg-up");
     }
     if (+percentage < 0) {
@@ -738,6 +743,7 @@ const displayUI = (data, percentage)=>{
         fluctuate.textContent = "DOWN";
         pricePercentageChange.style.color = "red";
         upDown2.classList.remove("hidden");
+        upDown.classList.add("hidden");
         box2.classList.add("bg-down");
     }
 };
