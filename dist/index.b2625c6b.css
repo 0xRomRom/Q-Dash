@@ -1713,6 +1713,20 @@ input:focus {
   position: relative;
 }
 
+.web-div {
+  width: 100%;
+  height: 1.8rem;
+  text-align: start;
+  position: relative;
+  top: 3rem;
+}
+
+.website-hook {
+  color: #c1b6b6;
+  font-family: Inter;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     height: 90%;

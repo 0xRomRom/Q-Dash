@@ -31,6 +31,7 @@ const athDate = document.querySelector(".ath-date");
 const circulatingCount = document.querySelector(".circ-count");
 const circulatingPercentageBox = document.querySelector(".circ-perc-box");
 const circulatingCountBox = document.querySelector(".circ-amount-box");
+const websiteHref = document.querySelector(".website-hook");
 
 // Date array
 const monthsArray = [
@@ -196,12 +197,14 @@ const dataFetcher = async (id) => {
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
     );
     const data = await response.json();
-    const response2 = await fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd&include_24hr_change=true`
-    );
-    const data2 = await response2.json();
-    const resultPercentage = data2[id].usd_24h_change.toString().slice(0, 4);
-    displayUI(data[0], resultPercentage);
+
+    const response3 = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
+    const data2 = await response3.json();
+    console.log(data2.market_data.price_change_percentage_24h.toString().slice(0, 4));
+    console.log(data2.links.homepage[0]);
+    const website = data2.links.homepage[0];
+    const resultPercentage = data2.market_data.price_change_percentage_24h.toString().slice(0, 4);
+    displayUI(data[0], resultPercentage, website);
   } catch (err) {
     console.log(err);
   }
@@ -212,10 +215,12 @@ const dateConverter = (month) => {
   return monthsArray[slicedMonth - 1];
 };
 
-const displayUI = (data, percentage) => {
+const displayUI = (data, percentage, site) => {
   let date = data.ath_date.slice(0, 10);
-  console.log(data.circulating_supply / data.total_supply);
-  console.log(data.circulating_supply);
+  websiteHref.textContent = site;
+  websiteHref.href = site;
+
+
   circulatingPercentage.textContent =
     data.circulating_supply / data.total_supply === Infinity
       ? "∞"
@@ -280,7 +285,7 @@ const displayUI = (data, percentage) => {
     upDown2.classList.add("hidden");
     box2.classList.add("bg-up");
   }
-  if (+percentage < 0) {
+  if (+percentage <= 0) {
     fluctuate.style.backgroundColor = "rgb(188, 67, 63)";
     fluctuate.textContent = "DOWN";
     pricePercentageChange.style.color = "red";
