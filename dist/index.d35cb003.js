@@ -608,10 +608,10 @@ returnResultButton.addEventListener("click", ()=>{
         t5.textContent = "";
     }, 2000);
 });
-// https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}
+//
 const coinFetcher = async ()=>{
     try {
-        const response = await fetch(`https://api.coingecko.com/api/v3/coins/${"solana"}/contract/${"Uuc6hiKT9Y6ASoqs2phonGGw2LAtecfJu9yEohppzWH"}`);
+        const response = await fetch(`https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}`);
         const data = await response.json();
         if (!response.ok) {
             errorText.classList.remove("inv");
@@ -626,7 +626,6 @@ const coinFetcher = async ()=>{
         console.log(err);
     }
 };
-coinFetcher();
 
 },{}]},["aGi2U","dye7W"], "dye7W", "parcelRequire379f")
 

@@ -92,12 +92,12 @@ returnResultButton.addEventListener("click", () => {
   }, 2000);
 });
 
-// https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}
+//
 
 const coinFetcher = async () => {
   try {
     const response = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${"solana"}/contract/${"Uuc6hiKT9Y6ASoqs2phonGGw2LAtecfJu9yEohppzWH"}`
+      `https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}`
     );
     const data = await response.json();
     if (!response.ok) {
@@ -113,4 +113,3 @@ const coinFetcher = async () => {
     console.log(err);
   }
 };
-coinFetcher();
