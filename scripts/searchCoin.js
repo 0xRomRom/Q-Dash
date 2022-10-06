@@ -244,17 +244,17 @@ const displayUI = (data, percentage) => {
   totalSupply.textContent =
     data.total_supply === null
       ? "∞"
-      : data.total_supply.toFixed(0) + " " + data.symbol.toUpperCase();
-  markPrice.textContent = `$${data.current_price} USD`;
+      : data.total_supply.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); + " " + data.symbol.toUpperCase();
+  markPrice.textContent = `$${data.current_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;
   markPriceHigh.textContent = `$${
-    data.current_price > 1 ? data.high_24h.toFixed(2) : data.high_24h.toFixed(5)
+    data.current_price > 1 ? data.high_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.high_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   } USD`;
   markPriceLow.textContent = `$${
-    data.current_price > 1 ? data.low_24h.toFixed(2) : data.low_24h.toFixed(5)
+    data.current_price > 1 ? data.low_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.low_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   } USD`;
   circulatingCount.textContent = `${data.circulating_supply.toFixed(
     0
-  )} $${data.symbol.toUpperCase()}`;
+  ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $${data.symbol.toUpperCase()}`;
   athDate.textContent = `${dateConverter(date)} ${data.ath_date.slice(
     8,
     10
