@@ -544,6 +544,7 @@ const errorText = document.querySelector(".error-text");
 const resultContainer = document.querySelector(".result-container");
 const inputContainer = document.querySelector(".input-container");
 const returnResultButton = document.querySelector(".return-result");
+const resultTotalSupplyTxt = document.querySelector(".res-total-sup");
 const t1 = document.querySelector(".t1a");
 const t2 = document.querySelector(".t2a");
 const t3 = document.querySelector(".t3a");
@@ -584,10 +585,11 @@ searchCoinButton.addEventListener("click", ()=>{
 // 7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
 const resultModal = (data)=>{
     t1.insertAdjacentHTML("beforeend", data.name);
-    t2.insertAdjacentHTML("beforeend", ` $${data.market_data.current_price.usd.toFixed(6)}`);
+    t2.insertAdjacentHTML("beforeend", ` $${data.market_data.current_price.usd}`);
     t3.insertAdjacentHTML("beforeend", ` ${data.coingecko_rank}`);
     t4.insertAdjacentText("beforeend", ` ${data.categories.length !== 0 ? data.categories.join(", ") : "Undefined"}`);
-    t5.insertAdjacentHTML("beforeend", `$${data.symbol}`);
+    t5.insertAdjacentHTML("beforeend", `$${data.symbol.toUpperCase()}`);
+    resultTotalSupplyTxt.textContent = `${data.market_data.total_supply.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $${data.symbol.toUpperCase()}`;
 };
 returnResultButton.addEventListener("click", ()=>{
     inputContainer.classList.remove("slideOutDiv");
@@ -606,15 +608,17 @@ returnResultButton.addEventListener("click", ()=>{
         t5.textContent = "";
     }, 2000);
 });
+// https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}
 const coinFetcher = async ()=>{
     try {
-        const response = await fetch(`https://api.coingecko.com/api/v3/coins/${blockchains.value}/contract/${addressInput.value}`);
+        const response = await fetch(`https://api.coingecko.com/api/v3/coins/${"solana"}/contract/${"Uuc6hiKT9Y6ASoqs2phonGGw2LAtecfJu9yEohppzWH"}`);
         const data = await response.json();
         if (!response.ok) {
             errorText.classList.remove("inv");
             return;
         }
         resultModal(data);
+        console.log(data.market_data.total_supply);
         inputContainer.classList.add("slideOutDiv");
         resultContainer.classList.remove("hidden");
         resultContainer.classList.add("slideInDiv");
@@ -622,6 +626,7 @@ const coinFetcher = async ()=>{
         console.log(err);
     }
 };
+coinFetcher();
 
 },{}]},["aGi2U","dye7W"], "dye7W", "parcelRequire379f")
 
