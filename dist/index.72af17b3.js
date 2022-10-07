@@ -533,7 +533,7 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"jWrRo":[function(require,module,exports) {
 "use strict";
-const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic&vs_currencies=usd&include_24hr_change=true`;
+const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic%2Cbaby-doge-coin%2Cshiba-inu%2Cdogelon-mars%2Cfloki-inu%2Ctamadoge%2Ckishu-inu%2Cleash%2Csamoyedcoin%2Cshiba-predator%2Ccatecoin%2Choge-finance%2Ccake-monster%2Cvita-inu%2Cbanano%2Cthe-doge-nft%2Cdogebonk%2Cpolydoge%2Ccumrocket%2Cdogegf%2Cwoofy%2Cdogsofelon%2Cfeisty-doge-nft%2Ckuma-inu%2Celon-doge-tken%2Cmeme-inu%2Csafemoon-inu%2Cwall-street-bets-dapp%2Cpoodle%2Cpuli-inu%2Cshih-tzu%2C1-up%2Ckawakami%2Ccat-token%2Cmeta-doge%2Ccorgicoin%2Cdckereum%2Cshibavax%2Ckangal%2Ckittycoin%2Ccatbonk%2Cbobo-cash%2Cshibavax%2Cupdog%2Csolabrador%2Ckitty-coin-solana%2Csafemoon-2%2Cbaby-samo-coin%2Charambe%2Cchihuahua-token%2Cjejudoge%2Cshibaken-finance%2Cshibapup%2Cakita-inu%2Cdogefi%2Cyooshiba-inu%2Clitedoge%2Ccato%2Csoldoge&vs_currencies=usd&include_24hr_change=true`;
 const bitcoinPrice = document.querySelector(".bitcoin-price");
 const bitcoinChange = document.querySelector(".bitcoin-change");
 const bitcoinDiv = document.querySelector(".bitcoin-div");
@@ -714,6 +714,66 @@ const xdcDiv = document.querySelector(".xdc-div");
 const compPrice = document.querySelector(".comp-price");
 const compChange = document.querySelector(".comp-change");
 const compDiv = document.querySelector(".comp-div");
+const dogelonmarsPrice = document.querySelector(".dogelonmars-price");
+const dogelonmarsChange = document.querySelector(".dogelonmars-change");
+const dogelonmarsDiv = document.querySelector(".dogelonmars-div");
+const flokiinuPrice = document.querySelector(".flokiinu-price");
+const flokiinuChange = document.querySelector(".flokiinu-change");
+const flokiinuDiv = document.querySelector(".flokiinu-div");
+const tamadogePrice = document.querySelector(".tamadoge-price");
+const tamadogeChange = document.querySelector(".tamadoge-change");
+const tamadogeDiv = document.querySelector(".tamadoge-div");
+const kishuinuPrice = document.querySelector(".kishuinu-price");
+const kishuinuChange = document.querySelector(".kishuinu-change");
+const kishuinuDiv = document.querySelector(".kishuinu-div");
+const leashPrice = document.querySelector(".leash-price");
+const leashChange = document.querySelector(".leash-change");
+const leashDiv = document.querySelector(".leash-div");
+const samoyedcoinPrice = document.querySelector(".samoyedcoin-price");
+const samoyedcoinChange = document.querySelector(".samoyedcoin-change");
+const samoyedcoinDiv = document.querySelector(".samoyedcoin-div");
+const shibapredPrice = document.querySelector(".shibapredator-price");
+const shibapredChange = document.querySelector(".shibapredator-change");
+const shibapredDiv = document.querySelector(".shibapredator-div");
+const catecoinPrice = document.querySelector(".catecoin-price");
+const catecoinChange = document.querySelector(".catecoin-change");
+const catecoinDiv = document.querySelector(".catecoin-div");
+const hogefinancePrice = document.querySelector(".hogefinance-price");
+const hogefinanceChange = document.querySelector(".hogefinance-change");
+const hogefinanceDiv = document.querySelector(".hogefinance-div");
+const cakemonsterPrice = document.querySelector(".cakemonster-price");
+const cakemonsterChange = document.querySelector(".cakemonster-change");
+const cakemonsterDiv = document.querySelector(".cakemonster-div");
+const vitainuPrice = document.querySelector(".vitainu-price");
+const vitainuChange = document.querySelector(".vitainu-change");
+const vitainuDiv = document.querySelector(".vitainu-div");
+const bananoPrice = document.querySelector(".banano-price");
+const bananoChange = document.querySelector(".banano-change");
+const bananoDiv = document.querySelector(".banano-div");
+const thedogenftPrice = document.querySelector(".thedogenft-price");
+const thedogenftChange = document.querySelector(".thedogenft-change");
+const thedogenftDiv = document.querySelector(".thedogenft-div");
+const dogebonkPrice = document.querySelector(".dogebonk-price");
+const dogebonkChange = document.querySelector(".dogebonk-change");
+const dogebonkDiv = document.querySelector(".dogebonk-div");
+const polydogePrice = document.querySelector(".polydoge-price");
+const polydogeChange = document.querySelector(".polydoge-change");
+const polydogeDiv = document.querySelector(".polydoge-div");
+const cumrocketPrice = document.querySelector(".cumrocket-price");
+const cumrocketChange = document.querySelector(".cumrocket-change");
+const cumrocketDiv = document.querySelector(".cumrocket-div");
+const dogegfPrice = document.querySelector(".dogegf-price");
+const dogegfChange = document.querySelector(".dogegf-change");
+const dogegfDiv = document.querySelector(".dogegf-div");
+const woofyPrice = document.querySelector(".woofy-price");
+const woofyChange = document.querySelector(".woofy-change");
+const woofyDiv = document.querySelector(".woofy-div");
+const dogsofelonPrice = document.querySelector(".dogsofelon-price");
+const dogsofelonChange = document.querySelector(".dogsofelon-change");
+const dogsofelonDiv = document.querySelector(".dogsofelon-div");
+const feistydogenftPrice = document.querySelector(".feistydogenft-price");
+const feistydogenftChange = document.querySelector(".feistydogenft-change");
+const feistydogenftDiv = document.querySelector(".feistydogenft-div");
 const refreshArrow = document.querySelector(".refresh-button");
 const allCards = document.querySelectorAll(".card");
 const refreshCounter = document.querySelector(".refresh-counter");
@@ -1137,6 +1197,153 @@ const fetchObject = {
         compChange,
         compPrice,
         2
+    ],
+    60: [
+        "shiba-inu",
+        shibaDiv,
+        shibaChange,
+        shibaPrice,
+        7
+    ],
+    61: [
+        "dogelon-mars",
+        dogelonmarsDiv,
+        dogelonmarsChange,
+        dogelonmarsPrice,
+        7
+    ],
+    62: [
+        "floki-inu",
+        flokiinuDiv,
+        flokiinuChange,
+        flokiinuPrice,
+        7
+    ],
+    63: [
+        "tamadoge",
+        tamadogeDiv,
+        tamadogeChange,
+        tamadogePrice,
+        7
+    ],
+    64: [
+        "kishu-inu",
+        kishuinuDiv,
+        kishuinuChange,
+        kishuinuPrice,
+        2
+    ],
+    65: [
+        "leash",
+        leashDiv,
+        leashChange,
+        leashPrice,
+        7
+    ],
+    66: [
+        "samoyedcoin",
+        samoyedcoinDiv,
+        samoyedcoinChange,
+        samoyedcoinPrice,
+        7
+    ],
+    67: [
+        "shiba-predator",
+        shibapredDiv,
+        shibapredChange,
+        shibapredPrice,
+        7
+    ],
+    68: [
+        "catecoin",
+        catecoinDiv,
+        catecoinChange,
+        catecoinPrice,
+        7
+    ],
+    69: [
+        "hoge-finance",
+        hogefinanceDiv,
+        hogefinanceChange,
+        hogefinancePrice,
+        7
+    ],
+    69: [
+        "cake-monster",
+        cakemonsterDiv,
+        cakemonsterChange,
+        cakemonsterPrice,
+        7
+    ],
+    70: [
+        "vita-inu",
+        vitainuDiv,
+        vitainuChange,
+        vitainuPrice,
+        7
+    ],
+    71: [
+        "banano",
+        bananoDiv,
+        bananoChange,
+        bananoPrice,
+        7
+    ],
+    72: [
+        "the-doge-nft",
+        thedogenftDiv,
+        thedogenftChange,
+        thedogenftPrice,
+        7
+    ],
+    73: [
+        "dogebonk",
+        dogebonkDiv,
+        dogebonkChange,
+        dogebonkPrice,
+        7
+    ],
+    74: [
+        "polydoge",
+        polydogeDiv,
+        polydogeChange,
+        polydogePrice,
+        7
+    ],
+    75: [
+        "cumrocket",
+        cumrocketDiv,
+        cumrocketChange,
+        cumrocketPrice,
+        7
+    ],
+    76: [
+        "dogegf",
+        dogegfDiv,
+        dogegfChange,
+        dogegfPrice,
+        7
+    ],
+    77: [
+        "woofy",
+        woofyDiv,
+        woofyChange,
+        woofyPrice,
+        7
+    ],
+    78: [
+        "dogsofelon",
+        dogsofelonDiv,
+        dogsofelonChange,
+        dogsofelonPrice,
+        7
+    ],
+    79: [
+        "feisty-doge-nft",
+        feistydogenftDiv,
+        feistydogenftChange,
+        feistydogenftPrice,
+        7, 
     ]
 };
 // Initial render
@@ -1204,7 +1411,7 @@ const updateUI = async ()=>{
         card.classList.remove("u2");
     });
     await dataFetcher();
-    for(let i = 0; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
+    for(let i = 60; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
 };
 const classChecker = (coinDiv, change)=>{
     if (change >= -2.5 && change <= 2.5) coinDiv.classList.add("neutral");
@@ -1225,6 +1432,7 @@ const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam)=>{
 const dataFetcher = async ()=>{
     const response = await fetch(COINGECKOAPI);
     const data = await response.json();
+    console.log(data);
     responseObject = data;
 };
 

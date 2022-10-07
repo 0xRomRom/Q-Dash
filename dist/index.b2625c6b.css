@@ -1855,17 +1855,19 @@ input:focus {
 }
 
 .web-div {
-  width: 100%;
-  height: 1.8rem;
+  width: 13rem;
+  height: 1.5rem;
   text-align: start;
   position: relative;
   top: 2.85rem;
+  overflow: hidden;
 }
 
 .website-hook {
   color: #c1b6b6;
   font-family: Inter;
   text-decoration: none;
+  position: absolute;
 }
 
 @media only screen and (max-width: 1915px) {

@@ -85,7 +85,6 @@ notifPush.addEventListener("click", async () => {
 });
 
 // User input search
-
 userInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     fetchCoinAlert();
@@ -134,7 +133,6 @@ const fetchCoinAlert = async () => {
 let positiveBool = "";
 
 //Calculate Price
-
 const priceCalculator = () => {
   if (isNaN(userPercentageInput.value)) {
     enterNumber.classList.remove("inv");

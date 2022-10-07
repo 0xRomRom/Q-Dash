@@ -1970,14 +1970,15 @@ input:focus {
 
 .web-div {
   position: relative;
-  width: 100%;
-  height: 1.8rem;
+  width: 13rem;
+  height: 1.5rem;
   top: 2.85rem;
   text-align: start;
+  overflow: hidden;
 }
 
 .website-hook {
-  /* position: relative; */
+  position: absolute;
   text-decoration: none;
   color: rgb(193, 182, 182);
   font-family: "Inter";
