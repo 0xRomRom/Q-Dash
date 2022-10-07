@@ -717,61 +717,6 @@ const compDiv = document.querySelector(".comp-div");
 const refreshArrow = document.querySelector(".refresh-button");
 const allCards = document.querySelectorAll(".card");
 const refreshCounter = document.querySelector(".refresh-counter");
-// Initial render
-window.addEventListener("load", async ()=>{
-    updateUI();
-});
-//Refresh interval counter
-let refreshCount = 90;
-refreshCounter.textContent = refreshCount;
-setInterval(()=>{
-    if (refreshCount === 0) {
-        updateUI();
-        refreshCount = 90;
-        allCards.forEach((card)=>{
-            card.classList.add("rotater");
-            setTimeout(()=>{
-                card.classList.remove("rotater");
-            }, 1100);
-        });
-    }
-    refreshCounter.textContent = refreshCount;
-    refreshCount--;
-    refreshCounter.textContent = refreshCount;
-}, 1000);
-setInterval(()=>{
-    refreshCount = 90;
-    refreshCounter.textContent = refreshCount;
-    updateUI();
-    allCards.forEach((card)=>{
-        card.classList.add("rotater");
-        setTimeout(()=>{
-            card.classList.remove("rotater");
-        }, 1100);
-    });
-}, 90000);
-// Refresh/Refetch
-refreshArrow.addEventListener("click", ()=>{
-    refreshArrow.disabled = true;
-    refreshCount = 90;
-    updateUI();
-    refreshArrow.classList.add("refreshRotate");
-    allCards.forEach((card)=>{
-        card.classList.add("rotater");
-        setTimeout(()=>{
-            refreshArrow.classList.remove("refreshRotate");
-            card.classList.remove("rotater");
-            refreshArrow.disabled = false;
-        }, 1100);
-    });
-});
-let responseObject = {};
-allCards.forEach((card)=>{
-    card.classList.add("rotater");
-    setTimeout(()=>{
-        card.classList.remove("rotater");
-    }, 1100);
-});
 const fetchObject = {
     0: [
         "bitcoin",
@@ -1194,7 +1139,69 @@ const fetchObject = {
         2
     ]
 };
+// Initial render
+window.addEventListener("load", async ()=>{
+    updateUI();
+});
+//Refresh interval counter
+let refreshCount = 90;
+refreshCounter.textContent = refreshCount;
+setInterval(()=>{
+    if (refreshCount === 0) {
+        updateUI();
+        refreshCount = 90;
+        allCards.forEach((card)=>{
+            card.classList.add("rotater");
+            setTimeout(()=>{
+                card.classList.remove("rotater");
+            }, 1100);
+        });
+    }
+    refreshCounter.textContent = refreshCount;
+    refreshCount--;
+    refreshCounter.textContent = refreshCount;
+}, 1000);
+setInterval(()=>{
+    refreshCount = 90;
+    refreshCounter.textContent = refreshCount;
+    updateUI();
+    allCards.forEach((card)=>{
+        card.classList.add("rotater");
+        setTimeout(()=>{
+            card.classList.remove("rotater");
+        }, 1100);
+    });
+}, 90000);
+// Refresh/Refetch
+refreshArrow.addEventListener("click", ()=>{
+    refreshArrow.disabled = true;
+    refreshCount = 90;
+    updateUI();
+    refreshArrow.classList.add("refreshRotate");
+    allCards.forEach((card)=>{
+        card.classList.add("rotater");
+        setTimeout(()=>{
+            refreshArrow.classList.remove("refreshRotate");
+            card.classList.remove("rotater");
+            refreshArrow.disabled = false;
+        }, 1100);
+    });
+});
+let responseObject = {};
+allCards.forEach((card)=>{
+    card.classList.add("rotater");
+    setTimeout(()=>{
+        card.classList.remove("rotater");
+    }, 1100);
+});
 const updateUI = async ()=>{
+    allCards.forEach((card)=>{
+        card.classList.remove("neutral");
+        card.classList.remove("d1");
+        card.classList.remove("d2");
+        card.classList.remove("u2");
+        card.classList.remove("u2");
+    });
     await dataFetcher();
     for(let i = 0; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
 };
