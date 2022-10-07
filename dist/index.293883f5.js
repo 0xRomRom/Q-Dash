@@ -728,11 +728,11 @@ const displayUI = (data, percentage, site)=>{
     responseImage.src = data.image;
     SearchCoinTitle.textContent = data.name;
     fetchedRank.textContent = `#${data.market_cap_rank === null ? "N/A" : data.market_cap_rank}`;
-    pricePercentageChange.textContent = `${percentage >= 0.01 ? "+" : ""}${percentage}% $${data.symbol.toUpperCase()} ${"$" + percentage >= 0.01 ? "+" : ""}${data.current_price.toString().length >= 8 ? "" : "(" + data.price_change_24h.toString().slice(0, 6) + " USD" + ")"}`;
-    totalSupply.textContent = data.total_supply === null ? "∞" : data.total_supply.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    data.symbol.toUpperCase();
+    pricePercentageChange.textContent = `${percentage >= 0.01 ? "+" : ""}${percentage}% $${data.symbol.toUpperCase()} ${"$" + percentage >= 0.01 ? "+" : ""}${+data.current_price < 0.1 ? "" : "(" + data.price_change_24h.toString().slice(0, 6) + " USD" + ")"}`;
+    totalSupply.textContent = data.total_supply === null ? "∞" : data.total_supply.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " " + data.symbol.toUpperCase();
     circulatingCount.textContent = `${data.circulating_supply.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $${data.symbol.toUpperCase()}`;
-    if (data.current_price.toString().length <= 7) {
+    ///
+    if (data.current_price > 0.5) {
         markPrice.textContent = `$${data.current_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;
         markPriceHigh.textContent = `$${data.current_price > 1 ? data.high_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.high_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;
         markPriceLow.textContent = `$${data.current_price > 1 ? data.low_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.low_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;

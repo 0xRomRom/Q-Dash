@@ -198,12 +198,18 @@ const dataFetcher = async (id) => {
     );
     const data = await response.json();
 
-    const response3 = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
+    const response3 = await fetch(
+      `https://api.coingecko.com/api/v3/coins/${id}`
+    );
     const data2 = await response3.json();
-    console.log(data2.market_data.price_change_percentage_24h.toString().slice(0, 4));
+    console.log(
+      data2.market_data.price_change_percentage_24h.toString().slice(0, 4)
+    );
     console.log(data2.links.homepage[0]);
     const website = data2.links.homepage[0];
-    const resultPercentage = data2.market_data.price_change_percentage_24h.toString().slice(0, 4);
+    const resultPercentage = data2.market_data.price_change_percentage_24h
+      .toString()
+      .slice(0, 4);
     displayUI(data[0], resultPercentage, website);
   } catch (err) {
     console.log(err);
@@ -219,8 +225,6 @@ const displayUI = (data, percentage, site) => {
   let date = data.ath_date.slice(0, 10);
   websiteHref.textContent = site;
   websiteHref.href = site;
-
-
   circulatingPercentage.textContent =
     data.circulating_supply / data.total_supply === Infinity
       ? "∞"
@@ -242,37 +246,66 @@ const displayUI = (data, percentage, site) => {
   }${percentage}% $${data.symbol.toUpperCase()} ${
     "$" + percentage >= 0.01 ? "+" : ""
   }${
-    data.current_price.toString().length >= 8
+    +data.current_price < 0.1
       ? ""
       : "(" + data.price_change_24h.toString().slice(0, 6) + " USD" + ")"
   }`;
+
   totalSupply.textContent =
-  data.total_supply === null
-    ? "∞"
-    : data.total_supply.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); + " " + data.symbol.toUpperCase();
-    circulatingCount.textContent = `${data.circulating_supply.toFixed(
-      0
-    ).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $${data.symbol.toUpperCase()}`;
-    if(data.current_price.toString().length <= 7) {
-    markPrice.textContent = `$${data.current_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;
+    data.total_supply === null
+      ? "∞"
+      : data.total_supply
+          .toFixed(0)
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+        " " +
+        data.symbol.toUpperCase();
+  circulatingCount.textContent = `${data.circulating_supply
+    .toFixed(0)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} $${data.symbol.toUpperCase()}`;
+  ///
+
+  if (data.current_price > 0.5) {
+    markPrice.textContent = `$${data.current_price
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;
     markPriceHigh.textContent = `$${
-      data.current_price > 1 ? data.high_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.high_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      data.current_price > 1
+        ? data.high_24h
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        : data.high_24h
+            .toFixed(5)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     } USD`;
     markPriceLow.textContent = `$${
-      data.current_price > 1 ? data.low_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.low_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      data.current_price > 1
+        ? data.low_24h
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        : data.low_24h
+            .toFixed(5)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     } USD`;
-    
-    } else {
+  } else {
     markPrice.textContent = `$${data.current_price.toString()} USD`;
     markPriceHigh.textContent = `$${
-      data.current_price > 1 ? data.high_24h.toFixed(2).toString() : data.high_24h.toFixed(5).toString()
+      data.current_price > 1
+        ? data.high_24h.toFixed(2).toString()
+        : data.high_24h.toFixed(5).toString()
     } USD`;
     markPriceLow.textContent = `$${
-      data.current_price > 1 ? data.low_24h.toFixed(2).toString() : data.low_24h.toFixed(5).toString()
+      data.current_price > 1
+        ? data.low_24h.toFixed(2).toString()
+        : data.low_24h.toFixed(5).toString()
     } USD`;
-    }
+  }
 
- 
   athDate.textContent = `${dateConverter(date)} ${data.ath_date.slice(
     8,
     10

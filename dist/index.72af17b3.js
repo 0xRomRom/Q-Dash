@@ -1161,6 +1161,7 @@ setInterval(()=>{
     refreshCount--;
     refreshCounter.textContent = refreshCount;
 }, 1000);
+// Default interval
 setInterval(()=>{
     refreshCount = 90;
     refreshCounter.textContent = refreshCount;

@@ -318,7 +318,6 @@ window.addEventListener("load", async () => {
 //Refresh interval counter
 let refreshCount = 90;
 refreshCounter.textContent = refreshCount;
-
 setInterval(() => {
   if (refreshCount === 0) {
     updateUI();
@@ -335,6 +334,7 @@ setInterval(() => {
   refreshCounter.textContent = refreshCount;
 }, 1000);
 
+// Default interval
 setInterval(() => {
   refreshCount = 90;
   refreshCounter.textContent = refreshCount;
