@@ -738,8 +738,8 @@ const displayUI = (data, percentage, site)=>{
         markPriceLow.textContent = `$${data.current_price > 1 ? data.low_24h.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : data.low_24h.toFixed(5).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} USD`;
     } else {
         markPrice.textContent = `$${data.current_price.toString()} USD`;
-        markPriceHigh.textContent = `$${data.current_price > 1 ? data.high_24h.toFixed(2).toString() : data.high_24h.toFixed(5).toString()} USD`;
-        markPriceLow.textContent = `$${data.current_price > 1 ? data.low_24h.toFixed(2).toString() : data.low_24h.toFixed(5).toString()} USD`;
+        markPriceHigh.textContent = `$${data.current_price > 1 ? data.high_24h.toFixed(2).toString() : data.high_24h.toFixed(8).toString()} USD`;
+        markPriceLow.textContent = `$${data.current_price > 1 ? data.low_24h.toFixed(2).toString() : data.low_24h.toFixed(8).toString()} USD`;
     }
     athDate.textContent = `${dateConverter(date)} ${data.ath_date.slice(8, 10)} ${data.ath_date.slice(0, 4)}`;
     if (+percentage >= 0.01) {

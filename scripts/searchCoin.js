@@ -297,12 +297,12 @@ const displayUI = (data, percentage, site) => {
     markPriceHigh.textContent = `$${
       data.current_price > 1
         ? data.high_24h.toFixed(2).toString()
-        : data.high_24h.toFixed(5).toString()
+        : data.high_24h.toFixed(8).toString()
     } USD`;
     markPriceLow.textContent = `$${
       data.current_price > 1
         ? data.low_24h.toFixed(2).toString()
-        : data.low_24h.toFixed(5).toString()
+        : data.low_24h.toFixed(8).toString()
     } USD`;
   }
 

@@ -539,7 +539,7 @@ const dropShadow = document.querySelector(".dropshadow");
 const lightBoxClose = document.querySelector(".fa-x");
 const widgetContainer = document.querySelector(".tradingview-widget-container");
 const searchContractBox = document.querySelector(".search-contract-box");
-let coinName = document.querySelector(".coin-name");
+const coinName = document.querySelector(".coin-name");
 // Onload rotate animation
 const allCards = document.querySelectorAll(".card");
 allCards.forEach((card)=>{

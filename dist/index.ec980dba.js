@@ -581,6 +581,7 @@ closeNotifModal.addEventListener("click", ()=>{
     dropShadow.classList.add("fadeOut");
     resetImg.classList.add("hidden");
     setTimeout(()=>{
+        dropShadow.classList.remove("fadeOut");
         notificationModal.classList.add("hidden");
         dropShadow.classList.add("hidden");
     }, 500);
@@ -592,6 +593,7 @@ dropShadow.addEventListener("click", ()=>{
     setTimeout(()=>{
         notificationModal.classList.add("hidden");
         dropShadow.classList.add("hidden");
+        dropShadow.classList.remove("fadeOut");
     }, 500);
 });
 // Ask for permission
