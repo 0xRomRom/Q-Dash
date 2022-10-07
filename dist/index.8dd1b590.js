@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"lNSW0":[function(require,module,exports) {
+})({"3zcFH":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "799dd96bcde5dfe0";
+module.bundle.HMR_BUNDLE_ID = "ae2dc66f8dd1b590";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,56 +531,43 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"jUTag":[function(require,module,exports) {
-var _coinIndexJs = require("./coinIndex.js");
+},{}],"6pRgf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "refreshCounter", ()=>refreshCounter);
 "use strict";
-const lightBox = document.querySelector(".lightbox");
-const dropShadow = document.querySelector(".dropshadow");
-const lightBoxClose = document.querySelector(".fa-x");
-const widgetContainer = document.querySelector(".tradingview-widget-container");
-const searchContractBox = document.querySelector(".search-contract-box");
-let coinName = document.querySelector(".coin-name");
-// Onload rotate animation
-const allCards = document.querySelectorAll(".card");
-allCards.forEach((card)=>{
-    card.classList.add("rotater");
-});
-// Close lightbox
-lightBoxClose.addEventListener("click", ()=>{
-    lightBox.classList.add("hidden");
-    dropShadow.classList.add("hidden");
-});
-dropShadow.addEventListener("click", ()=>{
-    lightBox.classList.add("hidden");
-    dropShadow.classList.add("hidden");
-    searchContractBox.classList.add("hidden");
-});
-// Render lightbox
-allCards.forEach((card)=>{
-    card.addEventListener("click", ()=>{
-        widgetContainer.classList.add("fadeIn");
-        coinName.textContent = "";
-        coinName.classList.add("dropIn");
-        lightBox.classList.remove("hidden");
-        dropShadow.classList.remove("hidden");
-        coinName.textContent = card.children[0].textContent;
-        lightBoxFiller(card.dataset.id);
+const refreshCounter = document.querySelector(".refresh-counter");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
     });
-});
-const lightBoxFiller = (key)=>{
-    new TradingView.widget({
-        autosize: true,
-        symbol: (0, _coinIndexJs.coinIndex)[key],
-        interval: "D",
-        timezone: "Etc/UTC",
-        theme: "dark",
-        style: "1",
-        locale: "en",
-        toolbar_bg: "#f1f3f6",
-        container_id: "chartbox"
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
     });
 };
 
-},{"./coinIndex.js":"dc5Y2"}]},["lNSW0","jUTag"], "jUTag", "parcelRequire379f")
+},{}]},["3zcFH","6pRgf"], "6pRgf", "parcelRequire379f")
 
-//# sourceMappingURL=index.cde5dfe0.js.map
+//# sourceMappingURL=index.8dd1b590.js.map

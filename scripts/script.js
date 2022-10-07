@@ -5,7 +5,6 @@ import { coinIndex } from "./coinIndex.js";
 const lightBox = document.querySelector(".lightbox");
 const dropShadow = document.querySelector(".dropshadow");
 const lightBoxClose = document.querySelector(".fa-x");
-const chartContainer = document.querySelector(".chart-container");
 const widgetContainer = document.querySelector(".tradingview-widget-container");
 const searchContractBox = document.querySelector(".search-contract-box");
 

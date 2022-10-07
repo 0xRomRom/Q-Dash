@@ -772,68 +772,431 @@ allCards.forEach((card)=>{
         card.classList.remove("rotater");
     }, 1100);
 });
+const fetchObject = {
+    0: [
+        "bitcoin",
+        bitcoinDiv,
+        bitcoinChange,
+        bitcoinPrice,
+        0
+    ],
+    1: [
+        "cardano",
+        cardanoDiv,
+        cardanoChange,
+        cardanoPrice,
+        2
+    ],
+    2: [
+        "dogecoin",
+        dogeDiv,
+        dogeChange,
+        dogePrice,
+        4
+    ],
+    3: [
+        "polkadot",
+        polkadotDiv,
+        polkadotChange,
+        polkadotPrice,
+        2
+    ],
+    4: [
+        "shiba-inu",
+        shibaDiv,
+        shibaChange,
+        shibaPrice,
+        7
+    ],
+    5: [
+        "matic-network",
+        polygonDiv,
+        polygonChange,
+        polygonPrice,
+        2
+    ],
+    6: [
+        "avalanche-2",
+        avaxDiv,
+        avaxChange,
+        avaxPrice,
+        2
+    ],
+    7: [
+        "tron",
+        trxDiv,
+        trxChange,
+        trxPrice,
+        2
+    ],
+    8: [
+        "leo-token",
+        leoDiv,
+        leoChange,
+        leoPrice,
+        2
+    ],
+    9: [
+        "uniswap",
+        uniDiv,
+        uniChange,
+        uniPrice,
+        2
+    ],
+    10: [
+        "cosmos",
+        cosmosDiv,
+        cosmosChange,
+        cosmosPrice,
+        2
+    ],
+    11: [
+        "eos",
+        eosDiv,
+        eosChange,
+        eosPrice,
+        2
+    ],
+    12: [
+        "ethereum-classic",
+        ethCDiv,
+        ethCChange,
+        ethCPrice,
+        2
+    ],
+    13: [
+        "flow",
+        flowDiv,
+        flowChange,
+        flowPrice,
+        2
+    ],
+    14: [
+        "litecoin",
+        litecoinDiv,
+        litecoinChange,
+        litecoinPrice,
+        2
+    ],
+    15: [
+        "okb",
+        okbDiv,
+        okbChange,
+        okbPrice,
+        2
+    ],
+    16: [
+        "chainlink",
+        chainlinkDiv,
+        chainlinkChange,
+        chainlinkPrice,
+        2
+    ],
+    17: [
+        "stellar",
+        xlmDiv,
+        xlmChange,
+        xlmPrice,
+        2
+    ],
+    18: [
+        "ftx-token",
+        ftxDiv,
+        ftxChange,
+        ftxPrice,
+        2
+    ],
+    19: [
+        "near",
+        nearDiv,
+        nearChange,
+        nearPrice,
+        2
+    ],
+    20: [
+        "crypto-com-chain",
+        cronosDiv,
+        cronosChange,
+        cronosPrice,
+        2
+    ],
+    21: [
+        "algorand",
+        algoDiv,
+        algoChange,
+        algoPrice,
+        2
+    ],
+    22: [
+        "monero",
+        moneroDiv,
+        moneroChange,
+        moneroPrice,
+        1
+    ],
+    23: [
+        "bitcoin-cash",
+        bcashDiv,
+        bcashChange,
+        bcashPrice,
+        1
+    ],
+    24: [
+        "vechain",
+        vetDiv,
+        vetChange,
+        vetPrice,
+        4
+    ],
+    25: [
+        "quant-network",
+        quantDiv,
+        quantChange,
+        quantPrice,
+        2
+    ],
+    26: [
+        "tezos",
+        tezosDiv,
+        tezosChange,
+        tezosPrice,
+        2
+    ],
+    27: [
+        "axie-infinity",
+        axieDiv,
+        axieChange,
+        axiePrice,
+        2
+    ],
+    28: [
+        "theta-token",
+        thetaDiv,
+        thetaChange,
+        thetaPrice,
+        2
+    ],
+    29: [
+        "elrond-erd-2",
+        elrondDiv,
+        elrondChange,
+        elrondPrice,
+        2
+    ],
+    30: [
+        "aave",
+        aaveDiv,
+        aaveChange,
+        aavePrice,
+        2
+    ],
+    31: [
+        "kucoin-shares",
+        kucoinDiv,
+        kucoinChange,
+        kucoinPrice,
+        2
+    ],
+    32: [
+        "ripple",
+        xrpDiv,
+        xrpChange,
+        xrpPrice,
+        2
+    ],
+    33: [
+        "iota",
+        iotaDiv,
+        iotaChange,
+        iotaPrice,
+        2
+    ],
+    34: [
+        "ethereum",
+        ethDiv,
+        ethChange,
+        ethPrice,
+        0
+    ],
+    35: [
+        "zcash",
+        zcashDiv,
+        zcashChange,
+        zcashPrice,
+        2
+    ],
+    36: [
+        "huobi-token",
+        huobiDiv,
+        huobiChange,
+        huobiPrice,
+        2
+    ],
+    37: [
+        "solana",
+        solDiv,
+        solChange,
+        solPrice,
+        2
+    ],
+    38: [
+        "evmos",
+        evmosDiv,
+        evmosChange,
+        evmosPrice,
+        2
+    ],
+    39: [
+        "celsius-degree-token",
+        celsiusDiv,
+        celsiusChange,
+        celsiusPrice,
+        2
+    ],
+    40: [
+        "pancakeswap-token",
+        cakeDiv,
+        cakeChange,
+        cakePrice,
+        2
+    ],
+    41: [
+        "gatechain-token",
+        gateDiv,
+        gateChange,
+        gatePrice,
+        2
+    ],
+    42: [
+        "neo",
+        neoDiv,
+        neoChange,
+        neoPrice,
+        2
+    ],
+    43: [
+        "maker",
+        makerDiv,
+        makerChange,
+        makerPrice,
+        0
+    ],
+    44: [
+        "helium",
+        heliumDiv,
+        heliumChange,
+        heliumPrice,
+        2
+    ],
+    45: [
+        "fantom",
+        fantomDiv,
+        fantomChange,
+        fantomPrice,
+        2
+    ],
+    46: [
+        "havven",
+        syntDiv,
+        syntChange,
+        syntPrice,
+        2
+    ],
+    47: [
+        "binancecoin",
+        bnbDiv,
+        bnbChange,
+        bnbPrice,
+        2
+    ],
+    48: [
+        "osmosis",
+        osmosisDiv,
+        osmosisChange,
+        osmosisPrice,
+        2
+    ],
+    49: [
+        "nexo",
+        nexoDiv,
+        nexoChange,
+        nexoPrice,
+        2
+    ],
+    50: [
+        "arweave",
+        arwDiv,
+        arwChange,
+        arwPrice,
+        2
+    ],
+    51: [
+        "zilliqa",
+        zilDiv,
+        zilChange,
+        zilPrice,
+        4
+    ],
+    52: [
+        "thorchain",
+        runeDiv,
+        runeChange,
+        runePrice,
+        2
+    ],
+    53: [
+        "dash",
+        dashDiv,
+        dashChange,
+        dashPrice,
+        2
+    ],
+    54: [
+        "rocket-pool",
+        rocketDiv,
+        rocketChange,
+        rocketPrice,
+        2
+    ],
+    55: [
+        "blockstack",
+        stacksDiv,
+        stacksChange,
+        stacksPrice,
+        3
+    ],
+    56: [
+        "waves",
+        wavesDiv,
+        wavesChange,
+        wavesPrice,
+        2
+    ],
+    57: [
+        "kava",
+        kavaDiv,
+        kavaChange,
+        kavaPrice,
+        2
+    ],
+    58: [
+        "xdce-crowd-sale",
+        xdcDiv,
+        xdcChange,
+        xdcPrice,
+        4
+    ],
+    59: [
+        "compound-governance-token",
+        compDiv,
+        compChange,
+        compPrice,
+        2
+    ]
+};
 const updateUI = async ()=>{
     await dataFetcher();
-    uiUpdater("bitcoin", bitcoinDiv, bitcoinChange, bitcoinPrice, 0);
-    uiUpdater("cardano", cardanoDiv, cardanoChange, cardanoPrice, 2);
-    uiUpdater("dogecoin", dogeDiv, dogeChange, dogePrice, 4);
-    uiUpdater("polkadot", polkadotDiv, polkadotChange, polkadotPrice, 2);
-    uiUpdater("shiba-inu", shibaDiv, shibaChange, shibaPrice, 7);
-    uiUpdater("matic-network", polygonDiv, polygonChange, polygonPrice, 2);
-    uiUpdater("avalanche-2", avaxDiv, avaxChange, avaxPrice, 2);
-    uiUpdater("tron", trxDiv, trxChange, trxPrice, 2);
-    uiUpdater("leo-token", leoDiv, leoChange, leoPrice, 2);
-    uiUpdater("uniswap", uniDiv, uniChange, uniPrice, 2);
-    uiUpdater("cosmos", cosmosDiv, cosmosChange, cosmosPrice, 2);
-    uiUpdater("eos", eosDiv, eosChange, eosPrice, 2);
-    uiUpdater("ethereum-classic", ethCDiv, ethCChange, ethCPrice, 2);
-    uiUpdater("flow", flowDiv, flowChange, flowPrice, 2);
-    uiUpdater("litecoin", litecoinDiv, litecoinChange, litecoinPrice, 2);
-    uiUpdater("okb", okbDiv, okbChange, okbPrice, 2);
-    uiUpdater("chainlink", chainlinkDiv, chainlinkChange, chainlinkPrice, 2);
-    uiUpdater("stellar", xlmDiv, xlmChange, xlmPrice, 2);
-    uiUpdater("ftx-token", ftxDiv, ftxChange, ftxPrice, 2);
-    uiUpdater("near", nearDiv, nearChange, nearPrice, 2);
-    uiUpdater("crypto-com-chain", cronosDiv, cronosChange, cronosPrice, 2);
-    uiUpdater("algorand", algoDiv, algoChange, algoPrice, 2);
-    uiUpdater("monero", moneroDiv, moneroChange, moneroPrice, 1);
-    uiUpdater("bitcoin-cash", bcashDiv, bcashChange, bcashPrice, 1);
-    uiUpdater("vechain", vetDiv, vetChange, vetPrice, 4);
-    uiUpdater("quant-network", quantDiv, quantChange, quantPrice, 2);
-    uiUpdater("tezos", tezosDiv, tezosChange, tezosPrice, 2);
-    uiUpdater("axie-infinity", axieDiv, axieChange, axiePrice, 2);
-    uiUpdater("theta-token", thetaDiv, thetaChange, thetaPrice, 2);
-    uiUpdater("elrond-erd-2", elrondDiv, elrondChange, elrondPrice, 2);
-    uiUpdater("aave", aaveDiv, aaveChange, aavePrice, 2);
-    uiUpdater("kucoin-shares", kucoinDiv, kucoinChange, kucoinPrice, 2);
-    uiUpdater("ripple", xrpDiv, xrpChange, xrpPrice, 2);
-    uiUpdater("iota", iotaDiv, iotaChange, iotaPrice, 2);
-    uiUpdater("ethereum", ethDiv, ethChange, ethPrice, 0);
-    uiUpdater("zcash", zcashDiv, zcashChange, zcashPrice, 2);
-    uiUpdater("huobi-token", huobiDiv, huobiChange, huobiPrice, 2);
-    uiUpdater("solana", solDiv, solChange, solPrice, 2);
-    uiUpdater("evmos", evmosDiv, evmosChange, evmosPrice, 2);
-    uiUpdater("celsius-degree-token", celsiusDiv, celsiusChange, celsiusPrice, 2);
-    uiUpdater("pancakeswap-token", cakeDiv, cakeChange, cakePrice, 2);
-    uiUpdater("gatechain-token", gateDiv, gateChange, gatePrice, 2);
-    uiUpdater("neo", neoDiv, neoChange, neoPrice, 2);
-    uiUpdater("maker", makerDiv, makerChange, makerPrice, 0);
-    uiUpdater("helium", heliumDiv, heliumChange, heliumPrice, 2);
-    uiUpdater("fantom", fantomDiv, fantomChange, fantomPrice, 2);
-    uiUpdater("havven", syntDiv, syntChange, syntPrice, 2);
-    uiUpdater("binancecoin", bnbDiv, bnbChange, bnbPrice, 2);
-    uiUpdater("osmosis", osmosisDiv, osmosisChange, osmosisPrice, 2);
-    uiUpdater("nexo", nexoDiv, nexoChange, nexoPrice, 2);
-    uiUpdater("arweave", arwDiv, arwChange, arwPrice, 2);
-    uiUpdater("zilliqa", zilDiv, zilChange, zilPrice, 4);
-    uiUpdater("thorchain", runeDiv, runeChange, runePrice, 2);
-    uiUpdater("dash", dashDiv, dashChange, dashPrice, 2);
-    uiUpdater("rocket-pool", rocketDiv, rocketChange, rocketPrice, 2);
-    uiUpdater("blockstack", stacksDiv, stacksChange, stacksPrice, 3);
-    uiUpdater("waves", wavesDiv, wavesChange, wavesPrice, 2);
-    uiUpdater("kava", kavaDiv, kavaChange, kavaPrice, 2);
-    uiUpdater("xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4);
-    uiUpdater("compound-governance-token", compDiv, compChange, compPrice, 2);
+    for(let i = 0; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
 };
 const classChecker = (coinDiv, change)=>{
     if (change >= -2.5 && change <= 2.5) coinDiv.classList.add("neutral");
