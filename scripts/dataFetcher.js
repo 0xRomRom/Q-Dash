@@ -1,6 +1,6 @@
 "use strict";
 
-const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic%2Cbaby-doge-coin%2Cshiba-inu%2Cdogelon-mars%2Cfloki-inu%2Ctamadoge%2Ckishu-inu%2Cleash%2Csamoyedcoin%2Cshiba-predator%2Ccatecoin%2Choge-finance%2Ccake-monster%2Cvita-inu%2Cbanano%2Cthe-doge-nft%2Cdogebonk%2Cpolydoge%2Ccumrocket%2Cdogegf%2Cwoofy%2Cdogsofelon%2Cfeisty-doge-nft%2Ckuma-inu%2Celon-doge-tken%2Cmeme-inu%2Csafemoon-inu%2Cwall-street-bets-dapp%2Cpoodle%2Cpuli-inu%2Cshih-tzu%2C1-up%2Ckawakami%2Ccat-token%2Cmeta-doge%2Ccorgicoin%2Cdckereum%2Cshibavax%2Ckangal%2Ckittycoin%2Ccatbonk%2Cbobo-cash%2Cshibavax%2Cupdog%2Csolabrador%2Ckitty-coin-solana%2Csafemoon-2%2Cbaby-samo-coin%2Charambe%2Cchihuahua-token%2Cjejudoge%2Cshibaken-finance%2Cshibapup%2Cakita-inu%2Cdogefi%2Cyooshiba-inu%2Clitedoge%2Ccato%2Csoldoge%2Celon-doge-token%2Cduckereum%2Crichquack%2Cmonacoin%2Cdoge-dash&vs_currencies=usd&include_24hr_change=true`;
+const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic%2Cbaby-doge-coin%2Cshiba-inu%2Cdogelon-mars%2Cfloki-inu%2Ctamadoge%2Ckishu-inu%2Cleash%2Csamoyedcoin%2Cshiba-predator%2Ccatecoin%2Choge-finance%2Ccake-monster%2Cvita-inu%2Cbanano%2Cthe-doge-nft%2Cdogebonk%2Cpolydoge%2Ccumrocket%2Cdogegf%2Cwoofy%2Cdogsofelon%2Cfeisty-doge-nft%2Ckuma-inu%2Celon-doge-tken%2Cmeme-inu%2Csafemoon-inu%2Cwall-street-bets-dapp%2Cpoodle%2Cpuli-inu%2Cshih-tzu%2C1-up%2Ckawakami%2Ccat-token%2Cmeta-doge%2Ccorgicoin%2Cdckereum%2Cshibavax%2Ckangal%2Ckittycoin%2Ccatbonk%2Cbobo-cash%2Cshibavax%2Cupdog%2Csolabrador%2Ckitty-coin-solana%2Csafemoon-2%2Cbaby-samo-coin%2Charambe%2Cchihuahua-token%2Cjejudoge%2Cshibaken-finance%2Cshibapup%2Cakita-inu%2Cdogefi%2Cyooshiba-inu%2Clitedoge%2Ccato%2Csoldoge%2Celon-doge-token%2Cduckereum%2Cdoge-dash&vs_currencies=usd&include_24hr_change=true`;
 
 const bitcoinPrice = document.querySelector(".bitcoin-price");
 const bitcoinChange = document.querySelector(".bitcoin-change");
@@ -462,13 +462,6 @@ const soldogePrice = document.querySelector(".soldoge-price");
 const soldogeChange = document.querySelector(".soldoge-change");
 const soldogeDiv = document.querySelector(".soldoge-div");
 
-const richquackPrice = document.querySelector(".richquack-price");
-const richquackChange = document.querySelector(".richquack-change");
-const richquackDiv = document.querySelector(".richquack-div");
-
-const monacoinPrice = document.querySelector(".monacoin-price");
-const monacoinChange = document.querySelector(".monacoin-change");
-const monacoinDiv = document.querySelector(".monacoin-div");
 
 const dogedashPrice = document.querySelector(".dogedash-price");
 const dogedashChange = document.querySelector(".dogedash-change");
@@ -542,63 +535,61 @@ const fetchObject = {
   59: ["compound-governance-token", compDiv, compChange, compPrice, 2],
   60: ["shiba-inu", shibaDiv, shibaChange, shibaPrice, 9],
   61: ["dogelon-mars", dogelonmarsDiv, dogelonmarsChange, dogelonmarsPrice, 10],
-  62: ["floki-inu", flokiinuDiv, flokiinuChange, flokiinuPrice, 7],
-  63: ["tamadoge", tamadogeDiv, tamadogeChange, tamadogePrice, 7],
-  64: ["kishu-inu", kishuinuDiv, kishuinuChange, kishuinuPrice, 7],
-  65: ["leash", leashDiv, leashChange, leashPrice, 7],
-  66: ["samoyedcoin", samoyedcoinDiv, samoyedcoinChange, samoyedcoinPrice, 7],
-  67: ["shiba-predator", shibapredDiv, shibapredChange, shibapredPrice, 7],
-  68: ["catecoin", catecoinDiv, catecoinChange, catecoinPrice, 7],
+  62: ["floki-inu", flokiinuDiv, flokiinuChange, flokiinuPrice, 9],
+  63: ["tamadoge", tamadogeDiv, tamadogeChange, tamadogePrice, 5],
+  64: ["kishu-inu", kishuinuDiv, kishuinuChange, kishuinuPrice, 13],
+  65: ["leash", leashDiv, leashChange, leashPrice, 2],
+  66: ["samoyedcoin", samoyedcoinDiv, samoyedcoinChange, samoyedcoinPrice, 5],
+  67: ["shiba-predator", shibapredDiv, shibapredChange, shibapredPrice, 10],
+  68: ["catecoin", catecoinDiv, catecoinChange, catecoinPrice, 9],
   69: ["hoge-finance", hogefinanceDiv, hogefinanceChange, hogefinancePrice, 7],
-  70: ["cake-monster", cakemonsterDiv, cakemonsterChange, cakemonsterPrice, 7],
-  71: ["vita-inu", vitainuDiv, vitainuChange, vitainuPrice, 7],
-  72: ["banano", bananoDiv, bananoChange, bananoPrice, 7],
-  73: ["the-doge-nft", thedogenftDiv, thedogenftChange, thedogenftPrice, 7],
-  74: ["dogebonk", dogebonkDiv, dogebonkChange, dogebonkPrice, 7],
-  75: ["polydoge", polydogeDiv, polydogeChange, polydogePrice, 7],
-  76: ["cumrocket", cumrocketDiv, cumrocketChange, cumrocketPrice, 7],
-  77: ["dogegf", dogegfDiv, dogegfChange, dogegfPrice, 7],
-  78: ["woofy", woofyDiv, woofyChange, woofyPrice, 7],
-  79: ["dogsofelon", dogsofelonDiv, dogsofelonChange, dogsofelonPrice, 7],
-  80: ["feisty-doge-nft", feistynftDiv, feistynftChange, feistynftPrice, 7],
-  81: ["kuma-inu", kumainuDiv, kumainuChange, kumainuPrice, 7],
-  82: ["elon-doge-token", eldogeDiv, eldogeChange, eldogePrice, 7],
-  83: ["meme-inu", memeinuDiv, memeinuChange, memeinuPrice, 7],
-  84: ["safemoon-inu", safemooninuDiv, safemooninuChange, safemooninuPrice, 7],
-  85: ["wall-street-bets-dapp", wsbDiv, wsbChange, wsbPrice, 7],
-  86: ["poodle", poodleDiv, poodleChange, poodlePrice, 7],
-  87: ["puli-inu", puliinuDiv, puliinuChange, puliinuPrice, 7],
-  88: ["shih-tzu", shihtzuDiv, shihtzuChange, shihtzuPrice, 7],
-  89: ["1-up", oneupDiv, oneupChange, oneupPrice, 7],
-  90: ["kawakami", kawakamiDiv, kawakamiChange, kawakamiPrice, 7],
-  91: ["cat-token", cattokenDiv, cattokenChange, cattokenPrice, 7],
-  92: ["meta-doge", metadogeDiv, metadogeChange, metadogePrice, 7],
+  70: ["cake-monster", cakemonsterDiv, cakemonsterChange, cakemonsterPrice, 5],
+  71: ["vita-inu", vitainuDiv, vitainuChange, vitainuPrice, 11],
+  72: ["banano", bananoDiv, bananoChange, bananoPrice, 5],
+  73: ["the-doge-nft", thedogenftDiv, thedogenftChange, thedogenftPrice, 6],
+  74: ["dogebonk", dogebonkDiv, dogebonkChange, dogebonkPrice, 11],
+  75: ["polydoge", polydogeDiv, polydogeChange, polydogePrice, 11],
+  76: ["cumrocket", cumrocketDiv, cumrocketChange, cumrocketPrice, 6],
+  77: ["dogegf", dogegfDiv, dogegfChange, dogegfPrice, 11],
+  78: ["woofy", woofyDiv, woofyChange, woofyPrice, 6],
+  79: ["dogsofelon", dogsofelonDiv, dogsofelonChange, dogsofelonPrice, 6],
+  80: ["feisty-doge-nft", feistynftDiv, feistynftChange, feistynftPrice, 10],
+  81: ["kuma-inu", kumainuDiv, kumainuChange, kumainuPrice, 11],
+  82: ["elon-doge-token", eldogeDiv, eldogeChange, eldogePrice, 11],
+  83: ["meme-inu", memeinuDiv, memeinuChange, memeinuPrice, 10],
+  84: ["safemoon-inu", safemooninuDiv, safemooninuChange, safemooninuPrice, 9],
+  85: ["wall-street-bets-dapp", wsbDiv, wsbChange, wsbPrice, 6],
+  86: ["poodle", poodleDiv, poodleChange, poodlePrice, 11],
+  87: ["puli-inu", puliinuDiv, puliinuChange, puliinuPrice, 5],
+  88: ["shih-tzu", shihtzuDiv, shihtzuChange, shihtzuPrice, 11],
+  89: ["1-up", oneupDiv, oneupChange, oneupPrice, 8],
+  90: ["kawakami", kawakamiDiv, kawakamiChange, kawakamiPrice, 10],
+  91: ["cat-token", cattokenDiv, cattokenChange, cattokenPrice, 5],
+  92: ["meta-doge", metadogeDiv, metadogeChange, metadogePrice, 12],
   93: ["corgicoin", corgicoinDiv, corgicoinChange, corgicoinPrice, 7],
   94: ["duckereum", duckereumDiv, duckereumChange, duckereumPrice, 7],
-  95: ["shibavax", shibavaxDiv, shibavaxChange, shibavaxPrice, 7],
-  96: ["kangal", kangalDiv, kangalChange, kangalPrice, 7],
+  95: ["shibavax", shibavaxDiv, shibavaxChange, shibavaxPrice, 8],
+  96: ["kangal", kangalDiv, kangalChange, kangalPrice, 8],
   97: ["kittycoin", kittycoinDiv, kittycoinChange, kittycoinPrice, 7],
   98: ["catbonk", catbonkDiv, catbonkChange, catbonkPrice, 7],
-  99: ["bobo-cash", bobocashDiv, bobocashChange, bobocashPrice, 7],
-  100: ["updog", updogDiv, updogChange, updogPrice, 7],
-  101: ["solabrador", solabradorDiv, solabradorChange, solabradorPrice, 7],
+  99: ["bobo-cash", bobocashDiv, bobocashChange, bobocashPrice, 10],
+  100: ["updog", updogDiv, updogChange, updogPrice, 11],
+  101: ["solabrador", solabradorDiv, solabradorChange, solabradorPrice, 8],
   102: ["kitty-coin-solana", kittysolDiv, kittysolChange, kittysolPrice, 7],
   103: ["safemoon-2", safemoonDiv, safemoonChange, safemoonPrice, 7],
-  104: ["baby-samo-coin", babysamoDiv, babysamoChange, babysamoPrice, 7],
-  105: ["harambe", harambeDiv, harambeChange, harambePrice, 7],
+  104: ["baby-samo-coin", babysamoDiv, babysamoChange, babysamoPrice, 8],
+  105: ["harambe", harambeDiv, harambeChange, harambePrice, 9],
   106: ["chihuahua-token", chihuDiv, chihuChange, chihuPrice, 7],
-  107: ["jejudoge", jejudogeDiv, jejudogeChange, jejudogePrice, 7],
-  108: ["shibaken-finance", shibakfDiv, shibakfChange, shibakfPrice, 7],
-  109: ["shibapup", shibapupDiv, shibapupChange, shibapupPrice, 7],
-  110: ["akita-inu", akitainuDiv, akitainuChange, akitainuPrice, 7],
-  111: ["dogefi", dogefiDiv, dogefiChange, dogefiPrice, 7],
-  112: ["yooshiba-inu", yooshiDiv, yooshiChange, yooshiPrice, 7],
-  113: ["litedoge", litedogeDiv, litedogeChange, litedogePrice, 7],
+  107: ["jejudoge", jejudogeDiv, jejudogeChange, jejudogePrice, 11],
+  108: ["shibaken-finance", shibakfDiv, shibakfChange, shibakfPrice, 13],
+  109: ["shibapup", shibapupDiv, shibapupChange, shibapupPrice, 3],
+  110: ["akita-inu", akitainuDiv, akitainuChange, akitainuPrice, 10],
+  111: ["dogefi", dogefiDiv, dogefiChange, dogefiPrice, 3],
+  112: ["yooshiba-inu", yooshiDiv, yooshiChange, yooshiPrice, 11],
+  113: ["litedoge", litedogeDiv, litedogeChange, litedogePrice, 8],
   114: ["cato", catoDiv, catoChange, catoPrice, 7],
-  115: ["soldoge", soldogeDiv, soldogeChange, soldogePrice, 7],
-  116: ["richquack", richquackDiv, richquackChange, richquackPrice, 7],
-  117: ["monacoin", monacoinDiv, monacoinChange, monacoinPrice, 7],
-  118: ["doge-dash", dogedashDiv, dogedashChange, dogedashPrice, 7],
+  115: ["soldoge", soldogeDiv, soldogeChange, soldogePrice, 8],
+  116: ["doge-dash", dogedashDiv, dogedashChange, dogedashPrice, 7],
 };
 
 // Initial render
