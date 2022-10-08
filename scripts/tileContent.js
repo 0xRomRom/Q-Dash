@@ -609,4 +609,4 @@ Elon Doge Token
 <p class="card-percentage dogedash-change"></p>
 </div>`;
 
-tileContainer.innerHTML = memePage;
+tileContainer.innerHTML = mainPage;

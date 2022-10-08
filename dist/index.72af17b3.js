@@ -1776,6 +1776,9 @@ refreshArrow.addEventListener("click", ()=>{
     });
 });
 let responseObject = {};
+//Start of loop based on selected tiles
+let pageToggle = 0;
+//Index 60 for meme page
 allCards.forEach((card)=>{
     card.classList.add("rotater");
     setTimeout(()=>{
@@ -1791,7 +1794,7 @@ const updateUI = async ()=>{
         card.classList.remove("u2");
     });
     await dataFetcher();
-    for(let i = 60; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
+    for(let i = pageToggle; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
 };
 const classChecker = (coinDiv, change)=>{
     console.log(change);
