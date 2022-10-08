@@ -462,6 +462,13 @@ const soldogePrice = document.querySelector(".soldoge-price");
 const soldogeChange = document.querySelector(".soldoge-change");
 const soldogeDiv = document.querySelector(".soldoge-div");
 
+const richquackPrice = document.querySelector(".richquack-price");
+const richquackChange = document.querySelector(".richquack-change");
+const richquackDiv = document.querySelector(".richquack-div");
+
+const monacoinPrice = document.querySelector(".monacoin-price");
+const monacoinChange = document.querySelector(".monacoin-change");
+const monacoinDiv = document.querySelector(".monacoin-div");
 
 const dogedashPrice = document.querySelector(".dogedash-price");
 const dogedashChange = document.querySelector(".dogedash-change");
@@ -539,7 +546,7 @@ const fetchObject = {
   63: ["tamadoge", tamadogeDiv, tamadogeChange, tamadogePrice, 5],
   64: ["kishu-inu", kishuinuDiv, kishuinuChange, kishuinuPrice, 13],
   65: ["leash", leashDiv, leashChange, leashPrice, 2],
-  66: ["samoyedcoin", samoyedcoinDiv, samoyedcoinChange, samoyedcoinPrice, 5],
+  66: ["samoyedcoin", samoyedcoinDiv, samoyedcoinChange, samoyedcoinPrice, 6],
   67: ["shiba-predator", shibapredDiv, shibapredChange, shibapredPrice, 10],
   68: ["catecoin", catecoinDiv, catecoinChange, catecoinPrice, 9],
   69: ["hoge-finance", hogefinanceDiv, hogefinanceChange, hogefinancePrice, 7],
@@ -553,7 +560,7 @@ const fetchObject = {
   77: ["dogegf", dogegfDiv, dogegfChange, dogegfPrice, 11],
   78: ["woofy", woofyDiv, woofyChange, woofyPrice, 6],
   79: ["dogsofelon", dogsofelonDiv, dogsofelonChange, dogsofelonPrice, 6],
-  80: ["feisty-doge-nft", feistynftDiv, feistynftChange, feistynftPrice, 10],
+  80: ["feisty-doge-nft", feistynftDiv, feistynftChange, feistynftPrice, 8],
   81: ["kuma-inu", kumainuDiv, kumainuChange, kumainuPrice, 11],
   82: ["elon-doge-token", eldogeDiv, eldogeChange, eldogePrice, 11],
   83: ["meme-inu", memeinuDiv, memeinuChange, memeinuPrice, 10],
@@ -586,10 +593,12 @@ const fetchObject = {
   110: ["akita-inu", akitainuDiv, akitainuChange, akitainuPrice, 10],
   111: ["dogefi", dogefiDiv, dogefiChange, dogefiPrice, 3],
   112: ["yooshiba-inu", yooshiDiv, yooshiChange, yooshiPrice, 11],
-  113: ["litedoge", litedogeDiv, litedogeChange, litedogePrice, 8],
+  113: ["litedoge", litedogeDiv, litedogeChange, litedogePrice, 7],
   114: ["cato", catoDiv, catoChange, catoPrice, 7],
-  115: ["soldoge", soldogeDiv, soldogeChange, soldogePrice, 8],
-  116: ["doge-dash", dogedashDiv, dogedashChange, dogedashPrice, 7],
+  115: ["soldoge", soldogeDiv, soldogeChange, soldogePrice, 7],
+  116: ["richquack", richquackDiv, richquackChange, richquackPrice, 7],
+  117: ["monacoin", monacoinDiv, monacoinChange, monacoinPrice, 7],
+  118: ["doge-dash", dogedashDiv, dogedashChange, dogedashPrice, 7],
 };
 
 // Initial render
@@ -680,7 +689,7 @@ const classChecker = (coinDiv, change) => {
     coinDiv.classList.add("neutral");
   }
 
-  if (change >= -2.5 && change <= 2.5) {
+  if (change >= -2 && change <= 2) {
     coinDiv.classList.add("neutral");
   }
   if (change >= 0 && change <= 7.5) {
@@ -689,7 +698,7 @@ const classChecker = (coinDiv, change) => {
   if (change >= 7.5) {
     coinDiv.classList.add("u2");
   }
-  if (change < -2.5) {
+  if (change < -2) {
     coinDiv.classList.add("d1");
   }
   if (change < -7.5) {

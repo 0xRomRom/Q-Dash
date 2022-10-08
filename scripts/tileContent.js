@@ -316,43 +316,43 @@ let mainPage = `<div class="card cardano-div rotater" data-id="cardano">
 //++++++
 ////////
 
-let memePage = `<div class="card shiba-div" data-id="shiba">
-<h1 class="card-title c-mid">Shiba Inu</h1>
-<p class="card-price m-pr shiba-price"></p>
-<p class="card-percentage shiba-change"></p>
+let memePage = `<div class="card corgicoin-div" data-id="corgicoin">
+<h1 class="card-title-fat m-tr corgicoin">CorgiCoin</h1>
+<p class="card-price m-pr corgicoin-price"></p>
+<p class="card-percentage corgicoin-change"></p>
 </div>
 <div class="card dogelonmars-div" data-id="dogelonmars">
-<h1 class="card-title">Dogelon Mars</h1>
+<h1 class="card-title m-tr">Dogelon Mars</h1>
 <p class="card-price m-pr dogelonmars-price"></p>
 <p class="card-percentage dogelonmars-change"></p>
 </div>
 <div class="card flokiinu-div" data-id="flokiinu">
-<h1 class="card-title c-small flokiinu">Floki Inu</h1>
+<h1 class="card-title c-small m-tr1 flokiinu">Floki Inu</h1>
 <p class="card-price m-pr flokiinu-price"></p>
 <p class="card-percentage flokiinu-change"></p>
 </div>
 <div class="card tamadoge-div" data-id="tamadoge">
-<h1 class="card-title c-mid">Tamadoge</h1>
+<h1 class="card-title m-tr1 c-mid">Tamadoge</h1>
 <p class="card-price m-pr tamadoge-price"></p>
 <p class="card-percentage tamadoge-change"></p>
 </div>
-<div class="card card-fat kishuinu-div" data-id="kishuinu">
-<h1 class="card-title-fat">Kishu Inu</h1>
-<p class="card-price-fat m-pr kishuinu-price"></p>
-<p class="card-percentage-fat kishuinu-change"></p>
+<div class="card card-fat babysamocoin-div" data-id="babysamocoin">
+<h1 class="card-title-fat m-tr2 ">Baby Samo Coin</h1>
+<p class="card-price-fat m-pr babysamocoin-price"></p>
+<p class="card-percentage-fat babysamocoin-change"></p>
 </div>
 <div class="card leash-div" data-id="leash">
 <h1 class="card-title c-small leash">Leash</h1>
 <p class="card-price leash-price"></p>
 <p class="card-percentage leash-change"></p>
 </div>
-<div class="card samoyedcoin-div" data-id="samoyedcoin">
-<h1 class="card-title">Samoyedcoin</h1>
-<p class="card-price samoyedcoin-price"></p>
-<p class="card-percentage samoyedcoin-change"></p>
+<div class="card kishuinu-div" data-id="kishuinu">
+<h1 class="card-title m-pr">Kishu Inu</h1>
+<p class="card-price kishuinu-price m-prs"></p>
+<p class="card-percentage kishuinu-change"></p>
 </div>
 <div class="card shibapredator-div" data-id="shibapredator">
-<h1 class="card-title">Shiba Predator</h1>
+<h1 class="card-title m-tr1">Shiba Predator</h1>
 <p class="card-price m-pr shibapredator-price"></p>
 <p class="card-percentage shibapredator-change"></p>
 </div>
@@ -362,19 +362,19 @@ let memePage = `<div class="card shiba-div" data-id="shiba">
 <p class="card-percentage catecoin-change"></p>
 </div>
 <div class="card hogefinance-div" data-id="hogefinance">
-<h1 class="card-title c-small hogefinance">Hoge Finance</h1>
+<h1 class="card-title c-small m-tr1 hogefinance">Hoge Finance</h1>
 <p class="card-price m-pr hogefinance-price"></p>
 <p class="card-percentage hogefinance-change"></p>
 </div>
 <div class="card cakemonster-div" data-id="cakemonster">
-<h1 class="card-title c-small cakemonster">Cakemonster</h1>
+<h1 class="card-title c-small m-pr1 cakemonster">Cakemonster</h1>
 <p class="card-price cakemonster-price"></p>
 <p class="card-percentage cakemonster-change"></p>
 </div>
-<div class="card card-wide vitainu-div" data-id="vitainu">
-<h1 class="card-title-wide">Vita Inu</h1>
-<p class="card-price-wide vitainu-price"></p>
-<p class="card-percentage-wide vitainu-change"></p>
+<div class="card card-wide safemoon2-div" data-id="safemoon2">
+<h1 class="m-tr3">Safemoon</h1>
+<p class="card-price-wide safemoon2-price"></p>
+<p class="card-percentage-wide safemoon2-change"></p>
 </div>
 <div class="card banano-div" data-id="banano">
 <h1 class="card-title c-small2 banano">Banano</h1>
@@ -382,22 +382,22 @@ let memePage = `<div class="card shiba-div" data-id="shiba">
 <p class="card-percentage banano-change"></p>
 </div>
 <div class="card thedogenft-div" data-id="thedogenft">
-<h1 class="card-title c-small">The Doge NFT</h1>
+<h1 class="card-title c-small m-pr">The Doge NFT</h1>
 <p class="card-price thedogenft-price"></p>
 <p class="card-percentage thedogenft-change"></p>
 </div>
 <div class="card dogebonk-div" data-id="dogebonk">
-<h1 class="card-title">Dogebonk</h1>
+<h1 class="card-title m-tr">Dogebonk</h1>
 <p class="card-price m-pr dogebonk-price"></p>
 <p class="card-percentage dogebonk-change"></p>
 </div>
 <div class="card polydoge-div" data-id="polydoge">
-<h1 class="card-title c-small2 polydoge">Polydoge</h1>
+<h1 class="card-title c-small2 m-tr polydoge">Polydoge</h1>
 <p class="card-price m-pr polydoge-price"></p>
 <p class="card-percentage polydoge-change"></p>
 </div>
 <div class="card cumrocket-div" data-id="cumrocket">
-<h1 class="card-title">Cumrocket</h1>
+<h1 class="card-title m-tr">Cumrocket</h1>
 <p class="card-price m-pr cumrocket-price"></p>
 <p class="card-percentage cumrocket-change"></p>
 </div>
@@ -412,7 +412,7 @@ let memePage = `<div class="card shiba-div" data-id="shiba">
 <p class="card-percentage woofy-change"></p>
 </div>
 <div class="card dogsofelon-div" data-id="dogsofelon">
-<h1 class="card-title c-small">Dogs Of Elon</h1>
+<h1 class="card-title c-small m-tr">Dogs Of Elon</h1>
 <p class="card-price dogsofelon-price"></p>
 <p class="card-percentage dogsofelon-change"></p>
 </div>
@@ -422,29 +422,29 @@ let memePage = `<div class="card shiba-div" data-id="shiba">
 <p class="card-percentage feistydogenft-change"></p>
 </div>
 <div class="card kumainu-div" data-id="kuma-inu">
-<h1 class="card-title c-small">Kuma Inu</h1>
+<h1 class="card-title c-small m-tr">Kuma Inu</h1>
 <p class="card-price m-pr kumainu-price"></p>
 <p class="card-percentage kumainu-change"></p>
 </div>
 <div class="card elondogetoken-div" data-id="elondogetoken">
-<h1 class="card-title c-small2 elondogetoken">
+<h1 class="card-title c-small2 elondogetoken m-tr">
 Elon Doge Token
 </h1>
 <p class="card-price m-pr elondogetoken-price"></p>
 <p class="card-percentage elondogetoken-change"></p>
 </div>
 <div class="card memeinu-div" data-id="memeinu">
-<h1 class="card-title c-small">Meme Inu</h1>
+<h1 class="card-title c-small m-tr">Meme Inu</h1>
 <p class="card-price m-pr memeinu-price"></p>
 <p class="card-percentage memeinu-change"></p>
 </div>
-<div class="card safemooninu-div" data-id="safemooninu">
-<h1 class="card-title c-mid">Safemoon Inu</h1>
-<p class="card-price m-pr safemooninu-price"></p>
-<p class="card-percentage safemooninu-change"></p>
+<div class="card vitainu-div" data-id="vitainu">
+<h1 class="card-title c-mid m-tr1">Vita Inu</h1>
+<p class="card-price vitainu-price m-pr"></p>
+<p class="card-percentage vitainu-change"></p>
 </div>
 <div class="card wallstreetbetsdapp-div" data-id="wallstreetbetsdapp">
-<h1 class="card-title">Wallstreet Bets dApp</h1>
+<h1 class="card-title m-pr2">Wallstreet Bets dApp</h1>
 <p class="card-price m-pr wallstreetbetsdapp-price"></p>
 <p class="card-percentage wallstreetbetsdapp-change"></p>
 </div>
@@ -469,39 +469,39 @@ Elon Doge Token
 <p class="card-percentage oneup-change"></p>
 </div>
 <div class="card kawakami-div" data-id="kawakami">
-<h1 class="card-title c-mid">Kawakami</h1>
+<h1 class="card-title c-mid m-tr">Kawakami</h1>
 <p class="card-price m-pr kawakami-price"></p>
 <p class="card-percentage kawakami-change"></p>
 </div>
 <div class="card card-tall cattoken-div" data-id="cattoken">
-<h1 class="card-title-tall cattoken">Cat Token</h1>
+<h1 class="card-title-tall cattoken m-tr2">Cat Token</h1>
 <p class="card-price-tall m-pr cattoken-price"></p>
 <p class="card-percentage-tall cattoken-change"></p>
 </div>
 <div class="card metadoge-div" data-id="metadoge">
-<h1 class="card-title">Metadoge</h1>
-<p class="card-price m-pr metadoge-price"></p>
+<h1 class="card-title m-tr">Metadoge</h1>
+<p class="card-price m-prs metadoge-price"></p>
 <p class="card-percentage metadoge-change"></p>
 </div>
-<div class="card card-fat corgicoin-div" data-id="corgicoin">
-<h1 class="card-title-fat corgicoin">CorgiCoin</h1>
-<p class="card-price-fat corgicoin-price"></p>
-<p class="card-percentage-fat corgicoin-change"></p>
+<div class="card card-fat shiba-div" data-id="shiba">
+<h1 class="card-title-fat c-mid">Shiba Inu</h1>
+<p class="card-price-fat m-pr shiba-price"></p>
+<p class="card-percentage-fat shiba-change"></p>
 </div>
 <div class="card duckereum-div" data-id="duckereum">
-<h1 class="card-title">Duckereum</h1>
+<h1 class="card-title m-tr">Duckereum</h1>
 <p class="card-price m-pr duckereum-price"></p>
 <p class="card-percentage duckereum-change"></p>
 </div>
 <div class="card shibavax-div" data-id="shibavax">
-<h1 class="card-title">Shibavax</h1>
+<h1 class="card-title m-tr1">Shibavax</h1>
 <p class="card-price m-pr shibavax-price"></p>
 <p class="card-percentage shibavax-change"></p>
 </div>
-<div class="card card-wide kangal-div" data-id="kangal">
-<h1 class="card-title-wide">Kangal</h1>
-<p class="card-price-wide kangal-price"></p>
-<p class="card-percentage-wide kangal-change"></p>
+<div class="card card-wide samoyedcoin-div" data-id="samoyedcoin">
+<h1 class="card-title-wide samoy-title">Samoyedcoin</h1>
+<p class="card-price-wide samoyedcoin-price"></p>
+<p class="card-percentage-wide samoyedcoin-change"></p>
 </div>
 <div class="card c-last kittycoin-div" data-id="kittycoin">
 <h1 class="card-title c-mid">Kittycoin</h1>
@@ -514,7 +514,7 @@ Elon Doge Token
 <p class="card-percentage catbonk-change"></p>
 </div>
 <div class="card bobocash-div" data-id="bobocash">
-<h1 class="card-title">Bobo Cash</h1>
+<h1 class="card-title m-r">Bobo Cash</h1>
 <p class="card-price m-pr bobocash-price"></p>
 <p class="card-percentage bobocash-change"></p>
 </div>
@@ -524,24 +524,24 @@ Elon Doge Token
 <p class="card-percentage updog-change"></p>
 </div>
 <div class="card solabrador-div" data-id="solabrador">
-<h1 class="card-title">Solabrador</h1>
+<h1 class="card-title m-tr">Solabrador</h1>
 <p class="card-price m-pr solabrador-price"></p>
 <p class="card-percentage solabrador-change"></p>
 </div>
 <div class="card kittycoinsolana-div" data-id="kittycoinsolana">
-<h1 class="card-title c-mid">Kitty Coin Solana</h1>
+<h1 class="card-title c-mid m-tr">Kitty Coin Solana</h1>
 <p class="card-price m-pr kittycoinsolana-price"></p>
 <p class="card-percentage kittycoinsolana-change"></p>
 </div>
-<div class="card safemoon2-div" data-id="safemoon2">
-<h1 class="card-title c-mid">Safemoon</h1>
-<p class="card-price m-pr safemoon2-price"></p>
-<p class="card-percentage safemoon2-change"></p>
+<div class="card safemooninu-div" data-id="safemooninu">
+<h1 class="card-title m-tr1">Safemoon Inu</h1>
+<p class="card-price m-pr safemooninu-price"></p>
+<p class="card-percentage safemooninu-change"></p>
 </div>
-<div class="card babysamocoin-div" data-id="babysamocoin">
-<h1 class="card-title c-small">Baby Samo Coin</h1>
-<p class="card-price m-pr babysamocoin-price"></p>
-<p class="card-percentage babysamocoin-change"></p>
+<div class="card kangal-div" data-id="kangal">
+<h1 class="card-title c-small2">Kangal</h1>
+<p class="card-price m-pr kangal-price"></p>
+<p class="card-percentage kangal-change"></p>
 </div>
 <div class="card harambe-div" data-id="harambe">
 <h1 class="card-title c-small2 harambe">Harambe</h1>
@@ -549,27 +549,27 @@ Elon Doge Token
 <p class="card-percentage harambe-change"></p>
 </div>
 <div class="card card-fat chihuahuatoken-div" data-id="chihuahuatoken">
-<h1 class="card-title-fat">Chihuahua Token</h1>
+<h1 class="card-title-fat m-tr1">Chihuahua Token</h1>
 <p class="card-price-fat chihuahuatoken-price"></p>
 <p class="card-percentage-fat chihuahuatoken-change"></p>
 </div>
 <div class="card jejudoge-div" data-id="jejudoge">
-<h1 class="card-title c-small jejudoge">Jeju Doge</h1>
+<h1 class="card-title c-small jejudoge m-tr1">Jeju Doge</h1>
 <p class="card-price m-pr jejudoge-price"></p>
 <p class="card-percentage jejudoge-change"></p>
 </div>
 <div class="card shibakenfinance-div" data-id="shibakenfinance">
-<h1 class="card-title">Shibaken Finance</h1>
-<p class="card-price m-pr shibakenfinance-price"></p>
+<h1 class="card-title m-tr">Shibaken Finance</h1>
+<p class="card-price m-prs shibakenfinance-price"></p>
 <p class="card-percentage shibakenfinance-change"></p>
 </div>
 <div class="card shibapup-div" data-id="shibapup">
-<h1 class="card-title">ShibaPup</h1>
+<h1 class="card-title m-tr">ShibaPup</h1>
 <p class="card-price shibapup-price"></p>
 <p class="card-percentage shibapup-change"></p>
 </div>
 <div class="card akitainu-div" data-id="akitainu">
-<h1 class="card-title c-small akita-inueave">Akita Inu</h1>
+<h1 class="card-title c-small akita-inueave m-tr">Akita Inu</h1>
 <p class="card-price m-pr akitainu-price"></p>
 <p class="card-percentage akitainu-change"></p>
 </div>
@@ -579,12 +579,12 @@ Elon Doge Token
 <p class="card-percentage dogefi-change"></p>
 </div>
 <div class="card yooshibainu-div" data-id="yooshibainu">
-<h1 class="card-title">Yooshiba Inu</h1>
+<h1 class="card-title m-tr">Yooshiba Inu</h1>
 <p class="card-price m-pr yooshibainu-price"></p>
 <p class="card-percentage yooshibainu-change"></p>
 </div>
 <div class="card litedoge-div" data-id="litedoge">
-<h1 class="card-title">LiteDoge</h1>
+<h1 class="card-title m-tr1">LiteDoge</h1>
 <p class="card-price m-pr litedoge-price"></p>
 <p class="card-percentage litedoge-change"></p>
 </div>

@@ -879,6 +879,12 @@ const catoDiv = document.querySelector(".cato-div");
 const soldogePrice = document.querySelector(".soldoge-price");
 const soldogeChange = document.querySelector(".soldoge-change");
 const soldogeDiv = document.querySelector(".soldoge-div");
+const richquackPrice = document.querySelector(".richquack-price");
+const richquackChange = document.querySelector(".richquack-change");
+const richquackDiv = document.querySelector(".richquack-div");
+const monacoinPrice = document.querySelector(".monacoin-price");
+const monacoinChange = document.querySelector(".monacoin-change");
+const monacoinDiv = document.querySelector(".monacoin-div");
 const dogedashPrice = document.querySelector(".dogedash-price");
 const dogedashChange = document.querySelector(".dogedash-change");
 const dogedashDiv = document.querySelector(".dogedash-div");
@@ -1353,7 +1359,7 @@ const fetchObject = {
         samoyedcoinDiv,
         samoyedcoinChange,
         samoyedcoinPrice,
-        5
+        6
     ],
     67: [
         "shiba-predator",
@@ -1451,7 +1457,7 @@ const fetchObject = {
         feistynftDiv,
         feistynftChange,
         feistynftPrice,
-        10
+        8
     ],
     81: [
         "kuma-inu",
@@ -1682,7 +1688,7 @@ const fetchObject = {
         litedogeDiv,
         litedogeChange,
         litedogePrice,
-        8
+        7
     ],
     114: [
         "cato",
@@ -1696,9 +1702,23 @@ const fetchObject = {
         soldogeDiv,
         soldogeChange,
         soldogePrice,
-        8
+        7
     ],
     116: [
+        "richquack",
+        richquackDiv,
+        richquackChange,
+        richquackPrice,
+        7
+    ],
+    117: [
+        "monacoin",
+        monacoinDiv,
+        monacoinChange,
+        monacoinPrice,
+        7
+    ],
+    118: [
         "doge-dash",
         dogedashDiv,
         dogedashChange,
@@ -1776,10 +1796,10 @@ const updateUI = async ()=>{
 const classChecker = (coinDiv, change)=>{
     console.log(change);
     if (change === "N/A") coinDiv.classList.add("neutral");
-    if (change >= -2.5 && change <= 2.5) coinDiv.classList.add("neutral");
+    if (change >= -2 && change <= 2) coinDiv.classList.add("neutral");
     if (change >= 0 && change <= 7.5) coinDiv.classList.add("u1");
     if (change >= 7.5) coinDiv.classList.add("u2");
-    if (change < -2.5) coinDiv.classList.add("d1");
+    if (change < -2) coinDiv.classList.add("d1");
     if (change < -7.5) coinDiv.classList.add("d2");
 };
 const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam)=>{

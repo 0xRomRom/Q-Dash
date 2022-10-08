@@ -306,6 +306,7 @@ li > a {
 }
 
 .card-tall {
+  text-align: center;
   grid-row: span 2;
 }
 
@@ -370,6 +371,7 @@ li > a {
 }
 
 .card-title-fat {
+  text-align: center;
   font-size: 4.5rem;
 }
 
@@ -431,6 +433,10 @@ li > a {
 
 .shiba-price {
   font-size: 1.1rem;
+}
+
+.samoy-title {
+  font-size: 2rem !important;
 }
 
 .lightbox {
@@ -1870,8 +1876,37 @@ input:focus {
   position: absolute;
 }
 
+.m-prs {
+  font-size: .5vw !important;
+}
+
 .m-pr {
   font-size: .7vw !important;
+}
+
+.m-pr1 {
+  font-size: .8vw !important;
+}
+
+.m-pr2 {
+  text-align: center;
+  font-size: .95vw !important;
+}
+
+.m-tr {
+  font-size: 1.1rem !important;
+}
+
+.m-tr1 {
+  font-size: 1.3rem !important;
+}
+
+.m-tr2 {
+  font-size: 1.7rem !important;
+}
+
+.m-tr3 {
+  font-size: 2.5rem !important;
 }
 
 @media only screen and (max-width: 1915px) {
