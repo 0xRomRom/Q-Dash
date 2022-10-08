@@ -398,6 +398,42 @@ const bobocashPrice = document.querySelector(".bobocash-price");
 const bobocashChange = document.querySelector(".bobocash-change");
 const bobocashDiv = document.querySelector(".bobocash-div");
 
+const updogPrice = document.querySelector(".updog-price");
+const updogChange = document.querySelector(".updog-change");
+const updogDiv = document.querySelector(".updog-div");
+
+const solabradorPrice = document.querySelector(".solabrador-price");
+const solabradorChange = document.querySelector(".solabrador-change");
+const solabradorDiv = document.querySelector(".solabrador-div");
+
+const kittysolPrice = document.querySelector(".kittycoinsolana-price");
+const kittysolChange = document.querySelector(".kittycoinsolana-change");
+const kittysolDiv = document.querySelector(".kittycoinsolana-div");
+
+const safemoonPrice = document.querySelector(".safemoon2-price");
+const safemoonChange = document.querySelector(".safemoon2-change");
+const safemoonDiv = document.querySelector(".safemoon2-div");
+
+const babysamoPrice = document.querySelector(".babysamocoin-price");
+const babysamoChange = document.querySelector(".babysamocoin-change");
+const babysamoDiv = document.querySelector(".babysamocoin-div");
+
+const harambePrice = document.querySelector(".harambe-price");
+const harambeChange = document.querySelector(".harambe-change");
+const harambeDiv = document.querySelector(".harambe-div");
+
+const chihuPrice = document.querySelector(".chihuahuatoken-price");
+const chihuChange = document.querySelector(".chihuahuatoken-change");
+const chihuDiv = document.querySelector(".chihuahuatoken-div");
+
+const jejudogePrice = document.querySelector(".jejudoge-price");
+const jejudogeChange = document.querySelector(".jejudoge-change");
+const jejudogeDiv = document.querySelector(".jejudoge-div");
+
+const shibakfPrice = document.querySelector(".shibakenfinance-price");
+const shibakfChange = document.querySelector(".shibakenfinance-change");
+const shibakfDiv = document.querySelector(".shibakenfinance-div");
+
 const refreshArrow = document.querySelector(".refresh-button");
 const allCards = document.querySelectorAll(".card");
 
@@ -504,6 +540,15 @@ const fetchObject = {
   97: ["kittycoin", kittycoinDiv, kittycoinChange, kittycoinPrice, 7],
   98: ["catbonk", catbonkDiv, catbonkChange, catbonkPrice, 7],
   99: ["bobo-cash", bobocashDiv, bobocashChange, bobocashPrice, 7],
+  100: ["updog", updogDiv, updogChange, updogPrice, 7],
+  101: ["solabrador", solabradorDiv, solabradorChange, solabradorPrice, 7],
+  102: ["kitty-coin-solana", kittysolDiv, kittysolChange, kittysolPrice, 7],
+  103: ["safemoon-2", safemoonDiv, safemoonChange, safemoonPrice, 7],
+  104: ["baby-samo-coin", babysamoDiv, babysamoChange, babysamoPrice, 7],
+  105: ["harambe", harambeDiv, harambeChange, harambePrice, 7],
+  106: ["chihuahua-token", chihuDiv, chihuChange, chihuPrice, 7],
+  107: ["jejudoge", jejudogeDiv, jejudogeChange, jejudogePrice, 7],
+  108: ["shibaken-finance", shibakfDiv, shibakfChange, shibakfPrice, 7],
 };
 
 // Initial render
@@ -589,6 +634,11 @@ const updateUI = async () => {
 };
 
 const classChecker = (coinDiv, change) => {
+  console.log(change);
+  if (change === "N/A") {
+    coinDiv.classList.add("neutral");
+  }
+
   if (change >= -2.5 && change <= 2.5) {
     coinDiv.classList.add("neutral");
   }
@@ -608,7 +658,10 @@ const classChecker = (coinDiv, change) => {
 
 const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam) => {
   const price = responseObject[coinName].usd.toFixed(fixedParam);
-  const change = responseObject[coinName].usd_24h_change.toFixed(2);
+  const change =
+    responseObject[coinName].usd_24h_change === null
+      ? "N/A"
+      : responseObject[coinName].usd_24h_change.toFixed(2);
   priceTxt.textContent = "";
   changeTxt.textContent = "";
   priceTxt.textContent = `$${price}`;

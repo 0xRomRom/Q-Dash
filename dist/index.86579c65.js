@@ -1048,50 +1048,50 @@ ElonDogeToken
 <p class="card-price bobocash-price"></p>
 <p class="card-percentage bobocash-change"></p>
 </div>
-<div class="card gate-div" data-id="gate">
-<h1 class="card-title">Gate</h1>
-<p class="card-price gate-price"></p>
-<p class="card-percentage gate-change"></p>
+<div class="card updog-div" data-id="updog">
+<h1 class="card-title">updog</h1>
+<p class="card-price updog-price"></p>
+<p class="card-percentage updog-change"></p>
 </div>
-<div class="card neo-div" data-id="neo">
-<h1 class="card-title">NEO</h1>
-<p class="card-price neo-price"></p>
-<p class="card-percentage neo-change"></p>
+<div class="card solabrador-div" data-id="solabrador">
+<h1 class="card-title">Solabrador</h1>
+<p class="card-price solabrador-price"></p>
+<p class="card-percentage solabrador-change"></p>
 </div>
-<div class="card maker-div" data-id="maker">
-<h1 class="card-title c-mid">Maker</h1>
-<p class="card-price maker-price"></p>
-<p class="card-percentage maker-change"></p>
+<div class="card kittycoinsolana-div" data-id="kittycoinsolana">
+<h1 class="card-title c-mid">Kittycoinsolana</h1>
+<p class="card-price kittycoinsolana-price"></p>
+<p class="card-percentage kittycoinsolana-change"></p>
 </div>
-<div class="card helium-div" data-id="helium">
-<h1 class="card-title c-mid">Helium</h1>
-<p class="card-price helium-price"></p>
-<p class="card-percentage helium-change"></p>
+<div class="card safemoon2-div" data-id="safemoon2">
+<h1 class="card-title c-mid">Safemoon</h1>
+<p class="card-price safemoon2-price"></p>
+<p class="card-percentage safemoon2-change"></p>
 </div>
-<div class="card fantom-div" data-id="fantom">
-<h1 class="card-title c-small">Fantom</h1>
-<p class="card-price fantom-price"></p>
-<p class="card-percentage fantom-change"></p>
+<div class="card babysamocoin-div" data-id="babysamocoin">
+<h1 class="card-title c-small">Babysamocoin</h1>
+<p class="card-price babysamocoin-price"></p>
+<p class="card-percentage babysamocoin-change"></p>
 </div>
-<div class="card synt-div" data-id="synthetix">
-<h1 class="card-title c-small2 synthetix">Synthetix</h1>
-<p class="card-price synt-price"></p>
-<p class="card-percentage synt-change"></p>
+<div class="card harambe-div" data-id="harambe">
+<h1 class="card-title c-small2 harambe">harambe</h1>
+<p class="card-price harambe-price"></p>
+<p class="card-percentage harambe-change"></p>
 </div>
-<div class="card card-fat bnb-div" data-id="bnb">
-<h1 class="card-title-fat">BNB</h1>
-<p class="card-price-fat bnb-price"></p>
-<p class="card-percentage-fat bnb-change"></p>
+<div class="card card-fat chihuahuatoken-div" data-id="chihuahuatoken">
+<h1 class="card-title-fat">chihuahuatoken</h1>
+<p class="card-price-fat chihuahuatoken-price"></p>
+<p class="card-percentage-fat chihuahuatoken-change"></p>
 </div>
-<div class="card osmosis-div" data-id="osmosis">
-<h1 class="card-title c-small osmosis">Osmosis</h1>
-<p class="card-price osmosis-price"></p>
-<p class="card-percentage osmosis-change"></p>
+<div class="card jejudoge-div" data-id="jejudoge">
+<h1 class="card-title c-small jejudoge">jejudoge</h1>
+<p class="card-price jejudoge-price"></p>
+<p class="card-percentage jejudoge-change"></p>
 </div>
-<div class="card nexo-div" data-id="nexo">
-<h1 class="card-title">NEXO</h1>
-<p class="card-price nexo-price"></p>
-<p class="card-percentage nexo-change"></p>
+<div class="card shibakenfinance-div" data-id="shibakenfinance">
+<h1 class="card-title">Shibaken Finance</h1>
+<p class="card-price shibakenfinance-price"></p>
+<p class="card-percentage shibakenfinance-change"></p>
 </div>
 <div class="card flow-div" data-id="flow">
 <h1 class="card-title">Flow</h1>
