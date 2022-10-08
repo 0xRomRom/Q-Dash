@@ -1093,50 +1093,50 @@ ElonDogeToken
 <p class="card-price shibakenfinance-price"></p>
 <p class="card-percentage shibakenfinance-change"></p>
 </div>
-<div class="card flow-div" data-id="flow">
-<h1 class="card-title">Flow</h1>
-<p class="card-price flow-price"></p>
-<p class="card-percentage flow-change"></p>
+<div class="card shibapup-div" data-id="shibapup">
+<h1 class="card-title">Shibapup</h1>
+<p class="card-price shibapup-price"></p>
+<p class="card-percentage shibapup-change"></p>
 </div>
-<div class="card arw-div" data-id="arweave">
-<h1 class="card-title c-small arweave">Arweave</h1>
-<p class="card-price arw-price"></p>
-<p class="card-percentage arw-change"></p>
+<div class="card akitainu-div" data-id="akitainu">
+<h1 class="card-title c-small akita-inueave">Akita Inu</h1>
+<p class="card-price akitainu-price"></p>
+<p class="card-percentage akitainu-change"></p>
 </div>
-<div class="card zil-div" data-id="zilliqa">
-<h1 class="card-title c-mid">Zilliqa</h1>
-<p class="card-price zil-price"></p>
-<p class="card-percentage zil-change"></p>
+<div class="card dogefi-div" data-id="dogefi">
+<h1 class="card-title c-mid">Dogefi</h1>
+<p class="card-price dogefi-price"></p>
+<p class="card-percentage dogefi-change"></p>
 </div>
-<div class="card rune-div" data-id="rune">
-<h1 class="card-title">RUNE</h1>
-<p class="card-price rune-price"></p>
-<p class="card-percentage rune-change"></p>
+<div class="card yooshibainu-div" data-id="yooshibainu">
+<h1 class="card-title">Yooshiba Inu</h1>
+<p class="card-price yooshibainu-price"></p>
+<p class="card-percentage yooshibainu-change"></p>
 </div>
-<div class="card dash-div" data-id="dash">
-<h1 class="card-title">Dash</h1>
-<p class="card-price dash-price"></p>
-<p class="card-percentage dash-change"></p>
+<div class="card litedoge-div" data-id="litedoge">
+<h1 class="card-title">Litedoge</h1>
+<p class="card-price litedoge-price"></p>
+<p class="card-percentage litedoge-change"></p>
 </div>
-<div class="card c-last2 rocket-div" data-id="rocketpool">
-<h1 class="card-title c-small2">Rocket Pool</h1>
-<p class="card-price rocket-price"></p>
-<p class="card-percentage rocket-change"></p>
+<div class="card c-last2 cato-div" data-id="cato">
+<h1 class="card-title c-small2">Cato</h1>
+<p class="card-price cato-price"></p>
+<p class="card-percentage cato-change"></p>
 </div>
-<div class="card c-last2 stacks-div" data-id="stacks">
-<h1 class="card-title c-mid">Stacks</h1>
-<p class="card-price stacks-price"></p>
-<p class="card-percentage stacks-change"></p>
+<div class="card c-last2 soldoge-div" data-id="soldoge">
+<h1 class="card-title c-mid">soldoge</h1>
+<p class="card-price soldoge-price"></p>
+<p class="card-percentage soldoge-change"></p>
 </div>
-<div class="card c-last waves-div" data-id="waves">
-<h1 class="card-title c-mid">Waves</h1>
-<p class="card-price waves-price"></p>
-<p class="card-percentage waves-change"></p>
+<div class="card c-last richquack-div" data-id="richquack">
+<h1 class="card-title c-mid">richquack</h1>
+<p class="card-price richquack-price"></p>
+<p class="card-percentage richquack-change"></p>
 </div>
-<div class="card c-last kava-div" data-id="kava">
-<h1 class="card-title">Kava</h1>
-<p class="card-price kava-price"></p>
-<p class="card-percentage kava-change"></p>
+<div class="card c-last dogedash-div" data-id="dogedash">
+<h1 class="card-title">dogedash</h1>
+<p class="card-price dogedash-price"></p>
+<p class="card-percentage dogedash-change"></p>
 </div>
 <div class="card c-last xdc-div" data-id="xdc">
 <h1 class="card-title">XDC</h1>
