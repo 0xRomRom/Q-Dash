@@ -1317,14 +1317,14 @@ const fetchObject = {
         shibaDiv,
         shibaChange,
         shibaPrice,
-        7
+        9
     ],
     61: [
         "dogelon-mars",
         dogelonmarsDiv,
         dogelonmarsChange,
         dogelonmarsPrice,
-        7
+        10
     ],
     62: [
         "floki-inu",
@@ -1345,7 +1345,7 @@ const fetchObject = {
         kishuinuDiv,
         kishuinuChange,
         kishuinuPrice,
-        2
+        7
     ],
     65: [
         "leash",
