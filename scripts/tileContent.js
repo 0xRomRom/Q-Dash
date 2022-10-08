@@ -421,103 +421,102 @@ let memePage = `<div class="card shiba-div" data-id="shiba">
 <p class="card-price feistydogenft-price"></p>
 <p class="card-percentage feistydogenft-change"></p>
 </div>
-<div class="card monero-div" data-id="monero">
-<h1 class="card-title c-small">Monero</h1>
-<p class="card-price monero-price"></p>
-<p class="card-percentage monero-change"></p>
+<div class="card kumainu-div" data-id="kuma-inu">
+<h1 class="card-title c-small">Kuma Inu</h1>
+<p class="card-price kumainu-price"></p>
+<p class="card-percentage kumainu-change"></p>
 </div>
-<div class="card bcash-div" data-id="bitcoincash">
-<h1 class="card-title c-small2 bitcoincash">
-  Bitcoin <br />
-  Cash
+<div class="card elondogetoken-div" data-id="elondogetoken">
+<h1 class="card-title c-small2 elondogetoken">
+ElonDogeToken
 </h1>
-<p class="card-price bcash-price"></p>
-<p class="card-percentage bcash-change"></p>
+<p class="card-price elondogetoken-price"></p>
+<p class="card-percentage elondogetoken-change"></p>
 </div>
-<div class="card vet-div" data-id="vechain">
-<h1 class="card-title c-small">VeChain</h1>
-<p class="card-price vet-price"></p>
-<p class="card-percentage vet-change"></p>
+<div class="card memeinu-div" data-id="memeinu">
+<h1 class="card-title c-small">Memeinu</h1>
+<p class="card-price memeinu-price"></p>
+<p class="card-percentage memeinu-change"></p>
 </div>
-<div class="card quant-div" data-id="quant">
-<h1 class="card-title c-mid">Quant</h1>
-<p class="card-price quant-price"></p>
-<p class="card-percentage quant-change"></p>
+<div class="card safemooninu-div" data-id="safemooninu">
+<h1 class="card-title c-mid">Safemoon Inu</h1>
+<p class="card-price safemooninu-price"></p>
+<p class="card-percentage safemooninu-change"></p>
 </div>
-<div class="card tezos-div" data-id="tezos">
-<h1 class="card-title">Tezos</h1>
-<p class="card-price tezos-price"></p>
-<p class="card-percentage tezos-change"></p>
+<div class="card wallstreetbetsdapp-div" data-id="wallstreetbetsdapp">
+<h1 class="card-title">wallstreetbetsdapp</h1>
+<p class="card-price wallstreetbetsdapp-price"></p>
+<p class="card-percentage wallstreetbetsdapp-change"></p>
 </div>
-<div class="card axie-div" data-id="axie">
-<h1 class="card-title">Axie</h1>
-<p class="card-price axie-price"></p>
-<p class="card-percentage axie-change"></p>
+<div class="card poodle-div" data-id="poodle">
+<h1 class="card-title">Poodle</h1>
+<p class="card-price poodle-price"></p>
+<p class="card-percentage poodle-change"></p>
 </div>
-<div class="card theta-div" data-id="theta">
-<h1 class="card-title">Theta</h1>
-<p class="card-price theta-price"></p>
-<p class="card-percentage theta-change"></p>
+<div class="card puliinu-div" data-id="puliinu">
+<h1 class="card-title">Puli Inu</h1>
+<p class="card-price puliinu-price"></p>
+<p class="card-percentage puliinu-change"></p>
 </div>
-<div class="card elrond-div" data-id="elrond">
-<h1 class="card-title c-mid">Elrond</h1>
-<p class="card-price elrond-price"></p>
-<p class="card-percentage elrond-change"></p>
+<div class="card shihtzu-div" data-id="shihtzu">
+<h1 class="card-title c-mid">shihtzu</h1>
+<p class="card-price shihtzu-price"></p>
+<p class="card-percentage shihtzu-change"></p>
 </div>
-<div class="card aave-div" data-id="aave">
-<h1 class="card-title">Aave</h1>
-<p class="card-price aave-price"></p>
-<p class="card-percentage aave-change"></p>
+<div class="card oneup-div" data-id="oneup">
+<h1 class="card-title">1 Up</h1>
+<p class="card-price oneup-price"></p>
+<p class="card-percentage oneup-change"></p>
 </div>
-<div class="card kucoin-div" data-id="kucoin">
-<h1 class="card-title c-mid">KuCoin</h1>
-<p class="card-price kucoin-price"></p>
-<p class="card-percentage kucoin-change"></p>
+<div class="card kawakami-div" data-id="kawakami">
+<h1 class="card-title c-mid">kawakami</h1>
+<p class="card-price kawakami-price"></p>
+<p class="card-percentage kawakami-change"></p>
 </div>
-<div class="card card-tall xrp-div" data-id="xrp">
-<h1 class="card-title-tall xrp">XRP</h1>
-<p class="card-price-tall xrp-price"></p>
-<p class="card-percentage-tall xrp-change"></p>
+<div class="card card-tall cattoken-div" data-id="cattoken">
+<h1 class="card-title-tall cattoken">Cattoken</h1>
+<p class="card-price-tall cattoken-price"></p>
+<p class="card-percentage-tall cattoken-change"></p>
 </div>
-<div class="card iota-div" data-id="iota">
-<h1 class="card-title">IOTA</h1>
-<p class="card-price iota-price"></p>
-<p class="card-percentage iota-change"></p>
+<div class="card metadoge-div" data-id="metadoge">
+<h1 class="card-title">Metadoge</h1>
+<p class="card-price metadoge-price"></p>
+<p class="card-percentage metadoge-change"></p>
 </div>
-<div class="card card-fat eth-div" data-id="ethereum">
-<h1 class="card-title-fat eth">Ethereum</h1>
-<p class="card-price-fat eth-price"></p>
-<p class="card-percentage-fat eth-change"></p>
+<div class="card card-fat corgicoin-div" data-id="corgicoin">
+<h1 class="card-title-fat corgicoin">Corgicoin</h1>
+<p class="card-price-fat corgicoin-price"></p>
+<p class="card-percentage-fat corgicoin-change"></p>
 </div>
-<div class="card zcash-div" data-id="zcash">
-<h1 class="card-title">Zcash</h1>
-<p class="card-price zcash-price"></p>
-<p class="card-percentage zcash-change"></p>
+<div class="card duckereum-div" data-id="duckereum">
+<h1 class="card-title">Duckereum</h1>
+<p class="card-price duckereum-price"></p>
+<p class="card-percentage duckereum-change"></p>
 </div>
-<div class="card huobi-div" data-id="huobi">
-<h1 class="card-title">Huobi</h1>
-<p class="card-price huobi-price"></p>
-<p class="card-percentage huobi-change"></p>
+<div class="card shibavax-div" data-id="shibavax">
+<h1 class="card-title">Shibavax</h1>
+<p class="card-price shibavax-price"></p>
+<p class="card-percentage shibavax-change"></p>
 </div>
-<div class="card card-wide sol-div" data-id="solana">
-<h1 class="card-title-wide">Solana</h1>
-<p class="card-price-wide sol-price"></p>
-<p class="card-percentage-wide sol-change"></p>
+<div class="card card-wide kangal-div" data-id="kangal">
+<h1 class="card-title-wide">Kangal</h1>
+<p class="card-price-wide kangal-price"></p>
+<p class="card-percentage-wide kangal-change"></p>
 </div>
-<div class="card c-last evmos-div" data-id="evmos">
-<h1 class="card-title c-mid">Evmos</h1>
-<p class="card-price evmos-price"></p>
-<p class="card-percentage evmos-change"></p>
+<div class="card c-last kittycoin-div" data-id="kittycoin">
+<h1 class="card-title c-mid">Kittycoin</h1>
+<p class="card-price kittycoin-price"></p>
+<p class="card-percentage kittycoin-change"></p>
 </div>
-<div class="card c-last celsius-div" data-id="celsius">
-<h1 class="card-title c-mid">Celsius</h1>
-<p class="card-price celsius-price"></p>
-<p class="card-percentage celsius-change"></p>
+<div class="card c-last catbonk-div" data-id="catbonk">
+<h1 class="card-title c-mid">Catbonk</h1>
+<p class="card-price catbonk-price"></p>
+<p class="card-percentage catbonk-change"></p>
 </div>
-<div class="card cake-div" data-id="cake">
-<h1 class="card-title">CAKE</h1>
-<p class="card-price cake-price"></p>
-<p class="card-percentage cake-change"></p>
+<div class="card bobocash-div" data-id="bobocash">
+<h1 class="card-title">Bobo Cash</h1>
+<p class="card-price bobocash-price"></p>
+<p class="card-percentage bobocash-change"></p>
 </div>
 <div class="card gate-div" data-id="gate">
 <h1 class="card-title">Gate</h1>
