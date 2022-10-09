@@ -25,7 +25,7 @@ lightBoxClose.addEventListener("click", () => {
 dropShadow.addEventListener("click", () => {
   lightBox.classList.add("hidden");
   dropShadow.classList.add("hidden");
-  searchContractBox.classList.add("hidden");
+  // searchContractBox.classList.add("hidden");
 });
 
 // Render lightbox

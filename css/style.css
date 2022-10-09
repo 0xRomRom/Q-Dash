@@ -176,6 +176,11 @@ nav {
   z-index: 10;
 }
 
+.colorWhite {
+  transition: all 1s ease-in-out;
+  color: white !important;
+}
+
 .fa-arrow-rotate-right {
   color: rgb(172, 168, 168);
   font-size: 2.5rem;
@@ -224,12 +229,13 @@ li > a {
 
 .brand-logo-div {
   background-color: rgb(8, 10, 22);
-  position: relative;
+  position: absolute;
   width: 17.8rem;
   height: 5rem;
   top: 0.5rem;
-  left: 1rem;
+  left: 0.8rem;
   border-radius: 0.4rem;
+  box-shadow: 0px 0px 10px rgb(14, 19, 38);
 }
 
 .brand-logo {
@@ -2217,6 +2223,9 @@ input:focus {
   .fetched-rank {
     font-size: 1.5rem;
   }
+  .brand-logo-div {
+    width: 17.3rem;
+  }
 }
 
 @media only screen and (max-width: 1595px) {
@@ -2430,6 +2439,9 @@ input:focus {
   .harambe {
     font-size: 1rem !important;
   }
+  .brand-logo-div {
+    width: 16.9rem;
+  }
 }
 
 @media only screen and (max-width: 1370px) {
@@ -2455,10 +2467,11 @@ input:focus {
     font-size: 0.6rem;
   }
   .search-button {
-    left: 18rem;
+    position: absolute;
+    left: 22rem;
   }
   .refresh-button {
-    left: 21rem;
+    left: 25rem;
   }
   .nav-list {
     padding-left: 7rem;
@@ -2557,6 +2570,9 @@ input:focus {
   }
   .monacoin {
     font-size: 0.85rem !important;
+  }
+  .brand-logo-div {
+    width: 16.6rem;
   }
 }
 
@@ -2700,9 +2716,19 @@ input:focus {
   .babysamocoin {
     font-size: 0.8rem !important;
   }
+  .search-button {
+    position: absolute;
+    left: 21rem;
+  }
+  .refresh-button {
+    left: 24rem;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
+  .brand-logo-div {
+    width: 16.1rem;
+  }
   .state-coinname {
     font-size: 1.3rem;
   }
@@ -2736,6 +2762,13 @@ input:focus {
   .input-container {
     width: 60%;
     left: 20%;
+  }
+  .search-button {
+    position: absolute;
+    left: 20rem;
+  }
+  .refresh-button {
+    left: 23rem;
   }
 }
 
