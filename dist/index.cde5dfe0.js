@@ -558,6 +558,7 @@ dropShadow.addEventListener("click", ()=>{
 // Render lightbox
 allCards.forEach((card)=>{
     card.addEventListener("click", ()=>{
+        if (card.classList.contains("block")) return;
         widgetContainer.classList.add("fadeIn");
         coinName.textContent = "";
         coinName.classList.add("dropIn");
