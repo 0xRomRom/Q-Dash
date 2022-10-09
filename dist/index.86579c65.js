@@ -1138,7 +1138,7 @@ Elon Doge Token
 <p class="card-price dogedash-price"></p>
 <p class="card-percentage dogedash-change"></p>
 </div>`;
-tileContainer.innerHTML = mainPage;
+tileContainer.innerHTML = memePage;
 
 },{}]},["ep8yO","clfFL"], "clfFL", "parcelRequire379f")
 

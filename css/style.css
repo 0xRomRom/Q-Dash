@@ -98,7 +98,8 @@ nav {
   width: 100vw;
   height: 100vh;
   /* background-color: red; */
-  /* background: linear-gradient(#00ffa3, #03e1ff, #dc1fff, #306a9c); */
+  /* background: linear-gradient( #00ffa3, #03e1ff, #dc1fff, #306a9c); */
+  /* background: linear-gradient(90deg, #00ffa3, #03e1ff, #dc1fff, #306a9c); */
  
   
 }

@@ -1777,7 +1777,7 @@ refreshArrow.addEventListener("click", ()=>{
 });
 let responseObject = {};
 //Start of loop based on selected tiles
-let pageToggle = 0;
+let pageToggle = 60;
 //Index 60 for meme page
 allCards.forEach((card)=>{
     card.classList.add("rotater");
