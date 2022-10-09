@@ -611,16 +611,21 @@ Elon Doge Token
 
 const togglePage = document.querySelector('.toggle-page');
 const purpleBox = document.querySelector('.purp-border');
+const memeBackground = document.querySelector('.meme-bg');
 
 togglePage.addEventListener('click', () => {
   if(purpleBox.classList.contains('slideRight')) {
     togglePage.disabled = true;
     purpleBox.classList.add('slideLeft')
+    memeBackground.classList.add('colorToDark')
     setTimeout(() => {
       togglePage.disabled = false;
       purpleBox.classList.remove('slideRight')
+      memeBackground.classList.remove('colorToDark')
+      memeBackground.classList.remove('darkToColor')
     }, 600);
   }
+  memeBackground.classList.add('darkToColor')
   togglePage.disabled = true;
   purpleBox.classList.add('slideRight')
   setTimeout(() => {

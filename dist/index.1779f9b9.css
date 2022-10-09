@@ -65,6 +65,7 @@
 
 .toggle-page {
   border: none;
+  border-radius: .4rem;
   display: flex;
 }
 

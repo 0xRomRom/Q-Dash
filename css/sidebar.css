@@ -26,6 +26,8 @@
 }
 
 
+
+
 .purp-border {
   position: absolute;
   left: 0%;
@@ -67,6 +69,7 @@
 .toggle-page {
   display: flex;
   border: none;
+  border-radius: 0.4rem;
 }
 
 .main-d {

@@ -94,10 +94,49 @@ nav {
   position: relative;
 }
 
+.meme-bg {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background: linear-gradient(90deg, #00ffa3, #03e1ff, #dc1fff, #306a9c);
+  position: absolute;
+}
+
 .main-page {
   width: 100vw;
   height: 100vh;
+  transition: all .5s ease-in-out;
   position: relative;
+}
+
+.darkToColor {
+  transition: all .5s ease-in-out;
+  animation: .5s ease-in-out forwards darkToColor;
+}
+
+@keyframes darkToColor {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.colorToDark {
+  transition: all .5s ease-in-out;
+  animation: .5s ease-in-out forwards colorToDark;
+}
+
+@keyframes colorToDark {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 .search-button {

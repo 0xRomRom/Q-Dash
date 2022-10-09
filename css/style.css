@@ -93,15 +93,47 @@ nav {
   height: 6rem;
 }
 
+.meme-bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background: linear-gradient(90deg, #00ffa3, #03e1ff, #dc1fff, #306a9c);
+}
+
 .main-page {
   position: relative;
   width: 100vw;
   height: 100vh;
-  /* background-color: red; */
-  /* background: linear-gradient( #00ffa3, #03e1ff, #dc1fff, #306a9c); */
-  /* background: linear-gradient(90deg, #00ffa3, #03e1ff, #dc1fff, #306a9c); */
- 
-  
+  transition: all 0.5s ease-in-out;
+}
+
+.darkToColor {
+  transition: all 0.5s ease-in-out;
+  animation: darkToColor 0.5s ease-in-out forwards;
+}
+
+@keyframes darkToColor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.colorToDark {
+  transition: all 0.5s ease-in-out;
+  animation: colorToDark 0.5s ease-in-out forwards;
+}
+
+@keyframes colorToDark {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .search-button {
