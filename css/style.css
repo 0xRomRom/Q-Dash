@@ -109,8 +109,8 @@ nav {
 }
 
 .darkToColor {
-  transition: all 0.5s ease-in-out;
-  animation: darkToColor 0.5s ease-in-out forwards;
+  transition: all 1.2s ease-in-out;
+  animation: darkToColor 1.2s ease-in-out forwards;
 }
 
 @keyframes darkToColor {
@@ -123,8 +123,8 @@ nav {
 }
 
 .colorToDark {
-  transition: all 0.5s ease-in-out;
-  animation: colorToDark 0.5s ease-in-out forwards;
+  transition: all 1.2s ease-in-out;
+  animation: colorToDark 1.2s ease-in-out forwards;
 }
 
 @keyframes colorToDark {
@@ -301,6 +301,17 @@ li > a {
 }
 
 .tile-container {
+  position: relative;
+  height: 100%;
+  width: 85%;
+  background-color: transparent;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  grid-auto-rows: 125px;
+}
+
+.tile-container-m {
   position: relative;
   height: 100%;
   width: 85%;
@@ -2027,27 +2038,25 @@ input:focus {
   font-family: "Inter";
 }
 
-
-
 .m-prs {
-/* Meme price reducer */
-font-size: 0.5vw !important;
+  /* Meme price reducer */
+  font-size: 0.5vw !important;
 }
 
 .m-pr {
-/* Meme price reducer */
-font-size: 0.7vw !important;
+  /* Meme price reducer */
+  font-size: 0.7vw !important;
 }
 
 .m-pr1 {
-/* Meme price reducer */
-font-size: 0.8vw !important;
+  /* Meme price reducer */
+  font-size: 0.8vw !important;
 }
 
 .m-pr2 {
-/* Meme price reducer */
-font-size: 0.95vw !important;
-text-align: center;
+  /* Meme price reducer */
+  font-size: 0.95vw !important;
+  text-align: center;
 }
 
 .m-tr {
@@ -2066,12 +2075,17 @@ text-align: center;
 }
 
 .m-tr3 {
-    /* Meme price reducer */
-    font-size: 2.5rem !important;
+  /* Meme price reducer */
+  font-size: 2.5rem !important;
 }
 
 @media only screen and (max-width: 1915px) {
   .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+    grid-auto-rows: 115px;
+    height: 90%;
+  }
+  .tile-container-m {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
     grid-auto-rows: 115px;
     height: 90%;
@@ -2167,6 +2181,11 @@ text-align: center;
     grid-auto-rows: 110px;
     height: 80%;
   }
+  .tile-container-m {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-auto-rows: 110px;
+    height: 80%;
+  }
   .circ-s {
     font-size: 0.8rem;
   }
@@ -2189,6 +2208,11 @@ text-align: center;
 
 @media only screen and (max-width: 1595px) {
   .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    height: 65%;
+  }
+  .tile-container-m {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
     height: 65%;
@@ -2227,6 +2251,11 @@ text-align: center;
 
 @media only screen and (max-width: 1490px) {
   .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    height: 90%;
+  }
+  .tile-container-m {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
     height: 90%;
@@ -2289,6 +2318,9 @@ text-align: center;
   .tile-container {
     height: 90%;
   }
+  .tile-container-m {
+    height: 90%;
+  }
   .search-img-box {
     position: relative;
     width: 75%;
@@ -2323,6 +2355,12 @@ text-align: center;
 
 @media only screen and (max-width: 1370px) {
   .tile-container {
+    top: -3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-auto-rows: 90px;
+    height: 75%;
+  }
+  .tile-container-m {
     top: -3.5rem;
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     grid-auto-rows: 90px;
@@ -2427,6 +2465,10 @@ text-align: center;
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     grid-auto-rows: 70px;
   }
+  .tile-container-m {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-auto-rows: 70px;
+  }
   .card-title {
     font-size: 0.7rem;
   }
@@ -2526,6 +2568,10 @@ text-align: center;
 
 @media only screen and (max-width: 1000px) {
   .tile-container {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-auto-rows: 60px;
+  }
+  .tile-container-m {
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     grid-auto-rows: 60px;
   }

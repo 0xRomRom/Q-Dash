@@ -110,8 +110,8 @@ nav {
 }
 
 .darkToColor {
-  transition: all .5s ease-in-out;
-  animation: .5s ease-in-out forwards darkToColor;
+  transition: all 1.2s ease-in-out;
+  animation: 1.2s ease-in-out forwards darkToColor;
 }
 
 @keyframes darkToColor {
@@ -125,8 +125,8 @@ nav {
 }
 
 .colorToDark {
-  transition: all .5s ease-in-out;
-  animation: .5s ease-in-out forwards colorToDark;
+  transition: all 1.2s ease-in-out;
+  animation: 1.2s ease-in-out forwards colorToDark;
 }
 
 @keyframes colorToDark {
@@ -286,7 +286,7 @@ li > a {
   position: relative;
 }
 
-.tile-container {
+.tile-container, .tile-container-m {
   height: 100%;
   width: 85%;
   background-color: #0000;
@@ -1949,7 +1949,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1915px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     height: 90%;
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
     grid-auto-rows: 115px;
@@ -2037,7 +2037,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1660px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     height: 80%;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     grid-auto-rows: 110px;
@@ -2069,7 +2069,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1595px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     height: 65%;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
@@ -2113,7 +2113,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1490px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     height: 90%;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-rows: 100px;
@@ -2178,7 +2178,7 @@ input:focus {
     font-size: 2rem !important;
   }
 
-  .tile-container {
+  .tile-container, .tile-container-m {
     height: 90%;
   }
 
@@ -2218,7 +2218,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1370px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     height: 75%;
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     grid-auto-rows: 90px;
@@ -2313,7 +2313,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1265px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     grid-auto-rows: 70px;
   }
@@ -2437,7 +2437,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 1000px) {
-  .tile-container {
+  .tile-container, .tile-container-m {
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     grid-auto-rows: 60px;
   }

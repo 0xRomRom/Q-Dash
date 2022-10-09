@@ -1,6 +1,6 @@
 "use strict";
 
-const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic%2Cbaby-doge-coin%2Cshiba-inu%2Cdogelon-mars%2Cfloki-inu%2Ctamadoge%2Ckishu-inu%2Cleash%2Csamoyedcoin%2Cshiba-predator%2Ccatecoin%2Choge-finance%2Ccake-monster%2Cvita-inu%2Cbanano%2Cthe-doge-nft%2Cdogebonk%2Cpolydoge%2Ccumrocket%2Cdogegf%2Cwoofy%2Cdogsofelon%2Cfeisty-doge-nft%2Ckuma-inu%2Celon-doge-tken%2Cmeme-inu%2Csafemoon-inu%2Cwall-street-bets-dapp%2Cpoodle%2Cpuli-inu%2Cshih-tzu%2C1-up%2Ckawakami%2Ccat-token%2Cmeta-doge%2Ccorgicoin%2Cdckereum%2Cshibavax%2Ckangal%2Ckittycoin%2Ccatbonk%2Cbobo-cash%2Cshibavax%2Cupdog%2Csolabrador%2Ckitty-coin-solana%2Csafemoon-2%2Cbaby-samo-coin%2Charambe%2Cchihuahua-token%2Cjejudoge%2Cshibaken-finance%2Cshibapup%2Cakita-inu%2Cdogefi%2Cyooshiba-inu%2Clitedoge%2Ccato%2Csoldoge%2Celon-doge-token%2Cduckereum%2Cdoge-dash&vs_currencies=usd&include_24hr_change=true`;
+const COINGECKOAPI = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Ccardano%2Cdogecoin%2Cpolkadot%2Cshiba-inu%2Cmatic-network%2Cavalanche-2%2Ctron%2Cleo-token%2Cuniswap%2Ccosmos%2Ceos%2Cflow%2Clitecoin%2Cokb%2Cchainlink%2Cstellar%2Cftx-token%2Cnear%2Ccrypto-com-chain%2Calgorand%2Cmonero%2Cbitcoin-cash%2Cvechain%2Cquant-network%2Ctezos%2Caxie-infinity%2Ctheta-token%2Celrond-erd-2%2Caave%2Ckucoin-shares%2Cripple%2Ciota%2Cethereum%2Czcash%2Chuobi-token%2Csolana%2Cevmos%2Ccelsius-degree-token%2Cpancakeswap-token%2Cgatechain-token%2Cneo%2Cmaker%2Chelium%2Cfantom%2Chavven%2Cbinancecoin%2Cosmosis%2Cnexo%2Ccompound-ether%2Carweave%2Czilliqa%2Cthorchain%2Cdash%2Crocket-pool%2Cblockstack%2Cwaves%2Ckava%2Cxdce-crowd-sale%2Ccompound-governance-token%2Cethereum-classic%2Cbaby-doge-coin%2Cdogelon-mars%2Cfloki-inu%2Ctamadoge%2Ckishu-inu%2Cleash%2Csamoyedcoin%2Cshiba-predator%2Ccatecoin%2Choge-finance%2Ccake-monster%2Cvita-inu%2Cbanano%2Cthe-doge-nft%2Cdogebonk%2Cpolydoge%2Ccumrocket%2Cdogegf%2Cwoofy%2Cdogsofelon%2Cfeisty-doge-nft%2Ckuma-inu%2Celon-doge-tken%2Cmeme-inu%2Csafemoon-inu%2Cwall-street-bets-dapp%2Cpoodle%2Cpuli-inu%2Cshih-tzu%2C1-up%2Ckawakami%2Ccat-token%2Cmeta-doge%2Ccorgicoin%2Cdckereum%2Cshibavax%2Ckangal%2Ckittycoin%2Ccatbonk%2Cbobo-cash%2Cshibavax%2Cupdog%2Csolabrador%2Ckitty-coin-solana%2Csafemoon-2%2Cbaby-samo-coin%2Charambe%2Cchihuahua-token%2Cjejudoge%2Cshibaken-finance%2Cshibapup%2Cakita-inu%2Cdogefi%2Cyooshiba-inu%2Clitedoge%2Ccato%2Csoldoge%2Celon-doge-token%2Cduckereum%2Cdoge-dash%2Crichquack%2Cmonacoin%2Cwoof-token&vs_currencies=usd&include_24hr_change=true`;
 
 const bitcoinPrice = document.querySelector(".bitcoin-price");
 const bitcoinChange = document.querySelector(".bitcoin-change");
@@ -21,6 +21,10 @@ const polkadotDiv = document.querySelector(".polkadot-div");
 const shibaPrice = document.querySelector(".shiba-price");
 const shibaChange = document.querySelector(".shiba-change");
 const shibaDiv = document.querySelector(".shiba-div");
+
+const shibaPrice2 = document.querySelector(".shiba-price2");
+const shibaChange2 = document.querySelector(".shiba-change2");
+const shibaDiv2 = document.querySelector(".shiba-div2");
 
 const polygonPrice = document.querySelector(".polygon-price");
 const polygonChange = document.querySelector(".polygon-change");
@@ -474,6 +478,10 @@ const dogedashPrice = document.querySelector(".dogedash-price");
 const dogedashChange = document.querySelector(".dogedash-change");
 const dogedashDiv = document.querySelector(".dogedash-div");
 
+const woofPrice = document.querySelector(".woof-price");
+const woofChange = document.querySelector(".woof-change");
+const woofDiv = document.querySelector(".woof-div");
+
 const refreshArrow = document.querySelector(".refresh-button");
 const allCards = document.querySelectorAll(".card");
 
@@ -540,7 +548,7 @@ const fetchObject = {
   57: ["kava", kavaDiv, kavaChange, kavaPrice, 2],
   58: ["xdce-crowd-sale", xdcDiv, xdcChange, xdcPrice, 4],
   59: ["compound-governance-token", compDiv, compChange, compPrice, 2],
-  60: ["shiba-inu", shibaDiv, shibaChange, shibaPrice, 9],
+  60: ["woof-token", woofDiv, woofChange, woofPrice, 7],
   61: ["dogelon-mars", dogelonmarsDiv, dogelonmarsChange, dogelonmarsPrice, 10],
   62: ["floki-inu", flokiinuDiv, flokiinuChange, flokiinuPrice, 9],
   63: ["tamadoge", tamadogeDiv, tamadogeChange, tamadogePrice, 5],
@@ -599,12 +607,23 @@ const fetchObject = {
   116: ["richquack", richquackDiv, richquackChange, richquackPrice, 7],
   117: ["monacoin", monacoinDiv, monacoinChange, monacoinPrice, 7],
   118: ["doge-dash", dogedashDiv, dogedashChange, dogedashPrice, 7],
+  119: ["shiba-inu", shibaDiv2, shibaChange2, shibaPrice2, 8],
 };
 
 // Initial render
 window.addEventListener("load", async () => {
-  updateUI();
+  await updateUI();
 });
+
+const transitionTiles = () => {
+  allCards.forEach((card) => {
+    card.classList.add("rotater");
+    setTimeout(() => {
+      card.classList.remove("rotater");
+    }, 1100);
+  });
+};
+transitionTiles();
 
 //Refresh interval counter
 let refreshCount = 90;
@@ -613,12 +632,7 @@ setInterval(() => {
   if (refreshCount === 0) {
     updateUI();
     refreshCount = 90;
-    allCards.forEach((card) => {
-      card.classList.add("rotater");
-      setTimeout(() => {
-        card.classList.remove("rotater");
-      }, 1100);
-    });
+    transitionTiles();
   }
   refreshCounter.textContent = refreshCount;
   refreshCount--;
@@ -630,12 +644,7 @@ setInterval(() => {
   refreshCount = 90;
   refreshCounter.textContent = refreshCount;
   updateUI();
-  allCards.forEach((card) => {
-    card.classList.add("rotater");
-    setTimeout(() => {
-      card.classList.remove("rotater");
-    }, 1100);
-  });
+  transitionTiles();
 }, 90000);
 
 // Refresh/Refetch
@@ -654,21 +663,10 @@ refreshArrow.addEventListener("click", () => {
   });
 });
 
+//Fetched coindata
 let responseObject = {};
 
-//Start of loop based on selected tiles
-let pageToggle = 60;
-//Index 60 for meme page
-
-
-allCards.forEach((card) => {
-  card.classList.add("rotater");
-  setTimeout(() => {
-    card.classList.remove("rotater");
-  }, 1100);
-});
-
-const updateUI = async () => {
+const reStyleClasses = () => {
   allCards.forEach((card) => {
     card.classList.remove("neutral");
     card.classList.remove("d1");
@@ -676,8 +674,12 @@ const updateUI = async () => {
     card.classList.remove("u2");
     card.classList.remove("u2");
   });
+};
+
+const updateUI = async () => {
+  reStyleClasses();
   await dataFetcher();
-  for (let i = pageToggle; i < Object.keys(fetchObject).length; i++) {
+  for (let i = 0; i < Object.keys(fetchObject).length; i++) {
     uiUpdater(
       fetchObject[i][0],
       fetchObject[i][1],
@@ -690,7 +692,7 @@ const updateUI = async () => {
 
 const classChecker = (coinDiv, change) => {
   console.log(change);
-  if (change === "N/A") {
+  if (Number.isNaN(change) === true) {
     coinDiv.classList.add("neutral");
   }
 
@@ -721,7 +723,7 @@ const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam) => {
   changeTxt.textContent = "";
   priceTxt.textContent = `$${price}`;
   changeTxt.textContent = `${change}%`;
-  classChecker(changeDiv, change);
+  classChecker(changeDiv, +change);
 };
 
 const dataFetcher = async () => {
@@ -730,3 +732,41 @@ const dataFetcher = async () => {
   console.log(data);
   responseObject = data;
 };
+
+//Toggle between Main/Meme page
+const togglePage = document.querySelector(".toggle-page");
+const purpleBox = document.querySelector(".purp-border");
+const memeBackground = document.querySelector(".meme-bg");
+const tileContainer = document.querySelector(".tile-container");
+const tileContainerMeme = document.querySelector(".tile-container-m");
+
+togglePage.addEventListener("click", () => {
+  if (purpleBox.classList.contains("slideRight")) {
+    togglePage.disabled = true;
+    purpleBox.classList.add("slideLeft");
+    memeBackground.classList.add("colorToDark");
+    tileContainer.classList.remove("hidden");
+    tileContainerMeme.classList.add("hidden");
+    updateUI();
+    transitionTiles();
+    setTimeout(() => {
+      togglePage.disabled = false;
+      purpleBox.classList.remove("slideRight");
+      purpleBox.classList.remove("slideLeft");
+      memeBackground.classList.remove("colorToDark");
+      memeBackground.classList.remove("darkToColor");
+    }, 1200);
+    return;
+  }
+  tileContainer.classList.add("hidden");
+  tileContainerMeme.classList.remove("hidden");
+  transitionTiles();
+  updateUI();
+  memeBackground.classList.add("darkToColor");
+  togglePage.disabled = true;
+  purpleBox.classList.add("slideRight");
+  setTimeout(() => {
+    togglePage.disabled = false;
+    purpleBox.classList.remove("slideLeft");
+  }, 1200);
+});
