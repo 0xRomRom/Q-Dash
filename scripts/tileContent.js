@@ -609,4 +609,26 @@ Elon Doge Token
 <p class="card-percentage dogedash-change"></p>
 </div>`;
 
+const togglePage = document.querySelector('.toggle-page');
+const purpleBox = document.querySelector('.purp-border');
+
+togglePage.addEventListener('click', () => {
+  if(purpleBox.classList.contains('slideRight')) {
+    togglePage.disabled = true;
+    purpleBox.classList.add('slideLeft')
+    setTimeout(() => {
+      togglePage.disabled = false;
+      purpleBox.classList.remove('slideRight')
+    }, 600);
+  }
+  togglePage.disabled = true;
+  purpleBox.classList.add('slideRight')
+  setTimeout(() => {
+    togglePage.disabled = false;
+    purpleBox.classList.remove('slideLeft')
+  }, 600)
+ 
+});
+
+
 tileContainer.innerHTML = memePage;

@@ -15,13 +15,64 @@
   cursor: pointer;
   background-color: #0e1326;
   border-radius: .2rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin-top: 3rem;
   transition: all .1s ease-in-out;
   display: flex;
   position: relative;
   box-shadow: 0 0 10px #0e1326;
+}
+
+.purp-border {
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+  background-color: purple;
+  border: 2px solid purple;
+  border-radius: .4rem;
+  position: absolute;
+  left: 0%;
+}
+
+.slideRight {
+  animation: .5s ease-in-out forwards slideRight;
+}
+
+@keyframes slideRight {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+.slideLeft {
+  animation: .5s ease-in-out forwards slideLeft;
+}
+
+@keyframes slideLeft {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+.toggle-page {
+  border: none;
+  display: flex;
+}
+
+.main-d, .meme-d {
+  z-index: 10;
+  font-family: Open Sans;
+  font-size: 1rem;
+  color: #d7cfcf !important;
 }
 
 .i1 {
@@ -68,8 +119,14 @@
 .side-text {
   color: #d7cfcf;
   letter-spacing: 2px;
+  z-index: 10;
   font-family: Open Sans;
   font-weight: 800;
+}
+
+.side-text-abs {
+  color: #fff;
+  position: relative;
 }
 
 .fa-clock, .fa-magnifying-glass-chart {

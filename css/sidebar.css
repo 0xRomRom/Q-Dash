@@ -15,7 +15,7 @@
   width: 90%;
   height: 3rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   border-radius: 0.2rem;
   margin-top: 3rem;
@@ -23,6 +23,63 @@
   background-color: rgb(14, 19, 38);
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 0px 10px rgb(14, 19, 38);
+}
+
+
+.purp-border {
+  position: absolute;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  background-color: purple;
+  border: 2px solid purple; 
+  border-radius: 0.4rem;
+  z-index: 5;
+}
+
+.slideRight {
+  animation: slideRight 0.5s ease-in-out forwards;
+}
+
+@keyframes slideRight {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
+  
+}
+
+.slideLeft {
+  animation: slideLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+.toggle-page {
+  display: flex;
+  border: none;
+}
+
+.main-d {
+  z-index: 10;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  color: rgb(215, 207, 207) !important;
+}
+.meme-d {
+  z-index: 10;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  color: rgb(215, 207, 207) !important;
 }
 
 .i1 {
@@ -73,6 +130,12 @@
   font-family: "Open Sans";
   font-weight: 800;
   letter-spacing: 2px;
+  z-index: 10;
+}
+
+.side-text-abs {
+  position: relative;
+  color: white;
 }
 
 .fa-clock {
