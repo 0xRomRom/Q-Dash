@@ -225,11 +225,20 @@ li > a {
   left: 2rem;
 }
 
+.brand-logo-div {
+  width: 17.8rem;
+  height: 5rem;
+  background-color: #080a16;
+  border-radius: .4rem;
+  position: relative;
+  top: .5rem;
+  left: 1rem;
+}
+
 .brand-logo {
   height: 5rem;
   cursor: pointer;
-  position: absolute;
-  top: .5rem;
+  position: relative;
   left: 4rem;
 }
 

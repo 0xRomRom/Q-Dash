@@ -222,11 +222,20 @@ li > a {
   font-family: "Press Start 2P", sans-serif;
 }
 
+.brand-logo-div {
+  background-color: rgb(8, 10, 22);
+  position: relative;
+  width: 17.8rem;
+  height: 5rem;
+  top: 0.5rem;
+  left: 1rem;
+  border-radius: 0.4rem;
+}
+
 .brand-logo {
-  position: absolute;
+  position: relative;
   height: 5rem;
   left: 4rem;
-  top: 0.5rem;
   cursor: pointer;
 }
 
