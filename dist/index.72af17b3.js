@@ -1386,14 +1386,14 @@ const fetchObject = {
         hogefinanceDiv,
         hogefinanceChange,
         hogefinancePrice,
-        7
+        8
     ],
     70: [
         "cake-monster",
         cakemonsterDiv,
         cakemonsterChange,
         cakemonsterPrice,
-        5
+        6
     ],
     71: [
         "vita-inu",
@@ -1414,7 +1414,7 @@ const fetchObject = {
         thedogenftDiv,
         thedogenftChange,
         thedogenftPrice,
-        6
+        7
     ],
     74: [
         "dogebonk",
@@ -1498,7 +1498,7 @@ const fetchObject = {
         wsbDiv,
         wsbChange,
         wsbPrice,
-        6
+        7
     ],
     86: [
         "poodle",
@@ -1512,7 +1512,7 @@ const fetchObject = {
         puliinuDiv,
         puliinuChange,
         puliinuPrice,
-        5
+        6
     ],
     88: [
         "shih-tzu",
@@ -1582,14 +1582,14 @@ const fetchObject = {
         kittycoinDiv,
         kittycoinChange,
         kittycoinPrice,
-        7
+        12
     ],
     98: [
         "catbonk",
         catbonkDiv,
         catbonkChange,
         catbonkPrice,
-        7
+        12
     ],
     99: [
         "bobo-cash",
@@ -1666,7 +1666,7 @@ const fetchObject = {
         shibapupDiv,
         shibapupChange,
         shibapupPrice,
-        3
+        4
     ],
     110: [
         "akita-inu",
@@ -1715,7 +1715,7 @@ const fetchObject = {
         richquackDiv,
         richquackChange,
         richquackPrice,
-        7
+        11
     ],
     117: [
         "monacoin",

@@ -2079,6 +2079,10 @@ input:focus {
   font-size: 2.5rem !important;
 }
 
+.chihuahuatoken-price {
+  font-size: 2vw;
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container {
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
@@ -2279,6 +2283,60 @@ input:focus {
     width: 50%;
     left: 25%;
   }
+  .tamadoge {
+    font-size: 1vw !important;
+  }
+  .safemoon-title {
+    font-size: 2vw !important;
+  }
+  .cumrocket {
+    font-size: 1vw !important;
+  }
+  .shihtzu {
+    font-size: 1.2vw !important;
+  }
+  .duckereum {
+    font-size: 1vw !important;
+  }
+  .solabrador {
+    font-size: 1vw !important;
+  }
+  .samoyedcoin {
+    font-size: 1.9vw !important;
+  }
+  .safemooninu {
+    font-size: 1.1vw !important;
+  }
+  .jejudoge {
+    font-size: 1.1vw !important;
+  }
+  .babysamocoin-price {
+    font-size: 1.8vw !important;
+  }
+  .chi-tit {
+    font-size: 1.8vw !important;
+  }
+  .chihuahuatoken-price {
+    font-size: 1.8vw !important;
+  }
+  .dogedash-price {
+    font-size: 0.9vw !important;
+  }
+  .dogedash {
+    font-size: 1vw !important;
+  }
+  .woof-price {
+    font-size: 1vw !important;
+  }
+  .shiba2 {
+    font-size: 2.1vw !important;
+  }
+  .shiba-price2 {
+    font-size: 1.6vw !important;
+  }
+  .feisty {
+    font-size: 1.2vw !important;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -2350,6 +2408,18 @@ input:focus {
   }
   .res-total-sup {
     font-size: 1.3vw;
+  }
+  .corgicoin {
+    font-size: 1rem !important;
+  }
+  .shibavax {
+    font-size: 1rem !important;
+  }
+  .litedoge {
+    font-size: 1rem !important;
+  }
+  .harambe {
+    font-size: 1rem !important;
   }
 }
 
@@ -2455,6 +2525,30 @@ input:focus {
   .ath-date {
     font-size: 1.2rem;
   }
+  .metadoge {
+    font-size: 0.95rem !important;
+  }
+  .kawakami {
+    font-size: 0.95rem !important;
+  }
+  .elondogetoken {
+    font-size: 0.95rem !important;
+  }
+  .dogebonk {
+    font-size: 0.95rem !important;
+  }
+  .shibapredator {
+    font-size: 0.95rem !important;
+  }
+  .catecoin {
+    font-size: 0.95rem !important;
+  }
+  .kittycoinsolana {
+    font-size: 0.95rem !important;
+  }
+  .monacoin {
+    font-size: 0.85rem !important;
+  }
 }
 
 /* @media only screen and (max-width: 1300px) {
@@ -2526,6 +2620,76 @@ input:focus {
   }
   .circ-title {
     font-size: 0.9rem;
+  }
+  .m-prs {
+    /* Meme price reducer */
+    font-size: 0.4vw !important;
+  }
+
+  .m-pr {
+    /* Meme price reducer */
+    font-size: 0.3vw !important;
+  }
+
+  .m-pr1 {
+    /* Meme price reducer */
+    font-size: 0.8vw !important;
+  }
+
+  .m-pr2 {
+    /* Meme price reducer */
+    font-size: 0.95vw !important;
+    text-align: center;
+  }
+
+  .m-tr {
+    /* Meme price reducer */
+    font-size: 0.6rem !important;
+  }
+
+  .m-tr1 {
+    /* Meme price reducer */
+    font-size: 0.5rem !important;
+  }
+
+  .m-tr2 {
+    /* Meme price reducer */
+    font-size: 0.6rem !important;
+  }
+
+  .m-tr3 {
+    /* Meme price reducer */
+    font-size: 1.1rem !important;
+  }
+  .samoyedcoin {
+    font-size: 0.9rem !important;
+  }
+  .feisty {
+    font-size: 0.6rem !important;
+  }
+  .bobocash {
+    font-size: 0.6rem !important;
+  }
+  .updog {
+    font-size: 0.6rem !important;
+  }
+  .harambe {
+    font-size: 0.6rem !important;
+  }
+  .harambe {
+    font-size: 0.6rem !important;
+  }
+  .wsb-title {
+    font-size: 0.6rem !important;
+  }
+  .cakemonster {
+    font-size: 0.4rem !important;
+  }
+  .catecoin {
+    font-size: 0.6rem !important;
+  }
+  .babysamocoin {
+    font-size: 0.8rem !important;
   }
 }
 

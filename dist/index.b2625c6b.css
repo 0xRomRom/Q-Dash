@@ -1948,6 +1948,10 @@ input:focus {
   font-size: 2.5rem !important;
 }
 
+.chihuahuatoken-price {
+  font-size: 2vw;
+}
+
 @media only screen and (max-width: 1915px) {
   .tile-container, .tile-container-m {
     height: 90%;
@@ -2143,6 +2147,58 @@ input:focus {
     width: 50%;
     left: 25%;
   }
+
+  .tamadoge {
+    font-size: 1vw !important;
+  }
+
+  .safemoon-title {
+    font-size: 2vw !important;
+  }
+
+  .cumrocket {
+    font-size: 1vw !important;
+  }
+
+  .shihtzu {
+    font-size: 1.2vw !important;
+  }
+
+  .duckereum, .solabrador {
+    font-size: 1vw !important;
+  }
+
+  .samoyedcoin {
+    font-size: 1.9vw !important;
+  }
+
+  .safemooninu, .jejudoge {
+    font-size: 1.1vw !important;
+  }
+
+  .babysamocoin-price, .chi-tit, .chihuahuatoken-price {
+    font-size: 1.8vw !important;
+  }
+
+  .dogedash-price {
+    font-size: .9vw !important;
+  }
+
+  .dogedash, .woof-price {
+    font-size: 1vw !important;
+  }
+
+  .shiba2 {
+    font-size: 2.1vw !important;
+  }
+
+  .shiba-price2 {
+    font-size: 1.6vw !important;
+  }
+
+  .feisty {
+    font-size: 1.2vw !important;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -2214,6 +2270,10 @@ input:focus {
 
   .res-total-sup {
     font-size: 1.3vw;
+  }
+
+  .corgicoin, .shibavax, .litedoge, .harambe {
+    font-size: 1rem !important;
   }
 }
 
@@ -2310,6 +2370,14 @@ input:focus {
   .total-sup, .mark-price, .mark-price-high, .mark-price-low, .ath-date {
     font-size: 1.2rem;
   }
+
+  .metadoge, .kawakami, .elondogetoken, .dogebonk, .shibapredator, .catecoin, .kittycoinsolana {
+    font-size: .95rem !important;
+  }
+
+  .monacoin {
+    font-size: .85rem !important;
+  }
 }
 
 @media only screen and (max-width: 1265px) {
@@ -2393,6 +2461,59 @@ input:focus {
 
   .circ-title {
     font-size: .9rem;
+  }
+
+  .m-prs {
+    font-size: .4vw !important;
+  }
+
+  .m-pr {
+    font-size: .3vw !important;
+  }
+
+  .m-pr1 {
+    font-size: .8vw !important;
+  }
+
+  .m-pr2 {
+    text-align: center;
+    font-size: .95vw !important;
+  }
+
+  .m-tr {
+    font-size: .6rem !important;
+  }
+
+  .m-tr1 {
+    font-size: .5rem !important;
+  }
+
+  .m-tr2 {
+    font-size: .6rem !important;
+  }
+
+  .m-tr3 {
+    font-size: 1.1rem !important;
+  }
+
+  .samoyedcoin {
+    font-size: .9rem !important;
+  }
+
+  .feisty, .bobocash, .updog, .harambe, .harambe, .wsb-title {
+    font-size: .6rem !important;
+  }
+
+  .cakemonster {
+    font-size: .4rem !important;
+  }
+
+  .catecoin {
+    font-size: .6rem !important;
+  }
+
+  .babysamocoin {
+    font-size: .8rem !important;
   }
 }
 
