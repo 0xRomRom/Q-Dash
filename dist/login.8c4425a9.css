@@ -1,0 +1,152 @@
+@import "https://fonts.googleapis.com/css2?family=Inter&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  width: 1rem;
+  background: #000;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  color: #000;
+  width: .5rem;
+  background: #fff padding-box padding-box;
+  border: 4px solid #0000;
+  border-radius: 1rem;
+}
+
+html {
+  width: 100vw;
+  background-color: #080b16;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inv {
+  visibility: hidden !important;
+}
+
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #080b16;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.login-modal {
+  width: 22rem;
+  height: 25rem;
+  background-color: #121930;
+  border-radius: .4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.user-email {
+  width: 80%;
+  color: #fff;
+  letter-spacing: 3px;
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: 0;
+  padding: .5rem 0 .5rem .5rem;
+  font-family: Open Sans;
+  font-weight: 600;
+}
+
+.user-email placeholder {
+  color: #fff;
+}
+
+.user-password {
+  width: 80%;
+  color: #fff;
+  letter-spacing: 3px;
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: 0;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  padding: .5rem 0 .5rem .5rem;
+  font-family: Open Sans;
+  font-weight: 600;
+}
+
+.login-button {
+  width: 80%;
+  color: #efecec;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: #7630d3;
+  border: none;
+  border-radius: .4rem;
+  margin-top: 2rem;
+  padding: .5rem 0;
+  font-family: Open Sans;
+  font-size: .6vw;
+  font-weight: 700;
+}
+
+.login-button:hover {
+  color: #fff;
+  background-color: #6d2dc0;
+}
+
+.goto-signup-button {
+  width: 80%;
+  color: #efecec;
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: #7630d3;
+  border: none;
+  border-radius: .4rem;
+  margin-top: 1rem;
+  padding: .5rem 0;
+  font-family: Open Sans;
+  font-size: .6vw;
+  font-weight: 700;
+}
+
+.goto-signup-button:hover {
+  color: #fff;
+  background-color: #6d2dc0;
+}
+
+.goto-forgot-password {
+  color: #cdc8c8;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin-top: 3rem;
+  font-family: Open Sans;
+  font-size: .7vw;
+  font-weight: 700;
+}
+
+.goto-forgot-password:hover {
+  color: #fff;
+  transition: all .1s ease-in-out;
+}
+
+/*# sourceMappingURL=login.8c4425a9.css.map */

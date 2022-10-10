@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+  background-color: white;
+}
+::-webkit-scrollbar-track {
+  background: black;
+  border: 2px solid black;
+  /* border-radius: 1rem; */
+  width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  color: black;
+  background: white;
+  border-radius: 1rem;
+  width: 0.5rem;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+html {
+  background-color: rgb(8, 11, 22);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inv {
+  visibility: hidden !important;
+}
+
+.login-page {
+  background-color: rgb(8, 11, 22);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-modal {
+  background-color: rgb(18, 25, 48);
+  position: relative;
+  width: 22rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.4rem;
+}
+
+.user-email {
+  padding: 0.5rem 0rem;
+  padding-left: 0.5rem;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: 0;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.user-email placeholder {
+  color: white;
+}
+
+.user-password {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0rem;
+  padding-left: 0.5rem;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: 0;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.login-button {
+  margin-top: 2rem;
+  padding: 0.5rem 0rem;
+  width: 80%;
+  border: none;
+  background-color: rgb(118, 48, 211);
+  font-family: "Open Sans";
+  color: rgb(239, 236, 236);
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 0.4rem;
+  font-size: 0.6vw;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: rgb(109, 45, 192);
+  color: white;
+}
+
+.goto-signup-button {
+  margin-top: 1rem;
+  padding: 0.5rem 0rem;
+  width: 80%;
+  border: none;
+  background-color: rgb(118, 48, 211);
+  font-family: "Open Sans";
+  color: rgb(239, 236, 236);
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 0.4rem;
+  font-size: 0.6vw;
+  cursor: pointer;
+}
+
+.goto-signup-button:hover {
+  background-color: rgb(109, 45, 192);
+  color: white;
+}
+
+.goto-forgot-password {
+  margin-top: 3rem;
+  font-family: "Open Sans";
+  color: rgb(205, 200, 200);
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 0.7vw;
+  cursor: pointer;
+}
+
+.goto-forgot-password:hover {
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
