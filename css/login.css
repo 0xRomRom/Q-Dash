@@ -63,6 +63,11 @@ html {
   border-radius: 0.4rem;
 }
 
+form {
+  position: relative;
+  left: 10%;
+}
+
 .user-email {
   padding: 0.5rem 0rem;
   padding-left: 0.5rem;
@@ -107,7 +112,7 @@ html {
   font-weight: 700;
   letter-spacing: 3px;
   border-radius: 0.4rem;
-  font-size: 0.6vw;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -127,7 +132,7 @@ html {
   font-weight: 700;
   letter-spacing: 3px;
   border-radius: 0.4rem;
-  font-size: 0.6vw;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 

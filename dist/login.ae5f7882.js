@@ -535,8 +535,6 @@ function hmrAcceptRun(bundle, id) {
 var _app = require("firebase/app");
 var _auth = require("firebase/auth");
 "use strict";
-const app = (0, _app.initializeApp)(firebaseConfig);
-const auth = (0, _auth.getAuth)(app);
 // Initialize Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyBjUBG1uVjtOrbC7dU2_yJD46tmCpDffNs",
@@ -547,12 +545,15 @@ const firebaseConfig = {
     appId: "1:741731808915:web:8a5095c180e8509969ff66",
     measurementId: "G-YJYQ20T6BW"
 };
+const app = (0, _app.initializeApp)(firebaseConfig);
+const auth = (0, _auth.getAuth)(app);
 const userEmailInput = document.querySelector(".user-email");
 const userPasswordInput = document.querySelector(".user-password");
 const inputValidator = ()=>{
     if (userEmailInput.value.includes("@") && userEmailInput.value.includes(".") && userEmailInput.value.length > 10) userEmailInput.style.borderBottomColor = "green";
     else userEmailInput.style.borderBottomColor = "white";
-    if (userPasswordInput.value.length > 10) userPasswordInput.style.borderBottomColor = "green";
+    let match = /["A-Z"]/;
+    if (userPasswordInput.value.length > 8 && match.test(userPasswordInput.value)) userPasswordInput.style.borderBottomColor = "green";
     else userPasswordInput.style.borderBottomColor = "white";
 };
 setInterval(()=>{

@@ -10,9 +10,6 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
 // Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBjUBG1uVjtOrbC7dU2_yJD46tmCpDffNs",
@@ -24,8 +21,10 @@ const firebaseConfig = {
   measurementId: "G-YJYQ20T6BW",
 };
 
-const userEmailInput = document.querySelector(".user-email");
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
+const userEmailInput = document.querySelector(".user-email");
 const userPasswordInput = document.querySelector(".user-password");
 
 const inputValidator = () => {
@@ -38,7 +37,13 @@ const inputValidator = () => {
   } else {
     userEmailInput.style.borderBottomColor = "white";
   }
-  if (userPasswordInput.value.length > 10) {
+
+  let match = /["A-Z"]/;
+
+  if (
+    userPasswordInput.value.length > 8 &&
+    match.test(userPasswordInput.value)
+  ) {
     userPasswordInput.style.borderBottomColor = "green";
   } else {
     userPasswordInput.style.borderBottomColor = "white";
