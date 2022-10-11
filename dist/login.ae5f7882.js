@@ -565,7 +565,7 @@ const loginEmailPassword = async ()=>{
     const passwordTxt = userPasswordInput.value;
     try {
         const userCredential = await (0, _auth.signInWithEmailAndPassword)(auth, emailTxt, passwordTxt);
-        window.location.href = "http://localhost:1234/";
+        window.location.href = "http://qdash.net";
         console.log(userCredential.user);
         console.log(userCredential.token);
     } catch (err) {
@@ -595,7 +595,7 @@ const createAccount = async ()=>{
         signupEmailInput.value = "";
         signupPasswordInput.value = "";
         signupModal.classList.add("hidden");
-        window.location.href = "http://localhost:1234/";
+        window.location.href = "http://qdash.net";
         console.log(userCredential.user.email);
     } catch (err) {
         invalidCredentialsTxt.classList.remove("hidden");
@@ -608,7 +608,7 @@ signupButton.addEventListener("click", (e1)=>{
 });
 // Back to home page
 qdashLogo.addEventListener("click", ()=>{
-    window.location.href = "http://localhost:1234/";
+    window.location.href = "http://qdash.net";
 });
 
 },{"firebase/app":"5wGMN","firebase/auth":"drt1f"}],"5wGMN":[function(require,module,exports) {

@@ -48,7 +48,7 @@ const loginEmailPassword = async () => {
       emailTxt,
       passwordTxt
     );
-    window.location.href = "http://localhost:1234/";
+    window.location.href = "http://qdash.net";
     console.log(userCredential.user);
     console.log(userCredential.token);
   } catch (err) {
@@ -86,7 +86,7 @@ const createAccount = async () => {
     signupEmailInput.value = "";
     signupPasswordInput.value = "";
     signupModal.classList.add("hidden");
-    window.location.href = "http://localhost:1234/";
+    window.location.href = "http://qdash.net";
     console.log(userCredential.user.email);
   } catch (err) {
     invalidCredentialsTxt.classList.remove("hidden");
@@ -100,5 +100,5 @@ signupButton.addEventListener("click", (e) => {
 
 // Back to home page
 qdashLogo.addEventListener("click", () => {
-  window.location.href = "http://localhost:1234/";
+  window.location.href = "http://qdash.net";
 });
