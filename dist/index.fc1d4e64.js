@@ -566,6 +566,15 @@ const monitorAuthState = async ()=>{
     });
 };
 monitorAuthState();
+const logOutHandler = async ()=>{
+    try {
+        await (0, _auth.signOut)(auth);
+        logOutButton.classList.add("hidden");
+    } catch (err) {
+        console.log(err);
+    }
+};
+logOutButton.addEventListener("click", logOutHandler);
 
 },{"firebase/app":"5wGMN","firebase/auth":"drt1f"}],"5wGMN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

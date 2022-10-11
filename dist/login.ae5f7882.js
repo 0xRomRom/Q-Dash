@@ -558,7 +558,6 @@ const loginModal = document.querySelector(".login-modal");
 const signupModal = document.querySelector(".signup-modal");
 const signupButton = document.querySelector(".signup-button");
 const invalidCredentialsTxt = document.querySelector(".invalid-text");
-const signupForm = document.querySelector(".signup-form");
 // User login
 loginButton.addEventListener("click", (e)=>{
     e.preventDefault();

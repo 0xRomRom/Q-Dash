@@ -59,6 +59,14 @@ html {
   animation: rotateDiv 0.4s ease-in-out forwards;
 }
 
+.login-btn {
+  cursor: pointer;
+}
+
+.logout-btn {
+  cursor: pointer;
+}
+
 @keyframes rotateDiv {
   0% {
     position: absolute;

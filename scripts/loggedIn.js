@@ -37,3 +37,14 @@ const monitorAuthState = async () => {
   });
 };
 monitorAuthState();
+
+const logOutHandler = async () => {
+  try {
+    await signOut(auth);
+    logOutButton.classList.add("hidden");
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+logOutButton.addEventListener("click", logOutHandler);
