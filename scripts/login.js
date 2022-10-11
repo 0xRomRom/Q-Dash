@@ -26,27 +26,36 @@ const auth = getAuth(app);
 
 const userEmailInput = document.querySelector(".user-email");
 const userPasswordInput = document.querySelector(".user-password");
+const invalidText = document.querySelector(".invalid-text");
 
 const inputValidator = () => {
+  let match = /["A-Z"]/;
+
+  if (document.activeElement === userEmailInput) {
+    for (let i = 0; i < 1; i++) {
+      alert("Focused!");
+    }
+  }
   if (
     userEmailInput.value.includes("@") &&
     userEmailInput.value.includes(".") &&
     userEmailInput.value.length > 10
   ) {
+    invalidText.textContent = "";
     userEmailInput.style.borderBottomColor = "green";
   } else {
+    invalidText.textContent = "Please enter a valid Email Address";
     userEmailInput.style.borderBottomColor = "white";
   }
-
-  let match = /["A-Z"]/;
-
   if (
     userPasswordInput.value.length > 8 &&
     match.test(userPasswordInput.value)
   ) {
+    invalidText.textContent = "";
     userPasswordInput.style.borderBottomColor = "green";
   } else {
     userPasswordInput.style.borderBottomColor = "white";
+    invalidText.textContent = "Wrong Password";
   }
 };
 

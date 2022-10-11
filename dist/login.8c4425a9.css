@@ -107,7 +107,7 @@ form {
   background-color: #7630d3;
   border: none;
   border-radius: .4rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding: .5rem 0;
   font-family: Open Sans;
   font-size: .8rem;
@@ -152,6 +152,14 @@ form {
 .goto-forgot-password:hover {
   color: #fff;
   transition: all .1s ease-in-out;
+}
+
+.invalid-text {
+  color: red;
+  font-family: Open Sans;
+  font-weight: 700;
+  position: absolute;
+  top: 10.2rem;
 }
 
 /*# sourceMappingURL=login.8c4425a9.css.map */
