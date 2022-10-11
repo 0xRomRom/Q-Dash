@@ -555,10 +555,9 @@ const signupBackButton = document.querySelector(".signup-back");
 const loginModal = document.querySelector(".login-modal");
 const signupModal = document.querySelector(".signup-modal");
 const inputValidator = ()=>{
-    let match = /["A-Z"]/;
     if (userEmailInput.value.includes("@") && userEmailInput.value.includes(".") && userEmailInput.value.length > 10) userEmailInput.style.borderBottomColor = "green";
     else userEmailInput.style.borderBottomColor = "white";
-    if (userPasswordInput.value.length >= 6 && match.test(userPasswordInput.value)) userPasswordInput.style.borderBottomColor = "green";
+    if (userPasswordInput.value.length >= 6) userPasswordInput.style.borderBottomColor = "green";
     else userPasswordInput.style.borderBottomColor = "white";
 };
 setInterval(()=>{
@@ -566,8 +565,8 @@ setInterval(()=>{
 }, 500);
 // User login
 loginButton.addEventListener("click", (e)=>{
-    if (userEmailInput.value.length < 2) e.preventDefault();
-    e.submit();
+    e.preventDefault();
+// window.location.href = 'https://qdash.net/'
 });
 // Open signup modal
 goToSignupButton.addEventListener("click", ()=>{
