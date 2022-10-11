@@ -58,8 +58,22 @@ html {
   animation: .4s ease-in-out forwards rotateDiv;
 }
 
-.login-btn, .logout-btn {
+.login-btn {
   cursor: pointer;
+  color: #dbdbda;
+}
+
+.logout-btn {
+  cursor: pointer;
+  color: #dbdbda;
+  position: absolute;
+  padding-left: 10rem !important;
+}
+
+.logout-btn:hover {
+  color: #fff;
+  color: #fff;
+  transition: all .1s ease-in-out;
 }
 
 @keyframes rotateDiv {

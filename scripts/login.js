@@ -5,7 +5,6 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  onAuthStateChanged,
   signOut,
   sendPasswordResetEmail,
 } from "firebase/auth";
@@ -37,11 +36,30 @@ const loginModal = document.querySelector(".login-modal");
 const signupModal = document.querySelector(".signup-modal");
 const signupButton = document.querySelector(".signup-button");
 const invalidCredentialsTxt = document.querySelector(".invalid-text");
+const qdashLogo = document.querySelector(".qdash-home-logo");
 
 // User login
+const loginEmailPassword = async () => {
+  const emailTxt = userEmailInput.value;
+  const passwordTxt = userPasswordInput.value;
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      emailTxt,
+      passwordTxt
+    );
+    window.location.href = "http://localhost:1234/";
+    console.log(userCredential.user);
+    console.log(userCredential.token);
+  } catch (err) {
+    e.preventDefault();
+    console.log(err);
+  }
+};
+
 loginButton.addEventListener("click", (e) => {
+  loginEmailPassword();
   e.preventDefault();
-  // window.location.href = 'https://qdash.net/'
 });
 
 // Open signup modal
@@ -56,6 +74,7 @@ signupBackButton.addEventListener("click", () => {
   signupModal.classList.add("hidden");
 });
 
+//Create account
 const createAccount = async () => {
   try {
     invalidCredentialsTxt.classList.add("hidden");
@@ -74,8 +93,12 @@ const createAccount = async () => {
     console.log(err);
   }
 };
-
 signupButton.addEventListener("click", (e) => {
   createAccount();
   e.preventDefault();
+});
+
+// Back to home page
+qdashLogo.addEventListener("click", () => {
+  window.location.href = "http://localhost:1234/";
 });

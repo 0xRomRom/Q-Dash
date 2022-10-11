@@ -32,6 +32,14 @@ html {
   overflow-x: hidden;
 }
 
+.qdash-home-logo {
+  height: 5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+}
+
 .hidden {
   display: none !important;
 }

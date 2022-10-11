@@ -33,6 +33,14 @@ html {
   overflow-x: hidden;
 }
 
+.qdash-home-logo {
+  position: absolute;
+  left: 4rem;
+  top: 2rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
 .hidden {
   display: none !important;
 }

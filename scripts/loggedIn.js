@@ -3,10 +3,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 
-window.addEventListener("load", async () => {
-  await monitorAuthState();
-});
-
 const firebaseConfig = {
   apiKey: "AIzaSyBjUBG1uVjtOrbC7dU2_yJD46tmCpDffNs",
   authDomain: "qdash-3fe95.firebaseapp.com",

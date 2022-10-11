@@ -535,9 +535,6 @@ function hmrAcceptRun(bundle, id) {
 var _app = require("firebase/app");
 var _auth = require("firebase/auth");
 "use strict";
-window.addEventListener("load", async ()=>{
-    await monitorAuthState();
-});
 const firebaseConfig = {
     apiKey: "AIzaSyBjUBG1uVjtOrbC7dU2_yJD46tmCpDffNs",
     authDomain: "qdash-3fe95.firebaseapp.com",

@@ -61,10 +61,24 @@ html {
 
 .login-btn {
   cursor: pointer;
+  color: rgb(219, 219, 218);
 }
 
 .logout-btn {
   cursor: pointer;
+  position: absolute;
+  padding-left: 10rem !important;
+  color: rgb(219, 219, 218);
+}
+
+.logout-btn:hover {
+  transition: all 0.1s ease-in-out;
+  color: white;
+}
+
+.logout-btn:hover {
+  transition: all 0.1s ease-in-out;
+  color: white;
 }
 
 @keyframes rotateDiv {

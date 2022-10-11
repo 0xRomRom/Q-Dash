@@ -558,10 +558,24 @@ const loginModal = document.querySelector(".login-modal");
 const signupModal = document.querySelector(".signup-modal");
 const signupButton = document.querySelector(".signup-button");
 const invalidCredentialsTxt = document.querySelector(".invalid-text");
+const qdashLogo = document.querySelector(".qdash-home-logo");
 // User login
-loginButton.addEventListener("click", (e)=>{
-    e.preventDefault();
-// window.location.href = 'https://qdash.net/'
+const loginEmailPassword = async ()=>{
+    const emailTxt = userEmailInput.value;
+    const passwordTxt = userPasswordInput.value;
+    try {
+        const userCredential = await (0, _auth.signInWithEmailAndPassword)(auth, emailTxt, passwordTxt);
+        window.location.href = "http://localhost:1234/";
+        console.log(userCredential.user);
+        console.log(userCredential.token);
+    } catch (err) {
+        e.preventDefault();
+        console.log(err);
+    }
+};
+loginButton.addEventListener("click", (e1)=>{
+    loginEmailPassword();
+    e1.preventDefault();
 });
 // Open signup modal
 goToSignupButton.addEventListener("click", ()=>{
@@ -573,6 +587,7 @@ signupBackButton.addEventListener("click", ()=>{
     loginModal.classList.remove("hidden");
     signupModal.classList.add("hidden");
 });
+//Create account
 const createAccount = async ()=>{
     try {
         invalidCredentialsTxt.classList.add("hidden");
@@ -587,9 +602,13 @@ const createAccount = async ()=>{
         console.log(err);
     }
 };
-signupButton.addEventListener("click", (e)=>{
+signupButton.addEventListener("click", (e1)=>{
     createAccount();
-    e.preventDefault();
+    e1.preventDefault();
+});
+// Back to home page
+qdashLogo.addEventListener("click", ()=>{
+    window.location.href = "http://localhost:1234/";
 });
 
 },{"firebase/app":"5wGMN","firebase/auth":"drt1f"}],"5wGMN":[function(require,module,exports) {
