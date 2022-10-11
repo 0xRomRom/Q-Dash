@@ -26,39 +26,59 @@ const auth = getAuth(app);
 
 const userEmailInput = document.querySelector(".user-email");
 const userPasswordInput = document.querySelector(".user-password");
-const invalidText = document.querySelector(".invalid-text");
+
+const loginButton = document.querySelector(".login-button");
+const goToSignupButton = document.querySelector(".goto-signup-button");
+const signupBackButton = document.querySelector('.signup-back')
+const loginModal = document.querySelector(".login-modal");
+const signupModal = document.querySelector(".signup-modal");
 
 const inputValidator = () => {
   let match = /["A-Z"]/;
 
-  if (document.activeElement === userEmailInput) {
-    for (let i = 0; i < 1; i++) {
-      alert("Focused!");
-    }
-  }
+  
   if (
     userEmailInput.value.includes("@") &&
     userEmailInput.value.includes(".") &&
     userEmailInput.value.length > 10
   ) {
-    invalidText.textContent = "";
     userEmailInput.style.borderBottomColor = "green";
   } else {
-    invalidText.textContent = "Please enter a valid Email Address";
     userEmailInput.style.borderBottomColor = "white";
   }
   if (
-    userPasswordInput.value.length > 8 &&
+    userPasswordInput.value.length >= 6 &&
     match.test(userPasswordInput.value)
   ) {
-    invalidText.textContent = "";
     userPasswordInput.style.borderBottomColor = "green";
   } else {
     userPasswordInput.style.borderBottomColor = "white";
-    invalidText.textContent = "Wrong Password";
   }
 };
 
 setInterval(() => {
   inputValidator();
 }, 500);
+
+
+// User login
+loginButton.addEventListener('click', (e) => {
+  if(userEmailInput.value.length < 2) {
+    e.preventDefault();
+  };
+e.submit();
+});
+
+
+// Open signup modal
+goToSignupButton.addEventListener('click', () => {
+loginModal.classList.add('hidden');
+signupModal.classList.remove('hidden');
+});
+
+
+// Back to login modal
+signupBackButton.addEventListener('click', () => {
+loginModal.classList.remove('hidden');
+signupModal.classList.add('hidden');
+});

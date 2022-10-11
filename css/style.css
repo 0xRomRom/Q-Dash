@@ -2053,6 +2053,10 @@ input:focus {
   font-family: "Inter";
 }
 
+.feisty {
+  font-size: 0.9vw !important;
+}
+
 .m-prs {
   /* Meme price reducer */
   font-size: 0.5vw !important;

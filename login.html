@@ -33,6 +33,10 @@
     />
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="./css/login.css" />
+    <script
+      src="https://kit.fontawesome.com/5f3c108898.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./scripts/login.js" type="module"></script>
   </head>
   <body>
@@ -41,17 +45,29 @@
         <form>
           <input
             type="text"
-            class="user-email"
+            class="user-email inp-stl"
             placeholder="E-Mail Address"
             spellcheck="false"
           />
-          <input type="password" class="user-password" placeholder="Password" />
-
-          <button class="login-button">Login</button>
-          <button class="goto-signup-button">Sign Up</button>
+          <input type="password" class="user-password inp-stl" placeholder="Password" />
+          <button class="login-button btn-stl">Login</button>
         </form>
+        <button class="goto-signup-button">Sign Up</button>
         <p class="invalid-text"></p>
         <p class="goto-forgot-password">Forgot Password?</p>
+      </div>
+      <div class="signup-modal hidden">
+        <i class="fa-solid fa-arrow-right-to-bracket signup-back"></i>
+        <form>
+          <input
+            type="text"
+            class="user-email-signup inp-stl"
+            placeholder="E-Mail Address"
+            spellcheck="false"
+          />
+          <input type="password" class="user-password-signup inp-stl" placeholder="Password" />
+          <button class="signup-button btn-stl">Signup</button>
+        </form>
       </div>
     </div>
   </body>

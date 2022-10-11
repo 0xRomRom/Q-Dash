@@ -1930,6 +1930,10 @@ input:focus {
   position: absolute;
 }
 
+.feisty {
+  font-size: .9vw !important;
+}
+
 .m-prs {
   font-size: .5vw !important;
 }

@@ -63,12 +63,38 @@ html {
   border-radius: 0.4rem;
 }
 
+.signup-modal {
+  background-color: rgb(18, 25, 48);
+  position: relative;
+  width: 22rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.4rem;
+}
+
+.signup-back {
+  left: 1rem;
+  top: 1rem;
+  color: rgb(210, 203, 203);
+  position: absolute;
+  font-size: 2rem;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.signup-back:hover {
+color: rgb(118, 48, 211)
+}
+
 form {
   position: relative;
   left: 10%;
 }
 
-.user-email {
+.inp-stl {
   padding: 0.5rem 0rem;
   padding-left: 0.5rem;
   width: 80%;
@@ -81,9 +107,8 @@ form {
   font-weight: 600;
   letter-spacing: 3px;
 }
-.user-email placeholder {
-  color: white;
-}
+
+
 
 .user-password {
   margin-top: 1.5rem;
@@ -99,6 +124,10 @@ form {
   font-family: "Open Sans";
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+.user-password-signup {
+  margin-top: 1.5rem !important;
 }
 
 .login-button {
@@ -137,6 +166,26 @@ form {
 }
 
 .goto-signup-button:hover {
+  background-color: rgb(109, 45, 192);
+  color: white;
+}
+
+.btn-stl {
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem;
+  width: 80%;
+  border: none;
+  background-color: rgb(118, 48, 211);
+  font-family: "Open Sans";
+  color: rgb(239, 236, 236);
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-stl:hover {
   background-color: rgb(109, 45, 192);
   color: white;
 }
