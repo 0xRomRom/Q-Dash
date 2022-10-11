@@ -1806,7 +1806,6 @@ const updateUI = async ()=>{
     for(let i = 0; i < Object.keys(fetchObject).length; i++)uiUpdater(fetchObject[i][0], fetchObject[i][1], fetchObject[i][2], fetchObject[i][3], fetchObject[i][4]);
 };
 const classChecker = (coinDiv, change)=>{
-    console.log(change);
     if (Number.isNaN(change) === true) coinDiv.classList.add("neutral");
     if (change >= -2 && change <= 2) coinDiv.classList.add("neutral");
     if (change >= 0 && change <= 7.5) coinDiv.classList.add("u1");
@@ -1826,7 +1825,6 @@ const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam)=>{
 const dataFetcher = async ()=>{
     const response = await fetch(COINGECKOAPI);
     const data = await response.json();
-    console.log(data);
     responseObject = data;
 };
 //Toggle between Main/Meme page

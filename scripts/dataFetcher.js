@@ -694,7 +694,6 @@ const updateUI = async () => {
 };
 
 const classChecker = (coinDiv, change) => {
-  console.log(change);
   if (Number.isNaN(change) === true) {
     coinDiv.classList.add("neutral");
   }
@@ -732,7 +731,6 @@ const uiUpdater = (coinName, changeDiv, changeTxt, priceTxt, fixedParam) => {
 const dataFetcher = async () => {
   const response = await fetch(COINGECKOAPI);
   const data = await response.json();
-  console.log(data);
   responseObject = data;
 };
 

@@ -179,7 +179,7 @@ form {
   cursor: pointer;
   margin-top: 3rem;
   font-family: Open Sans;
-  font-size: .7vw;
+  font-size: .8rem;
   font-weight: 700;
 }
 
@@ -191,9 +191,10 @@ form {
 .invalid-text {
   color: red;
   font-family: Open Sans;
-  font-weight: 700;
+  font-weight: 500;
   position: absolute;
-  top: 10.2rem;
+  top: 6.5rem;
+  left: 20%;
 }
 
 /*# sourceMappingURL=login.8c4425a9.css.map */

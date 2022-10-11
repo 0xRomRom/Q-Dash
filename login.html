@@ -49,25 +49,34 @@
             placeholder="E-Mail Address"
             spellcheck="false"
           />
-          <input type="password" class="user-password inp-stl" placeholder="Password" />
+          <input
+            type="password"
+            class="user-password inp-stl"
+            placeholder="Password"
+          />
           <button class="login-button btn-stl">Login</button>
         </form>
         <button class="goto-signup-button">Sign Up</button>
-        <p class="invalid-text"></p>
         <p class="goto-forgot-password">Forgot Password?</p>
       </div>
       <div class="signup-modal hidden">
         <i class="fa-solid fa-arrow-right-to-bracket signup-back"></i>
-        <form>
+        <form class="signup-form">
           <input
             type="text"
             class="user-email-signup inp-stl"
             placeholder="E-Mail Address"
             spellcheck="false"
           />
-          <input type="password" class="user-password-signup inp-stl" placeholder="Password" />
+          <input
+            type="password"
+            class="user-password-signup inp-stl"
+            placeholder="Password"
+          />
+          <p class="invalid-text hidden">Invalid Credentials</p>
           <button class="signup-button btn-stl">Signup</button>
         </form>
+        <p class="check-email-txt">Please check your E-Mail</p>
       </div>
     </div>
   </body>

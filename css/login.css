@@ -86,7 +86,7 @@ html {
 }
 
 .signup-back:hover {
-color: rgb(118, 48, 211)
+  color: rgb(118, 48, 211);
 }
 
 form {
@@ -107,8 +107,6 @@ form {
   font-weight: 600;
   letter-spacing: 3px;
 }
-
-
 
 .user-password {
   margin-top: 1.5rem;
@@ -196,7 +194,7 @@ form {
   color: rgb(205, 200, 200);
   font-weight: 700;
   letter-spacing: 3px;
-  font-size: 0.7vw;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -206,9 +204,10 @@ form {
 }
 
 .invalid-text {
-  color: red;
-  top: 10.2rem;
   position: absolute;
+  color: red;
+  top: 6.5rem;
+  left: 20%;
   font-family: "Open Sans";
-  font-weight: 700;
+  font-weight: 500;
 }

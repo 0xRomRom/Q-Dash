@@ -27,55 +27,56 @@ const auth = getAuth(app);
 const userEmailInput = document.querySelector(".user-email");
 const userPasswordInput = document.querySelector(".user-password");
 
+const signupEmailInput = document.querySelector(".user-email-signup");
+const signupPasswordInput = document.querySelector(".user-password-signup");
+
 const loginButton = document.querySelector(".login-button");
 const goToSignupButton = document.querySelector(".goto-signup-button");
-const signupBackButton = document.querySelector('.signup-back')
+const signupBackButton = document.querySelector(".signup-back");
 const loginModal = document.querySelector(".login-modal");
 const signupModal = document.querySelector(".signup-modal");
-
-const inputValidator = () => {
-  
-
-  if (
-    userEmailInput.value.includes("@") &&
-    userEmailInput.value.includes(".") &&
-    userEmailInput.value.length > 10
-  ) {
-    userEmailInput.style.borderBottomColor = "green";
-  } else {
-    userEmailInput.style.borderBottomColor = "white";
-  }
-  if (
-    userPasswordInput.value.length >= 6 
-  ) {
-    userPasswordInput.style.borderBottomColor = "green";
-  } else {
-    userPasswordInput.style.borderBottomColor = "white";
-  }
-};
-
-setInterval(() => {
-  inputValidator();
-}, 500);
-
+const signupButton = document.querySelector(".signup-button");
+const invalidCredentialsTxt = document.querySelector(".invalid-text");
+const signupForm = document.querySelector(".signup-form");
 
 // User login
-loginButton.addEventListener('click', (e) => {
- 
+loginButton.addEventListener("click", (e) => {
   e.preventDefault();
   // window.location.href = 'https://qdash.net/'
 });
 
-
 // Open signup modal
-goToSignupButton.addEventListener('click', () => {
-loginModal.classList.add('hidden');
-signupModal.classList.remove('hidden');
+goToSignupButton.addEventListener("click", () => {
+  loginModal.classList.add("hidden");
+  signupModal.classList.remove("hidden");
 });
 
-
 // Back to login modal
-signupBackButton.addEventListener('click', () => {
-loginModal.classList.remove('hidden');
-signupModal.classList.add('hidden');
+signupBackButton.addEventListener("click", () => {
+  loginModal.classList.remove("hidden");
+  signupModal.classList.add("hidden");
+});
+
+const createAccount = async () => {
+  try {
+    invalidCredentialsTxt.classList.add("hidden");
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      signupEmailInput.value,
+      signupPasswordInput.value
+    );
+    signupEmailInput.value = "";
+    signupPasswordInput.value = "";
+    signupModal.classList.add("hidden");
+    window.location.href = "http://localhost:1234/";
+    console.log(userCredential.user.email);
+  } catch (err) {
+    invalidCredentialsTxt.classList.remove("hidden");
+    console.log(err);
+  }
+};
+
+signupButton.addEventListener("click", (e) => {
+  createAccount();
+  e.preventDefault();
 });
