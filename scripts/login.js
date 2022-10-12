@@ -37,6 +37,14 @@ const signupModal = document.querySelector(".signup-modal");
 const signupButton = document.querySelector(".signup-button");
 const invalidCredentialsTxt = document.querySelector(".invalid-text");
 const qdashLogo = document.querySelector(".qdash-home-logo");
+const forgotPassModal = document.querySelector(".forgot-password-modal");
+const forgotPassBackButton = document.querySelector(".forgot-pass-back");
+const forgotPassInput = document.querySelector(".user-email-forgot");
+const openForgotPassModal = document.querySelector(".goto-forgot-password");
+const forgetEmailButton = document.querySelector(".forgot-email-button");
+const forgetFinalText = document.querySelector(".forgot-final");
+const passSubmitForm = document.querySelector(".forgot-pass-form");
+const enterValidEmailText = document.querySelector(".enter-valid-mail");
 
 // User login
 const loginEmailPassword = async () => {
@@ -101,4 +109,42 @@ signupButton.addEventListener("click", (e) => {
 // Back to home page
 qdashLogo.addEventListener("click", () => {
   window.location.href = "http://qdash.net";
+});
+
+forgotPassBackButton.addEventListener("click", () => {
+  forgotPassModal.classList.add("hidden");
+  loginModal.classList.remove("hidden");
+  enterValidEmailText.classList.add("hidden");
+  passSubmitForm.classList.remove("hidden");
+  forgetFinalText.classList.add("hidden");
+  forgotPassInput.value = "";
+});
+
+openForgotPassModal.addEventListener("click", () => {
+  forgotPassModal.classList.remove("hidden");
+  loginModal.classList.add("hidden");
+});
+
+const resetPassword = async () => {
+  try {
+    enterValidEmailText.classList.add("hidden");
+    await sendPasswordResetEmail(auth, forgotPassInput.value);
+    passSubmitForm.classList.add("hidden");
+    forgetFinalText.classList.remove("hidden");
+    forgotPassInput.value = "";
+  } catch (err) {
+    console.log(err);
+    console.log(err);
+    enterValidEmailText.classList.remove("hidden");
+  }
+};
+
+forgetEmailButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  enterValidEmailText.classList.add("hidden");
+  if (forgotPassInput.value.length < 6) {
+    enterValidEmailText.classList.remove("hidden");
+    return;
+  }
+  resetPassword();
 });

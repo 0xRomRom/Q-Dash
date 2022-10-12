@@ -83,6 +83,18 @@ html {
   border-radius: 0.4rem;
 }
 
+.forgot-password-modal {
+  background-color: rgb(18, 25, 48);
+  position: relative;
+  width: 22rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.4rem;
+}
+
 .signup-back {
   left: 1rem;
   top: 1rem;
@@ -94,6 +106,20 @@ html {
 }
 
 .signup-back:hover {
+  color: rgb(118, 48, 211);
+}
+
+.forgot-pass-back {
+  left: 1rem;
+  top: 1rem;
+  color: rgb(210, 203, 203);
+  position: absolute;
+  font-size: 2rem;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.forgot-pass-back:hover {
   color: rgb(118, 48, 211);
 }
 
@@ -114,6 +140,10 @@ form {
   font-family: "Open Sans";
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+.user-email-forgot {
+  width: 80% !important;
 }
 
 .user-password {
@@ -174,6 +204,31 @@ form {
 .goto-signup-button:hover {
   background-color: rgb(109, 45, 192);
   color: white;
+}
+
+.forgot-pass-form {
+  /* background-color: red; */
+  left: 0%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.enter-valid-mail {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  position: absolute;
+  color: red;
+}
+
+.forgot-final {
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1.2rem;
 }
 
 .btn-stl {
