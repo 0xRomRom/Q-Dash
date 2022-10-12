@@ -625,25 +625,29 @@ forgotPassBackButton.addEventListener("click", ()=>{
     passSubmitForm.classList.remove("hidden");
     forgetFinalText.classList.add("hidden");
     forgotPassInput.value = "";
+    userPasswordInput.value = "";
 });
 openForgotPassModal.addEventListener("click", ()=>{
     forgotPassModal.classList.remove("hidden");
     loginModal.classList.add("hidden");
 });
-const resetPassword = async ()=>{
-    try {
+const resetPassword = ()=>{
+    passSubmitForm.classList.add("hidden");
+    const passInput = forgotPassInput.value;
+    (0, _auth.sendPasswordResetEmail)(auth, passInput).then(()=>{
+        forgotPassInput.value = "";
+        console.log("Reset email sent!");
         enterValidEmailText.classList.add("hidden");
-        await (0, _auth.sendPasswordResetEmail)(auth, forgotPassInput.value);
         passSubmitForm.classList.add("hidden");
         forgetFinalText.classList.remove("hidden");
-        forgotPassInput.value = "";
-    } catch (err) {
-        console.log(err);
-        console.log(err);
+    }).catch((error)=>{
         enterValidEmailText.classList.remove("hidden");
-    }
+        console.log(error);
+    });
 };
 forgetEmailButton.addEventListener("click", (e1)=>{
+    let userValue = forgotPassInput.value;
+    console.log(userValue);
     e1.preventDefault();
     enterValidEmailText.classList.add("hidden");
     if (forgotPassInput.value.length < 6) {
@@ -1910,8 +1914,8 @@ parcelHelpers.export(exports, "validateCallback", ()=>validateCallback);
 parcelHelpers.export(exports, "validateContextObject", ()=>validateContextObject);
 parcelHelpers.export(exports, "validateIndexedDBOpenable", ()=>validateIndexedDBOpenable);
 parcelHelpers.export(exports, "validateNamespace", ()=>validateNamespace);
-var process = require("process");
 var global = arguments[3];
+var process = require("process");
 /**
  * @license
  * Copyright 2017 Google LLC

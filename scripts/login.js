@@ -118,6 +118,7 @@ forgotPassBackButton.addEventListener("click", () => {
   passSubmitForm.classList.remove("hidden");
   forgetFinalText.classList.add("hidden");
   forgotPassInput.value = "";
+  userPasswordInput.value = "";
 });
 
 openForgotPassModal.addEventListener("click", () => {
@@ -125,21 +126,26 @@ openForgotPassModal.addEventListener("click", () => {
   loginModal.classList.add("hidden");
 });
 
-const resetPassword = async () => {
-  try {
-    enterValidEmailText.classList.add("hidden");
-    await sendPasswordResetEmail(auth, forgotPassInput.value);
-    passSubmitForm.classList.add("hidden");
-    forgetFinalText.classList.remove("hidden");
-    forgotPassInput.value = "";
-  } catch (err) {
-    console.log(err);
-    console.log(err);
-    enterValidEmailText.classList.remove("hidden");
-  }
+const resetPassword = () => {
+  passSubmitForm.classList.add("hidden");
+  const passInput = forgotPassInput.value;
+  sendPasswordResetEmail(auth, passInput)
+    .then(() => {
+      forgotPassInput.value = "";
+      console.log("Reset email sent!");
+      enterValidEmailText.classList.add("hidden");
+      passSubmitForm.classList.add("hidden");
+      forgetFinalText.classList.remove("hidden");
+    })
+    .catch((error) => {
+      enterValidEmailText.classList.remove("hidden");
+      console.log(error);
+    });
 };
 
 forgetEmailButton.addEventListener("click", (e) => {
+  let userValue = forgotPassInput.value;
+  console.log(userValue);
   e.preventDefault();
   enterValidEmailText.classList.add("hidden");
   if (forgotPassInput.value.length < 6) {
