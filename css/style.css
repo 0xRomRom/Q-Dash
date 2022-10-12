@@ -278,6 +278,28 @@ li > a {
   gap: 8rem;
 }
 
+.local-button {
+  position: absolute;
+  width: 10rem;
+  height: 5rem;
+  background-color: green;
+  z-index: 30;
+  left: 20rem;
+  top: 20rem;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.random-input {
+  position: absolute;
+  left: 20rem;
+  top: 27rem;
+  z-index: 30;
+}
+
 .li-ho1 {
   position: absolute;
   /* left: 34%; */
@@ -300,7 +322,7 @@ li > a {
 
 .li-ho4 {
   position: absolute;
-  padding-left: 18rem;
+  left: 70vw;
   color: rgb(219, 219, 218);
 }
 

@@ -276,6 +276,28 @@ li > a {
   top: 2rem;
 }
 
+.local-button {
+  width: 10rem;
+  height: 5rem;
+  z-index: 30;
+  color: #fff;
+  cursor: pointer;
+  background-color: green;
+  padding: 1rem 2rem;
+  font-family: Open Sans;
+  font-weight: 600;
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+}
+
+.random-input {
+  z-index: 30;
+  position: absolute;
+  top: 27rem;
+  left: 20rem;
+}
+
 .li-ho1 {
   color: #dbdbda;
   padding-left: 1.2rem;
@@ -295,8 +317,8 @@ li > a {
 
 .li-ho4 {
   color: #dbdbda;
-  padding-left: 18rem;
   position: absolute;
+  left: 70vw;
 }
 
 .li-ho1:hover, .li-ho2:hover, .li-ho3:hover {

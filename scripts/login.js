@@ -56,11 +56,11 @@ const loginEmailPassword = async () => {
       emailTxt,
       passwordTxt
     );
-    window.location.href = "http://qdash.net";
+    // window.location.href = "http://qdash.net";
+    window.location.href = "http://qdash.net/";
     console.log(userCredential.user);
     console.log(userCredential.token);
   } catch (err) {
-    e.preventDefault();
     console.log(err);
   }
 };

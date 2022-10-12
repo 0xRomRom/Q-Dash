@@ -573,17 +573,17 @@ const loginEmailPassword = async ()=>{
     const passwordTxt = userPasswordInput.value;
     try {
         const userCredential = await (0, _auth.signInWithEmailAndPassword)(auth, emailTxt, passwordTxt);
-        window.location.href = "http://qdash.net";
+        // window.location.href = "http://qdash.net";
+        window.location.href = "http://qdash.net/";
         console.log(userCredential.user);
         console.log(userCredential.token);
     } catch (err) {
-        e.preventDefault();
         console.log(err);
     }
 };
-loginButton.addEventListener("click", (e1)=>{
+loginButton.addEventListener("click", (e)=>{
     loginEmailPassword();
-    e1.preventDefault();
+    e.preventDefault();
 });
 // Open signup modal
 goToSignupButton.addEventListener("click", ()=>{
@@ -610,9 +610,9 @@ const createAccount = async ()=>{
         console.log(err);
     }
 };
-signupButton.addEventListener("click", (e1)=>{
+signupButton.addEventListener("click", (e)=>{
     createAccount();
-    e1.preventDefault();
+    e.preventDefault();
 });
 // Back to home page
 qdashLogo.addEventListener("click", ()=>{
@@ -645,10 +645,10 @@ const resetPassword = ()=>{
         console.log(error);
     });
 };
-forgetEmailButton.addEventListener("click", (e1)=>{
+forgetEmailButton.addEventListener("click", (e)=>{
     let userValue = forgotPassInput.value;
     console.log(userValue);
-    e1.preventDefault();
+    e.preventDefault();
     enterValidEmailText.classList.add("hidden");
     if (forgotPassInput.value.length < 6) {
         enterValidEmailText.classList.remove("hidden");

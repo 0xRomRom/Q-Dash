@@ -24,11 +24,12 @@ const monitorAuthState = async () => {
     if (user) {
       logInButton.classList.add("hidden");
       logOutButton.classList.remove("hidden");
-      console.log(user.email);
+      localStorage.setItem("loggedIn", user.uid);
     } else {
       logInButton.classList.remove("hidden");
       logOutButton.classList.add("hidden");
       console.log("No user");
+      localStorage.clear();
     }
   });
 };
