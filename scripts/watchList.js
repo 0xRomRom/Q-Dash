@@ -1,16 +1,5 @@
 "use strict";
 
-// const sendData = fetch(
-//   `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}.json`,
-//   {
-//     method: "POST",
-//     body: JSON.stringify(someInput.value),
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   }
-// );
-
 const watchListButton = document.querySelector(".watchlist");
 const watchListClose = document.querySelector(".watch-close");
 const watchListDiv = document.querySelector(".watchlist-div");
@@ -40,7 +29,6 @@ viewWatchlist.addEventListener("click", () => {
   watchListBox.classList.remove("hidden");
   watchListBox.classList.add("fadeBoxIn");
   assetsBox.classList.add("hidden");
-
   setTimeout(() => {
     watchListBox.classList.remove("fadeBoxIn");
   }, 500);
@@ -53,10 +41,7 @@ viewAssets.addEventListener("click", () => {
   viewWatchlist.classList.add("fadeColorOut");
   assetsBox.classList.remove("hidden");
   assetsBox.classList.add("fadeBoxIn");
-  //   watchListBox.classList.add("fadeBoxOut");
-
   watchListBox.classList.add("hidden");
-  //   watchListBox.classList.remove("fadeBoxOut");
 });
 
 // Open watchlist modal
@@ -166,7 +151,10 @@ const renderUI = (data1, data2) => {
   loadSpinner.classList.add("hidden");
   addToWatchList.classList.remove("hidden");
   searchCoinInput.value = "";
+  apiID = data1.id;
 };
+
+let apiID = "";
 
 // Search coin
 searchInputButton.addEventListener("click", coinSearcher);
@@ -178,4 +166,78 @@ searchCoinInput.addEventListener("keyup", (e) => {
   }
 });
 
-// addToWatchList.addEventListener("click", coinSearcher);
+const fetchSearchResult = async () => {
+  // Getting uID from storage for path
+  const getStorage = localStorage.getItem("loggedIn");
+  // Fetching current coins
+  const response = await fetch(
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`
+  );
+  const data = await response.json();
+
+  // Loop over existing data to check for match
+  // Only continue if no match
+  let currentAPI_ID = [];
+  for (const property in data) {
+    currentAPI_ID.push(data[property]);
+  }
+  let match = false;
+  currentAPI_ID.forEach((id) => {
+    if (id === apiID) {
+      alert("Coin is already on watchlist!");
+
+      return (match = true);
+    }
+  });
+
+  //No current match, proceed
+  //Posting new coin
+  if (!match) {
+    const sendData = await fetch(
+      `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`,
+      {
+        method: "POST",
+        body: JSON.stringify(apiID),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    await buildCurrentQuery();
+  }
+};
+
+const APILeft = `https://api.coingecko.com/api/v3/simple/price?ids=`;
+const APIRight = `&vs_currencies=usd&include_24hr_change=true`;
+
+const buildCurrentQuery = async () => {
+  // Getting uID from storage for path
+  const getStorage = localStorage.getItem("loggedIn");
+
+  // Fetching current coins
+  const response = await fetch(
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`
+  );
+  const data = await response.json();
+  let currentAPI_IDs = [];
+  let convertedAPI_IDs = [];
+  for (const property in data) {
+    currentAPI_IDs.push(data[property]);
+  }
+  currentAPI_IDs.forEach((id) => {
+    console.log(id);
+    convertedAPI_IDs.push(id + "%2C");
+  });
+  let apiQuery = convertedAPI_IDs.join("");
+  let apiMiddleQuery = apiQuery.slice(0, -3);
+  let finalQuery = APILeft + apiMiddleQuery + APIRight;
+  console.log(finalQuery);
+};
+
+const updateCurrentWatchlist = async () => {
+  const response = await fetch(COINGECKOAPI);
+  const data = await response.json();
+  responseObject = data;
+};
+
+addToWatchList.addEventListener("click", fetchSearchResult);
