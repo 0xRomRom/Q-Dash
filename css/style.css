@@ -278,28 +278,6 @@ li > a {
   gap: 8rem;
 }
 
-.local-button {
-  position: absolute;
-  width: 10rem;
-  height: 5rem;
-  background-color: green;
-  z-index: 30;
-  left: 20rem;
-  top: 20rem;
-  padding: 1rem 2rem;
-  color: white;
-  font-family: "Open Sans";
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.random-input {
-  position: absolute;
-  left: 20rem;
-  top: 27rem;
-  z-index: 30;
-}
-
 .li-ho1 {
   position: absolute;
   /* left: 34%; */
@@ -641,6 +619,34 @@ li > a {
 }
 .fadeOut {
   animation: fadeOut 0.2s ease-in forwards;
+}
+
+.fadeBoxIn {
+  animation: fadeBoxIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeBoxIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeBoxOut {
+  animation: fadeBoxOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeBoxOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeOut {
@@ -1217,13 +1223,242 @@ li > a {
   width: 50%;
   height: 50rem;
   box-shadow: 0px 0px 15px rgb(140, 20, 156);
-  /* border: 1px solid rgb(140, 20, 156); */
-  /* background: linear-gradient(90deg, #c33764, #1d2671); */
   background: linear-gradient(to right, #0f0c29, #24243e);
   border-radius: 1rem;
   font-family: "Open Sans";
   color: white;
   z-index: 50;
+}
+
+.watchlist-div {
+  position: absolute;
+  left: 25%;
+  top: 5rem;
+  width: 50%;
+  height: 50rem;
+  box-shadow: 0px 0px 15px rgb(140, 20, 156);
+  background: linear-gradient(to right, #0f0c29, #24243e);
+  border-radius: 1rem;
+  font-family: "Open Sans";
+  color: white;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.modal-dropshadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  background-color: rgba(16, 20, 16, 0.71);
+  border-radius: 1rem;
+  font-family: "Open Sans";
+  color: white;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.toggle-watchlist {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+}
+
+.view-watchlist {
+  color: white;
+  z-index: 30;
+  font-family: "Open Sans";
+  cursor: pointer;
+}
+
+.watchlist-box {
+  position: relative;
+  width: 99%;
+  left: 0.3%;
+  height: 40rem;
+  top: 5.8rem;
+  /* background-color: blue; */
+}
+
+.watch-top {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.watch-low {
+  position: relative;
+  width: 100%;
+  /* border: 1px solid white; */
+  height: 36.5rem;
+}
+
+.add-item-div {
+  position: absolute;
+  top: 5rem;
+  left: 30%;
+  width: 40%;
+  height: 30rem;
+  /* background-color: rgb(140, 20, 156); */
+  background: radial-gradient(#e085e9, #9198e5);
+  border-radius: 0.4rem;
+  z-index: 1000 !important;
+}
+
+.add-item-inner {
+  position: relative;
+  width: 100%;
+  top: 8rem;
+  height: 10rem;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.coin-search-input {
+  padding: 0.5rem 0rem;
+  padding-left: 0.5rem;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: 0;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: left;
+  outline: 0;
+}
+
+.coin-search-input::placeholder {
+  color: white;
+  text-align: left;
+  letter-spacing: 3px;
+}
+
+.add-search-button {
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem;
+  width: 80%;
+  border: none;
+  background-color: rgb(112, 8, 248);
+  /* background-color: rgb(191, 31, 191); */
+  font-family: "Open Sans";
+  color: rgb(239, 236, 236);
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.05s ease-in-out;
+}
+
+.add-search-button:hover {
+  background-color: rgb(191, 31, 191);
+}
+
+.assets-box {
+  position: relative;
+  width: 99%;
+  left: 0.3%;
+  height: 40rem;
+  top: 5.8rem;
+  background-color: red;
+}
+
+.view-assets {
+  color: rgb(159, 151, 151);
+  z-index: 30;
+  font-family: "Open Sans";
+  cursor: pointer;
+}
+
+.add-to-watchlist {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  background-color: rgb(191, 31, 191);
+  font-family: "Inter";
+  color: rgb(239, 236, 236);
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  /* padding: 0.6rem 0.25rem; */
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-to-watchlist:hover {
+  background-color: rgb(177, 29, 177);
+  color: white;
+}
+
+.fa-plus {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.add-left {
+  position: relative;
+  height: 100%;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-right {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  left: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(177, 29, 177);
+}
+
+.fadeColorIn {
+  animation: fadeColorIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeColorIn {
+  from {
+    color: rgb(159, 151, 151);
+  }
+  to {
+    color: white;
+  }
+}
+
+.fadeColorOut {
+  animation: fadeColorOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeColorOut {
+  from {
+    color: white;
+  }
+  to {
+    color: rgb(159, 151, 151);
+  }
 }
 
 .slideOutDiv {
@@ -2064,6 +2299,12 @@ input:focus {
   border-radius: 0.5rem;
   padding-left: 0.7rem;
   padding-top: 0.7rem;
+}
+
+.inner-search-close {
+  position: relative;
+  left: 85%;
+  font-size: 1.5rem;
 }
 
 .box-s6 {
