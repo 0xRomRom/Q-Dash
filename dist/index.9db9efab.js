@@ -553,6 +553,9 @@ const coinResultLogo = document.querySelector(".coin-result-logo");
 const searchResultTitle = document.querySelector(".search-res-title");
 const addToWatchList = document.querySelector(".item-result-lower");
 const loadSpinner = document.querySelector(".lds-ripple");
+//User specific API url for watchlist
+const userLinkLogged = localStorage.getItem("userLink");
+console.log(userLinkLogged);
 // Toggle to watchlist view
 viewWatchlist.addEventListener("click", ()=>{
     viewWatchlist.classList.remove("fadeColorOut");
@@ -699,6 +702,7 @@ const fetchSearchResult = async ()=>{
 };
 const APILeft = `https://api.coingecko.com/api/v3/simple/price?ids=`;
 const APIRight = `&vs_currencies=usd&include_24hr_change=true`;
+let currentQuery = "";
 const buildCurrentQuery = async ()=>{
     // Getting uID from storage for path
     const getStorage = localStorage.getItem("loggedIn");
@@ -714,13 +718,17 @@ const buildCurrentQuery = async ()=>{
     });
     let apiQuery = convertedAPI_IDs.join("");
     let apiMiddleQuery = apiQuery.slice(0, -3);
-    let finalQuery = APILeft + apiMiddleQuery + APIRight;
-    console.log(finalQuery);
+    currentQuery = APILeft + apiMiddleQuery + APIRight;
+    updateCurrentWatchlist();
 };
 const updateCurrentWatchlist = async ()=>{
-    const response = await fetch(COINGECKOAPI);
+    const response = await fetch(currentQuery);
     const data = await response.json();
-    responseObject = data;
+    console.log(data);
+    localStorage.removeItem("userLink");
+    localStorage.setItem("userLink", currentQuery);
+    const userLinkLogged = localStorage.getItem("userLink");
+    console.log(userLinkLogged);
 };
 addToWatchList.addEventListener("click", fetchSearchResult);
 
