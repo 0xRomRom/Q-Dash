@@ -28,6 +28,8 @@ const searchCoinInput = document.querySelector(".coin-search-input");
 const noCoinFoundTxt = document.querySelector(".no-search-res");
 const coinResultLogo = document.querySelector(".coin-result-logo");
 const searchResultTitle = document.querySelector(".search-res-title");
+const addToWatchList = document.querySelector(".item-result-lower");
+const loadSpinner = document.querySelector(".lds-ripple");
 
 // Toggle to watchlist view
 viewWatchlist.addEventListener("click", () => {
@@ -101,6 +103,8 @@ let userValue;
 
 // Search for user input (1/3)
 const coinSearcher = async () => {
+  loadSpinner.classList.remove("hidden");
+  addToWatchList.classList.add("hidden");
   let searchValue = searchCoinInput.value.toLowerCase();
   userValue = searchValue;
   noCoinFoundTxt.classList.add("hidden");
@@ -153,6 +157,19 @@ const dataFetcher = async (id) => {
 const renderUI = (data1, data2) => {
   coinResultLogo.src = data1.image;
   searchResultTitle.textContent = data1.name;
+  loadSpinner.classList.add("hidden");
+  addToWatchList.classList.remove("hidden");
+  searchCoinInput.value = "";
 };
 
+// Search coin
 searchInputButton.addEventListener("click", coinSearcher);
+
+// Search by enter key
+searchCoinInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    coinSearcher();
+  }
+});
+
+// addToWatchList.addEventListener("click", coinSearcher);
