@@ -1289,7 +1289,7 @@ li > a {
   left: 0.3%;
   height: 40rem;
   top: 5.8rem;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .watch-top {
@@ -1322,13 +1322,62 @@ li > a {
 .add-item-inner {
   position: relative;
   width: 100%;
-  top: 8rem;
+  top: 6rem;
   height: 10rem;
-  background-color: green;
+  /* background-color: green; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.item-result-lower {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  top: 7.3rem;
+  height: 9rem;
+  /* background-color: rgb(191, 31, 191); */
+  background-color: black;
+  display: flex;
+  border-radius: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.item-result-lower:hover {
+  box-shadow: 0px 0px 5px rgb(112, 8, 248);
+}
+
+.item-result-lower:hover .add-span {
+  color: rgb(112, 8, 248);
+}
+
+.search-res-title {
+  font-family: "Inter";
+  font-size: 1.5vw;
+  position: relative;
+  top: -3rem;
+}
+
+.add-span {
+  font-family: "Inter";
+  font-size: 1.2vw;
+  position: absolute;
+  left: 60%;
+  top: 6.5rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.coin-result-logo {
+  position: absolute;
+  height: 10rem;
+  left: -3rem;
+  opacity: 0.35;
 }
 
 .coin-search-input {

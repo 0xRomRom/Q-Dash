@@ -1225,7 +1225,6 @@ li > a {
 .watchlist-box {
   width: 99%;
   height: 40rem;
-  background-color: #00f;
   position: relative;
   top: 5.8rem;
   left: .3%;
@@ -1259,13 +1258,60 @@ li > a {
 .add-item-inner {
   width: 100%;
   height: 10rem;
-  background-color: green;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
   position: relative;
-  top: 8rem;
+  top: 6rem;
+}
+
+.item-result-lower {
+  width: 80%;
+  height: 9rem;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: .4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .1s ease-in-out;
+  display: flex;
+  position: relative;
+  top: 7.3rem;
+  left: 10%;
+  overflow: hidden;
+}
+
+.item-result-lower:hover {
+  box-shadow: 0 0 5px #7008f8;
+}
+
+.item-result-lower:hover .add-span {
+  color: #7008f8;
+}
+
+.search-res-title {
+  font-family: Inter;
+  font-size: 1.5vw;
+  position: relative;
+  top: -3rem;
+}
+
+.add-span {
+  font-family: Inter;
+  font-size: 1.2vw;
+  transition: all .1s ease-in-out;
+  position: absolute;
+  top: 6.5rem;
+  left: 60%;
+}
+
+.coin-result-logo {
+  height: 10rem;
+  opacity: .35;
+  position: absolute;
+  left: -3rem;
 }
 
 .coin-search-input {

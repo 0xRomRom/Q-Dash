@@ -26,6 +26,8 @@ const addItemDiv = document.querySelector(".add-item-div");
 const searchInputButton = document.querySelector(".add-search-button");
 const searchCoinInput = document.querySelector(".coin-search-input");
 const noCoinFoundTxt = document.querySelector(".no-search-res");
+const coinResultLogo = document.querySelector(".coin-result-logo");
+const searchResultTitle = document.querySelector(".search-res-title");
 
 // Toggle to watchlist view
 viewWatchlist.addEventListener("click", () => {
@@ -128,7 +130,7 @@ const nameChecker = (data) => {
   }
 };
 
-// Re-fetching coin and displaying result
+// Re-fetching coin and displaying result (3/3)
 const dataFetcher = async (id) => {
   try {
     const response = await fetch(
@@ -142,9 +144,15 @@ const dataFetcher = async (id) => {
     const data2 = await response3.json();
     console.log(data[0]);
     console.log(data2);
+    renderUI(data[0], data2);
   } catch (err) {
     console.log(err);
   }
+};
+
+const renderUI = (data1, data2) => {
+  coinResultLogo.src = data1.image;
+  searchResultTitle.textContent = data1.name;
 };
 
 searchInputButton.addEventListener("click", coinSearcher);
