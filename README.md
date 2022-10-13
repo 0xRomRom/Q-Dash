@@ -1,2 +1,2 @@
 # Q-Dash
-https://q-dash.net (under construction)
+https://qdash.net (under construction)
