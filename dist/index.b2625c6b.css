@@ -1195,7 +1195,7 @@ li > a {
   overflow: hidden;
 }
 
-.no-search-res {
+.no-search-res, .no-search-res2 {
   color: red;
   font-family: Open Sans;
   font-weight: 700;

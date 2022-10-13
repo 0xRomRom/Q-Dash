@@ -26,6 +26,7 @@ const addItemDiv = document.querySelector(".add-item-div");
 const searchInputButton = document.querySelector(".add-search-button");
 const searchCoinInput = document.querySelector(".coin-search-input");
 const noCoinFoundTxt = document.querySelector(".no-search-res");
+const noCoinFoundTxt2 = document.querySelector(".no-search-res2");
 const coinResultLogo = document.querySelector(".coin-result-logo");
 const searchResultTitle = document.querySelector(".search-res-title");
 const addToWatchList = document.querySelector(".item-result-lower");
@@ -103,6 +104,11 @@ let userValue;
 
 // Search for user input (1/3)
 const coinSearcher = async () => {
+  noCoinFoundTxt2.classList.add("hidden");
+  if (searchCoinInput.value === "") {
+    noCoinFoundTxt2.classList.remove("hidden");
+    return;
+  }
   loadSpinner.classList.remove("hidden");
   addToWatchList.classList.add("hidden");
   let searchValue = searchCoinInput.value.toLowerCase();

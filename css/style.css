@@ -1264,6 +1264,14 @@ li > a {
   color: red;
 }
 
+.no-search-res2 {
+  position: absolute;
+  top: 4rem;
+  font-family: "Open Sans";
+  font-weight: 700;
+  color: red;
+}
+
 .toggle-watchlist {
   position: relative;
   width: 100%;
