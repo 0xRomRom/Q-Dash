@@ -1252,10 +1252,16 @@ li > a {
   height: 50rem;
   background-color: rgba(16, 20, 16, 0.71);
   border-radius: 1rem;
-  font-family: "Open Sans";
-  color: white;
   z-index: 50;
   overflow: hidden;
+}
+
+.no-search-res {
+  position: absolute;
+  top: 4rem;
+  font-family: "Open Sans";
+  font-weight: 700;
+  color: red;
 }
 
 .toggle-watchlist {
@@ -1283,7 +1289,7 @@ li > a {
   left: 0.3%;
   height: 40rem;
   top: 5.8rem;
-  /* background-color: blue; */
+  background-color: blue;
 }
 
 .watch-top {
@@ -1310,7 +1316,7 @@ li > a {
   /* background-color: rgb(140, 20, 156); */
   background: radial-gradient(#e085e9, #9198e5);
   border-radius: 0.4rem;
-  z-index: 1000 !important;
+  z-index: 500;
 }
 
 .add-item-inner {
@@ -1318,7 +1324,7 @@ li > a {
   width: 100%;
   top: 8rem;
   height: 10rem;
-  /* background-color: green; */
+  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;

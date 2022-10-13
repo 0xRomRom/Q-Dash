@@ -1187,14 +1187,20 @@ li > a {
 .modal-dropshadow {
   width: 100%;
   height: 50rem;
-  color: #fff;
   z-index: 50;
   background-color: #101410b5;
   border-radius: 1rem;
-  font-family: Open Sans;
   position: absolute;
   top: 0;
   overflow: hidden;
+}
+
+.no-search-res {
+  color: red;
+  font-family: Open Sans;
+  font-weight: 700;
+  position: absolute;
+  top: 4rem;
 }
 
 .toggle-watchlist {
@@ -1219,6 +1225,7 @@ li > a {
 .watchlist-box {
   width: 99%;
   height: 40rem;
+  background-color: #00f;
   position: relative;
   top: 5.8rem;
   left: .3%;
@@ -1241,17 +1248,18 @@ li > a {
 .add-item-div {
   width: 40%;
   height: 30rem;
+  z-index: 500;
   background: radial-gradient(#e085e9, #9198e5);
   border-radius: .4rem;
   position: absolute;
   top: 5rem;
   left: 30%;
-  z-index: 1000 !important;
 }
 
 .add-item-inner {
   width: 100%;
   height: 10rem;
+  background-color: green;
   flex-direction: column;
   justify-content: center;
   align-items: center;
