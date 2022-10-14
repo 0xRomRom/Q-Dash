@@ -21,13 +21,13 @@ const searchResultTitle = document.querySelector(".search-res-title");
 const addToWatchList = document.querySelector(".item-result-lower");
 const loadSpinner = document.querySelector(".lds-ripple");
 const watchListItemsBox = document.querySelector(".watch-low");
+const deleteFromWatchList = document.querySelectorAll(".delete-from-watch");
 
-//User specific API url for watchlist]
+//User specific API url for watchlist
 
 window.addEventListener("load", () => {
   const userLinkLogged = localStorage.getItem("userLink");
-
-  console.log(userLinkLogged);
+  console.log(userLinkLogged !== null ? userLinkLogged : "No Query");
 });
 
 // Toggle to watchlist view
@@ -117,7 +117,6 @@ const coinSearcher = async () => {
     return;
   } else {
     nameChecker(data);
-    console.log(data);
   }
 };
 
@@ -219,10 +218,10 @@ const fetchSearchResult = async () => {
 const APILeft = `https://api.coingecko.com/api/v3/simple/price?ids=`;
 const APIRight = `&vs_currencies=usd&include_24hr_change=true`;
 let currentQuery = "";
+
 const buildCurrentQuery = async () => {
   // Getting uID from storage for path
   const getStorage = localStorage.getItem("loggedIn");
-  console.log(getStorage);
 
   // Fetching current coins
   const response = await fetch(
@@ -233,8 +232,9 @@ const buildCurrentQuery = async () => {
   for (const property in data) {
     currentAPI_IDs.push(data[property] + "%2C");
   }
+  console.log(currentAPI_IDs);
   let apiQuery = currentAPI_IDs.join("");
-  let apiMiddleQuery = apiQuery.slice(0, -3);
+  let apiMiddleQuery = apiQuery;
   currentQuery = APILeft + apiMiddleQuery + APIRight;
   console.log(currentQuery);
   updateCurrentWatchlist();
@@ -249,29 +249,74 @@ const updateCurrentWatchlist = async () => {
   localStorage.setItem("userLink", currentQuery);
   const userLinkLogged = localStorage.getItem("userLink");
   console.log(userLinkLogged);
+  renderWatchList();
 };
 
 const renderWatchList = async () => {
   const userLinkLogged = localStorage.getItem("userLink");
   const response = await fetch(userLinkLogged);
   const data = await response.json();
-  console.log(data);
 
+  watchListItemsBox.innerHTML = "";
   for (let i = 0; i < Object.values(data).length; i++) {
-    console.log(Object.values(data)[i].usd);
-    watchListItemsBox.innerHTML += `<div class="watch-item" data-id="${
-      Object.keys(data)[i]
-    }">
+    watchListItemsBox.innerHTML += `<div class="watch-item">
   <h1 class="watch-title">${(
     Object.keys(data)[i].charAt(0).toUpperCase() + Object.keys(data)[i].slice(1)
   ).replace("-", " ")}</h1>
   <h2 class="watch-price">$${Object.values(data)[i].usd}</h2>
   <h2 class="watch-24h-change">24h: ${
-    Object.values(data)[i].usd_24h_change >= 0 ? "+" : "-"
+    Object.values(data)[i].usd_24h_change >= 0 ? "+" : ""
   }${Object.values(data)[i].usd_24h_change.toFixed(2)}%</h2>
+  <button class="delete-from-watch"><i class="fa-solid fa-circle-minus" data-id="${
+    Object.keys(data)[i]
+  }"></i></button>
 </div>`;
   }
 };
 renderWatchList();
 
 addToWatchList.addEventListener("click", fetchSearchResult);
+
+watchListItemsBox.addEventListener("click", (e) => {
+  deleteWatchListItem(e);
+});
+
+const deleteWatchListItem = async (e) => {
+  if (!e.target.hasAttribute("data-id")) return;
+  const selectedDataset = e.target.dataset.id;
+
+  console.log(selectedDataset);
+  const getQuery = localStorage.getItem("userLink");
+  console.log(getQuery);
+  let newQueryInstance = getQuery.replace(selectedDataset, "");
+  localStorage.removeItem("userLink");
+  localStorage.setItem("userLink", newQueryInstance);
+
+  const getStorage = localStorage.getItem("loggedIn");
+
+  // const request = new Request(
+  //   `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist`,
+  //   { method: "DELETE" }
+  // );
+
+  await renderWatchList();
+};
+
+const fetcher = async () => {
+  const getStorage = localStorage.getItem("loggedIn");
+  const fetchIDs = await fetch(
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`
+  );
+  const fetchResponse = await fetchIDs.json();
+
+  for (const [key, value] of Object.entries(fetchResponse)) {
+    console.log(`${key}: ${value}`);
+  }
+
+  // for (const [key, value] in Object.keys(fetchResponse)) {
+  //   console.log(Object.keys(fetchResponse));
+  // }
+
+  console.log(fetchResponse);
+};
+fetcher();

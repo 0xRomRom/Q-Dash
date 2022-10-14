@@ -1392,7 +1392,7 @@ li > a {
 
 .watch-title {
   font-family: "Inter";
-
+  font-size: 1.5rem;
   position: relative;
   width: 30%;
   left: 2%;
@@ -1407,6 +1407,25 @@ li > a {
 .watch-24h-change {
   font-family: "Inter";
   width: 25%;
+}
+
+.delete-from-watch {
+  position: absolute;
+  left: 95%;
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.fa-circle-minus {
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-circle-minus:hover {
+  color: red;
 }
 
 .add-item-div {

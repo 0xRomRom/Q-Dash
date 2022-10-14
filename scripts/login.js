@@ -9,7 +9,6 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 
-// Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBjUBG1uVjtOrbC7dU2_yJD46tmCpDffNs",
   authDomain: "qdash-3fe95.firebaseapp.com",
