@@ -1361,7 +1361,52 @@ li > a {
   position: relative;
   width: 100%;
   /* border: 1px solid white; */
-  height: 36.5rem;
+  height: 38.3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 0.5rem;
+  overflow: scroll;
+}
+
+.watch-item {
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    rgb(57, 60, 170),
+    rgb(211, 5, 243),
+    rgb(195, 45, 218),
+    rgb(188, 52, 198),
+    rgb(57, 60, 170)
+  );
+  width: 98%;
+  height: 3rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watch-title {
+  font-family: "Inter";
+
+  position: relative;
+  width: 30%;
+  left: 2%;
+}
+
+.watch-price {
+  font-family: "Inter";
+  /* background-color: red; */
+  width: 25%;
+}
+
+.watch-24h-change {
+  font-family: "Inter";
+  width: 25%;
 }
 
 .add-item-div {

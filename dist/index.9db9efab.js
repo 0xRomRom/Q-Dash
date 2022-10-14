@@ -553,9 +553,12 @@ const coinResultLogo = document.querySelector(".coin-result-logo");
 const searchResultTitle = document.querySelector(".search-res-title");
 const addToWatchList = document.querySelector(".item-result-lower");
 const loadSpinner = document.querySelector(".lds-ripple");
-//User specific API url for watchlist
-const userLinkLogged = localStorage.getItem("userLink");
-console.log(userLinkLogged);
+const watchListItemsBox = document.querySelector(".watch-low");
+//User specific API url for watchlist]
+window.addEventListener("load", ()=>{
+    const userLinkLogged = localStorage.getItem("userLink");
+    console.log(userLinkLogged);
+});
 // Toggle to watchlist view
 viewWatchlist.addEventListener("click", ()=>{
     viewWatchlist.classList.remove("fadeColorOut");
@@ -706,21 +709,19 @@ let currentQuery = "";
 const buildCurrentQuery = async ()=>{
     // Getting uID from storage for path
     const getStorage = localStorage.getItem("loggedIn");
+    console.log(getStorage);
     // Fetching current coins
     const response = await fetch(`https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`);
     const data = await response.json();
     let currentAPI_IDs = [];
-    let convertedAPI_IDs = [];
-    for(const property in data)currentAPI_IDs.push(data[property]);
-    currentAPI_IDs.forEach((id)=>{
-        console.log(id);
-        convertedAPI_IDs.push(id + "%2C");
-    });
-    let apiQuery = convertedAPI_IDs.join("");
+    for(const property in data)currentAPI_IDs.push(data[property] + "%2C");
+    let apiQuery = currentAPI_IDs.join("");
     let apiMiddleQuery = apiQuery.slice(0, -3);
     currentQuery = APILeft + apiMiddleQuery + APIRight;
+    console.log(currentQuery);
     updateCurrentWatchlist();
 };
+// Updating current watchlist new coin was added
 const updateCurrentWatchlist = async ()=>{
     const response = await fetch(currentQuery);
     const data = await response.json();
@@ -730,6 +731,21 @@ const updateCurrentWatchlist = async ()=>{
     const userLinkLogged = localStorage.getItem("userLink");
     console.log(userLinkLogged);
 };
+const renderWatchList = async ()=>{
+    const userLinkLogged = localStorage.getItem("userLink");
+    const response = await fetch(userLinkLogged);
+    const data = await response.json();
+    console.log(data);
+    for(let i = 0; i < Object.values(data).length; i++){
+        console.log(Object.values(data)[i].usd);
+        watchListItemsBox.innerHTML += `<div class="watch-item" data-id="${Object.keys(data)[i]}">
+  <h1 class="watch-title">${(Object.keys(data)[i].charAt(0).toUpperCase() + Object.keys(data)[i].slice(1)).replace("-", " ")}</h1>
+  <h2 class="watch-price">$${Object.values(data)[i].usd}</h2>
+  <h2 class="watch-24h-change">24h: ${Object.values(data)[i].usd_24h_change >= 0 ? "+" : "-"}${Object.values(data)[i].usd_24h_change.toFixed(2)}%</h2>
+</div>`;
+    }
+};
+renderWatchList();
 addToWatchList.addEventListener("click", fetchSearchResult);
 
 },{}]},["iU07B","3X4BY"], "3X4BY", "parcelRequire379f")
