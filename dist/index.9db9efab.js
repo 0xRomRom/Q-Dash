@@ -648,17 +648,13 @@ const dataFetcher = async (id)=>{
     try {
         const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
         const data = await response.json();
-        const response3 = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
-        const data2 = await response3.json();
-        console.log(data[0]);
-        console.log(data2);
-        renderSearchUI(data[0], data2);
+        renderSearchUI(data[0]);
     } catch (err) {
         console.log(err);
     }
 };
 //Display coin result modal
-const renderSearchUI = (data1, data2)=>{
+const renderSearchUI = (data1)=>{
     coinResultLogo.src = data1.image;
     searchResultTitle.textContent = data1.name;
     loadSpinner.classList.add("hidden");
@@ -676,6 +672,7 @@ let apiID = "";
 // localStorage.removeItem("userLink");
 //Beginning of addition to watchlist
 const fetchSearchResult = async ()=>{
+    const userLinkLogged = localStorage.getItem("userLink");
     let currentAPI_ID = "";
     // Getting uID from storage for path
     const uID = localStorage.getItem("loggedIn");
@@ -683,11 +680,15 @@ const fetchSearchResult = async ()=>{
     const response = await fetch(`https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${uID}/watchlist.json`);
     const data = await response.json();
     if (data === null) currentAPI_ID = apiID;
-    if (data !== null) currentAPI_ID = Object.values(data).join("") + apiID;
+    if (data !== null) {
+        if (userLinkLogged.includes(apiID)) {
+            alert("Already on watchlist!");
+            return;
+        }
+        currentAPI_ID = Object.values(data).join("") + apiID;
+    }
     apiID = "";
     apiID = currentAPI_ID.replace(",", "");
-    //No current match, proceed
-    //Posting new coin
     const sendData = await fetch(`https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${uID}/watchlist.json`, {
         method: "PUT",
         body: JSON.stringify(apiID),
