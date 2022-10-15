@@ -572,8 +572,8 @@ const loginEmailPassword = async ()=>{
     const passwordTxt = userPasswordInput.value;
     try {
         const userCredential = await (0, _auth.signInWithEmailAndPassword)(auth, emailTxt, passwordTxt);
-        // window.location.href = "http://qdash.net";
-        window.location.href = "http://qdash.net/";
+        // window.location.href = "http://qdash.net/";
+        window.location.href = "http://localhost:61218/";
         console.log(userCredential.user);
         console.log(userCredential.token);
     } catch (err) {

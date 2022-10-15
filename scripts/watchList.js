@@ -25,13 +25,24 @@ const deleteFromWatchList = document.querySelectorAll(".delete-from-watch");
 
 //User specific API url for watchlist
 
-window.addEventListener("load", () => {
-  const userLinkLogged = localStorage.getItem("userLink");
-  if (userLinkLogged.length === 93) {
-    localStorage.setItem("userLink", "");
-  }
+window.addEventListener("load", async () => {
+  setTimeout(async () => {
+    const getStorage = localStorage.getItem("loggedIn");
+    const apiLink = localStorage.getItem("userLink");
 
-  console.log(userLinkLogged !== "" ? userLinkLogged : "No Query");
+    const sendData = await fetch(
+      `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/apiLink.json`
+    );
+    const response = await sendData.json();
+    console.log(response);
+    if (response.length < 5) {
+      localStorage.setItem("userLink", "");
+    } else {
+      localStorage.setItem("userLink", response);
+    }
+
+    await renderWatchList();
+  }, 1000);
 });
 
 // Toggle to watchlist view
@@ -63,6 +74,7 @@ watchListButton.addEventListener("click", () => {
   if (!getStorage) {
     window.location.href = "https://www.qdash.net/login.html";
   } else {
+    renderWatchList();
     watchListDiv.classList.remove("hidden");
     dropShadow.classList.remove("hidden");
   }
@@ -172,8 +184,6 @@ searchCoinInput.addEventListener("keyup", (e) => {
 
 let apiID = "";
 
-// localStorage.removeItem("userLink");
-
 //Beginning of addition to watchlist
 const fetchSearchResult = async () => {
   const userLinkLogged = localStorage.getItem("userLink");
@@ -228,13 +238,13 @@ const updateCurrentWatchlist = async () => {
   console.log(data);
   localStorage.removeItem("userLink");
   localStorage.setItem("userLink", currentQuery);
+  querySaver();
   renderWatchList();
 };
 
 const renderWatchList = async () => {
   try {
     const userLinkLogged = localStorage.getItem("userLink");
-    console.log(userLinkLogged);
     const response = await fetch(userLinkLogged);
     const data = await response.json();
 
@@ -259,13 +269,8 @@ const renderWatchList = async () => {
     watchListItemsBox.innerHTML = `<h1 class="no-item-text">Add new items to watchlist</h1>`;
   }
 };
-renderWatchList();
 
 addToWatchList.addEventListener("click", fetchSearchResult);
-
-watchListItemsBox.addEventListener("click", (e) => {
-  deleteWatchListItem(e);
-});
 
 const deleteWatchListItem = async (e) => {
   if (!e.target.hasAttribute("data-id")) return;
@@ -290,6 +295,30 @@ const deleteWatchListItem = async (e) => {
 
   localStorage.removeItem("userLink");
   localStorage.setItem("userLink", APILeft + newValue + APIRight);
-
+  const getStorageItem = localStorage.getItem("userLink");
+  if (getStorageItem.length === 93) {
+    localStorage.setItem("userLink", "");
+  }
+  querySaver();
   await renderWatchList();
+};
+
+watchListItemsBox.addEventListener("click", (e) => {
+  deleteWatchListItem(e);
+});
+
+const querySaver = async () => {
+  const getStorage = localStorage.getItem("loggedIn");
+  const apiLink = localStorage.getItem("userLink");
+  const checked = apiLink.length === 93 ? "" : apiLink;
+  const sendData = await fetch(
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/apiLink.json`,
+    {
+      method: "PUT",
+      body: JSON.stringify(checked),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 };

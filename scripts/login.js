@@ -55,8 +55,9 @@ const loginEmailPassword = async () => {
       emailTxt,
       passwordTxt
     );
-    // window.location.href = "http://qdash.net";
-    window.location.href = "http://qdash.net/";
+
+    // window.location.href = "http://qdash.net/";
+    window.location.href = "http://localhost:61218/";
     console.log(userCredential.user);
     console.log(userCredential.token);
   } catch (err) {
