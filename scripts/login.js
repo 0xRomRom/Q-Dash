@@ -45,6 +45,10 @@ const forgetFinalText = document.querySelector(".forgot-final");
 const passSubmitForm = document.querySelector(".forgot-pass-form");
 const enterValidEmailText = document.querySelector(".enter-valid-mail");
 
+window.addEventListener("load", () => {
+  userEmailInput.focus();
+});
+
 // User login
 const loginEmailPassword = async () => {
   const emailTxt = userEmailInput.value;
@@ -56,8 +60,9 @@ const loginEmailPassword = async () => {
       passwordTxt
     );
 
-    window.location.href = "http://qdash.net/";
-    // window.location.href = "http://localhost:61218/";
+    window.location.href = "https://qdash.net";
+    // window.location.href = "http://localhost:62575";
+
     console.log(userCredential.user);
     console.log(userCredential.token);
   } catch (err) {
@@ -94,7 +99,7 @@ const createAccount = async () => {
     signupEmailInput.value = "";
     signupPasswordInput.value = "";
     signupModal.classList.add("hidden");
-    window.location.href = "http://qdash.net";
+    window.location.href = "https://qdash.net";
     console.log(userCredential.user.email);
   } catch (err) {
     invalidCredentialsTxt.classList.remove("hidden");
@@ -108,7 +113,7 @@ signupButton.addEventListener("click", (e) => {
 
 // Back to home page
 qdashLogo.addEventListener("click", () => {
-  window.location.href = "http://qdash.net";
+  window.location.href = "https://qdash.net";
 });
 
 forgotPassBackButton.addEventListener("click", () => {

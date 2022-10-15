@@ -1422,7 +1422,7 @@ li > a {
 }
 
 .watch-24h-change {
-  background: -webkit-linear-gradient(rgb(209, 210, 215), rgb(153, 149, 156));
+  background: -webkit-linear-gradient(rgb(240, 240, 243), rgb(186, 181, 190));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1471,7 +1471,7 @@ li > a {
 
 .add-item-div {
   position: absolute;
-  top: 5rem;
+  top: 0rem;
   left: 30%;
   width: 40%;
   height: 30rem;
@@ -2547,7 +2547,7 @@ input:focus {
   position: relative;
   width: 13rem;
   height: 1.5rem;
-  top: 2.85rem;
+  top: 2.3rem;
   text-align: start;
   overflow: hidden;
 }

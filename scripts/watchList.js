@@ -28,8 +28,6 @@ const deleteFromWatchList = document.querySelectorAll(".delete-from-watch");
 window.addEventListener("load", async () => {
   setTimeout(async () => {
     const getStorage = localStorage.getItem("loggedIn");
-    const apiLink = localStorage.getItem("userLink");
-
     const sendData = await fetch(
       `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/apiLink.json`
     );
@@ -71,8 +69,10 @@ viewAssets.addEventListener("click", () => {
 // Open watchlist modal
 watchListButton.addEventListener("click", () => {
   const getStorage = localStorage.getItem("loggedIn");
+  console.log(getStorage);
   if (!getStorage) {
     window.location.href = "https://www.qdash.net/login.html";
+    // window.location.href = "http://localhost:62575/login.html";
   } else {
     renderWatchList();
     watchListDiv.classList.remove("hidden");
@@ -84,11 +84,13 @@ watchListButton.addEventListener("click", () => {
 dropShadow.addEventListener("click", () => {
   watchListDiv.classList.add("hidden");
   dropShadow.classList.add("hidden");
+  addToWatchList.classList.add("hidden");
 });
 
 watchListClose.addEventListener("click", () => {
   watchListDiv.classList.add("hidden");
   dropShadow.classList.add("hidden");
+  addToWatchList.classList.add("hidden");
 });
 
 // Open search modal

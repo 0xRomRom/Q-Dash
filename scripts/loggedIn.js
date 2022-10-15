@@ -29,7 +29,7 @@ const monitorAuthState = async () => {
       logInButton.classList.remove("hidden");
       logOutButton.classList.add("hidden");
       console.log("No user");
-      localStorage.clear();
+      localStorage.setItem("loggedIn", "");
     }
   });
 };
@@ -39,6 +39,7 @@ const logOutHandler = async () => {
   try {
     await signOut(auth);
     logOutButton.classList.add("hidden");
+    localStorage.setItem("loggedIn", "");
   } catch (err) {
     console.log(err);
   }
