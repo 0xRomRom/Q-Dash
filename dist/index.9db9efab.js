@@ -729,11 +729,13 @@ const renderWatchList = async ()=>{
         const userLinkLogged = localStorage.getItem("userLink");
         const response = await fetch(userLinkLogged);
         const data = await response.json();
+        // if(Object.values(data)[i].usd_24h_change >= 0 ?) {
+        // }
         watchListItemsBox.innerHTML = "";
         for(let i = 0; i < Object.values(data).length; i++)watchListItemsBox.innerHTML += `<div class="watch-item">
     <h1 class="watch-title">${(Object.keys(data)[i].charAt(0).toUpperCase() + Object.keys(data)[i].slice(1)).replace("-", " ")}</h1>
     <h2 class="watch-price">$${Object.values(data)[i].usd}</h2>
-    <h2 class="watch-24h-change">24h: ${Object.values(data)[i].usd_24h_change >= 0 ? "+" : ""}${Object.values(data)[i].usd_24h_change.toFixed(2)}%</h2>
+    <h2 class="watch-24h-change">24h: <span class="percentage-daily ${Object.values(data)[i].usd_24h_change >= 0 ? "" : "daily-down"}">${Object.values(data)[i].usd_24h_change >= 0 ? "+" : ""}${Object.values(data)[i].usd_24h_change.toFixed(2)}%</span></h2>
     <button class="delete-from-watch"><i class="fa-solid fa-circle-minus" data-id="${Object.keys(data)[i]}"></i></button>
   </div>`;
     } catch (err) {
@@ -741,7 +743,13 @@ const renderWatchList = async ()=>{
         watchListItemsBox.innerHTML = `<h1 class="no-item-text">Add new items to watchlist</h1>`;
     }
 };
-addToWatchList.addEventListener("click", fetchSearchResult);
+addToWatchList.addEventListener("click", ()=>{
+    fetchSearchResult();
+    addToWatchList.disabled = true;
+    setTimeout(()=>{
+        addToWatchList.disabled = false;
+    }, 1000);
+});
 const deleteWatchListItem = async (e)=>{
     if (!e.target.hasAttribute("data-id")) return;
     const getStorage = localStorage.getItem("loggedIn");

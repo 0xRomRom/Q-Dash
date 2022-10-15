@@ -1355,6 +1355,8 @@ li > a {
   height: 3rem;
   display: flex;
   justify-content: flex-end;
+  /* background-color: #00bf8f; */
+  margin-bottom: 0.3rem;
 }
 
 .watch-low {
@@ -1396,6 +1398,9 @@ li > a {
   position: relative;
   width: 30%;
   left: 2%;
+  background: -webkit-linear-gradient(rgb(161, 159, 166), rgb(82, 211, 200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .no-item-text {
@@ -1411,6 +1416,33 @@ li > a {
   font-family: "Inter";
   /* background-color: red; */
   width: 25%;
+  background: -webkit-linear-gradient(rgb(216, 224, 218), rgb(27, 218, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.watch-24h-change {
+  background: -webkit-linear-gradient(rgb(209, 210, 215), rgb(153, 149, 156));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.percentage-daily {
+  font-family: "Inter";
+  /* background-color: red; */
+  width: 25%;
+  background: -webkit-linear-gradient(rgb(216, 224, 218), rgb(27, 218, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.daily-down {
+  font-family: "Inter";
+  /* background-color: red; */
+  width: 25%;
+  background: -webkit-linear-gradient(rgb(217, 108, 71), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .watch-24h-change {
@@ -1477,6 +1509,7 @@ li > a {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  border: none;
 }
 
 .item-result-lower:hover {
@@ -1492,6 +1525,8 @@ li > a {
   font-size: 1.5vw;
   position: relative;
   top: -3rem;
+  color: white;
+  z-index: 30;
 }
 
 .add-span {
@@ -1501,6 +1536,8 @@ li > a {
   left: 60%;
   top: 6.5rem;
   transition: all 0.1s ease-in-out;
+  color: white;
+  z-index: 30;
 }
 
 .coin-result-logo {
@@ -2742,6 +2779,16 @@ input:focus {
   .setup-title {
     font-size: 1.7rem;
   }
+
+  .watch-title {
+    font-size: 1.4vw;
+  }
+  .watch-price {
+    font-size: 1.4vw;
+  }
+  .watch-24h-change {
+    font-size: 1.4vw;
+  }
 }
 
 @media only screen and (max-width: 1490px) {
@@ -3046,6 +3093,18 @@ input:focus {
   }
   .brand-logo-div {
     width: 16.6rem;
+  }
+  .add-to-watchlist {
+    position: relative;
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(191, 31, 191);
+    font-family: "Inter";
+    color: rgb(239, 236, 236);
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    font-size: 0.8rem;
   }
 }
 
