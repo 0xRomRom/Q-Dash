@@ -714,8 +714,6 @@ const updateCurrentWatchlist = async ()=>{
     console.log(data);
     localStorage.removeItem("userLink");
     localStorage.setItem("userLink", currentQuery);
-    const userLinkLogged = localStorage.getItem("userLink");
-    console.log(userLinkLogged);
     renderWatchList();
 };
 const renderWatchList = async ()=>{

@@ -185,11 +185,9 @@ const fetchSearchResult = async () => {
     `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${uID}/watchlist.json`
   );
   const data = await response.json();
-
   if (data === null) {
     currentAPI_ID = apiID;
   }
-
   if (data !== null) {
     if (userLinkLogged.includes(apiID)) {
       alert("Already on watchlist!");
@@ -197,10 +195,8 @@ const fetchSearchResult = async () => {
     }
     currentAPI_ID = Object.values(data).join("") + apiID;
   }
-
   apiID = "";
   apiID = currentAPI_ID.replace(",", "");
-
   const sendData = await fetch(
     `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${uID}/watchlist.json`,
     {
@@ -232,8 +228,6 @@ const updateCurrentWatchlist = async () => {
   console.log(data);
   localStorage.removeItem("userLink");
   localStorage.setItem("userLink", currentQuery);
-  const userLinkLogged = localStorage.getItem("userLink");
-  console.log(userLinkLogged);
   renderWatchList();
 };
 
