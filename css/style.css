@@ -1398,6 +1398,15 @@ li > a {
   left: 2%;
 }
 
+.no-item-text {
+  position: relative;
+  font-size: 2vw;
+  top: 10rem;
+  background: -webkit-linear-gradient(rgb(58, 49, 136), rgb(169, 33, 142));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .watch-price {
   font-family: "Inter";
   /* background-color: red; */

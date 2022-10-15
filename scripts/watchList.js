@@ -27,7 +27,11 @@ const deleteFromWatchList = document.querySelectorAll(".delete-from-watch");
 
 window.addEventListener("load", () => {
   const userLinkLogged = localStorage.getItem("userLink");
-  console.log(userLinkLogged !== null ? userLinkLogged : "No Query");
+  if (userLinkLogged.length === 93) {
+    localStorage.setItem("userLink", "");
+  }
+
+  console.log(userLinkLogged !== "" ? userLinkLogged : "No Query");
 });
 
 // Toggle to watchlist view
@@ -253,24 +257,29 @@ const updateCurrentWatchlist = async () => {
 };
 
 const renderWatchList = async () => {
-  const userLinkLogged = localStorage.getItem("userLink");
-  const response = await fetch(userLinkLogged);
-  const data = await response.json();
+  try {
+    const userLinkLogged = localStorage.getItem("userLink");
+    const response = await fetch(userLinkLogged);
+    const data = await response.json();
 
-  watchListItemsBox.innerHTML = "";
-  for (let i = 0; i < Object.values(data).length; i++) {
-    watchListItemsBox.innerHTML += `<div class="watch-item">
-  <h1 class="watch-title">${(
-    Object.keys(data)[i].charAt(0).toUpperCase() + Object.keys(data)[i].slice(1)
-  ).replace("-", " ")}</h1>
-  <h2 class="watch-price">$${Object.values(data)[i].usd}</h2>
-  <h2 class="watch-24h-change">24h: ${
-    Object.values(data)[i].usd_24h_change >= 0 ? "+" : ""
-  }${Object.values(data)[i].usd_24h_change.toFixed(2)}%</h2>
-  <button class="delete-from-watch"><i class="fa-solid fa-circle-minus" data-id="${
-    Object.keys(data)[i]
-  }"></i></button>
-</div>`;
+    watchListItemsBox.innerHTML = "";
+    for (let i = 0; i < Object.values(data).length; i++) {
+      watchListItemsBox.innerHTML += `<div class="watch-item">
+    <h1 class="watch-title">${(
+      Object.keys(data)[i].charAt(0).toUpperCase() +
+      Object.keys(data)[i].slice(1)
+    ).replace("-", " ")}</h1>
+    <h2 class="watch-price">$${Object.values(data)[i].usd}</h2>
+    <h2 class="watch-24h-change">24h: ${
+      Object.values(data)[i].usd_24h_change >= 0 ? "+" : ""
+    }${Object.values(data)[i].usd_24h_change.toFixed(2)}%</h2>
+    <button class="delete-from-watch"><i class="fa-solid fa-circle-minus" data-id="${
+      Object.keys(data)[i]
+    }"></i></button>
+  </div>`;
+    }
+  } catch (err) {
+    watchListItemsBox.innerHTML = `<h1 class="no-item-text">Add new items to watchlist</h1>`;
   }
 };
 renderWatchList();
@@ -288,9 +297,13 @@ const deleteWatchListItem = async (e) => {
   console.log(selectedDataset);
   const getQuery = localStorage.getItem("userLink");
   console.log(getQuery);
-  let newQueryInstance = getQuery.replace(selectedDataset, "");
+  let newQueryInstance = getQuery.replace(selectedDataset + "%2C", "");
   localStorage.removeItem("userLink");
   localStorage.setItem("userLink", newQueryInstance);
+  const getLatestQuery = localStorage.getItem("userLink");
+  if (getLatestQuery.length === 93) {
+    localStorage.setItem("userLink", "");
+  }
 
   const getStorage = localStorage.getItem("loggedIn");
 

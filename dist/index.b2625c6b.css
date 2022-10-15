@@ -1326,6 +1326,15 @@ li > a {
   left: 2%;
 }
 
+.no-item-text {
+  background: -webkit-linear-gradient(#3a3188, #a9218e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2vw;
+  position: relative;
+  top: 10rem;
+}
+
 .watch-price, .watch-24h-change {
   width: 25%;
   font-family: Inter;
