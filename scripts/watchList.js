@@ -151,22 +151,22 @@ const dataFetcher = async (id) => {
     const data2 = await response3.json();
     console.log(data[0]);
     console.log(data2);
-    renderUI(data[0], data2);
+    renderSearchUI(data[0], data2);
   } catch (err) {
     console.log(err);
   }
 };
 
-const renderUI = (data1, data2) => {
+//Display coin result modal
+
+const renderSearchUI = (data1, data2) => {
   coinResultLogo.src = data1.image;
   searchResultTitle.textContent = data1.name;
   loadSpinner.classList.add("hidden");
   addToWatchList.classList.remove("hidden");
   searchCoinInput.value = "";
-  apiID = data1.id;
+  apiID = data1.id + "%2C";
 };
-
-let apiID = "";
 
 // Search coin
 searchInputButton.addEventListener("click", coinSearcher);
@@ -178,68 +178,54 @@ searchCoinInput.addEventListener("keyup", (e) => {
   }
 });
 
+let apiID = "";
+
+// localStorage.removeItem("userLink");
+
+//Beginning of addition to watchlist
+
 const fetchSearchResult = async () => {
+  let currentAPI_ID = "";
   // Getting uID from storage for path
-  const getStorage = localStorage.getItem("loggedIn");
+  const uID = localStorage.getItem("loggedIn");
   // Fetching current coins
   const response = await fetch(
-    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${uID}/watchlist.json`
   );
   const data = await response.json();
 
-  // Loop over existing data to check for match
-  // Only continue if no match
-  let currentAPI_ID = [];
-  for (const property in data) {
-    currentAPI_ID.push(data[property]);
+  if (data === null) {
+    currentAPI_ID = apiID;
   }
-  let match = false;
-  currentAPI_ID.forEach((id) => {
-    if (id === apiID) {
-      alert("Coin is already on watchlist!");
-
-      return (match = true);
-    }
-  });
+  if (data !== null) {
+    currentAPI_ID = Object.values(data).join("") + apiID;
+  }
+  apiID = "";
+  apiID = currentAPI_ID.replace(",", "");
 
   //No current match, proceed
   //Posting new coin
-  if (!match) {
-    const sendData = await fetch(
-      `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`,
-      {
-        method: "POST",
-        body: JSON.stringify(apiID),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    await buildCurrentQuery();
-  }
+
+  const sendData = await fetch(
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${uID}/watchlist.json`,
+    {
+      method: "PUT",
+      body: JSON.stringify(apiID),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  buildCurrentQuery();
 };
 
 const APILeft = `https://api.coingecko.com/api/v3/simple/price?ids=`;
 const APIRight = `&vs_currencies=usd&include_24hr_change=true`;
 let currentQuery = "";
 
-const buildCurrentQuery = async () => {
-  // Getting uID from storage for path
-  const getStorage = localStorage.getItem("loggedIn");
-
-  // Fetching current coins
-  const response = await fetch(
-    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`
-  );
-  const data = await response.json();
-  let currentAPI_IDs = [];
-  for (const property in data) {
-    currentAPI_IDs.push(data[property] + "%2C");
-  }
-  console.log(currentAPI_IDs);
-  let apiQuery = currentAPI_IDs.join("");
-  let apiMiddleQuery = apiQuery;
-  currentQuery = APILeft + apiMiddleQuery + APIRight;
+const buildCurrentQuery = () => {
+  currentQuery = "";
+  currentQuery = APILeft + apiID + APIRight;
   console.log(currentQuery);
   updateCurrentWatchlist();
 };
@@ -259,6 +245,7 @@ const updateCurrentWatchlist = async () => {
 const renderWatchList = async () => {
   try {
     const userLinkLogged = localStorage.getItem("userLink");
+    console.log(userLinkLogged);
     const response = await fetch(userLinkLogged);
     const data = await response.json();
 
@@ -279,6 +266,7 @@ const renderWatchList = async () => {
   </div>`;
     }
   } catch (err) {
+    console.log(err);
     watchListItemsBox.innerHTML = `<h1 class="no-item-text">Add new items to watchlist</h1>`;
   }
 };
@@ -292,44 +280,27 @@ watchListItemsBox.addEventListener("click", (e) => {
 
 const deleteWatchListItem = async (e) => {
   if (!e.target.hasAttribute("data-id")) return;
-  const selectedDataset = e.target.dataset.id;
-
-  console.log(selectedDataset);
-  const getQuery = localStorage.getItem("userLink");
-  console.log(getQuery);
-  let newQueryInstance = getQuery.replace(selectedDataset + "%2C", "");
-  localStorage.removeItem("userLink");
-  localStorage.setItem("userLink", newQueryInstance);
-  const getLatestQuery = localStorage.getItem("userLink");
-  if (getLatestQuery.length === 93) {
-    localStorage.setItem("userLink", "");
-  }
-
-  const getStorage = localStorage.getItem("loggedIn");
-
-  // const request = new Request(
-  //   `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist`,
-  //   { method: "DELETE" }
-  // );
-
-  await renderWatchList();
-};
-
-const fetcher = async () => {
   const getStorage = localStorage.getItem("loggedIn");
   const fetchIDs = await fetch(
     `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`
   );
   const fetchResponse = await fetchIDs.json();
+  let currentValue = Object.values(fetchResponse).toString().replace(/,/g, "");
+  let newValue = currentValue.replace(e.target.dataset.id + "%2C", "");
 
-  for (const [key, value] of Object.entries(fetchResponse)) {
-    console.log(`${key}: ${value}`);
-  }
+  const sendData = await fetch(
+    `https://qdash-3fe95-default-rtdb.europe-west1.firebasedatabase.app/${getStorage}/watchlist.json`,
+    {
+      method: "PUT",
+      body: JSON.stringify(newValue),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 
-  // for (const [key, value] in Object.keys(fetchResponse)) {
-  //   console.log(Object.keys(fetchResponse));
-  // }
+  localStorage.removeItem("userLink");
+  localStorage.setItem("userLink", APILeft + newValue + APIRight);
 
-  console.log(fetchResponse);
+  await renderWatchList();
 };
-fetcher();
