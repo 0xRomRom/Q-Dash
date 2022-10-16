@@ -84,18 +84,17 @@ watchListButton.addEventListener("click", () => {
 dropShadow.addEventListener("click", () => {
   watchListDiv.classList.add("hidden");
   dropShadow.classList.add("hidden");
-  addToWatchList.classList.add("hidden");
 });
 
 watchListClose.addEventListener("click", () => {
   watchListDiv.classList.add("hidden");
   dropShadow.classList.add("hidden");
-  addToWatchList.classList.add("hidden");
 });
 
 // Open search modal
 addItemToWatchlist.addEventListener("click", () => {
   addItemDiv.classList.remove("hidden");
+  addToWatchList.classList.add("hidden");
   modalDropShadow.classList.remove("hidden");
   searchCoinInput.focus();
 });
