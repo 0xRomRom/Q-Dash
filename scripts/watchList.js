@@ -71,8 +71,8 @@ watchListButton.addEventListener("click", () => {
   const getStorage = localStorage.getItem("loggedIn");
   console.log(getStorage);
   if (!getStorage) {
-    window.location.href = "https://www.qdash.net/login.html";
-    // window.location.href = "http://localhost:62575/login.html";
+    window.location.href = "https://qdash.net/login.html";
+    // window.location.href = "http://localhost:1234/login.html";
   } else {
     renderWatchList();
     watchListDiv.classList.remove("hidden");

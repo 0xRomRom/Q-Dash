@@ -61,7 +61,7 @@ const loginEmailPassword = async () => {
     );
 
     window.location.href = "https://qdash.net";
-    // window.location.href = "http://localhost:62575";
+    // window.location.href = "http://localhost:1234/";
 
     console.log(userCredential.user);
     console.log(userCredential.token);
@@ -100,6 +100,7 @@ const createAccount = async () => {
     signupPasswordInput.value = "";
     signupModal.classList.add("hidden");
     window.location.href = "https://qdash.net";
+    // window.location.href = "http://localhost:1234/";
     console.log(userCredential.user.email);
   } catch (err) {
     invalidCredentialsTxt.classList.remove("hidden");
