@@ -1365,7 +1365,7 @@ li > a {
   position: relative;
   width: 102%;
   /* border: 1px solid white; */
-  height: 38.3rem;
+  height: 43rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1603,9 +1603,57 @@ li > a {
 .top-assets {
   position: relative;
   width: 98%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   left: 1%;
-  height: 10rem;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance-box {
+  height: 100%;
+  width: 70%;
+  background-color: rgb(30, 31, 37);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.day-week-change {
+  position: relative;
+  top: 1rem;
+  border: 1px solid white;
+  width: 20rem;
+  height: 4rem;
+}
+
+.daily-container {
+  width: 45%;
+  height: 100%;
+  background-color: white;
+}
+
+.weekly-container {
+  width: 45%;
+  height: 100%;
+  background-color: white;
+}
+
+.balance-title {
+  font-family: "Inter";
+  font-size: 1.3rem;
+}
+
+.balance-usd {
+  font-family: "Inter";
+  padding-top: 1rem;
+}
+
+.assets-balance-box {
+  height: 100%;
+  width: 28%;
+  background-color: rgb(30, 31, 37);
+  border-radius: 0.5rem;
 }
 
 .view-assets {

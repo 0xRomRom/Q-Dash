@@ -1296,7 +1296,7 @@ li > a {
 
 .watch-low {
   width: 102%;
-  height: 38.3rem;
+  height: 43rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -1518,10 +1518,51 @@ li > a {
 
 .top-assets {
   width: 98%;
-  height: 10rem;
-  border: 1px solid #fff;
+  height: 12rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
   position: relative;
   left: 1%;
+}
+
+.balance-box {
+  height: 100%;
+  width: 70%;
+  background-color: #1e1f25;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.day-week-change {
+  width: 20rem;
+  height: 4rem;
+  border: 1px solid #fff;
+  position: relative;
+  top: 1rem;
+}
+
+.daily-container, .weekly-container {
+  width: 45%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.balance-title {
+  font-family: Inter;
+  font-size: 1.3rem;
+}
+
+.balance-usd {
+  padding-top: 1rem;
+  font-family: Inter;
+}
+
+.assets-balance-box {
+  height: 100%;
+  width: 28%;
+  background-color: #1e1f25;
+  border-radius: .5rem;
 }
 
 .view-assets {
