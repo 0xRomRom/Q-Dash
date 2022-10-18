@@ -1627,32 +1627,109 @@ li > a {
 
 #myChart {
   color: #0000;
-  max-width: 350px !important;
-  max-height: 225px !important;
+  width: 175px !important;
+  height: 175px !important;
 }
 
 .canvas-container {
   color: #0000;
   position: relative;
-  top: -5.3rem;
-  left: 0;
-  max-width: 350px !important;
-  max-height: 225px !important;
+  top: -2rem;
+  left: 4.5rem;
+  max-width: 200px !important;
+  max-height: 200px !important;
+}
+
+.canvas-overlay {
+  height: 3rem;
+  width: 100%;
+  background-color: #1e1f25;
+  position: absolute;
 }
 
 .assets-change-box {
   height: 3rem;
   width: 3.5rem;
-  border: 1px solid #fff;
   position: absolute;
-  top: 7.1rem;
-  left: 9.4rem;
+  top: 4.2rem;
+  left: 29%;
+}
+
+.logo-1, .logo-st {
+  max-width: 20px;
+  position: relative;
+}
+
+.top-title1, .top-title {
+  font-family: Inter;
+  font-size: .9rem;
+  position: relative;
+  top: -1.5rem;
+  left: 1.75rem;
+}
+
+.wallet-arrow {
+  padding-right: .5rem;
+  padding-top: .2rem !important;
+}
+
+.coin-perc {
+  width: 4.3rem;
+  display: flex;
+  position: relative;
+  top: -4.1rem;
+  left: 6rem;
+}
+
+.top-title1-full {
+  color: #40445a;
+  padding-top: .3rem;
+  font-family: Inter;
+  font-size: .9rem;
+  position: relative;
+  top: -1.5rem;
+  left: 1.75rem;
+}
+
+.top3-1 {
+  width: 100%;
+  height: 3.1rem;
+  border: 1px solid #fff;
+}
+
+.top3-2 {
+  width: 100%;
+  height: 3.1rem;
+  margin-top: .5rem;
+  position: relative;
+}
+
+.top3-3 {
+  width: 100%;
+  height: 3.1rem;
+  margin-top: .5rem;
+}
+
+.top-3-title {
+  color: #6a6e84;
+  text-align: end;
+  padding-bottom: .5rem;
+  padding-right: .3rem;
+  font-size: 1rem;
 }
 
 .fa-arrow-up {
   color: #22ec22;
   padding-top: .8rem;
   position: relative;
+}
+
+.top-changers {
+  width: 10.5rem;
+  height: 100%;
+  position: absolute;
+  top: .2rem;
+  left: 57%;
 }
 
 .fa-arrow-down {
@@ -1668,14 +1745,7 @@ li > a {
   font-size: .9rem;
   position: absolute;
   top: .75rem;
-  left: .9rem;
-}
-
-.canvas-overlay {
-  height: 3rem;
-  width: 100%;
-  background-color: #1e1f25;
-  position: absolute;
+  left: 1.1rem;
 }
 
 .add-to-watchlist {

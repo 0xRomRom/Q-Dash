@@ -540,17 +540,13 @@ const portfolioLabels = [
     "Baby Samo Coin",
     "Aptos",
     "Cardano",
-    "Bitcoin",
-    "AVAX",
-    "XLM", 
+    "Solana"
 ];
 const portfolioPriceArray = [
     322,
-    70,
-    1544,
-    123,
-    357,
-    155
+    120,
+    800,
+    230
 ];
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new (0, _autoDefault.default)(ctx, {
@@ -587,7 +583,13 @@ const myChart = new (0, _autoDefault.default)(ctx, {
             }, 
         ]
     },
-    options: {}
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
 });
 
 },{"chart.js/auto":"hCqnV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hCqnV":[function(require,module,exports) {

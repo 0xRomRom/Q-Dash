@@ -2,15 +2,8 @@
 
 import Chart from "chart.js/auto";
 
-const portfolioLabels = [
-  "Baby Samo Coin",
-  "Aptos",
-  "Cardano",
-  "Bitcoin",
-  "AVAX",
-  "XLM",
-];
-const portfolioPriceArray = [322, 70, 1544, 123, 357, 155];
+const portfolioLabels = ["Baby Samo Coin", "Aptos", "Cardano", "Solana"];
+const portfolioPriceArray = [322, 120, 800, 230];
 
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new Chart(ctx, {
@@ -47,5 +40,11 @@ const myChart = new Chart(ctx, {
       },
     ],
   },
-  options: {},
+  options: {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
 });
