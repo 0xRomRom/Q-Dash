@@ -1616,7 +1616,7 @@ li > a {
   width: 70%;
   background-color: rgb(30, 31, 37);
   border-radius: 0.5rem;
-  padding: 1rem;
+
   display: flex;
   gap: 1rem;
 }
@@ -1625,12 +1625,14 @@ li > a {
   /* background-color: red; */
   height: 100%;
   width: 48%;
+  padding: 1rem;
 }
 
 .balance-box-right {
   /* background-color: red; */
   height: 100%;
   width: 48%;
+  overflow: hidden;
 }
 
 .fa-hand-holding-dollar {
@@ -1646,7 +1648,6 @@ li > a {
 .day-week-change {
   position: relative;
   top: 2rem;
-  /* border: 1px solid white; */
   width: 20rem;
   height: 4rem;
   display: flex;
@@ -1707,6 +1708,7 @@ li > a {
 .wallet-title {
   font-family: "Inter";
   font-size: 1.3rem;
+  padding: 1rem 0rem 0rem 0.1rem;
 }
 
 .balance-usd {
@@ -1726,6 +1728,60 @@ li > a {
   z-index: 30;
   font-family: "Open Sans";
   cursor: pointer;
+}
+
+#myChart {
+  max-width: 350px !important;
+  max-height: 225px !important;
+  color: transparent;
+}
+
+.canvas-container {
+  position: relative;
+  left: 0rem;
+  top: -5.3rem;
+  max-width: 350px !important;
+  max-height: 225px !important;
+  /* border: 1px solid white; */
+  color: transparent;
+}
+
+.assets-change-box {
+  position: absolute;
+  height: 3rem;
+  width: 3.5rem;
+  border: 1px solid white;
+  left: 9.4rem;
+  top: 7.1rem;
+}
+
+.fa-arrow-up {
+  color: rgb(34, 236, 34);
+  padding-top: 0.8rem;
+  position: relative;
+}
+
+.fa-arrow-down {
+  color: rgb(255, 3, 3);
+  padding-top: 0.8rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.wallet-perc-change {
+  color: white;
+  font-family: "Inter";
+  font-size: 0.9rem;
+  position: absolute;
+  left: 0.9rem;
+  top: 0.75rem;
+}
+
+.canvas-overlay {
+  position: absolute;
+  height: 3rem;
+  width: 100%;
+  background-color: rgb(30, 31, 37);
 }
 
 .add-to-watchlist {

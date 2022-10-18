@@ -1532,13 +1532,19 @@ li > a {
   background-color: #1e1f25;
   border-radius: .5rem;
   gap: 1rem;
-  padding: 1rem;
   display: flex;
 }
 
-.balance-box-left, .balance-box-right {
+.balance-box-left {
   height: 100%;
   width: 48%;
+  padding: 1rem;
+}
+
+.balance-box-right {
+  height: 100%;
+  width: 48%;
+  overflow: hidden;
 }
 
 .fa-hand-holding-dollar {
@@ -1589,7 +1595,13 @@ li > a {
   height: 100%;
 }
 
-.balance-title, .wallet-title {
+.balance-title {
+  font-family: Inter;
+  font-size: 1.3rem;
+}
+
+.wallet-title {
+  padding: 1rem 0 0 .1rem;
   font-family: Inter;
   font-size: 1.3rem;
 }
@@ -1611,6 +1623,59 @@ li > a {
   z-index: 30;
   cursor: pointer;
   font-family: Open Sans;
+}
+
+#myChart {
+  color: #0000;
+  max-width: 350px !important;
+  max-height: 225px !important;
+}
+
+.canvas-container {
+  color: #0000;
+  position: relative;
+  top: -5.3rem;
+  left: 0;
+  max-width: 350px !important;
+  max-height: 225px !important;
+}
+
+.assets-change-box {
+  height: 3rem;
+  width: 3.5rem;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 7.1rem;
+  left: 9.4rem;
+}
+
+.fa-arrow-up {
+  color: #22ec22;
+  padding-top: .8rem;
+  position: relative;
+}
+
+.fa-arrow-down {
+  color: #ff0303;
+  padding-top: .8rem;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.wallet-perc-change {
+  color: #fff;
+  font-family: Inter;
+  font-size: .9rem;
+  position: absolute;
+  top: .75rem;
+  left: .9rem;
+}
+
+.canvas-overlay {
+  height: 3rem;
+  width: 100%;
+  background-color: #1e1f25;
+  position: absolute;
 }
 
 .add-to-watchlist {

@@ -536,56 +536,58 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 "use strict";
+const portfolioLabels = [
+    "Baby Samo Coin",
+    "Aptos",
+    "Cardano",
+    "Bitcoin",
+    "AVAX",
+    "XLM", 
+];
+const portfolioPriceArray = [
+    322,
+    70,
+    1544,
+    123,
+    357,
+    155
+];
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new (0, _autoDefault.default)(ctx, {
     type: "doughnut",
     data: {
-        labels: [
-            "Red",
-            "Blue",
-            "Yellow",
-            "Green",
-            "Purple",
-            "Orange"
-        ],
+        labels: portfolioLabels,
         datasets: [
             {
                 label: "# of Votes",
-                data: [
-                    12,
-                    19,
-                    3,
-                    5,
-                    2,
-                    3
-                ],
+                data: portfolioPriceArray,
                 backgroundColor: [
-                    "rgba(255, 99, 132, 0.2)",
-                    "rgba(54, 162, 235, 0.2)",
-                    "rgba(255, 206, 86, 0.2)",
+                    "rgba(36, 108, 249, 0.2)",
+                    "rgba(247 , 147, 26, 0.2)",
+                    "rgba(71, 196, 100, 0.2)",
                     "rgba(75, 192, 192, 0.2)",
                     "rgba(153, 102, 255, 0.2)",
-                    "rgba(255, 159, 64, 0.2)", 
+                    "rgba(255, 159, 64, 0.2)",
+                    "rgba(175, 192, 192, 0.2)",
+                    "rgba(253, 102, 255, 0.2)",
+                    "rgba(155, 159, 64, 0.2)", 
                 ],
                 borderColor: [
-                    "rgba(255, 99, 132, 1)",
-                    "rgba(54, 162, 235, 1)",
-                    "rgba(255, 206, 86, 1)",
+                    "rgba(36,108,249, 1)",
+                    "rgba(247 , 147, 26, 1)",
+                    "rgba(71, 196, 100, 1)",
                     "rgba(75, 192, 192, 1)",
                     "rgba(153, 102, 255, 1)",
-                    "rgba(255, 159, 64, 1)", 
+                    "rgba(255, 159, 64, 1)",
+                    "rgba(175, 192, 192, 1)",
+                    "rgba(253, 102, 255, 1)",
+                    "rgba(155, 159, 64, 1)", 
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }, 
         ]
     },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
+    options: {}
 });
 
 },{"chart.js/auto":"hCqnV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hCqnV":[function(require,module,exports) {
