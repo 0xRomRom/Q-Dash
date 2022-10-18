@@ -537,9 +537,8 @@ var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 "use strict";
 const portfolioLabels = [
-    "Baby Samo Coin",
-    "Aptos",
-    "Cardano",
+    "Ethereum",
+    "Bitcoin",
     "Solana"
 ];
 const portfolioPriceArray = [

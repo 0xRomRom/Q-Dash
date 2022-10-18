@@ -2,7 +2,7 @@
 
 import Chart from "chart.js/auto";
 
-const portfolioLabels = ["Baby Samo Coin", "Aptos", "Cardano", "Solana"];
+const portfolioLabels = ["Ethereum", "Bitcoin", "Solana"];
 const portfolioPriceArray = [322, 120, 800, 230];
 
 const ctx = document.getElementById("myChart").getContext("2d");
