@@ -1624,7 +1624,7 @@ li > a {
 .balance-box-left {
   /* background-color: red; */
   height: 100%;
-  width: 48%;
+  width: 40%;
   padding: 1rem;
 }
 
@@ -1674,10 +1674,9 @@ li > a {
   position: relative;
   width: 2px;
   background-color: rgb(35, 36, 45);
-  /* background-color: red; */
   margin-top: 0.2rem;
-  height: 100%;
-  /* top: 20%; */
+  height: 90%;
+  top: 5%;
 }
 
 .usd-24h-price {
@@ -1721,6 +1720,103 @@ li > a {
   width: 28%;
   background-color: rgb(30, 31, 37);
   border-radius: 0.5rem;
+  overflow-y: scroll;
+}
+
+.assets-bal-top {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+.assets-bal-bot {
+  position: relative;
+  width: 100%;
+  height: 9rem;
+}
+
+.asset-row {
+  width: 100%;
+  height: 2.9rem;
+  display: flex;
+}
+
+.ass-img-box {
+  position: relative;
+  height: 100%;
+  width: 3rem;
+}
+
+.coin-ticker-div {
+  position: relative;
+  width: 4rem;
+  height: 100%;
+}
+
+.coin-total-div {
+  position: relative;
+  height: 100%;
+  width: 8rem;
+}
+
+.coin-total-price-div {
+  position: relative;
+  height: 100%;
+  width: 7.6rem;
+}
+
+.coin-total-price {
+  position: relative;
+  font-family: "Inter";
+  top: 0.8rem;
+  padding-left: 1rem;
+}
+.coin-total-count {
+  font-size: 1rem;
+  font-family: "Inter";
+  padding-top: 0.8rem;
+  padding-left: 1rem;
+}
+
+.coin-ticker-name {
+  position: relative;
+  top: 0.8rem;
+  font-family: "Inter";
+}
+
+.portfolio-coin-logo {
+  max-width: 30px;
+  left: 0.5rem;
+  position: relative;
+  top: 0.5rem;
+}
+
+.all-assets {
+  font-family: "Inter";
+  font-size: 1.3rem;
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  display: inline;
+}
+
+.add-asset {
+  position: absolute;
+  background-color: rgb(222, 27, 222);
+  color: white;
+  font-family: "Inter";
+  left: 80%;
+  top: 0.7rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.add-asset:hover {
+  background-color: rgb(208, 38, 208);
 }
 
 .view-assets {
@@ -1739,7 +1835,7 @@ li > a {
 
 .canvas-container {
   position: relative;
-  left: 4.5rem;
+  left: 6.5rem;
   top: -2rem;
   max-width: 200px !important;
   max-height: 200px !important;
@@ -1871,7 +1967,7 @@ li > a {
   width: 10.5rem;
   top: 0.2rem;
   height: 100%;
-  left: 56.5%;
+  left: 55%;
   /* border: 1px solid white; */
 }
 

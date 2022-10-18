@@ -544,8 +544,7 @@ const portfolioLabels = [
 const portfolioPriceArray = [
     322,
     120,
-    800,
-    230
+    800
 ];
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new (0, _autoDefault.default)(ctx, {
