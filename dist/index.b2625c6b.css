@@ -1531,24 +1531,65 @@ li > a {
   width: 70%;
   background-color: #1e1f25;
   border-radius: .5rem;
+  gap: 1rem;
   padding: 1rem;
+  display: flex;
+}
+
+.balance-box-left, .balance-box-right {
+  height: 100%;
+  width: 48%;
+}
+
+.fa-hand-holding-dollar {
+  color: #5e6276;
+  font-size: 1.2rem;
+}
+
+.change-title-top {
+  gap: 1rem;
+  display: flex;
 }
 
 .day-week-change {
   width: 20rem;
   height: 4rem;
-  border: 1px solid #fff;
+  justify-content: space-between;
+  display: flex;
   position: relative;
-  top: 1rem;
+  top: 2rem;
+}
+
+.day-change-title, .week-change-title {
+  color: #5e6276;
+  font-size: .9rem;
+}
+
+.hr-div {
+  width: 2px;
+  height: 90%;
+  background-color: #23242d;
+}
+
+.hr-div1 {
+  width: 2px;
+  height: 100%;
+  background-color: #23242d;
+  margin-top: .2rem;
+  position: relative;
+}
+
+.usd-24h-price, .usd-1w-price {
+  padding-top: .5rem;
+  font-family: Inter;
 }
 
 .daily-container, .weekly-container {
   width: 45%;
   height: 100%;
-  background-color: #fff;
 }
 
-.balance-title {
+.balance-title, .wallet-title {
   font-family: Inter;
   font-size: 1.3rem;
 }

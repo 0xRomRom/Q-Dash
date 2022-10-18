@@ -1617,29 +1617,94 @@ li > a {
   background-color: rgb(30, 31, 37);
   border-radius: 0.5rem;
   padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.balance-box-left {
+  /* background-color: red; */
+  height: 100%;
+  width: 48%;
+}
+
+.balance-box-right {
+  /* background-color: red; */
+  height: 100%;
+  width: 48%;
+}
+
+.fa-hand-holding-dollar {
+  color: rgb(94, 98, 118);
+  font-size: 1.2rem;
+}
+
+.change-title-top {
+  display: flex;
+  gap: 1rem;
 }
 
 .day-week-change {
   position: relative;
-  top: 1rem;
-  border: 1px solid white;
+  top: 2rem;
+  /* border: 1px solid white; */
   width: 20rem;
   height: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.day-change-title {
+  font-size: 0.9rem;
+  color: rgb(94, 98, 118);
+}
+.week-change-title {
+  font-size: 0.9rem;
+  color: rgb(94, 98, 118);
+}
+
+.hr-div {
+  width: 2px;
+  background-color: rgb(35, 36, 45);
+  height: 90%;
+  /* top: 20%; */
+}
+
+.hr-div1 {
+  position: relative;
+  width: 2px;
+  background-color: rgb(35, 36, 45);
+  /* background-color: red; */
+  margin-top: 0.2rem;
+  height: 100%;
+  /* top: 20%; */
+}
+
+.usd-24h-price {
+  padding-top: 0.5rem;
+  font-family: "Inter";
+}
+
+.usd-1w-price {
+  padding-top: 0.5rem;
+  font-family: "Inter";
 }
 
 .daily-container {
   width: 45%;
   height: 100%;
-  background-color: white;
 }
 
 .weekly-container {
   width: 45%;
   height: 100%;
-  background-color: white;
 }
 
 .balance-title {
+  font-family: "Inter";
+  font-size: 1.3rem;
+}
+
+.wallet-title {
   font-family: "Inter";
   font-size: 1.3rem;
 }
