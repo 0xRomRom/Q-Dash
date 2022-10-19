@@ -16,7 +16,7 @@ const myChart = new Chart(ctx, {
         data: portfolioPriceArray,
         backgroundColor: [
           "rgba(36, 108, 249, 0.2)",
-          "rgba(247 , 147, 26, 0.2)",
+          "rgba(247, 147, 26, 0.2)",
           "rgba(71, 196, 100, 0.2)",
           "rgba(75, 192, 192, 0.2)",
           "rgba(153, 102, 255, 0.2)",
@@ -26,8 +26,8 @@ const myChart = new Chart(ctx, {
           "rgba(155, 159, 64, 0.2)",
         ],
         borderColor: [
-          "rgba(36,108,249, 1)",
-          "rgba(247 , 147, 26, 1)",
+          "rgba(36, 108, 249, 1)",
+          "rgba(247, 147, 26, 1)",
           "rgba(71, 196, 100, 1)",
           "rgba(75, 192, 192, 1)",
           "rgba(153, 102, 255, 1)",
