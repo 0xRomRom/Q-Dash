@@ -6,8 +6,7 @@ const watchListDiv = document.querySelector(".watchlist-div");
 const dropShadow = document.querySelector(".dropshadow");
 const viewWatchlist = document.querySelector(".view-watchlist");
 const watchListBox = document.querySelector(".watchlist-box");
-const viewAssets = document.querySelector(".view-assets");
-const assetsBox = document.querySelector(".assets-box");
+
 const addItemToWatchlist = document.querySelector(".add-to-watchlist");
 const modalDropShadow = document.querySelector(".modal-dropshadow");
 const closeSearchModal = document.querySelector(".inner-search-close");
@@ -44,27 +43,6 @@ window.addEventListener("load", async () => {
 });
 
 // Toggle to watchlist view
-viewWatchlist.addEventListener("click", () => {
-  viewWatchlist.classList.remove("fadeColorOut");
-  viewWatchlist.classList.add("fadeColorIn");
-  viewAssets.classList.add("fadeColorOut");
-  watchListBox.classList.remove("hidden");
-  watchListBox.classList.add("fadeBoxIn");
-  assetsBox.classList.add("hidden");
-  setTimeout(() => {
-    watchListBox.classList.remove("fadeBoxIn");
-  }, 500);
-});
-
-// Toggle to assets view
-viewAssets.addEventListener("click", () => {
-  viewAssets.classList.remove("fadeColorOut");
-  viewAssets.classList.add("fadeColorIn");
-  viewWatchlist.classList.add("fadeColorOut");
-  assetsBox.classList.remove("hidden");
-  assetsBox.classList.add("fadeBoxIn");
-  watchListBox.classList.add("hidden");
-});
 
 // Open watchlist modal
 watchListButton.addEventListener("click", () => {

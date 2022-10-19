@@ -27,8 +27,8 @@ gtag("config", "G-S26PTY099E");
     <script src="/index.d35cb003.js" defer=""></script>
     <script src="/index.293883f5.js" defer=""></script>
     <script src="/index.cde5dfe0.js" defer=""></script>
+    <script src="/index.3b82516c.js" defer=""></script>
     <script src="/index.9db9efab.js" defer=""></script>
-    <script src="/index.a3eff71a.js" defer=""></script>
     <script src="/index.ec980dba.js" defer=""></script>
     <script src="https://kit.fontawesome.com/5f3c108898.js" crossorigin="anonymous"></script>
     <script src="https://s3.tradingview.com/tv.js"></script>
@@ -36,6 +36,7 @@ gtag("config", "G-S26PTY099E");
   </head>
   <body>
     <div class="dropshadow hidden"></div>
+    <div class="dropshadow-conv hidden"></div>
     <div class="dropshadow-contr hidden"></div>
     <div class="dropshadow-srch hidden"></div>
     <div class="meme-bg"></div>
@@ -69,6 +70,10 @@ gtag("config", "G-S26PTY099E");
             <p class="side-text-abs main-d">Main Dash</p>
             <p class="side-text-abs meme-d">Meme Dash</p>
           </button>
+          <div class="converter side-style">
+            <i class="fa-solid fa-hand-holding-dollar i4"></i>
+            <p class="side-text">Converter</p>
+          </div>
           <div class="watchlist side-style">
             <i class="fa-regular fa-clock i1"></i>
             <p class="side-text">Watchlist</p>
@@ -720,14 +725,16 @@ gtag("config", "G-S26PTY099E");
           </div>
         </div>
       </div>
+      <div class="converter-div hidden">
+        <i class="fa-solid fa-x conv-close"></i>
+      </div>
       <div class="watchlist-div hidden">
         <div class="modal-dropshadow hidden"></div>
         <i class="fa-solid fa-x watch-close"></i>
         <div class="toggle-watchlist">
           <h1 class="view-watchlist">Watchlist</h1>
-          <h1 class="view-assets">Assets</h1>
         </div>
-        <div class="watchlist-box hidden">
+        <div class="watchlist-box">
           <div class="watch-top">
             <button class="add-to-watchlist btn-stl">
               <span class="add-left">Add Item</span>
@@ -752,137 +759,6 @@ gtag("config", "G-S26PTY099E");
               <span class="add-span">+ ADD</span>
               <img src="/index.html" class="coin-result-logo" alt="crypto coin logo">
             </button>
-          </div>
-        </div>
-        <div class="assets-box">
-          <div class="top-assets">
-            <div class="balance-box">
-              <div class="balance-box-left">
-                <h2 class="balance-title">Balance</h2>
-                <h1 class="balance-usd">USD 12.783,87</h1>
-                <div class="day-week-change">
-                  <div class="daily-container">
-                    <div class="change-title-top">
-                      <i class="fa-solid fa-hand-holding-dollar"></i>
-                      <h2 class="day-change-title">24H Change</h2>
-                    </div>
-                    <h3 class="usd-24h-price">USD 872,91</h3>
-                  </div>
-                  <div class="hr-div"></div>
-                  <div class="weekly-container">
-                    <div class="change-title-top">
-                      <i class="fa-solid fa-hand-holding-dollar"></i>
-                      <h2 class="week-change-title">1W Change</h2>
-                    </div>
-                    <h3 class="usd-1w-price">USD 2.498,44</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="hr-div1"></div>
-              <div class="balance-box-right">
-                <h2 class="wallet-title">Wallet</h2>
-                <div class="canvas-container">
-                  <div class="assets-change-box">
-                    <i class="fa-solid fa-arrow-up"></i>
-                    <i class="fa-solid fa-arrow-down hidden"></i>
-                    <h3 class="wallet-perc-change">8.31%</h3>
-                  </div>
-                  <canvas id="myChart" width="200" height="200"></canvas>
-                </div>
-                <div class="top-changers">
-                  <h1 class="top-3-title">Top 3 Change</h1>
-                  <div class="top3-1">
-                    <div class="top-img-box">
-                      <img src="/solana.d67c95be.png" alt="coin logo" class="logo-3 logo-st">
-                    </div>
-                    <div class="top-title-box">
-                      <h1 class="top-title top-title1">SOL</h1>
-                      <h6 class="ttf top-title1-full">Solana</h6>
-                    </div>
-                    <div class="coin-perc">
-                      <i class="fa-solid fa-arrow-up wallet-arrow"></i>
-                      <p>0.97%</p>
-                    </div>
-                  </div>
-                  <div class="top3-2">
-                    <div class="top-img-box">
-                      <img src="/Ethereum.8ea6f8fb.svg" alt="coin logo" class="logo-3 logo-st">
-                    </div>
-                    <div class="top-title-box">
-                      <h1 class="top-title top-title1">ETH</h1>
-                      <h6 class="ttf top-title1-full">Ethereum</h6>
-                    </div>
-                    <div class="coin-perc">
-                      <i class="fa-solid fa-arrow-up wallet-arrow"></i>
-                      <p>8.51%</p>
-                    </div>
-                  </div>
-                  <div class="top3-3">
-                    <div class="top-img-box">
-                      <img src="/Bitcoin.svg.3f3c6451.png" alt="coin logo" class="logo-3 logo-st">
-                    </div>
-                    <div class="top-title-box">
-                      <h1 class="top-title top-title1">BTC</h1>
-                      <h6 class="ttf top-title1-full">Bitcoin</h6>
-                    </div>
-                    <div class="coin-perc">
-                      <i class="fa-solid fa-arrow-up wallet-arrow"></i>
-                      <p>2.36%</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="assets-balance-box">
-              <div class="assets-bal-top">
-                <h1 class="all-assets">All Assets</h1>
-                <button class="add-asset">Add</button>
-              </div>
-              <div class="assets-bal-bot">
-                <div class="asset-row">
-                  <div class="ass-img-box">
-                    <img src="/Bitcoin.svg.3f3c6451.png" alt="portfolio coin logo" class="portfolio-coin-logo">
-                  </div>
-                  <div class="coin-ticker-div">
-                    <p class="coin-ticker-name">BTC</p>
-                  </div>
-                  <div class="coin-total-div">
-                    <p class="coin-total-count">0.88513</p>
-                  </div>
-                  <div class="coin-total-price-div">
-                    <p class="coin-total-price">$10.354,91</p>
-                  </div>
-                </div>
-                <div class="asset-row">
-                  <div class="ass-img-box">
-                    <img src="/solana.d67c95be.png" alt="portfolio coin logo" class="portfolio-coin-logo">
-                  </div>
-                  <div class="coin-ticker-div">
-                    <p class="coin-ticker-name">SOL</p>
-                  </div>
-                  <div class="coin-total-div">
-                    <p class="coin-total-count">23</p>
-                  </div>
-                  <div class="coin-total-price-div">
-                    <p class="coin-total-price">$721,33</p>
-                  </div>
-                </div>
-                <div class="asset-row">
-                  <div class="ass-img-box">
-                    <img src="/Ethereum.8ea6f8fb.svg" alt="portfolio coin logo" class="portfolio-coin-logo">
-                  </div>
-                  <div class="coin-ticker-div">
-                    <p class="coin-ticker-name">ETH</p>
-                  </div>
-                  <div class="coin-total-div">
-                    <p class="coin-total-count">4.22</p>
-                  </div>
-                  <div class="coin-total-price-div">
-                    <p class="coin-total-price">$7.871,67</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

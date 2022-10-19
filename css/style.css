@@ -1060,6 +1060,15 @@ li > a {
   background-color: rgba(16, 20, 16, 0.71);
 }
 
+.dropshadow-conv {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(16, 20, 16, 0.71);
+}
+
 .dropshadow-srch {
   position: absolute;
   width: 100vw;
@@ -1067,6 +1076,13 @@ li > a {
   top: 0;
   z-index: 20;
   background-color: rgba(16, 20, 16, 0.71);
+}
+
+.conv-close {
+  position: relative;
+  left: 88% !important;
+  font-size: 1.5rem !important;
+  top: 1rem !important;
 }
 
 .fa-x {
@@ -1590,401 +1606,6 @@ li > a {
 
 .add-search-button:hover {
   background-color: rgb(191, 31, 191);
-}
-
-.assets-box {
-  position: relative;
-  width: 99%;
-  left: 0.3%;
-  height: 40rem;
-  top: 5.8rem;
-}
-
-.top-assets {
-  position: relative;
-  width: 98%;
-  /* border: 1px solid white; */
-  left: 1%;
-  height: 12rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.balance-box {
-  height: 100%;
-  width: 70%;
-  background-color: rgb(30, 31, 37);
-  border-radius: 0.5rem;
-
-  display: flex;
-  gap: 1rem;
-}
-
-.balance-box-left {
-  /* background-color: red; */
-  height: 100%;
-  width: 40%;
-  padding: 1rem;
-}
-
-.balance-box-right {
-  /* background-color: red; */
-  height: 100%;
-  width: 48%;
-  overflow: hidden;
-}
-
-.fa-hand-holding-dollar {
-  color: rgb(94, 98, 118);
-  font-size: 1.2rem;
-}
-
-.change-title-top {
-  display: flex;
-  gap: 1rem;
-}
-
-.day-week-change {
-  position: relative;
-  top: 2rem;
-  width: 20rem;
-  height: 4rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.day-change-title {
-  font-size: 0.9rem;
-  color: rgb(94, 98, 118);
-}
-.week-change-title {
-  font-size: 0.9rem;
-  color: rgb(94, 98, 118);
-}
-
-.hr-div {
-  width: 2px;
-  background-color: rgb(35, 36, 45);
-  height: 90%;
-  /* top: 20%; */
-}
-
-.hr-div1 {
-  position: relative;
-  width: 2px;
-  background-color: rgb(35, 36, 45);
-  margin-top: 0.2rem;
-  height: 90%;
-  top: 5%;
-}
-
-.usd-24h-price {
-  padding-top: 0.5rem;
-  font-family: "Inter";
-}
-
-.usd-1w-price {
-  padding-top: 0.5rem;
-  font-family: "Inter";
-}
-
-.daily-container {
-  width: 45%;
-  height: 100%;
-}
-
-.weekly-container {
-  width: 45%;
-  height: 100%;
-}
-
-.balance-title {
-  font-family: "Inter";
-  font-size: 1.3rem;
-}
-
-.wallet-title {
-  font-family: "Inter";
-  font-size: 1.3rem;
-  padding: 1rem 0rem 0rem 0.1rem;
-}
-
-.balance-usd {
-  font-family: "Inter";
-  padding-top: 1rem;
-}
-
-.assets-balance-box {
-  height: 100%;
-  width: 28%;
-  background-color: rgb(30, 31, 37);
-  border-radius: 0.5rem;
-  overflow-y: scroll;
-}
-
-.assets-bal-top {
-  position: relative;
-  width: 100%;
-  height: 3rem;
-}
-
-.assets-bal-bot {
-  position: relative;
-  width: 100%;
-  height: 9rem;
-}
-
-.asset-row {
-  width: 100%;
-  height: 2.9rem;
-  display: flex;
-}
-
-.ass-img-box {
-  position: relative;
-  height: 100%;
-  width: 3rem;
-}
-
-.coin-ticker-div {
-  position: relative;
-  width: 4rem;
-  height: 100%;
-}
-
-.coin-total-div {
-  position: relative;
-  height: 100%;
-  width: 8rem;
-}
-
-.coin-total-price-div {
-  position: relative;
-  height: 100%;
-  width: 7.6rem;
-}
-
-.coin-total-price {
-  position: relative;
-  font-family: "Inter";
-  top: 0.8rem;
-  padding-left: 1rem;
-}
-.coin-total-count {
-  font-size: 1rem;
-  font-family: "Inter";
-  padding-top: 0.8rem;
-  padding-left: 1rem;
-}
-
-.coin-ticker-name {
-  position: relative;
-  top: 0.8rem;
-  font-family: "Inter";
-}
-
-.portfolio-coin-logo {
-  max-width: 30px;
-  left: 0.5rem;
-  position: relative;
-  top: 0.5rem;
-}
-
-.all-assets {
-  font-family: "Inter";
-  font-size: 1.3rem;
-  position: relative;
-  top: 1rem;
-  left: 1rem;
-  display: inline;
-}
-
-.add-asset {
-  position: absolute;
-  background-color: rgb(222, 27, 222);
-  color: white;
-  font-family: "Inter";
-  left: 80%;
-  top: 0.7rem;
-  font-size: 1.2rem;
-  border: none;
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-
-.add-asset:hover {
-  background-color: rgb(208, 38, 208);
-}
-
-.view-assets {
-  color: rgb(159, 151, 151);
-  z-index: 30;
-  font-family: "Open Sans";
-  cursor: pointer;
-}
-
-#myChart {
-  width: 175px !important;
-  height: 175px !important;
-  color: transparent;
-  /* border: 1px solid white; */
-}
-
-.canvas-container {
-  position: relative;
-  left: 6.5rem;
-  top: -2rem;
-  max-width: 200px !important;
-  max-height: 200px !important;
-  /* border: 1px solid white; */
-  color: transparent;
-}
-
-.canvas-overlay {
-  position: absolute;
-  height: 3rem;
-  width: 100%;
-  background-color: rgb(30, 31, 37);
-  /* background-color: green; */
-}
-
-.assets-change-box {
-  position: absolute;
-  height: 3rem;
-  width: 3.5rem;
-  /* border: 1px solid white; */
-  left: 29%;
-  top: 4.2rem;
-}
-
-.logo-1 {
-  position: relative;
-  max-width: 20px;
-}
-
-.logo-st {
-  position: relative;
-  max-width: 20px;
-  top: 0.4rem;
-}
-
-.top-title2 {
-  font-family: "Inter";
-  font-size: 0.9rem;
-  position: absolute;
-  left: 1.75rem;
-  top: -2rem !important;
-}
-
-.top-title {
-  font-family: "Inter";
-  font-size: 0.9rem;
-  position: relative;
-}
-
-.wallet-arrow {
-  padding-top: 0.2rem !important;
-  padding-right: 0.5rem;
-}
-
-.coin-perc {
-  position: relative;
-  width: 4.3rem;
-
-  display: flex;
-}
-
-.top-img-box {
-  position: relative;
-  width: 1.5rem;
-  height: 100%;
-}
-
-.top-title-box {
-  position: relative;
-  width: 7rem;
-  height: 100%;
-  padding-left: 0.3rem;
-}
-
-.top-title2-full {
-  position: absolute;
-  top: -2rem !important;
-}
-
-.cp-2 {
-  top: -4.8rem;
-}
-
-.ttf {
-  font-family: "Inter";
-  font-size: 0.9rem;
-  position: relative;
-
-  padding-top: 0.3rem;
-  color: rgb(64, 68, 90);
-}
-
-.top3-1 {
-  width: 100%;
-  height: 3.1rem;
-  display: flex;
-}
-.top3-2 {
-  /* background-color: red; */
-  width: 100%;
-  height: 3.1rem;
-  position: relative;
-  margin-top: 0.5rem;
-  display: flex;
-}
-.top3-3 {
-  width: 100%;
-  height: 3.1rem;
-  margin-top: 0.5rem;
-  display: flex;
-}
-
-.top-3-title {
-  color: rgb(106, 110, 132);
-  font-size: 1rem;
-  text-align: end;
-  padding-right: 0.3rem;
-  padding-bottom: 0.5rem;
-}
-
-.fa-arrow-up {
-  color: rgb(34, 236, 34);
-  padding-top: 0.8rem;
-  position: relative;
-}
-
-.top-changers {
-  position: absolute;
-  width: 10.5rem;
-  top: 0.2rem;
-  height: 100%;
-  left: 55%;
-  /* border: 1px solid white; */
-}
-
-.fa-arrow-down {
-  color: rgb(255, 3, 3);
-  padding-top: 0.8rem;
-  position: relative;
-  font-size: 1.1rem;
-}
-
-.wallet-perc-change {
-  color: white;
-  font-family: "Inter";
-  font-size: 0.9rem;
-  position: absolute;
-  left: 1.1rem;
-  top: 0.75rem;
 }
 
 .wallet-arrow {
@@ -2991,6 +2612,17 @@ input:focus {
 
 .chihuahuatoken-price {
   font-size: 2vw;
+}
+
+.converter-div {
+  z-index: 50;
+  position: absolute;
+  top: 0rem;
+  width: 20rem;
+  left: 43%;
+  top: 10rem;
+  height: 35rem;
+  background-color: rgb(25, 27, 31);
 }
 
 @media only screen and (max-width: 1915px) {

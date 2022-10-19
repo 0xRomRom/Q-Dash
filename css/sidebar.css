@@ -126,6 +126,23 @@
   transform: translateX(210%);
 }
 
+.fa-hand-holding-dollar {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.i4 {
+  position: absolute;
+  left: -3rem;
+}
+
+.converter:hover .i4 {
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  position: absolute;
+  transform: translateX(210%);
+}
+
 .side-text {
   color: rgb(215, 207, 207);
   font-family: "Open Sans";
