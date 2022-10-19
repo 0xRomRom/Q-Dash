@@ -1085,6 +1085,155 @@ li > a {
   top: 1rem !important;
 }
 
+.converter-title {
+  color: white;
+  font-family: "Inter";
+  text-align: center;
+  font-size: 1.3rem;
+  top: 3rem;
+  position: relative;
+}
+
+.from {
+  color: rgb(87, 82, 82);
+  font-family: "Inter";
+  position: relative;
+  top: 4rem;
+  left: 1.8rem;
+}
+
+.to {
+  color: rgb(87, 82, 82);
+  font-family: "Inter";
+  position: relative;
+  top: 8rem;
+  left: 1.8rem;
+}
+
+.top-input-conv {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 3rem;
+  top: 4.5rem;
+  border-radius: 1.5rem;
+  background-color: rgb(39, 41, 51);
+  border: 1px solid rgb(68, 69, 77);
+  outline: 0;
+  overflow: hidden;
+}
+
+.bot-input-conv {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 3rem;
+  top: 8.5rem;
+  border-radius: 1.5rem;
+  background-color: rgb(39, 41, 51);
+  border: 1px solid rgb(68, 69, 77);
+  outline: 0;
+  overflow: hidden;
+}
+
+.conv-input-box {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  height: 27.4rem;
+  top: 5rem;
+  /* border: 1px solid white; */
+  background-color: rgb(33, 36, 44);
+  border-radius: 0.8rem;
+  z-index: 10;
+}
+
+.convert-btn {
+  font-family: "Inter";
+  position: relative;
+  width: 40%;
+  left: 30%;
+  top: 10rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: rgb(126, 20, 126);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.convert-btn:hover {
+  background-color: rgb(190, 26, 190);
+}
+
+.swap-conversion {
+  color: rgb(169, 162, 162);
+  position: relative;
+  font-size: 1.5rem;
+  left: 8rem;
+  top: 7rem;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.swap-conversion:hover {
+  color: white;
+}
+
+.conv-top {
+  /* border: 1px solid white; */
+  background-color: rgb(33, 36, 44);
+  /* background-color: blue; */
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  color: white;
+  padding-left: 1rem;
+  border: none;
+  outline: 0;
+  font-family: "Inter";
+}
+
+.hr-div {
+  position: absolute;
+  height: 70%;
+  top: 15%;
+  width: 1px;
+  left: 10rem;
+  background-color: rgb(72, 67, 67);
+}
+
+.conv-top-btn {
+  position: absolute;
+  background-color: transparent;
+  /* background-color: red; */
+  width: 4.5rem;
+  height: 3rem;
+  left: 10.1rem;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.conv-top-btn:hover .fa-chevron-down {
+  color: white;
+}
+
+.conv-img-top {
+  max-width: 25px;
+  /* border: 1px solid white; */
+  left: -1rem;
+  position: relative;
+}
+
+.fa-chevron-down {
+  color: gray;
+  position: absolute;
+  top: 1.1rem;
+  left: 2.7rem;
+}
+
 .fa-x {
   position: absolute;
   color: white;
@@ -2622,6 +2771,7 @@ input:focus {
   left: 43%;
   top: 10rem;
   height: 35rem;
+  border-radius: 0.4rem;
   background-color: rgb(25, 27, 31);
 }
 
