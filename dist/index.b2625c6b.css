@@ -1188,6 +1188,36 @@ li > a {
   background-color: #be1abe;
 }
 
+.top-search-res-img {
+  width: 30px;
+  cursor: pointer;
+  background-color: #0000;
+  border-radius: 1rem;
+  outline: 0;
+  position: absolute;
+  top: .5rem;
+  left: 11rem;
+}
+
+.top-search-res-img:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.bot-search-res-img {
+  width: 30px;
+  cursor: pointer;
+  background-color: #0000;
+  border-radius: 1rem;
+  outline: 0;
+  position: absolute;
+  top: .5rem;
+  left: 11rem;
+}
+
+.bot-search-res-img:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
 .search-bot-btn {
   width: 4.5rem;
   height: 3rem;
@@ -1222,7 +1252,7 @@ li > a {
   color: #fff;
 }
 
-.conv-img-top {
+.conv-img-top, .conv-img-bot {
   max-width: 25px;
   position: relative;
   left: -1rem;

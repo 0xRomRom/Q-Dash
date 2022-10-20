@@ -1335,6 +1335,38 @@ li > a {
   background-color: rgb(190, 26, 190);
 }
 
+.top-search-res-img {
+  position: absolute;
+  background-color: transparent;
+  /* background-color: red; */
+  width: 30px;
+  left: 11rem;
+  top: 0.5rem;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.top-search-res-img:hover {
+  box-shadow: 0px 0px 5px white;
+}
+
+.bot-search-res-img {
+  position: absolute;
+  background-color: transparent;
+  /* background-color: red; */
+  width: 30px;
+  left: 11rem;
+  top: 0.5rem;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.bot-search-res-img:hover {
+  box-shadow: 0px 0px 5px white;
+}
+
 .search-bot-btn {
   position: absolute;
   background-color: transparent;
@@ -1372,6 +1404,13 @@ li > a {
 }
 
 .conv-img-top {
+  max-width: 25px;
+  /* border: 1px solid white; */
+  left: -1rem;
+  position: relative;
+}
+
+.conv-img-bot {
   max-width: 25px;
   /* border: 1px solid white; */
   left: -1rem;
