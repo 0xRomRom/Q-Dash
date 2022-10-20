@@ -1136,7 +1136,33 @@ li > a {
   overflow: hidden;
 }
 
+.bot-search-conv {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 3rem;
+  top: 4.5rem;
+  border-radius: 1.5rem;
+  background-color: rgb(39, 41, 51);
+  border: 1px solid rgb(68, 69, 77);
+  outline: 0;
+  overflow: hidden;
+}
+
 .bot-input-conv {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 3rem;
+  top: 8.5rem;
+  border-radius: 1.5rem;
+  background-color: rgb(39, 41, 51);
+  border: 1px solid rgb(68, 69, 77);
+  outline: 0;
+  overflow: hidden;
+}
+
+.bot-search-conv {
   position: relative;
   width: 80%;
   left: 10%;
@@ -1208,7 +1234,35 @@ li > a {
   font-family: "Inter";
 }
 
+.conv-bot {
+  /* border: 1px solid white; */
+  background-color: rgb(33, 36, 44);
+  /* background-color: blue; */
+  width: 110% !important;
+  height: 100%;
+  border-radius: 1rem;
+  color: white;
+  padding-left: 1rem;
+  border: none;
+  outline: 0;
+  font-family: "Inter";
+}
+
 .search-top {
+  /* border: 1px solid white; */
+  background-color: rgb(33, 36, 44);
+  /* background-color: blue; */
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  color: white;
+  padding-left: 1rem;
+  border: none;
+  outline: 0;
+  font-family: "Inter";
+}
+
+.search-bot {
   /* border: 1px solid white; */
   background-color: rgb(33, 36, 44);
   /* background-color: blue; */
@@ -1278,6 +1332,26 @@ li > a {
 }
 
 .search-top-btn:hover {
+  background-color: rgb(190, 26, 190);
+}
+
+.search-bot-btn {
+  position: absolute;
+  background-color: transparent;
+  /* background-color: red; */
+  width: 4.5rem;
+  height: 3rem;
+  left: 10rem;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: "Inter";
+  font-weight: 800;
+  z-index: 30;
+}
+
+.search-bot-btn:hover {
   background-color: rgb(190, 26, 190);
 }
 

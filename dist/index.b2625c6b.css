@@ -1039,7 +1039,7 @@ li > a {
   left: 1.8rem;
 }
 
-.top-input-conv, .top-search-conv {
+.top-input-conv, .top-search-conv, .bot-search-conv {
   width: 80%;
   height: 3rem;
   background-color: #272933;
@@ -1052,7 +1052,7 @@ li > a {
   overflow: hidden;
 }
 
-.bot-input-conv {
+.bot-input-conv, .bot-search-conv {
   width: 80%;
   height: 3rem;
   background-color: #272933;
@@ -1121,7 +1121,19 @@ li > a {
   font-family: Inter;
 }
 
-.search-top, .conv-bot {
+.conv-bot {
+  height: 100%;
+  color: #fff;
+  background-color: #21242c;
+  border: none;
+  border-radius: 1rem;
+  outline: 0;
+  padding-left: 1rem;
+  font-family: Inter;
+  width: 110% !important;
+}
+
+.search-top, .search-bot, .conv-bot {
   width: 100%;
   height: 100%;
   color: #fff;
@@ -1173,6 +1185,25 @@ li > a {
 }
 
 .search-top-btn:hover {
+  background-color: #be1abe;
+}
+
+.search-bot-btn {
+  width: 4.5rem;
+  height: 3rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 30;
+  background-color: #0000;
+  border: none;
+  outline: 0;
+  font-family: Inter;
+  font-weight: 800;
+  position: absolute;
+  left: 10rem;
+}
+
+.search-bot-btn:hover {
   background-color: #be1abe;
 }
 
