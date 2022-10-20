@@ -21,6 +21,7 @@ const topResultBox = document.querySelector(".top-input-conv");
 const botResultBox = document.querySelector(".bot-input-conv");
 const topSearchBox = document.querySelector(".top-search-conv");
 const botSearchBox = document.querySelector(".bot-search-conv");
+const convertCurrencies = document.querySelector(".convert-btn");
 
 converter.addEventListener("click", () => {
   dropShadow.classList.remove("hidden");
@@ -208,4 +209,10 @@ botSearchResultImage.addEventListener("click", () => {
   convImgBot.src = botImage;
   botResultBox.classList.remove("hidden");
   botSearchBox.classList.add("hidden");
+});
+
+convertCurrencies.addEventListener("click", () => {
+  console.log(+topInput.value);
+  botInput.value = +topInput.value * topPrice;
+  console.log(botPrice * +topInput.value);
 });
