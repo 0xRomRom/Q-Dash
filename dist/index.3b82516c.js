@@ -555,6 +555,7 @@ const botResultBox = document.querySelector(".bot-input-conv");
 const topSearchBox = document.querySelector(".top-search-conv");
 const botSearchBox = document.querySelector(".bot-search-conv");
 const convertCurrencies = document.querySelector(".convert-btn");
+const swapConversion = document.querySelector(".swap-conversion");
 converter.addEventListener("click", ()=>{
     dropShadow.classList.remove("hidden");
     converterDiv.classList.remove("hidden");
@@ -603,13 +604,16 @@ botInput.addEventListener("click", ()=>{
 topSearchButton.addEventListener("click", ()=>{
     coinSearcherTop();
 });
+topSearchInput.addEventListener("keyup", (e)=>{
+    if (e.key === "Enter") coinSearcherTop();
+});
 let topImage = "";
 let topPrice = 0;
 // Used to store user inserted search value
 let userValueTop;
 // Fetch coin name
 const coinSearcherTop = async ()=>{
-    let searchValue = topSearchInput.value.toLowerCase();
+    let searchValue = topSearchInput.value.toLowerCase() || "bitcoin";
     userValueTop = searchValue;
     try {
         const response = await fetch(`https://api.coingecko.com/api/v3/search?query=${searchValue}`);
@@ -634,7 +638,6 @@ const dataFetcher = async (id)=>{
     try {
         const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
         const data = await response.json();
-        console.log(data[0]);
         topSearchInput.value = "";
         topSearchButton.classList.add("hidden");
         topSearchResultImage.classList.remove("hidden");
@@ -649,6 +652,7 @@ const dataFetcher = async (id)=>{
         console.log(err);
     }
 };
+coinSearcherTop();
 let botImage = "";
 let botPrice = 0;
 // Used to store user inserted search value
@@ -656,9 +660,12 @@ let userValueBot;
 botSearchButton.addEventListener("click", ()=>{
     coinSearcherBot();
 });
+botSearchInput.addEventListener("keyup", (e)=>{
+    if (e.key === "Enter") coinSearcherBot();
+});
 // Fetch coin name
 const coinSearcherBot = async ()=>{
-    let searchValue = botSearchInput.value.toLowerCase();
+    let searchValue = botSearchInput.value.toLowerCase() || "bitcoin";
     userValueBot = searchValue;
     try {
         const response = await fetch(`https://api.coingecko.com/api/v3/search?query=${searchValue}`);
@@ -698,10 +705,41 @@ const dataFetcherBot = async (id)=>{
         console.log(err);
     }
 };
+coinSearcherBot();
 convertCurrencies.addEventListener("click", ()=>{
-    console.log(+topInput.value);
-    botInput.value = +topInput.value * topPrice / botPrice;
-    console.log(+topInput.value * topPrice);
+    if (topInput.value === "") return;
+    const output = +topInput.value * topPrice / botPrice;
+    botInput.value = output > 0.1 ? output.toFixed(3) : output.toFixed(6);
+});
+let switched = false;
+swapConversion.addEventListener("click", ()=>{
+    if (!switched) {
+        let tempTopImg = topImage;
+        let tempBotImg = botImage;
+        let tempTopPrice = topPrice;
+        let tempBotPrice = botPrice;
+        botPrice = tempTopPrice;
+        topPrice = tempBotPrice;
+        convImgTop.src = tempBotImg;
+        convImgBot.src = tempTopImg;
+        switched = true;
+        const output = +topInput.value * topPrice / botPrice;
+        botInput.value = output > 0.1 ? output.toFixed(3) : output.toFixed(6);
+        return;
+    }
+    if (switched) {
+        let tempTopImg1 = topImage;
+        let tempBotImg1 = botImage;
+        let tempTopPrice1 = botPrice;
+        let tempBotPrice1 = topPrice;
+        botPrice = tempBotPrice1;
+        topPrice = tempTopPrice1;
+        convImgTop.src = tempTopImg1;
+        convImgBot.src = tempBotImg1;
+        switched = false;
+        const output1 = +topInput.value * topPrice / botPrice;
+        botInput.value = output1 > 0.1 ? output1.toFixed(3) : output1.toFixed(6);
+    }
 });
 
 },{}]},["22jdy","jYW2n"], "jYW2n", "parcelRequire379f")

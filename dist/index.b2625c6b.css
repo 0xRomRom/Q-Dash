@@ -1252,8 +1252,15 @@ li > a {
   color: #fff;
 }
 
-.conv-img-top, .conv-img-bot {
+.conv-img-top {
   max-width: 25px;
+  position: relative;
+  left: -1rem;
+}
+
+.conv-img-bot {
+  max-width: 25px;
+  border-radius: 1rem;
   position: relative;
   left: -1rem;
 }

@@ -1415,6 +1415,7 @@ li > a {
   /* border: 1px solid white; */
   left: -1rem;
   position: relative;
+  border-radius: 1rem;
 }
 
 .fa-chevron-down {

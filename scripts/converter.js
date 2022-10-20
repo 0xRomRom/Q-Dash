@@ -22,6 +22,7 @@ const botResultBox = document.querySelector(".bot-input-conv");
 const topSearchBox = document.querySelector(".top-search-conv");
 const botSearchBox = document.querySelector(".bot-search-conv");
 const convertCurrencies = document.querySelector(".convert-btn");
+const swapConversion = document.querySelector(".swap-conversion");
 
 converter.addEventListener("click", () => {
   dropShadow.classList.remove("hidden");
@@ -80,6 +81,12 @@ topSearchButton.addEventListener("click", () => {
   coinSearcherTop();
 });
 
+topSearchInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    coinSearcherTop();
+  }
+});
+
 let topImage = "";
 let topPrice = 0;
 
@@ -88,7 +95,7 @@ let userValueTop;
 
 // Fetch coin name
 const coinSearcherTop = async () => {
-  let searchValue = topSearchInput.value.toLowerCase();
+  let searchValue = topSearchInput.value.toLowerCase() || "bitcoin";
   userValueTop = searchValue;
   try {
     const response = await fetch(
@@ -126,7 +133,6 @@ const dataFetcher = async (id) => {
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
     );
     const data = await response.json();
-    console.log(data[0]);
     topSearchInput.value = "";
     topSearchButton.classList.add("hidden");
     topSearchResultImage.classList.remove("hidden");
@@ -142,6 +148,8 @@ const dataFetcher = async (id) => {
   }
 };
 
+coinSearcherTop();
+
 let botImage = "";
 let botPrice = 0;
 
@@ -152,9 +160,15 @@ botSearchButton.addEventListener("click", () => {
   coinSearcherBot();
 });
 
+botSearchInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    coinSearcherBot();
+  }
+});
+
 // Fetch coin name
 const coinSearcherBot = async () => {
-  let searchValue = botSearchInput.value.toLowerCase();
+  let searchValue = botSearchInput.value.toLowerCase() || "bitcoin";
   userValueBot = searchValue;
   try {
     const response = await fetch(
@@ -207,9 +221,46 @@ const dataFetcherBot = async (id) => {
     console.log(err);
   }
 };
+coinSearcherBot();
 
 convertCurrencies.addEventListener("click", () => {
-  console.log(+topInput.value);
-  botInput.value = (+topInput.value * topPrice) / botPrice;
-  console.log(+topInput.value * topPrice);
+  if (topInput.value === "") return;
+  const output = (+topInput.value * topPrice) / botPrice;
+  botInput.value = output > 0.1 ? output.toFixed(3) : output.toFixed(6);
+});
+
+let switched = false;
+
+swapConversion.addEventListener("click", () => {
+  if (!switched) {
+    let tempTopImg = topImage;
+    let tempBotImg = botImage;
+
+    let tempTopPrice = topPrice;
+    let tempBotPrice = botPrice;
+
+    botPrice = tempTopPrice;
+    topPrice = tempBotPrice;
+    convImgTop.src = tempBotImg;
+    convImgBot.src = tempTopImg;
+    switched = true;
+    const output = (+topInput.value * topPrice) / botPrice;
+    botInput.value = output > 0.1 ? output.toFixed(3) : output.toFixed(6);
+    return;
+  }
+  if (switched) {
+    let tempTopImg = topImage;
+    let tempBotImg = botImage;
+
+    let tempTopPrice = botPrice;
+    let tempBotPrice = topPrice;
+
+    botPrice = tempBotPrice;
+    topPrice = tempTopPrice;
+    convImgTop.src = tempTopImg;
+    convImgBot.src = tempBotImg;
+    switched = false;
+    const output = (+topInput.value * topPrice) / botPrice;
+    botInput.value = output > 0.1 ? output.toFixed(3) : output.toFixed(6);
+  }
 });
