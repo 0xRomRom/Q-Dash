@@ -1039,7 +1039,7 @@ li > a {
   left: 1.8rem;
 }
 
-.top-input-conv {
+.top-input-conv, .top-search-conv {
   width: 80%;
   height: 3rem;
   background-color: #272933;
@@ -1110,6 +1110,18 @@ li > a {
 }
 
 .conv-top {
+  width: 107%;
+  height: 100%;
+  color: #fff;
+  background-color: #21242c;
+  border: none;
+  border-radius: 1rem;
+  outline: 0;
+  padding-left: 1rem;
+  font-family: Inter;
+}
+
+.search-top, .conv-bot {
   width: 100%;
   height: 100%;
   color: #fff;
@@ -1142,6 +1154,40 @@ li > a {
 }
 
 .conv-top-btn:hover .fa-chevron-down {
+  color: #fff;
+}
+
+.search-top-btn {
+  width: 4.5rem;
+  height: 3rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 30;
+  background-color: #0000;
+  border: none;
+  outline: 0;
+  font-family: Inter;
+  font-weight: 800;
+  position: absolute;
+  left: 10rem;
+}
+
+.search-top-btn:hover {
+  background-color: #be1abe;
+}
+
+.conv-bot-btn {
+  width: 4.5rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  outline: 0;
+  position: absolute;
+  left: 10.1rem;
+}
+
+.conv-bot-btn:hover .fa-chevron-down {
   color: #fff;
 }
 
