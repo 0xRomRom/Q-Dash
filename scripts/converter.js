@@ -50,6 +50,7 @@ topConvertButton.addEventListener("click", () => {
 botConvertButton.addEventListener("click", () => {
   botResultBox.classList.add("hidden");
   botSearchBox.classList.remove("hidden");
+  botSearchButton.classList.remove("hidden");
   botSearchInput.focus();
   botSearchResultImage.classList.add("hidden");
   botSearchResultImage.src = "";
@@ -132,16 +133,14 @@ const dataFetcher = async (id) => {
     topSearchResultImage.src = data[0].image;
     topImage = data[0].image;
     topPrice = data[0].current_price;
+    convImgTop.src = topImage;
+    topResultBox.classList.remove("hidden");
+    topSearchBox.classList.add("hidden");
+    topInput.value = "";
   } catch (err) {
     console.log(err);
   }
 };
-
-topSearchResultImage.addEventListener("click", () => {
-  convImgTop.src = topImage;
-  topResultBox.classList.remove("hidden");
-  topSearchBox.classList.add("hidden");
-});
 
 let botImage = "";
 let botPrice = 0;
@@ -200,19 +199,17 @@ const dataFetcherBot = async (id) => {
     botSearchResultImage.src = data[0].image;
     botImage = data[0].image;
     botPrice = data[0].current_price;
+    convImgBot.src = botImage;
+    botResultBox.classList.remove("hidden");
+    botSearchBox.classList.add("hidden");
+    botInput.value = "";
   } catch (err) {
     console.log(err);
   }
 };
 
-botSearchResultImage.addEventListener("click", () => {
-  convImgBot.src = botImage;
-  botResultBox.classList.remove("hidden");
-  botSearchBox.classList.add("hidden");
-});
-
 convertCurrencies.addEventListener("click", () => {
   console.log(+topInput.value);
-  botInput.value = +topInput.value * topPrice;
-  console.log(botPrice * +topInput.value);
+  botInput.value = (+topInput.value * topPrice) / botPrice;
+  console.log(+topInput.value * topPrice);
 });
