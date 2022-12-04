@@ -513,7 +513,7 @@ li > a {
 
 .lightbox {
   width: 50%;
-  height: 50rem;
+  height: 42rem;
   color: #fff;
   z-index: 50;
   background: linear-gradient(to right, #0f0c29, #24243e);
@@ -1276,9 +1276,9 @@ li > a {
   color: #fff;
   cursor: pointer;
   z-index: 10;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   left: 93%;
 }
 
@@ -1312,8 +1312,8 @@ li > a {
   background-clip: text;
   -webkit-background-clip: text;
   text-align: center;
-  margin-top: 1rem;
-  font-size: 3rem;
+  margin-top: .2rem;
+  font-size: 2.25rem;
 }
 
 .dropIn {
@@ -1335,7 +1335,7 @@ li > a {
 .chart-container {
   height: 42rem;
   position: relative;
-  top: 4.8rem;
+  top: .3rem;
 }
 
 .tradingview-widget-container {

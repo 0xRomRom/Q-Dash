@@ -538,7 +538,6 @@ const lightBox = document.querySelector(".lightbox");
 const dropShadow = document.querySelector(".dropshadow");
 const lightBoxClose = document.querySelector(".fa-x");
 const widgetContainer = document.querySelector(".tradingview-widget-container");
-const searchContractBox = document.querySelector(".search-contract-box");
 const coinName = document.querySelector(".coin-name");
 // Onload rotate animation
 const allCards = document.querySelectorAll(".card");
@@ -562,6 +561,7 @@ allCards.forEach((card)=>{
         widgetContainer.classList.add("fadeIn");
         coinName.textContent = "";
         coinName.classList.add("dropIn");
+        lightBoxClose.classList.add("dropIn");
         lightBox.classList.remove("hidden");
         dropShadow.classList.remove("hidden");
         coinName.textContent = card.children[0].textContent;

@@ -542,7 +542,7 @@ li > a {
   left: 25%;
   top: 5rem;
   width: 50%;
-  height: 50rem;
+  height: 42rem;
   box-shadow: 0px 0px 15px rgb(140, 20, 156);
   border: 1px solid rgb(140, 20, 156);
   background: linear-gradient(to right, #0f0c29, #24243e);
@@ -1428,9 +1428,9 @@ li > a {
 .fa-x {
   position: absolute;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   left: 93%;
-  top: 2rem;
+  top: 1rem;
   cursor: pointer;
   z-index: 10;
 }
@@ -1457,10 +1457,10 @@ li > a {
 }
 
 .coin-name {
-  font-size: 3rem;
+  font-size: 2.25rem;
   color: white;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   background: -webkit-linear-gradient(
     90deg,
     rgb(210, 39, 210),
@@ -1490,7 +1490,7 @@ li > a {
 .chart-container {
   position: relative;
   height: 42rem;
-  top: 4.8rem;
+  top: 0.3rem;
 }
 
 .tradingview-widget-container {
