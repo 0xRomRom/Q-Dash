@@ -257,14 +257,13 @@ li > a {
   top: 0.5rem;
   left: 0.8rem;
   border-radius: 0.4rem;
-  box-shadow: 0px 0px 10px rgb(14, 19, 38);
+  z-index: 200;
 }
 
 .brand-logo {
   position: relative;
   height: 5rem;
   left: 4rem;
-  cursor: pointer;
 }
 
 .nav-list {
@@ -2962,7 +2961,7 @@ input:focus {
   left: 43%;
   top: 10rem;
   height: 35rem;
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
   background-color: rgb(25, 27, 31);
 }
 

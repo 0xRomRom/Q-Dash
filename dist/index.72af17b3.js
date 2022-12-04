@@ -1834,6 +1834,7 @@ const purpleBox = document.querySelector(".purp-border");
 const memeBackground = document.querySelector(".meme-bg");
 const tileContainer = document.querySelector(".tile-container");
 const tileContainerMeme = document.querySelector(".tile-container-m");
+const homeLogo = document.querySelector(".brand-logo-div");
 togglePage.addEventListener("click", ()=>{
     if (purpleBox.classList.contains("slideRight")) {
         togglePage.disabled = true;
@@ -1854,6 +1855,7 @@ togglePage.addEventListener("click", ()=>{
         }, 1200);
         return;
     }
+    homeLogo.style.cursor = "pointer";
     magnifyingGlass.classList.add("colorWhite");
     rotateArrow.classList.add("colorWhite");
     tileContainer.classList.add("hidden");
@@ -1867,6 +1869,27 @@ togglePage.addEventListener("click", ()=>{
         togglePage.disabled = false;
         purpleBox.classList.remove("slideLeft");
     }, 1200);
+});
+homeLogo.addEventListener("click", ()=>{
+    if (purpleBox.classList.contains("slideRight")) {
+        togglePage.disabled = true;
+        purpleBox.classList.add("slideLeft");
+        memeBackground.classList.add("colorToDark");
+        tileContainer.classList.remove("hidden");
+        tileContainerMeme.classList.add("hidden");
+        magnifyingGlass.classList.remove("colorWhite");
+        rotateArrow.classList.remove("colorWhite");
+        updateUI();
+        transitionTiles();
+        setTimeout(()=>{
+            togglePage.disabled = false;
+            purpleBox.classList.remove("slideRight");
+            purpleBox.classList.remove("slideLeft");
+            memeBackground.classList.remove("colorToDark");
+            memeBackground.classList.remove("darkToColor");
+            homeLogo.style.cursor = "initial";
+        }, 1200);
+    }
 });
 
 },{}]},["cjnog","jWrRo"], "jWrRo", "parcelRequire379f")

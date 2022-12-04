@@ -251,17 +251,16 @@ li > a {
 .brand-logo-div {
   width: 17.8rem;
   height: 5rem;
+  z-index: 200;
   background-color: #080a16;
   border-radius: .4rem;
   position: absolute;
   top: .5rem;
   left: .8rem;
-  box-shadow: 0 0 10px #0e1326;
 }
 
 .brand-logo {
   height: 5rem;
-  cursor: pointer;
   position: relative;
   left: 4rem;
 }
@@ -2710,7 +2709,7 @@ input:focus {
   width: 20rem;
   height: 35rem;
   background-color: #191b1f;
-  border-radius: .4rem;
+  border-radius: .8rem;
   position: absolute;
   top: 10rem;
   left: 43%;
