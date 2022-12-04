@@ -251,7 +251,7 @@ li > a {
 .brand-logo-div {
   width: 17.8rem;
   height: 5rem;
-  z-index: 200;
+  z-index: 5;
   background-color: #080a16;
   border-radius: .4rem;
   position: absolute;

@@ -789,6 +789,7 @@ homeLogo.addEventListener("click", () => {
     tileContainerMeme.classList.add("hidden");
     magnifyingGlass.classList.remove("colorWhite");
     rotateArrow.classList.remove("colorWhite");
+    homeLogo.style.cursor = 'initial';
     updateUI();
     transitionTiles();
     setTimeout(() => {
@@ -797,7 +798,6 @@ homeLogo.addEventListener("click", () => {
       purpleBox.classList.remove("slideLeft");
       memeBackground.classList.remove("colorToDark");
       memeBackground.classList.remove("darkToColor");
-      homeLogo.style.cursor = 'initial';
     }, 1200);
   }
 

@@ -243,7 +243,6 @@ li > a {
   color: white;
   top: 45rem;
   left: 2rem;
-
   z-index: 100;
   font-size: 0.8rem;
   font-family: "Press Start 2P", sans-serif;
@@ -257,7 +256,7 @@ li > a {
   top: 0.5rem;
   left: 0.8rem;
   border-radius: 0.4rem;
-  z-index: 200;
+  z-index: 5;
 }
 
 .brand-logo {
